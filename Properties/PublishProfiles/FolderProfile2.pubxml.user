@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Publish\MamjiAdmin</_PublishTargetUrl>
+    <History>True|2022-11-08T13:34:10.5337837Z;True|2022-11-08T17:38:56.2213645+05:00;True|2022-11-08T16:48:30.8089587+05:00;True|2022-11-08T15:43:40.2496298+05:00;False|2022-11-08T15:41:50.4691333+05:00;False|2022-11-08T15:39:14.5778571+05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

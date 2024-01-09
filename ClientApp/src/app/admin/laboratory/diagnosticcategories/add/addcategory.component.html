@@ -1,0 +1,44 @@
+<h1 class="h3 mb-2 text-gray-800">Add Diagnostic Category</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="categoryForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Diagnostic Category Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputcategoryName">Category Name</label>
+                  <input type="text" class="form-control" id=categoryName placeholder="" formControlName="categoryName">
+                  <div *ngIf="f.categoryName.invalid && (f.categoryName.dirty || f.categoryName.touched)" class="alert alert-danger">
+                    <div *ngIf="f.categoryName.errors.required">
+                      Category Name is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-4 text-center">
+              <app-imageupload></app-imageupload>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

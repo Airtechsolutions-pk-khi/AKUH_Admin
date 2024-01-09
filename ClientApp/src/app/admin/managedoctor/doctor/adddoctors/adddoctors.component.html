@@ -1,0 +1,226 @@
+
+<h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="doctorForm" class="form">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Item Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Name </label>
+                  <input type="text" class="form-control" id=fullName placeholder="" formControlName="fullName">
+                  <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
+                    <div *ngIf="f.fullName.errors.required">
+                      Name is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Form Row-->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="small mb-1" for="inputUsername">Urdu Name</label>
+                  <input type="text" class="form-control" id=urduName placeholder="" formControlName="urduName">
+                  
+                </div>
+                <!--<div class="form-group col-md-6">
+                  <label class="small mb-1" for="inputUsername">Email</label>
+                  <input type="text" class="form-control" id=email placeholder="" formControlName="email">
+                </div>-->
+                <div class="form-group col-md-6">
+                  <label class="small mb-1" for="inputFirstName">Skills</label>
+                  <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
+                   <div *ngIf="f.skills.invalid && (f.skills.dirty || f.skills.touched)" class="alert alert-danger">
+                      <div *ngIf="f.skills.errors.required">
+                          Skill is required.
+                      </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label class="small mb-1" for="inputLastName">Gender</label>
+                  <select type="text" class="form-control" id=gender placeholder="" required formControlName="gender">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <div *ngIf="f.gender.invalid && (f.gender.dirty || f.gender.touched)" class="alert alert-danger">
+                    <div *ngIf="f.gender.errors.required">
+                      Gender is required.
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="form-group col-md-6">
+                  <label class="small mb-1" for="inputLastName">Education</label>
+                  <input type="text" class="form-control" id=education placeholder="" formControlName="education">
+                   <div *ngIf="f.education.invalid && (f.education.dirty || f.education.touched)" class="alert alert-danger">
+                      <div *ngIf="f.education.errors.required">
+                          Education is required.
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+
+                <div class="form-group col-md-3">
+                  <label class="small mb-1" for="inputUsername">Attach Speciality</label>
+                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="false" placeholder=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="drProfile.specialistID">
+                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                      <div class="ng-value" *ngFor="let item of items">
+                        <span class="ng-value-label">{{item.name}}</span>
+                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                      </div>
+                    </ng-template>
+                  </ng-select>
+                 
+                </div>
+                <div class="form-group col-md-3">
+                  <label class="small mb-1" for="inputLastName">Profile</label>
+                  <input type="text" class="form-control" id="profile" [ngModelOptions]="{standalone: true}" [(ngModel)]="drProfile.profile">
+                </div>
+                <div class="form-group col-md-3">
+                  <br />
+                  <button class="btn btn-primary" type="submit" (click)="AddProfileChild(drProfile)" [disabled]="drProfile==null">Add</button>
+                </div>
+              </div>
+
+              <div class="tile-body p-0 table-responsive ">
+                <table class="table table-striped">
+                  <thead>
+                    <tr class="table-header">
+                      <th width="20%">Speciality </th>
+                      <!--<th width="20%">Fees </th>-->
+                      <th width="40%">Profile </th>
+                      <th width="20%">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of  DoctorProfiles">
+
+                      <td>
+                        {{item.name}}
+                      </td>
+                      <!--<td>
+                        {{item.fees}}
+                      </td>-->
+                      <td> {{item.profile}} </td>
+
+                      <td>
+                        <i (click)="RemoveProfileChild(item)" class="fas fa-fw fa-trash-alt "></i>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <div class="form-group col-md-4 text-center" style="display: none;">
+              <app-imageupload></app-imageupload>
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group col-md-3">
+              <label class="small mb-1" for="inputUsername">Attach Speciality</label>
+              <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.specialistID">
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                  <div class="ng-value" *ngFor="let item of items">
+                    <span class="ng-value-label">{{item.name}}</span>
+                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                  </div>
+                </ng-template>
+              </ng-select>
+            </div>
+
+            <div class="form-group col-md-3">
+              <label class="small mb-1" for="inputLocation">Attach Days</label>
+              <select name="dayName" id="dayName" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.dayName">
+                <option *ngFor="let option of DoctorDaysList" [value]="option">{{option}}</option>
+              </select>
+            </div>
+
+
+            <div class="form-group col-md-3">
+              <label class="small mb-1" for="inputUsername">Timeslot</label>
+              <ng-select [items]="selectedTimeList" bindLabel="timeSlot" [multiple]="true" bindValue="timeSlot" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.timeSlot">
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                  <div class="ng-value" *ngFor="let item of items">
+                    <span class="ng-value-label">{{item.timeSlot}}</span>
+                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                  </div>
+                </ng-template>
+              </ng-select>
+            </div>
+
+
+            <div class="form-group col-md-3">
+              <br />
+              <button class="btn btn-primary" type="submit" (click)="AddChild(spec)" [disabled]="spec==null">Add</button>
+            </div>
+          </div>
+          <div class="tile-body p-0 table-responsive ">
+            <table class="table table-striped">
+              <thead>
+                <tr class="table-header">
+                  <th width="20%">ID </th>
+                  <th width="20%">Speciality </th>
+                  <th width="20%">Days </th>
+                  <th width="20%">Timeslot</th>
+                  <th width="20%">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of  DoctorSchedule">
+                  <td>
+                    {{item.specialistID}}
+
+                  </td>
+                  <td>
+                    {{item.name}}
+
+                  </td>
+                  <td> {{item.dayName}} </td>
+                  <td> {{item.timeSlot}} </td>
+
+                  <td>
+                    <i (click)="RemoveChild(item)" class="fas fa-fw fa-trash-alt "></i>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Save changes button-->
+          <button class="btn btn-primary" (click)="onSubmit()" type="submit">Save changes</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

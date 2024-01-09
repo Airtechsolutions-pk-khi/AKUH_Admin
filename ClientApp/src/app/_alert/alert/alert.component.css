@@ -1,0 +1,25 @@
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .alert-container.success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .alert-container.error {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .alert-container.show {
+    opacity: 1;
+  }
+      

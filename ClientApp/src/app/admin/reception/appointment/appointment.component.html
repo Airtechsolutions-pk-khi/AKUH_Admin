@@ -1,0 +1,116 @@
+<h1 class="h3 mb-2 text-gray-800">Doctor Appoinment</h1>
+<p class="mb-4"></p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-4">
+        <h6 class="m-0 font-weight-bold text-orange">Doctor Appoinment List</h6>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col-md-7 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
+      <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+      </div>
+      <div class="col-md-1 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
+      </div>
+    </div>
+
+    <div class="tile-body p-0 table-responsive ">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-header">
+            <th width="10%" sortable="AppointmentNo"> Appoint. No.</th>
+            <th width="25%" sortable="FullName"> Patient Name </th>
+            <!--<th width="10%" sortable="Address"> Address </th>-->
+            <!--<th width="10%" sortable="Email"> Email </th>-->
+            <th width="10%" sortable="Mobile"> Mobile </th>
+            <!--<th width="10%" sortable="Fees"> Fees </th>-->
+            <th width="15%" sortable="BookingTime"> Booking Date/Time </th>
+            <th width="15%" sortable="BookingDate"> Appointment Date </th>
+            <th width="20%" sortable="Timeslot"> Appointment Slot</th>
+            <th width="20%" sortable="AppointmentStatus"> Appointment Status </th>
+            <th width="15%" sortable="Status"> Approved By </th>
+            <th width="10%">Action</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data$ | async ">
+            <td> {{item.appointmentNo}} </td>
+            <td> {{item.fullName}} </td>
+            <!--<td> {{item.address}} </td>-->
+            <!--<td> {{item.email}} </td>-->
+            <td> {{item.mobile}} </td>
+            <!--<td> {{item.fees}} </td>-->
+            <td> {{item.createdOn | date: 'dd/MM/yyyy hh:mm:ss'}} </td>
+            <td> {{item.bookingDate}} </td>
+            <td> {{item.timeslot}} </td>
+            <td>
+              <span class="badge badge-warning"
+                    *ngIf="item.appointmentStatus == 101">Pending</span>
+
+              <span class="badge badge-success"
+                    *ngIf="item.appointmentStatus == 102">Approved</span>
+
+              <span class="badge badge-danger"
+                    *ngIf="item.appointmentStatus == 103">Cancelled</span>
+
+              <span class="badge badge-info"
+                    *ngIf="item.appointmentStatus == 100">Completed</span>
+
+              <span class="badge badge-dark"
+                    *ngIf="![101, 102, 103, 100].includes(item.appointmentStatus)">-</span>
+            </td>
+            <!--<td>
+              {{ item.appointmentStatus == 101 ?"Pending":item.appointmentStatus == 102 ? "Approved" : item.appointmentStatus==103 ?"Cancelled" : item.appointmentStatus == 100 ?"Completed": "-"}}
+            </td>-->
+          <td>
+            {{item.lastUpdatedBy}}
+          </td>
+            <td>
+              <a (click)="View(item.appointmentID)"><i class="fas fa-fw fa-eye"></i> </a>
+              <!--<a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="pagination-count">
+          Showing
+          <strong>{{(service.pageSize * service.page)-9}}</strong> to
+          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+          <strong>{{(total$ | async)!}}</strong> results
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+        </ngb-pagination>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function handleDropDownEvents(e) {
+    if (e.value == "CreditCard") {
+      showCreditCardMethod();
+    }
+    else if (e.value == "SendPayment") {
+      showSendPaymentMethod();
+    }
+  }
+</script>

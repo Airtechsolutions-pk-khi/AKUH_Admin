@@ -1,0 +1,42 @@
+<h1 class="h3 mb-2 text-gray-800">Add TimeSlot</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="timeslotForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Add TimeSlot</div>
+        <div class="card-body">
+          <div class="form-row">
+
+            <div class="form-group col-md-6">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Time Slot</label>
+                <input type="text" class="form-control" id=timeSlot placeholder="" formControlName="timeSlot">
+                <label style="color:red">Note: Time should be type in this format e.g: 10:00 AM - 11:00 AM</label>
+                <div *ngIf="f.timeSlot.invalid && (f.timeSlot.dirty || f.timeSlot.touched)" class="alert alert-danger">
+                  <div *ngIf="f.timeSlot.errors.required">
+                    Time Slot is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

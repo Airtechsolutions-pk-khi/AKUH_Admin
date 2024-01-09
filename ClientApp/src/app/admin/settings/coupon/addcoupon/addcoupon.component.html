@@ -1,0 +1,70 @@
+<h1 class="h3 mb-2 text-gray-800">Add Coupon</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="couponForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Coupon Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Title</label>
+                <input type="text" class="form-control" id=Title placeholder="" formControlName="title">
+                <div *ngIf="f.title.invalid && (f.title.dirty || f.title.touched)" class="alert alert-danger">
+                  <div *ngIf="f.title.errors.required">
+                    Title is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Type</label>
+                <input type="text" class="form-control" id=Type placeholder="" formControlName="type">
+                <div *ngIf="f.type.invalid && (f.type.dirty || f.type.touched)" class="alert alert-danger">
+                  <div *ngIf="f.type.errors.required">
+                    Type is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Amount</label>
+                <input type="number" class="form-control" id=Amount placeholder="" formControlName="amount">
+                <div *ngIf="f.amount.invalid && (f.amount.dirty || f.amount.touched)" class="alert alert-danger">
+                  <div *ngIf="f.amount.errors.required">
+                    Amount is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Coupon Code</label>
+                <input type="text" class="form-control" id=CouponCode placeholder="" formControlName="couponCode">
+                <div *ngIf="f.couponCode.invalid && (f.couponCode.dirty || f.couponCode.touched)" class="alert alert-danger">
+                  <div *ngIf="f.couponCode.errors.required">
+                    Coupon Code is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

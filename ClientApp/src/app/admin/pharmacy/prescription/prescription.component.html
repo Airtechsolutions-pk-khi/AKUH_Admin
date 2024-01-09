@@ -1,0 +1,108 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Medicine Prescription</h1>
+<p class="mb-4"></p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-4">
+        <h6 class="m-0 font-weight-bold text-orange">Prescription List</h6>
+      </div>
+      <!--<div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+      </div>-->
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-7 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
+      <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+      </div>
+      <div class="col-md-1 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
+      </div>
+    </div>
+
+
+    <div class="tile-body p-0 table-responsive ">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-header">
+            <th width="10%">IMAGE</th>
+            <th width="15%" sortable="fullName">Customer Name </th>
+            <th width="15%" sortable="Mobile">Mobile </th>
+            <th width="15%" sortable="Address">Address </th>
+            <th width="15%" sortable="Notes">Notes </th>
+            <th width="10%" sortable="Status">Aproved By </th>
+            <th width="10%" sortable="Status">Status </th>
+            <th width="10%">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data$ | async ">
+            <td>
+              <img *ngIf="item.image !== ''" [src]="item.image" data-lightbox="image-1" class="table-img" alt="" href="IMAGE_URL" />
+              <div *ngIf="item.image === ''" class="image-replace"></div>
+            <td> {{item.customerName}} </td>
+            <td> {{item.mobile}} </td>
+            <td> {{item.address}} </td>
+            <td> {{item.note}} </td>
+            <td> {{item.lastUpdatedBy}} </td>
+            <td>
+              <span class="badge badge-warning"
+                    *ngIf="item.statusID == 101">Pending</span>
+
+              <span class="badge badge-success"
+                    *ngIf="item.statusID == 102">Approved</span>
+
+              <span class="badge badge-danger"
+                    *ngIf="item.statusID == 103">Cancelled</span>
+
+              <span class="badge badge-info"
+                    *ngIf="item.statusID == 100">Completed</span>
+
+              <span class="badge badge-dark"
+                    *ngIf="![101, 102, 103, 100].includes(item.statusID)">-</span>
+            </td>
+            <!--<td>
+            <ngb-highlight [ngClass]="{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }" class="btn btn-sm" [result]="item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'" [term]="service.searchTerm">
+            </ngb-highlight>
+          </td>-->
+            <td>
+              <a download="sd" href="{{item.image}}" target="_blank" title="ImageName">
+                <i class="fas fa-fw fa-download" download></i>
+              </a>
+              &nbsp;
+              <a (click)="Edit(item.prescriptionID)"><i class="fas fa-fw fa-edit"></i> </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="pagination-count">
+          Showing
+          <strong>{{(service.pageSize * service.page)-9}}</strong> to
+          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+          <strong>{{(total$ | async)!}}</strong> results
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+        </ngb-pagination>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+<!-- Page Heading -->
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-6">
+        <h6 class="m-0 font-weight-bold text-orange">Appointment Details - <span class="badge badge-info"> {{
+            appointment.appointmentStatus == 100 ? "Completed" : appointment.appointmentStatus==101 ?"Pending" :
+            appointment.appointmentStatus == 102? "Approved" : appointment.appointmentStatus == 103? "Cancelled" : "-"
+            }}</span></h6>
+      </div>
+      <div class="col-md-6 text-right">
+
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 form-group ">
+        <p>Comments / Reason (Optional)</p>
+        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="StatusMsg">
+      </div>
+      <div class="col-md-12 mb-4" *ngIf="appointment.appointmentStatus!=100">
+        <div class="card border-left-info shadow mb-4">
+          <div class="card-header border-bottom-0">Appointment Status</div>
+          <div class="card-body">
+            <div class="">
+              <button class="btn btn-info mr-1" (click)="updateAppointment(appointment,100)">
+                <i class="fas fa-truck"></i> Completed
+              </button>
+              <button class="btn btn-success mr-1" (click)="updateAppointment(appointment,102)">
+                <i class="fas fa-people-carry"></i> Approved
+              </button>
+              <button class="btn btn-danger mr-1" (click)="updateAppointment(appointment,103)">
+                <i class="fas fa-people-carry"></i> Cancelled
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card border-left-danger shadow mb-4">
+          <div class="card-body">
+            <div class="card">
+              <div class="card-header border-bottom-0">Appointment Information</div>
+
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Appointment #
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.appointmentNo }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Patient Name
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.patientName }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Patient Mobile
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.mobile }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Patient Email
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.email }}</div>
+              </div>
+              <!--<div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Patient Address
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.address }}</div>
+              </div>-->
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Age & Gender
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.age + " " + appointment.gender }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Booking Date
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.bookingDate }}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card border-left-Success shadow mb-4">
+          <div class="card-body">
+            <div class="card">
+              <div class="card-header border-bottom-0">Doctor Information</div>
+
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Appointment #
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.appointmentNo }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Doctor Name
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.doctorName }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Time Slot
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.timeslot }}</div>
+              </div>
+              <!-- <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Doctor Fee
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ appointment.fees }}</div>
+              </div> -->
+              <table class="table table-striped">
+                <thead>
+                  <tr class="table-header">
+                    <th>Specialities</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let specialty of appointment.specialities">
+                    <td>{{ specialty.specialityName }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

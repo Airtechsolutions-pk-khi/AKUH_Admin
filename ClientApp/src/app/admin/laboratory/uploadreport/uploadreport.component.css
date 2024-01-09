@@ -1,0 +1,18 @@
+ 
+.btnDownload {
+    background-color: #00843D;
+    border: none;
+    color: white;
+    padding: 5px 13px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Darker background on mouse-over */
+.btnDownload:hover {
+  background-color: #149063;
+  border: none;
+  border-radius: 5px;
+}
+ 

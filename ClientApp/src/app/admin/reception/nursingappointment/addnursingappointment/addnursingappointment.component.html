@@ -1,0 +1,205 @@
+<h1 class="h3 mb-2 text-gray-800">Add Nursing Appointment</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="nursingappointmentForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Nursing Appointment</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="form-group">
+                <label class="small mb-1" for="inputAppointmentNo">Appointment No</label>
+                <input type="text" class="form-control" id=appointmentNo placeholder="" formControlName="appointmentNo">
+                <div *ngIf="f.appointmentNo.invalid && (f.appointmentNo.dirty || f.appointmentNo.touched)" class="alert alert-danger">
+                  <div *ngIf="f.appointmentNo.errors.required">
+                    Appointment is required.
+                  </div>  
+                </div>
+              </div>
+            
+                
+
+                <!-- <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLocation">Speciality</label>
+                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
+                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                          <div class="ng-value" *ngFor="let item of items">
+                              <span class="ng-value-label">{{item.name}}</span>
+                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                          </div>
+                      </ng-template>
+                  </ng-select>
+              </div> -->
+              
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputTimeslot">Timeslot</label>
+                  <select type="time" class="form-control" id=timeslot placeholder="" formControlName="timeslot">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>10:00 AM - 11:00 AM</option>
+                    <option>11:00 AM - 12:00 PM</option>
+                    <option>12:00 PM - 01:00 PM</option>
+                    <option>01:00 PM - 02:00 PM</option>
+                  </select>
+                  <div *ngIf="f.timeslot.invalid && (f.timeslot.dirty || f.timeslot.touched)" class="alert alert-danger">
+                    <div *ngIf="f.timeslot.errors.required">
+                      Timeslot is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputPatientname">Patient Name</label>
+                <input type="text" class="form-control" id=patientName placeholder="" formControlName="patientName">
+                <div *ngIf="f.patientName.invalid && (f.patientName.dirty || f.patientName.touched)" class="alert alert-danger">
+                  <div *ngIf="f.patientName.errors.required">
+                    Patient Name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputAge">Age</label>
+                <input type="text" class="form-control" id=age placeholder="" formControlName="age">
+                <div *ngIf="f.age.invalid && (f.age.dirty || f.age.touched)" class="alert alert-danger">
+                  <div *ngIf="f.age.errors.required">
+                    Age is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputappointmentStatus">Appointment Status</label>
+                  <select type="text" class="form-control" id=appointmentStatus placeholder="" formControlName="appointmentStatus">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Pending</option>
+                    <option>Approved</option>
+                    <option>Cancelled</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <!-- <div class="form-group">
+                <label class="small mb-1" for="inputAppointmentNo">Doctor Name</label>
+                <ng-select [items]="DoctorList" bindLabel="fullName" bindValue="doctorID" [multiple]="false" placeholder="" (change)="onChange(DoctorList)" >
+                  <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items"  [value]="items.doctorID">
+                      <span class="ng-value-label">{{item.fullName}}</span>
+                      <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                  </ng-template>
+                </ng-select>
+              </div> -->
+              <!-- <div class="form-row">
+                
+
+
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLocation">Days</label>
+                  <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
+                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                          <div class="ng-value" *ngFor="let item of items">
+                              <span class="ng-value-label">{{item.name}}</span>
+                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                          </div>
+                      </ng-template>
+                  </ng-select>
+              </div>
+
+
+              </div> -->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputFees">Fees</label>
+                  <input type="text" class="form-control" id=fees placeholder="" formControlName="fees">
+                  <div *ngIf="f.fees.invalid && (f.fees.dirty || f.fees.touched)" class="alert alert-danger">
+                    <div *ngIf="f.fees.errors.required">
+                      Fees is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLastName">Booking Date</label>
+                  <input type="date" class="form-control" id=bookingDate placeholder="" formControlName="bookingDate">
+                  <div *ngIf="f.bookingDate.invalid && (f.bookingDate.dirty || f.bookingDate.touched)" class="alert alert-danger">
+                    <div *ngIf="f.bookingDate.errors.required">
+                      Booking Date is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputGender">Gender</label>
+                  <select type="text" class="form-control" id=gender placeholder="" formControlName="gender">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <div *ngIf="f.gender.invalid && (f.gender.dirty || f.gender.touched)" class="alert alert-danger">
+                    <div *ngIf="f.gender.errors.required">
+                      Gender is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputGender">Appoinment Type</label>
+                  <select type="text" class="form-control" id=appointmentType placeholder="" formControlName="appointmentType">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Nursing</option>
+                    
+                  </select>
+                  <div *ngIf="f.appointment.invalid && (f.appointment.dirty || f.appointment.touched)" class="alert alert-danger">
+                    <div *ngIf="f.appointment.errors.required">
+                      appointment type is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputGender">Day</label>
+                  <select type="text" class="form-control" id=day placeholder="" formControlName="day">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturdey</option>
+                    <option>Sunday</option>
+                    
+                  </select>
+                  <div *ngIf="f.day.invalid && (f.day.dirty || f.day.touched)" class="alert alert-danger">
+                    <div *ngIf="f.day.errors.required">
+                      day is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

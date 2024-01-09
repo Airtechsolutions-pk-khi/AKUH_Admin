@@ -1,0 +1,88 @@
+<h1 class="h3 mb-2 text-gray-800">Add Medicine</h1>
+<p class="mb-4"></p>
+<form [formGroup]="medicineForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Medicine Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Name</label>
+                <input type="text" class="form-control" id=name placeholder="" formControlName="name">
+                <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+                  <div *ngIf="f.name.errors.required">
+                    Name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Description</label>
+                <input type="text" class="form-control" id=description placeholder="" formControlName="description">
+                <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)" class="alert alert-danger">
+                  <div *ngIf="f.description.errors.required">
+                    Description is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Brand Details</label>
+                <input type="text" class="form-control" id=brandDetails placeholder="" formControlName="brandDetails">
+                <div *ngIf="f.brandDetails.invalid && (f.brandDetails.dirty || f.brandDetails.touched)" class="alert alert-danger">
+                  <div *ngIf="f.brandDetails.errors.required">
+                    Brand is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Price</label>
+                <input type="number" class="form-control" id=price placeholder="" formControlName="price">
+                <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="alert alert-danger">
+                  <div *ngIf="f.price.errors.required">
+                    Price is required.
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Quantity Description</label>
+                <input type="text" class="form-control" id=quantityDescription placeholder="" formControlName="quantityDescription">
+                <div *ngIf="f.quantityDescription.invalid && (f.quantitydescription.dirty || f.quantityDescription.touched)" class="alert alert-danger">
+                  <div *ngIf="f.quantityDescription.errors.required">
+                    Quantity is required.
+                  </div>
+                </div>
+              </div> -->
+
+
+                  
+                                <div class="form-group  ">
+                                    <label class="small mb-1" for="inputUsername">Quantity Description</label>
+                                    <input type="text" class="form-control" id=quantityDescription placeholder="" formControlName="quantityDescription">
+                                </div>
+                             
+
+
+
+            </div>
+            <div class="form-group col-md-4 text-center">
+              <app-imageupload></app-imageupload>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+    </div>
+  </div>
+  </div>
+</form>

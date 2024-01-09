@@ -1,0 +1,101 @@
+<style>
+  input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    padding: initial;
+    border: 1px solid #ced4da;
+    white-space: pre;
+    overflow: hidden !important;
+    width: 100%;
+    border-radius: 5px;
+  }
+</style>
+
+
+<h1 class="h3 mb-2 text-gray-800">Upload Reports</h1>
+<p class="mb-4"></p>
+
+<form class="form" (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Report Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Registration # <em style="color: red;">*</em></label>
+                  <!--<input type="text" class="form-control" name="registrationNo" [(ngModel)]="formData.registrationNo"/>-->
+                  <div class="input-group">
+                    <input type="text" class="form-control"  placeholder="Enter Registration#" name="registrationNo" [(ngModel)]="formData.registrationNo" [disabled]="formData.customerID>0?true: false" >
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" (click)="search()">
+                        <i class="fa fa-search"></i>
+                      </button>
+                      <button class="btn btn-info" type="button" (click)="refresh()">
+                        <i class="fa fa-recycle"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Lab Reference #</label>
+                  <input type="text" class="form-control" name="referenceNo" [(ngModel)]="formData.referenceNo" placeholder="Enter Lab Reference#" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Upload Report  <em style="color: red;">*</em></label>
+                  <input type="file" (change)="onFileChange($event.target.files)" style="margin-top: 5px;" />
+                  <div *ngIf="formData.pdfFile">
+                  <input type="text" class="form-control" name="pdfFile" [(ngModel)]="formData.pdfFile" readonly/>
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Patient Name</label>
+                  <input type="text" class="form-control" name="name" [(ngModel)]="formData.name" placeholder="Enter Patient Name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Diagnostic Category <em style="color: red;">*</em></label>
+                  <ng-select [items]="CategoryList" bindLabel="categoryName" bindValue="diagnosticCatID" [multiple]="false" placeholder="--Select Diagnostic Category--" (change)="onDiagnosticSelect(formData.diagnosticCatID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.diagnosticCatID" aria-required="true">
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

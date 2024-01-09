@@ -1,0 +1,96 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Nursing Appoinment</h1>
+<p class="mb-4"></p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <div class="row">
+            <div class="col-md-4">
+                <h6 class="m-0 font-weight-bold text-orange">Nursing Appoinment List</h6>
+            </div>
+            <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
+                <div class="input-group-prepend"style="height: 39px;">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                </div>
+                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
+            </div>
+            <div class="col-md-3 form-group text-right">
+                <!--<button type="submit" class="btn btn-primary mt-4 mr-1" >
+                    <span translate>Export</span>
+                </button>-->
+                 <!-- <button [routerLink]="['addnursingappointment']" class="btn btn-primary mt-4 mr-1">
+                    Nursing Appoinment
+                </button>  -->
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tile-body p-0 table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                  <tr class="table-header">
+                    <th width="10%" sortable="AppointmentNo"> Appoint. No.</th>
+                    <th width="10%" sortable="PatientName"> Patient Name </th>
+                    <th width="10%" sortable="Age"> Age </th>
+                    <th width="10%" sortable="Gender"> Gender </th>
+                    <th width="10%" sortable="Fees"> Fees </th>
+                    <th width="10%" sortable="BookingDate"> Booking Date </th>
+                    <th width="15%" sortable="Timeslot"> Time Slot </th>
+                    <th width="10%" sortable="TestName"> Test Name </th>
+                    <th width="10%" sortable="AppointmentStatus"> Appointment Status </th>
+                    <th width="10%" sortable="Status"> Status </th>
+                    <th width="5%">Action</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of data$ | async ">
+                    <td> {{item.appointmentNo}} </td>
+                    <td> {{item.patientName}} </td>
+                    <td> {{item.age}} </td>
+                    <td> {{item.gender}} </td>
+                    <td> {{item.fees}} </td>
+                    <td> {{item.bookingDateNursing}} </td>
+                    <td> {{item.timeslot}} </td>
+                    <td> {{item.testName}} </td>
+                    <td>
+                      {{ item.appointmentStatus == 101 ?"Pending":item.appointmentStatus == 102 ? "Approved" : item.appointmentStatus==103 ?"Cancelled" : item.appointmentStatus == 104 ?"Completed": "-"}}
+                    </td>
+                    <td>
+                      <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
+                      </ngb-highlight>
+                    </td>
+                    <td>
+                      <a (click)="View(item.appointmentID)"><i class="fas fa-fw fa-eye"></i> </a>
+                      <!-- <a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a> -->
+                      <!--<a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
+                    </td>
+                    <!--<td>
+                      <select class="btn btn-danger dropdown form-control" (change)="Status(item)" id="appointmentStatus" name="appointmentStatus" [(ngModel)]="item.appointmentStatus" style=" padding-left: 5px;">
+                        <option selected></option>
+                        <option [ngValue]="102">Approved</option>
+                        <option [ngValue]="103">Cancelled</option>
+                        <option [ngValue]="104">Completed</option>
+                      </select>
+                    </td>-->
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p class="pagination-count">
+                    Showing
+                     <strong>{{(service.pageSize * service.page)-9}}</strong> to
+                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+                    <strong>{{(total$ | async)!}}</strong> results 
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                 <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+                </ngb-pagination> 
+            </div>
+        </div>
+    </div>
+</div>
