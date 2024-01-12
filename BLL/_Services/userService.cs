@@ -16,6 +16,74 @@ namespace AKU_Admin.BLL._Services
         {
             _service = new userDB();
         }
+        public List<UserBLL> GetAllUser()
+        {
+            try
+            {
+                return _service.GetAllUser();
+            }
+            catch (Exception ex)
+            {
+                return new List<UserBLL>();
+            }
+        }
+        public UserBLL GetUser(int id)
+        {
+            try
+            {
+                return _service.GetUser(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertUser(UserBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "User", _env);
+                data.CreatedDate = DateTime.UtcNow.AddMinutes(180);
+                var result = _service.InsertUser(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public int UpdateUser(UserBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "User", _env);
+                data.UpdatedDate = DateTime.UtcNow.AddMinutes(180);
+                var result = _service.UpdateUser(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteUser(UserBLL data)
+        {
+            try
+            {
+
+                var result = _service.DeleteUser(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
         public List<LoginBLL> GetAll()
         {
