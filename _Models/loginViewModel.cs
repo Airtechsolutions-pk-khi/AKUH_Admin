@@ -12,7 +12,7 @@ namespace AKU_Admin._Models
     public class RspLogin : Rsp
     {
         public LoginBLL login { get; set; }
-         
+
     }
     public class LoginBLL
     {
@@ -240,24 +240,40 @@ namespace AKU_Admin._Models
     public class SpeakerBLL
     {
         public int SpeakerID { get; set; }
-
         public string Name { get; set; }
-
         public string Designation { get; set; }
-
         public string Company { get; set; }
-
         public string About { get; set; }
-
         public string Image { get; set; }
-
         public int? StatusID { get; set; }
-
         public DateTime? Createdon { get; set; }
-
         public DateTime? Updatedon { get; set; }
-
         public int? UpdatedBy { get; set; }
-
+    }
+    public class UserBLL
+    {
+        public int UserID { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Image { get; set; }
+        public string Address { get; set; }
+        public string ContactNo { get; set; }
+        public string Password { get; set; }
+        public int? StatusID { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public int? UpdatedBy { get; set; }
+    }
+    public class SettingBLL
+    {
+        public int SettingID { get; set;}
+        public string SplashScreen { get; set; }
+        public string About { get; set; }
+        public string PrivacyPolicy { get; set; }
+        public string AppName { get; set; }
+        public string AppVersion { get; set; }
+        public int StatusID { get; set; }
+        public DateTime? Createdon { get; set; }
+        public DateTime? Updatedon { get; set; }
     }
 }

@@ -1,8 +1,9 @@
 export class Appsetting {
-  appSettingID: number;
-  discount: string;
-  deliveryCharges: string;
-  tax: string;
-  minimumOrderAmount: string;
+  settingID: number;
+  appName: string;
+  appVersion: string;
+  about: string;
+  privacyPolicy: string;
+  splashScreen: string;
   statusID: number;
 }

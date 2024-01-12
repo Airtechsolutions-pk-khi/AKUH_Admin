@@ -44,22 +44,24 @@ export class AddsettingsComponent implements OnInit {
 
   private createForm() {
     this.settingForm = this.formBuilder.group({
-      discount: [0],
-      deliveryCharges: [0],
-      minimumOrderAmount: [0],
-      tax: [0],
+      appName: [''],
+      appVersion: [''],
+      about: [''],
+      privacyPolicy: [''],
+      splashScreen: [''],
       statusID: [true],
-      appSettingID: 1,
+      settingID: 1,
     });
   }
 
   private editForm(obj) {
-    this.f.discount.setValue(obj.discount);
-    this.f.deliveryCharges.setValue(obj.deliveryCharges);
-    this.f.appSettingID.setValue(obj.appSettingID);
-    this.f.minimumOrderAmount.setValue(obj.minimumOrderAmount);
+    this.f.settingID.setValue(obj.settingID);
+    this.f.appName.setValue(obj.appName);
+    this.f.appVersion.setValue(obj.appVersion);
+    this.f.about.setValue(obj.about);
+    this.f.privacyPolicy.setValue(obj.privacyPolicy);
+    this.f.splashScreen.setValue(obj.splashScreen);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.f.tax.setValue(obj.tax);
   }
 
   setSelectedSetting() {

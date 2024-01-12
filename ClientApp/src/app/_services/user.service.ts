@@ -28,8 +28,8 @@ function sort(data: User[], column: SortColumn, direction: string): User[] {
 }
 
 function matches(data: User, term: string) {
-   
-  return data.type.toLowerCase().includes(term.toLowerCase())
+
+  return data.userName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({

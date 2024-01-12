@@ -111,7 +111,14 @@ import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/addd
 import { CorporateClientComponent } from './admin/settings/corporateclient/corporateclient.component';
 import { addcorporateclientComponent } from './admin/settings/corporateclient/addcorporateclient/addcorporateclient.component';
 
+import { SpeakerComponent } from './admin/speaker/speaker.component';
+import { AddSpeakerComponent } from './admin/speaker/addspeaker/addspeaker.component';
 
+import { OrganizerComponent } from './admin/organizer/organizer.component';
+import { AddOrganizerComponent } from './admin/organizer/add/addorganizer.component';
+
+import { EventCategoryComponent } from './admin/eventCategory/eventcategory.component';
+import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcategory.component';
 
 @NgModule({
   declarations: [
@@ -188,7 +195,12 @@ import { addcorporateclientComponent } from './admin/settings/corporateclient/ad
     FormPermissionComponent,
     CorporateClientComponent,
     addcorporateclientComponent,
-
+    SpeakerComponent,
+    AddSpeakerComponent,
+    OrganizerComponent,
+    AddOrganizerComponent,
+    EventCategoryComponent,
+    AddEventCategoryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -333,7 +345,19 @@ import { addcorporateclientComponent } from './admin/settings/corporateclient/ad
           { path: 'settings/timeslot/add', component: AddTimeSlotComponent },
           { path: 'settings/timeslot/edit/:id', component: AddTimeSlotComponent },
 
-          { path: 'formpermission', component: FormPermissionComponent }
+          { path: 'formpermission', component: FormPermissionComponent },
+     
+          { path: 'speaker', component: SpeakerComponent },
+          { path: 'speaker/add', component: AddSpeakerComponent },
+          { path: 'speaker/edit/:id', component: AddSpeakerComponent },
+
+          { path: 'organizer', component: OrganizerComponent },
+          { path: 'organizer/add', component: AddOrganizerComponent },
+          { path: 'organizer/edit/:id', component: AddOrganizerComponent },
+
+          { path: 'eventcategory', component: EventCategoryComponent },
+          { path: 'eventcategory/add', component: AddEventCategoryComponent },
+          { path: 'eventcategory/edit/:id', component: AddEventCategoryComponent },
         ]
       }
     ]),
