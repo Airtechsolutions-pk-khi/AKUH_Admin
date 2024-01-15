@@ -1,0 +1,178 @@
+<h1 class="h3 mb-2 text-gray-800">Add Event</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="eventForm" class="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+
+        <div class="col-xl-12">
+            <div class="card mb-4">
+                <div class="card-header">Event Details</div>
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="small mb-1" for="inputUsername">Name</label>
+                            <input type="text" class="form-control" id=Name placeholder="" formControlName="name">
+                            <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+                                <div *ngIf="f.title.errors.required">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="small mb-1" for="inputUsername">Facebook URL</label>
+                            <input type="text" class="form-control" id=facebook placeholder="" formControlName="facebook">
+                            
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="small mb-1" for="inputUsername">Instagram URL</label>
+                            <input type="text" class="form-control" id=instagram placeholder="" formControlName="instagram">
+                             
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="small mb-1" for="inputUsername">Twitter URL</label>
+                            <input type="text" class="form-control" id=twitter placeholder="" formControlName="twitter">
+                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="small mb-1" for="inputLastName">Display Order</label>
+                            <input type="number" class="form-control" id=displayOrder placeholder="" formControlName="displayOrder">
+                        </div>
+                        <div class="form-group col-md-4">
+                           
+                            <label class="small mb-1" for="inputLastName">Type</label>
+                            <select type="text" class="form-control" id=type placeholder="" formControlName="type">
+                              <option selected disabled> -- Please Select -- </option>
+                              <option>Conference</option>
+                              <option>Educational</option>
+                              <option>History of Diagnosis</option>
+                              
+                            </select>
+             
+                        </div>
+                      
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label class="small mb-1" for="inputLastName">Event City</label>
+                            <input type="text" class="form-control" id=eventCity placeholder="" formControlName="eventCity">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="small mb-1" for="inputLastName">Location Link</label>
+                            <input type="text" class="form-control" id=locationLink placeholder="" formControlName="locationLink">
+                            
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="small mb-1" for="inputLastName">Contact No</label>
+                            <input type="text" class="form-control" id=phoneNo placeholder="" formControlName="phoneNo">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label class="small mb-1" for="inputLastName">Email</label>
+                            <input type="text" class="form-control" id=email placeholder="" formControlName="email">
+                        </div>
+                        
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label class="small mb-1" for="inputLocation">Event Category</label>
+                        <ng-select [items]="EventCategoryList" bindLabel="name" bindValue="eventCategoryID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedEventCategoryIds">
+                            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                <div class="ng-value" *ngFor="let item of items">
+                                    <span class="ng-value-label">{{item.name}}</span>
+                                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                                </div>
+                            </ng-template>
+                        </ng-select>
+                    </div>
+
+    
+                   
+
+                    <div class="form-group col-md-4">
+                        <label class="small mb-1" for="inputLocation">Event Organizer</label>
+                        <ng-select [items]="OrganizerList" bindLabel="name" bindValue="organizerID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedOrganizerIds">
+                            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                <div class="ng-value" *ngFor="let item of items">
+                                    <span class="ng-value-label">{{item.name}}</span>
+                                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                                </div>
+                            </ng-template>
+                        </ng-select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="small mb-1" for="inputLocation">Event Speakers</label>
+                        <ng-select [items]="SpeakerList" bindLabel="name" bindValue="speakerID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpeakerIds">
+                            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                <div class="ng-value" *ngFor="let item of items">
+                                    <span class="ng-value-label">{{item.name}}</span>
+                                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                                </div>
+                            </ng-template>
+                        </ng-select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+
+                        <label class="small mb-1" for="inputLocation">Description</label>
+                        <textarea class="form-control" formControlName="description" height="100px"></textarea>
+                    </div>
+                    
+                        <div class="form-group col-md-6">
+                            <label class="small mb-1" for="inputLocation">Choose Start to End Date</label>
+                            <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+                            
+                        </div>
+                    
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="Item Status">Status</label>
+                        <div class="custom-control custom-switch custom-switch-md">
+                            <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                            <label class="custom-control-label" for="statusID"></label>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="Item Status">Is Featured</label>
+                        <div class="custom-control custom-switch custom-switch-md">
+                            <input type="checkbox" class="custom-control-input" checked id="isFeatured" formControlName="isFeatured">
+                            <label class="custom-control-label" for="isFeatured"></label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                  <div class="form-row">
+                      <div class="col-md-12 form-group">
+
+                          <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>
+                          <br>
+                          <label for="file">Select Images </label>
+                          <input formControlName="file" id="file" type="file" class="form-control" multiple="" (change)="onFileChange($event)">
+                          <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+                              <div *ngIf="f.file.errors.required">File is required.</div>
+                          </div>
+                      </div>
+                      <div *ngFor='let url of Images' class="col-md-2">
+                          <i class="fa fa-times" (click)="removeImage(url)" style="    background: #E91E63;
+                              padding: 5px 8px;
+                              border-radius: 18px;
+                              color: white;
+                              position: absolute;
+                              left: 0;"></i>
+                          <img [src]="url" style="padding: 7px; max-width: 200px;  width: auto;height: 180px;"> <br/>
+                      </div>
+
+                  </div>
+                <!-- Save changes button-->
+                <button class="btn btn-primary" type="submit">Save changes</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

@@ -59,67 +59,7 @@ namespace AKU_Admin._Models
     //    public int? UpdatedBy { get; set; }
 
     //}
-    public class EventBLL
-    {
-        public int EventID { get; set; }
-
-        public int? EventCategoryID { get; set; }
-
-        public int? OrganizerID { get; set; }
-
-        public int? AttendeesID { get; set; }
-
-        public string Name { get; set; }
-
-        public string Type { get; set; }
-
-        public string Description { get; set; }
-
-        public string Location { get; set; }
-
-        public DateTime? StartDate { get; set; }
-
-        public DateTime? EndDate { get; set; }
-
-        public decimal? TicketNormal { get; set; }
-
-        public decimal? TicketPremium { get; set; }
-
-        public decimal? TicketPlatinum { get; set; }
-
-        public DateTime? EventDate { get; set; }
-
-        public DateTime? EventCity { get; set; }
-
-        public string LocationLink { get; set; }
-
-        public int? StatusID { get; set; }
-
-        public DateTime? DoorTime { get; set; }
-
-        public string PhoneNo { get; set; }
-
-        public string Email { get; set; }
-
-        public int? RemainingTicket { get; set; }
-
-        public int? EventAttendeesID { get; set; }
-
-        public string Facebook { get; set; }
-
-        public string Instagram { get; set; }
-
-        public string Twitter { get; set; }
-
-        public string Image { get; set; }
-
-        public DateTime? Createdon { get; set; }
-
-        public DateTime? Updatedon { get; set; }
-
-        public int? UpdatedBy { get; set; }
-
-    }
+    
     public class EventAttendeesBLL
     {
         public int AttendeesID { get; set; }

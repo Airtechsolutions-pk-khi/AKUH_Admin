@@ -1,4 +1,6 @@
-﻿using BAL.Repositories;
+﻿
+
+using BAL.Repositories;
 using AKU_Admin._Models;
 using Microsoft.AspNetCore.Hosting;
 using System;
@@ -23,6 +25,17 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 return _service.GetAll();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<SpeakerBLL> GetDropdown()
+        {
+            try
+            {
+                return _service.GetDropdown();
             }
             catch (Exception ex)
             {

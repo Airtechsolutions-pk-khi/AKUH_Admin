@@ -23,6 +23,11 @@ namespace AKU_Admin.Controllers
         {
             return _service.Get();
         }
+        [HttpGet("DropdownAll")]
+        public List<OrganizerBLL> GetDropdown()
+        {
+            return _service.GetDropdown();
+        }
         [HttpGet("organizer/{id}")]
         public OrganizerBLL Get(int id)
         {

@@ -23,6 +23,11 @@ namespace AKU_Admin.Controllers
         {
             return _service.Get();
         }
+        [HttpGet("DropdownAll")]
+        public List<EventCategoryBLL> GetDropdown()
+        {
+            return _service.GetDropdown();
+        }
         [HttpGet("eventcategory/{id}")]
         public EventCategoryBLL Get(int id)
         {

@@ -50,6 +50,29 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public List<EventCategoryBLL> GetAllDropdown()
+        {
+            try
+            {
+                var lst = new List<EventCategoryBLL>();
+                //SqlParameter[] p = new SqlParameter[1];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllEventCategoryDropdown_Admin");
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventCategoryBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public EventCategoryBLL Get(int id)
         {
             try
@@ -81,8 +104,8 @@ namespace BAL.Repositories
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
-                p[2] = new SqlParameter("@StatusID", data.StatusID);                
-                p[3] = new SqlParameter("@CreatedOn", data.Createdon);                
+                p[2] = new SqlParameter("@StatusID", data.StatusID);
+                p[3] = new SqlParameter("@CreatedOn", data.Createdon);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertEventCategory_Admin", p);
 
@@ -108,7 +131,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@EventCategoryID", data.EventCategoryID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEventCategory_Admin", p);
-               
+
                 return rtn;
             }
             catch (Exception)

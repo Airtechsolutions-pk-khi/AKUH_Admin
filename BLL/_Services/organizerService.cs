@@ -1,4 +1,6 @@
-﻿using BAL.Repositories;
+﻿
+
+using BAL.Repositories;
 using AKU_Admin._Models;
 using Microsoft.AspNetCore.Hosting;
 using System;
@@ -29,6 +31,18 @@ namespace AKU_Admin.BLL._Services
                 return null;
             }
         }
+        public List<OrganizerBLL> GetDropdown()
+        {
+            try
+            {
+                return _service.GetAllDropdown();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public OrganizerBLL Get(int id)
         {
             try

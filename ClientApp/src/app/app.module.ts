@@ -119,6 +119,8 @@ import { AddOrganizerComponent } from './admin/organizer/add/addorganizer.compon
 
 import { EventCategoryComponent } from './admin/eventCategory/eventcategory.component';
 import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcategory.component';
+import { AddEventComponent } from './admin/event/addevent/addevent.component';
+import { EventComponent } from './admin/event/event.component';
 
 @NgModule({
   declarations: [
@@ -133,6 +135,8 @@ import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcat
     AddcategoryComponent,
     ItemsComponent,
     AdditemsComponent,
+    EventComponent,
+    AddEventComponent,
     ModifiersComponent,
     AddmodifierComponent,
     CustomersComponent,
@@ -228,6 +232,10 @@ import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcat
           { path: 'item/add', component: AdditemsComponent },
           { path: 'item/settings', component: ItemsettingsComponent },
           { path: 'item/edit/:id', component: AdditemsComponent },
+
+          { path: 'event', component: EventComponent },
+          { path: 'event/add', component: AddEventComponent },          
+          { path: 'event/edit/:id', component: AddEventComponent },
 
           { path: 'modifier', component: ModifiersComponent },
           { path: 'modifier/add', component: AddmodifierComponent },

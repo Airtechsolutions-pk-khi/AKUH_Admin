@@ -1,4 +1,6 @@
-﻿using BAL.Repositories;
+﻿
+
+using BAL.Repositories;
 using AKU_Admin._Models;
 using Microsoft.AspNetCore.Hosting;
 using System;
@@ -23,6 +25,17 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 return _service.GetAll();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<EventCategoryBLL> GetDropdown()
+        {
+            try
+            {
+                return _service.GetAllDropdown();
             }
             catch (Exception ex)
             {
@@ -60,7 +73,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-               // data.Image = UploadImage(data.Image, "EventCategory", _env);
+                // data.Image = UploadImage(data.Image, "EventCategory", _env);
                 data.Updatedon = DateTime.UtcNow.AddMinutes(180);
                 var result = _service.Update(data);
 
