@@ -332,10 +332,10 @@ namespace BAL.Repositories
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
-                p[0] = new SqlParameter("@id", data.EventID);
+                p[0] = new SqlParameter("@EventID", data.EventID);
                 p[1] = new SqlParameter("@Updatedon", data.Updatedon);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteItem", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser_Admin", p);
 
                 return _obj;
             }

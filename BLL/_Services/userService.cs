@@ -76,7 +76,6 @@ namespace AKU_Admin.BLL._Services
             {
 
                 var result = _service.DeleteUser(data);
-
                 return result;
             }
             catch (Exception ex)
