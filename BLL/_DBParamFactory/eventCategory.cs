@@ -100,12 +100,13 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[5];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
-                p[2] = new SqlParameter("@StatusID", data.StatusID);
-                p[3] = new SqlParameter("@CreatedOn", data.Createdon);
+                p[2] = new SqlParameter("@Image", data.Image);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@CreatedOn", data.Createdon);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertEventCategory_Admin", p);
 
@@ -122,13 +123,14 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 1;
-                SqlParameter[] p = new SqlParameter[5];
+                SqlParameter[] p = new SqlParameter[6];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
-                p[2] = new SqlParameter("@StatusID", data.StatusID);
-                p[3] = new SqlParameter("@Updatedon", data.Updatedon);
-                p[4] = new SqlParameter("@EventCategoryID", data.EventCategoryID);
+                p[2] = new SqlParameter("@Image", data.Image);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@Updatedon", data.Updatedon);
+                p[5] = new SqlParameter("@EventCategoryID", data.EventCategoryID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEventCategory_Admin", p);
 

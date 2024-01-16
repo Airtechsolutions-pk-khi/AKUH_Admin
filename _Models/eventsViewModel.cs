@@ -74,10 +74,10 @@ namespace AKU_Admin._Models
         public string Speakers { get; set; }
         public string Organizers { get; set; }
 
-        public List<ItemimagesBLL> ItemImages = new List<ItemimagesBLL>();
+        public List<EventImagesBLL> EventImages = new List<EventImagesBLL>();
         public List<string> ImagesSource { get; set; }
     }
-    public class ItemimagesBLL
+    public class EventImagesBLL
     {
         public int EventImageID { get; set; }
 

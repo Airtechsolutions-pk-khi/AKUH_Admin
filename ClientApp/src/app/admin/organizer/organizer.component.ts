@@ -7,6 +7,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Organizer } from '../../_models/Organizer';
 import { OrganizerService } from '../../_services/organizer.service';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-organizer',
@@ -22,13 +23,15 @@ export class OrganizerComponent implements OnInit {
   private selectedBrand;
   locationSubscription: Subscription;
   submit: boolean;
+  closeResult: string;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
 
   constructor(public service: OrganizerService,
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    public router: Router) {
+    public router: Router,
+    private modalService: NgbModal) {
     this.selectedBrand = this.ls.getSelectedBrand().brandID;
     this.loading$ = service.loading$;
     this.submit = false;
@@ -77,5 +80,24 @@ export class OrganizerComponent implements OnInit {
     }, error => {
       this.ts.showError("Error", "Failed to delete record.")
     });
+  }
+  open(content, obj) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      if (result === 'yes') {
+        this.Delete(obj);
+      }
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }

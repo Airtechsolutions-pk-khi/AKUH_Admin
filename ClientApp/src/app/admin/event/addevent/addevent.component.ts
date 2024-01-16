@@ -24,10 +24,10 @@ export class AddEventComponent implements OnInit {
   Images = [];
   EventCategoryList = [];
   selectedEventCategoryIds: string[];
-  OrganizerList =[];
+  OrganizerList = [];
   selectedOrganizerIds: string[];
-  SpeakerList=[];
-  selectedSpeakerIds:string[];
+  SpeakerList = [];
+  selectedSpeakerIds: string[];
   ModifiersList = [];
   AddonsList = [];
   selectedModifierIds: string[];
@@ -46,16 +46,17 @@ export class AddEventComponent implements OnInit {
 
   ) {
     this.createForm();
-    
+
     this.loadEventCategory();
     this.loadOrganizer();
     this.loadSpeaker();
-    
+
   }
 
   ngOnInit() {
-    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);   
-    this._datepicker.fromDate=date;
+    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+    this._datepicker.fromDate = date;
+    this.setSelecteditem();
   }
 
   get f() { return this.eventForm.controls; }
@@ -68,11 +69,11 @@ export class AddEventComponent implements OnInit {
       description: [''],
       statusID: [true],
       location: [''],
-      fromDate:'',
-      toDate:'',
+      fromDate: '',
+      toDate: '',
       eventCity: [''],
-      eventCategoryID: [null],
-      locationLink: [''],    
+      eventCategoryID: [],
+      locationLink: [''],
       phoneNo: [''],
       email: [''],
       eventCategories: [],
@@ -86,53 +87,65 @@ export class AddEventComponent implements OnInit {
       displayOrder: [0],
       file: [''],
       imagesSource: [''],
-      isFeatured:[false]
+      isFeatured: [false]
     });
   }
 
   private editForm(obj) {
-
+    debugger
+    this.f.eventID.setValue(obj.eventID);
     this.f.name.setValue(obj.name);
-    this.f.arabicName.setValue(obj.arabicName);
-    this.f.displayOrder.setValue(obj.displayOrder);
-    this.f.price.setValue(obj.price);
-    this.f.cost.setValue(obj.cost);
-    this.f.calories.setValue(obj.calories);
-    this.f.itemID.setValue(obj.itemID);
-
-    
-    if (obj.modifiers != "") {
-      var stringToConvert = obj.modifiers;
-      this.selectedModifierIds = stringToConvert.split(',').map(Number);
-      this.f.modifiers.setValue(obj.modifiers);
-    }
-    
-    if (obj.addons != "") {
-      var stringToConvert = obj.addons;
-      this.selectedAddonIds = stringToConvert.split(',').map(Number);
-      this.f.addons.setValue(obj.addons);
-    }
-    this.f.categoryID.setValue(obj.categoryID);
-    this.f.image.setValue(obj.image);
+    this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.location.setValue(obj.location);
+    this.f.fromDate.setValue(obj.fromDate);
+    this.f.toDate.setValue(obj.toDate);
+    this.f.eventCity.setValue(obj.eventCity);
+    this.f.eventCategoryID.setValue(obj.eventCategoryID);
+    this.f.locationLink.setValue(obj.locationLink);
+    this.f.phoneNo.setValue(obj.phoneNo);
+    this.f.email.setValue(obj.email);
+    this.f.remainingTicket.setValue(obj.remainingTicket);
+    this.f.facebook.setValue(obj.facebook);
+    this.f.instagram.setValue(obj.instagram);
+    this.f.twitter.setValue(obj.twitter);
+    this.f.displayOrder.setValue(obj.displayOrder);
     this.f.isFeatured.setValue(obj.isFeatured);
-    obj.isApplyDiscount = obj.isApplyDiscount == null ? true : obj.isApplyDiscount;
-    this.f.isApplyDiscount.setValue(obj.isApplyDiscount);
-    this.imgComp.imageUrl = obj.image;
 
+    if (obj.organizers != "") {
+      debugger
+      var stringToConvert = obj.organizers;
+      this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
+      this.f.organizers.setValue(obj.organizers);
+    }
+
+    if (obj.speakers != "") {
+      debugger
+      var stringToConvert = obj.speakers;
+      this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
+      this.f.speakers.setValue(obj.speakers);
+    }
+
+    //if (obj.eventCategories != "") {
+    //  debugger
+    //  var stringToConvert = obj.eventCategories;
+    //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
+    //  this.f.eventCategories.setValue(obj.eventCategories);
+    //}
+    this.loadItemImages(this.f.eventID.value);
   }
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
   }
   setSelecteditem() {
-    
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingItems = true;
-        this.f.itemID.setValue(sid);
-        this.eventService.getById(sid, this.f.brandID.value).subscribe(res => {
+        this.f.eventID.setValue(sid);
+        this.eventService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingItems = false;
@@ -142,11 +155,11 @@ export class AddEventComponent implements OnInit {
   }
 
   onSubmit() {
-debugger
+    debugger
     this.eventForm.markAllAsTouched();
     this.submitted = true;
     if (this.eventForm.invalid) { return; }
-    this.loading = true;    
+    this.loading = true;
     this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
     this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
     this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
@@ -169,7 +182,6 @@ debugger
         this.ts.showError("Error", "Failed to insert Event.")
         this.loading = false;
       });
-
     } else {
       //Update item
       this.eventService.update(this.eventForm.value).subscribe(data => {
@@ -206,26 +218,30 @@ debugger
     }
   }
   private loadEventCategory() {
-     debugger
     this.eventService.loadActiveCategories().subscribe((res: any) => {
-     
       this.EventCategoryList = res;
     });
   }
   private loadOrganizer() {
-     
     this.eventService.loadOrganizer().subscribe((res: any) => {
-     
       this.OrganizerList = res;
-    }); 
+    });
   }
   private loadSpeaker() {
-     
     this.eventService.loadSpeaker().subscribe((res: any) => {
-     
+
       this.SpeakerList = res;
-    }); 
+    });
   }
-  
- 
+  private loadItemImages(id) {
+    this.eventService.loadEventImages(id).subscribe((res: any) => {
+      this.Images = res;
+      this.f.imagesSource.setValue(this.Images);
+    });
+  }
+  removeImage(obj) {
+    const index = this.Images.indexOf(obj);
+    this.Images.splice(index, 1);
+    this.f.imagesSource.setValue(this.Images);
+  }
 }

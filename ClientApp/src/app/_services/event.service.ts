@@ -6,7 +6,7 @@ import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
 
-import { Event } from '../_models/Event';
+import { Event, EventImageJunc } from '../_models/Event';
 import { Category } from '../_models/Cateogry';
 import { EventCategory } from '../_models/EventCategory';
 import { Organizer } from '../_models/Organizer';
@@ -99,8 +99,11 @@ export class EventService {
   loadAddonList(brandId) {    
     return this.http.get<Category[]>( `api/addons/all/${brandId}`);
   }
-  getById(id,brandId) {
-    return this.http.get<Event[]>(`api/item/${id}/brand/${brandId}`);
+  loadEventImages(id) {
+    return this.http.get<EventImageJunc[]>(`api/event/images/${id}`);
+  }
+  getById(id) {
+    return this.http.get<Event[]>(`api/event/${id}`);
   }
   getTodaysItems(brandId) {
     return this.http.get<Event[]>(`api/item/settings/${brandId}`);
@@ -174,7 +177,7 @@ export class EventService {
   }
 
   update(updateData) {
-    return this.http.post(`api/item/update`, updateData)
+    return this.http.post(`api/event/update`, updateData)
       .pipe(map(res => {
         console.log(res);
         return res;

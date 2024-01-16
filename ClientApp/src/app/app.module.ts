@@ -117,6 +117,9 @@ import { AddSpeakerComponent } from './admin/speaker/addspeaker/addspeaker.compo
 import { OrganizerComponent } from './admin/organizer/organizer.component';
 import { AddOrganizerComponent } from './admin/organizer/add/addorganizer.component';
 
+import { PartnerComponent } from './admin/partner/partner.component';
+import { AddPartnerComponent } from './admin/partner/add/addpartner.component';
+
 import { EventCategoryComponent } from './admin/eventCategory/eventcategory.component';
 import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcategory.component';
 import { AddEventComponent } from './admin/event/addevent/addevent.component';
@@ -204,7 +207,9 @@ import { EventComponent } from './admin/event/event.component';
     OrganizerComponent,
     AddOrganizerComponent,
     EventCategoryComponent,
-    AddEventCategoryComponent
+    AddEventCategoryComponent,
+    PartnerComponent,
+    AddPartnerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -362,6 +367,10 @@ import { EventComponent } from './admin/event/event.component';
           { path: 'organizer', component: OrganizerComponent },
           { path: 'organizer/add', component: AddOrganizerComponent },
           { path: 'organizer/edit/:id', component: AddOrganizerComponent },
+
+          { path: 'partner', component: PartnerComponent },
+          { path: 'partner/add', component: AddPartnerComponent },
+          { path: 'partner/edit/:id', component: AddPartnerComponent },
 
           { path: 'eventcategory', component: EventCategoryComponent },
           { path: 'eventcategory/add', component: AddEventCategoryComponent },

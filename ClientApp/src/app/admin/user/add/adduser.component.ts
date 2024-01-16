@@ -51,21 +51,25 @@ export class AdduserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       userName: ['', Validators.required],
       email: ['', Validators.required],
-      statusID: [true],
+      image: [''],
+      address: ['', Validators.required],
+      contactNo: ['', Validators.required],
       password: ['', Validators.required],
-      type: ['', Validators.required],
-      id: 0,
+      statusID: [true],
+      userID: 0,
     });
   }
 
   private editForm(obj) {
     this.f.userName.setValue(obj.userName);
     this.f.email.setValue(obj.email);
+    this.f.address.setValue(obj.address);
+    this.f.contactNo.setValue(obj.contactNo);
     this.f.password.setValue(obj.password);
-    this.f.type.setValue(obj.type);
-    this.f.id.setValue(obj.id);
+    this.f.userID.setValue(obj.userID);
+    this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    //this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
+    this.imgComp.imageUrl = obj.image;
   }
 
   setSelectedCustomer() {
@@ -74,7 +78,7 @@ export class AdduserComponent implements OnInit {
       const sid = +param.get('id');
       if (sid) {
         this.loadingCustomer = true;
-        this.f.id.setValue(sid);
+        this.f.userID.setValue(sid);
         this.userService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
@@ -90,8 +94,8 @@ export class AdduserComponent implements OnInit {
     if (this.userForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-
-    if (parseInt(this.f.id.value) === 0) {
+    this.f.image.setValue(this.imgComp.imageUrl);
+    if (parseInt(this.f.userID.value) === 0) {
       //Insert customer
       console.log(JSON.stringify(this.userForm.value));
       this.userService.insert(this.userForm.value).subscribe(data => {

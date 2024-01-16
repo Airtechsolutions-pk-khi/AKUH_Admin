@@ -28,12 +28,23 @@ namespace AKU_Admin.BLL._Services
                 return new List<EventBLL>();
             }
         }
-        
-        public ItemBLL Get(int id, int brandID)
+
+        public EventBLL Get(int id)
         {
             try
             {
-                return _service.Get(id, brandID);
+                return _service.Get(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<string> GetItemImages(int id)
+        {
+            try
+            {
+                return _service.GetItemImages(id);
             }
             catch (Exception ex)
             {
@@ -46,7 +57,7 @@ namespace AKU_Admin.BLL._Services
         }
         public int Insert(EventBLL data, IWebHostEnvironment _env)
         {
-            List<ItemimagesBLL> imBLL = new List<ItemimagesBLL>();
+            List<EventImagesBLL> imBLL = new List<EventImagesBLL>();
             try
             {
                 //data.Image = UploadImage(data.Image, "Items", _env);
@@ -58,15 +69,15 @@ namespace AKU_Admin.BLL._Services
                     {
                         data.Image = UploadImage(img, "Event", _env);
                     }
-                     
-                    imBLL.Add(new ItemimagesBLL
+
+                    imBLL.Add(new EventImagesBLL
                     {
                         Image = UploadImage(img, "Event", _env),
                         Createdon = data.Createdon
                     });
 
                 }
-                data.ItemImages = imBLL;
+                data.EventImages = imBLL;
 
                 var result = _service.Insert(data);
 
@@ -82,7 +93,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                
+
                 var result = _service.UpdateItemSettings(data);
 
                 return result;
@@ -92,12 +103,29 @@ namespace AKU_Admin.BLL._Services
                 return 0;
             }
         }
-        public int Update(ItemBLL data, IWebHostEnvironment _env)
+        public int Update(EventBLL data, IWebHostEnvironment _env)
         {
+            List<EventImagesBLL> imBLL = new List<EventImagesBLL>();
             try
             {
-                data.Image = UploadImage(data.Image, "Items", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Updatedon = DateTime.UtcNow.AddMinutes(300);
+                for (int i = 0; i < data.ImagesSource.Count; i++)
+                {
+                    var img = data.ImagesSource[i].ToString();
+                    if (i == 0)
+                    {
+                        data.Image = UploadImage(img, "Event", _env);
+                    }
+
+                    imBLL.Add(new EventImagesBLL
+                    {
+                        Image = UploadImage(img, "Event", _env),
+                        Createdon = data.Createdon
+                    });
+
+                }
+                data.EventImages = imBLL;
+
                 var result = _service.Update(data);
 
                 return result;
@@ -108,11 +136,11 @@ namespace AKU_Admin.BLL._Services
             }
         }
 
-        public int Delete(ItemBLL data)
+        public int Delete(EventBLL data)
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Updatedon = DateTime.Now.AddMinutes(180);
                 var result = _service.Delete(data);
 
                 return result;

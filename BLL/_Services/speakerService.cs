@@ -58,7 +58,7 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 data.Image = UploadImage(data.Image, "Speaker", _env);
-                data.Createdon = DateTime.UtcNow.AddMinutes(180);
+                data.Createdon = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.Insert(data);
 
                 return result;
@@ -74,7 +74,7 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 data.Image = UploadImage(data.Image, "Speaker", _env);
-                data.Updatedon = DateTime.UtcNow.AddMinutes(180);
+                data.Updatedon = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.Update(data);
 
                 return result;

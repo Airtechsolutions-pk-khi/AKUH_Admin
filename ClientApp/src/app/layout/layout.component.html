@@ -7,7 +7,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['dashboard']">
         <div class="sidebar-brand-icon">
-          <img src="../../assets/img/logo-White.png" style="width: 45%;" />
+          <img src="../../assets/img/logo-new.png" style="width: 100%;" />
         </div>
       </a>
       <!-- Divider -->
@@ -25,7 +25,7 @@
       <div class="sidebar-heading">
         Modules
       </div>
-       
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNot" aria-expanded="true" aria-controls="collapseNot">
           <i class="fas fa-fw fa-sticky-note"></i>
@@ -37,130 +37,138 @@
           </div>
         </div>
       </li>
-  
-  <!-- Divider -->
-  
-    <hr class="sidebar-divider">
-    <li class="nav-item">
-      <a class="nav-link collapsed" [routerLink]="['/admin/speaker']" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-people-carry"></i>
-        <span>Speaker</span>
-      </a>
-      <!--<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/settings/speciality']">Doctor's Specialities</a>
-          <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor's</a>
-          <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Doctor's Appoinment</a>
-        </div>
-      </div>-->
-    </li>
-   
 
-  <hr class="sidebar-divider">
-  <li class="nav-item">
-    <a class="nav-link collapsed" [routerLink]="['/admin/event']" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-      <i class="fas fa-fw fa-people-carry"></i>
-      <span>Events</span>
-    </a>
-    <!--<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <!-- Divider -->
+
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/speaker']" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-people-carry"></i>
+          <span>Speaker</span>
+        </a>
+        <!--<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" [routerLink]="['/admin/settings/speciality']">Doctor's Specialities</a>
         <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor's</a>
         <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Doctor's Appoinment</a>
       </div>
     </div>-->
-  </li>
- 
+      </li>
 
-<hr class="sidebar-divider">
-  
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
-        <i class="fas fa-fw fa-user"></i>
-        <span>Users</span>
-      </a>
-      <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/user']">Users & Roles</a>
-          <a class="collapse-item" [routerLink]="['/admin/formpermission']">Forms Permission</a>
-        </div>
-      </div>
-    </li>
-    <hr class="sidebar-divider">
- 
-  <!-- Nav Item - Pages Collapse Menu -->
- 
 
-    <li class="nav-item">
-      <a class="nav-link collapsed" [routerLink]="['/admin/organizer']" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>Organizer</span>
-      </a>
-      <!--<div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/pharmacy/medicine']">Medicine</a>
-          <a class="collapse-item" [routerLink]="['/admin/pharmacy/prescription']">Prescription</a>
-          <a class="collapse-item" [routerLink]="['/admin/pharmacy/orders']">Orders</a>
-        </div>
-      </div>-->
-    </li>
-    <hr class="sidebar-divider">
-  
-  <!-- Nav Item - Utilities Collapse Menu -->
-   
-    <li class="nav-item">
-      <a class="nav-link collapsed" [routerLink]="['/admin/eventcategory']" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
-        <i class="fas fa-fw fa-folder"></i>
-        <span>Event Category</span>
-      </a>
-      <!--<div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/reception/customers']">Patient Information</a>
-        </div>
-      </div>-->
-    </li>
-    <hr class="sidebar-divider">
-  
-   
-    <!--<li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLab" aria-expanded="true" aria-controls="collapseLab">
-        <i class="fas fa-fw fa-folder"></i>
-        <span>Diagnostic</span>
-      </a>
-      <div id="collapseLab" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/laboratory/uploadreport']">Diagnostic Reports</a>
-          <a class="collapse-item" [routerLink]="['/admin/laboratory/diagnosticcategory']">Diagnostic Category</a>
-        </div>
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/event']" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-people-carry"></i>
+          <span>Events</span>
+        </a>
+        <!--<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" [routerLink]="['/admin/settings/speciality']">Doctor's Specialities</a>
+        <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor's</a>
+        <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Doctor's Appoinment</a>
       </div>
-    </li>-->
-    <!--<hr class="sidebar-divider">-->
-   
- 
-   
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>Settings</span>
-      </a>
-      <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <!--<a class="collapse-item" [routerLink]="['/admin/settings/timeslot']">Time Slots</a>-->
-          <a class="collapse-item" [routerLink]="['/admin/settings/appsettings/add']">Setting</a>
-          <a class="collapse-item" [routerLink]="['/admin/settings/banner']">Discount Banners | APP</a>
-          <!--<a class="collapse-item" [routerLink]="['/admin/settings/corporateclient']">Corporate Client</a>-->
+    </div>-->
+      </li>
+
+
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/user']" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Users</span>
+        </a>
+        <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <!--<div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" [routerLink]="['/admin/user']">Users & Roles</a>
+        <a class="collapse-item" [routerLink]="['/admin/formpermission']">Forms Permission</a>
+      </div>-->
         </div>
+      </li>
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Pages Collapse Menu -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/organizer']" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Organizer</span>
+        </a>
+        <!--<div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" [routerLink]="['/admin/pharmacy/medicine']">Medicine</a>
+        <a class="collapse-item" [routerLink]="['/admin/pharmacy/prescription']">Prescription</a>
+        <a class="collapse-item" [routerLink]="['/admin/pharmacy/orders']">Orders</a>
       </div>
-    </li>
-    <!-- Divider -->
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-   
-  <!-- Sidebar Toggler (Sidebar) -->
-  <div class="text-center d-none d-md-inline">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-  </div>
-  </ul>
+    </div>-->
+      </li>
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/partner']" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
+          <i class="fas fa-fw fa-people-arrows"></i>
+          <span>Partner</span>
+        </a>
+      </li>
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/admin/eventcategory']" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Event Category</span>
+        </a>
+        <!--<div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" [routerLink]="['/admin/reception/customers']">Patient Information</a>
+      </div>
+    </div>-->
+      </li>
+      <hr class="sidebar-divider">
+
+
+      <!--<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLab" aria-expanded="true" aria-controls="collapseLab">
+      <i class="fas fa-fw fa-folder"></i>
+      <span>Diagnostic</span>
+    </a>
+    <div id="collapseLab" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" [routerLink]="['/admin/laboratory/uploadreport']">Diagnostic Reports</a>
+        <a class="collapse-item" [routerLink]="['/admin/laboratory/diagnosticcategory']">Diagnostic Category</a>
+      </div>
+    </div>
+  </li>-->
+      <!--<hr class="sidebar-divider">-->
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Settings</span>
+        </a>
+        <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!--<a class="collapse-item" [routerLink]="['/admin/settings/timeslot']">Time Slots</a>-->
+            <a class="collapse-item" [routerLink]="['/admin/settings/appsettings/add']">Setting</a>
+            <a class="collapse-item" [routerLink]="['/admin/settings/banner']">Discount Banners | APP</a>
+            <!--<a class="collapse-item" [routerLink]="['/admin/settings/corporateclient']">Corporate Client</a>-->
+          </div>
+        </div>
+      </li>
+      <!-- Divider -->
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+    </ul>
   <!-- End of Sidebar -->
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">

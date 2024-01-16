@@ -86,13 +86,13 @@ export class UserService {
   }
 
   ExportList() {
-    return this.http.get<User[]>(`api/user/all`);
+    return this.http.get<User[]>(`api/user/getall`);
   }
   getById(id) {
-    return this.http.get<User[]>(`api/user/user/${id}`);
+    return this.http.get<User[]>(`api/user/${id}`);
   }
   getAllData() {
-    const url = `api/user/all`;
+    const url = `api/user/getall`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<User[]>(url).subscribe(res => {
@@ -146,7 +146,7 @@ export class UserService {
   }
   insert(data) {
     debugger
-    return this.http.post(`api/user/insert`, data)
+    return this.http.post(`api/user/insertuser`, data)
       .pipe(map(res => { 
         console.log(res);
         return res;
@@ -154,14 +154,14 @@ export class UserService {
   }
 
   update(updateData) {
-    return this.http.post(`api/user/update`, updateData)
+    return this.http.post(`api/user/updateuser`, updateData)
       .pipe(map(res => {
         console.log(res);
         return res;
       }));
   }
   delete(data) {
-    return this.http.post(`api/user/delete`, data);
+    return this.http.post(`api/user/deleteuser`, data);
   }
 
   insertpermission(obj) {

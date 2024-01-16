@@ -31,7 +31,7 @@
       <table class="table table-striped">
         <thead>
           <tr class="table-header">
-            <!--<th width="10%">IMAGE</th>-->
+            <th width="10%">IMAGE</th>
             <th width="15%" sortable="Name" (sort)="onSort($event)"> Name </th>
             <th width="20%" sortable="Descripiton" (sort)="onSort($event)">Description </th>
             <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
@@ -40,10 +40,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of data$ | async ">
-            <!--<td>
+            <td>
               <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
               <div *ngIf="item.image === ''" class="image-replace"></div>
-            </td>-->
+            </td>
             <td> {{item.name}} </td>
             <td> {{item.description}} </td>
             <td>
@@ -51,9 +51,9 @@
               </ngb-highlight>
             </td>
             <td>
-              <a (click)="Edit(item.speakerID)"><i class="fas fa-fw fa-edit"></i> </a>
+              <a (click)="Edit(item.eventCategoryID)"><i class="fas fa-fw fa-edit"></i> </a>
 
-              <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+              <a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
             </td>
           </tr>
         </tbody>
@@ -77,3 +77,18 @@
     </div>
   </div>
 </div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure to delete this?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
+    <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
+  </div>
+</ng-template>

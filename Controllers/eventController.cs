@@ -26,13 +26,16 @@ namespace AKU_Admin.Controllers
             return _service.GetAll();
         }
 
-
-        [HttpGet("{id}/brand/{brandid}")]
-        public ItemBLL Get(int id, int brandid)
+        [HttpGet("{id}")]
+        public EventBLL Get(int id)
         {
-            return _service.Get(id, brandid);
+            return _service.Get(id);
         }
-
+        [HttpGet("images/{id}")]
+        public List<string> GetImages(int id)
+        {
+            return _service.GetItemImages(id);
+        }
         [HttpGet("settings/{brandid}")]
         public ItemSettingsBLL GetItemSettings(int brandid)
         {
@@ -48,7 +51,7 @@ namespace AKU_Admin.Controllers
 
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody]ItemBLL obj)
+        public int PostUpdate([FromBody]EventBLL obj)
         {
             return _service.Update(obj, _env);
         }
@@ -62,7 +65,7 @@ namespace AKU_Admin.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody]ItemBLL obj)
+        public int PostDelete([FromBody]EventBLL obj)
         {
             return _service.Delete(obj);
         }
