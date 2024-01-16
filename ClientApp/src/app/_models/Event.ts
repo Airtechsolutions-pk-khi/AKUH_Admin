@@ -47,3 +47,8 @@ image : string;
 displayOrder:number;
   
 }
+export class EventImageJunc {
+  eventImageID: number;
+  eventID: number;
+  image: string;
+}

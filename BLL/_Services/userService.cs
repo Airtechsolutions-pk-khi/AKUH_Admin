@@ -43,7 +43,7 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 data.Image = UploadImage(data.Image, "User", _env);
-                data.CreatedDate = DateTime.UtcNow.AddMinutes(180);
+                data.CreatedDate = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.InsertUser(data);
 
                 return result;
@@ -59,7 +59,7 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 data.Image = UploadImage(data.Image, "User", _env);
-                data.UpdatedDate = DateTime.UtcNow.AddMinutes(180);
+                data.UpdatedDate = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.UpdateUser(data);
 
                 return result;

@@ -42,6 +42,7 @@ export class AddEventCategoryComponent implements OnInit {
     this.eventForm = this.formBuilder.group({
       name: ['', Validators.required],
       description: [''],
+      image: [''],
       statusID: [true],
       eventCategoryID: 0,
     });
@@ -50,8 +51,10 @@ export class AddEventCategoryComponent implements OnInit {
   private editForm(obj) {    
     this.f.name.setValue(obj.name);
     this.f.description.setValue(obj.description);
-    this.f.organizerID.setValue(obj.organizerID);
+    this.f.eventCategoryID.setValue(obj.eventCategoryID);
+    this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.imgComp.imageUrl = obj.image;
   }
 
   setSelectedaddon() {
@@ -78,14 +81,14 @@ export class AddEventCategoryComponent implements OnInit {
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
-    if (parseInt(this.f.organizerID.value) === 0) {
+    if (parseInt(this.f.eventCategoryID.value) === 0) {
 
       //Insert modifier
       console.log(JSON.stringify(this.eventForm.value));
       this.eventService.insert(this.eventForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/eventCategory']);
+          this.router.navigate(['/admin/eventcategory']);
         }
         // this.alertService.success("Item has been created");
         this.loading = false;
@@ -100,7 +103,7 @@ export class AddEventCategoryComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/eventCategory']);
+          this.router.navigate(['/admin/eventcategory']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")
