@@ -140,7 +140,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                data.Updatedon = DateTime.Now.AddMinutes(180);
+                data.Updatedon = DateTime.Now.AddMinutes(300);
                 var result = _service.Delete(data);
 
                 return result;

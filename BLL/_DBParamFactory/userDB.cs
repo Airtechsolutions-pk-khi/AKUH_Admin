@@ -132,7 +132,6 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@UserID", data.UserID);
                 p[1] = new SqlParameter("@UpdatedDate", data.UpdatedDate);
 
-
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser_Admin", p);
 
                 return _obj;

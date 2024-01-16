@@ -192,7 +192,7 @@ export class EventService {
       }));
   }
   delete(updateData) {
-    return this.http.post(`api/item/delete`, updateData);
+    return this.http.post(`api/event/delete`, updateData);
   }
   //  delete(id) {
   //    return this.http.delete<any[]>(`api/items/delete/${id}`);
