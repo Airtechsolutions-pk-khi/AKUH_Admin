@@ -40,6 +40,8 @@
             <th width="15%" sortable="displayOrder" (sort)="onSort($event)">Description</th>
             <th width="15%" sortable="dalories" (sort)="onSort($event)">Contact No</th>
             <th width="10%" sortable="Price" (sort)="onSort($event)">Location Link </th>
+            <th width="10%" sortable="Price" (sort)="onSort($event)">Start Date </th>
+            <th width="10%" sortable="Price" (sort)="onSort($event)">End Date </th>
             <th width="10%" sortable="status" (sort)="onSort($event)">Status </th>
             <th width="10%"></th>
           </tr>
@@ -55,6 +57,8 @@
             <td>{{item.description}}</td>
             <td>{{item.phoneNo}}</td>
             <td>{{item.locationLink}}</td>
+            <td>{{item.fromDate}}</td>
+            <td>{{item.toDate}}</td>
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
