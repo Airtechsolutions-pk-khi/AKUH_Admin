@@ -6,4 +6,8 @@ export class Appsetting {
   privacyPolicy: string;
   splashScreen: string;
   statusID: number;
+  facebookUrl: string;
+  instagramUrl:string;
+  twitterUrl:string;
+  youtubeUrl:string;
 }

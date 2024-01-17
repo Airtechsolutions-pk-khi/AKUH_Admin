@@ -144,14 +144,14 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[19];
+                SqlParameter[] p = new SqlParameter[20];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Type", data.Type);                
                 p[2] = new SqlParameter("@Description", data.Description);                
                 p[3] = new SqlParameter("@FromDate", data.FromDate);
                 p[4] = new SqlParameter("@ToDate", data.ToDate);
-                p[5] = new SqlParameter("@EventDate", data.EventDate);
+                p[5] = new SqlParameter("@EventDate", data.FromDate);
                 p[6] = new SqlParameter("@EventCity", data.EventCity);
                 p[7] = new SqlParameter("@LocationLink", data.LocationLink);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
@@ -165,14 +165,15 @@ namespace BAL.Repositories
                 p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
                 p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                
+                p[19] = new SqlParameter("@EventTime", data.EventTime);
+
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
 
-                if (data.EventCategories != "" && data.EventCategories != null)
+                if (data.EventCategoryID != null )
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@EventID", rtn);
-                    p1[1] = new SqlParameter("@EventCategory", data.EventCategories);
+                    p1[1] = new SqlParameter("@EventCategory", data.EventCategoryID.ToString());
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventCatMapping_Admin", p1);
                 }
                 if (data.Speakers != "" && data.Speakers != null)
@@ -227,7 +228,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[20];
+                SqlParameter[] p = new SqlParameter[21];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Type", data.Type);
@@ -249,13 +250,14 @@ namespace BAL.Repositories
                 p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
                 p[19] = new SqlParameter("@EventID", data.EventID);
+                p[20] = new SqlParameter("@EventTime", data.EventTime);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin", p);
 
-                if (data.EventCategories != "" && data.EventCategories != null)
+                if (data.EventCategoryID != null )
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@EventID", rtn);
-                    p1[1] = new SqlParameter("@EventCategory", data.EventCategories);
+                    p1[1] = new SqlParameter("@EventCategory", data.EventCategoryID.ToString());
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventCatMapping_Admin", p1);
                 }
                 if (data.Speakers != "" && data.Speakers != null)
@@ -335,12 +337,13 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@EventID", data.EventID);
                 p[1] = new SqlParameter("@Updatedon", data.Updatedon);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser_Admin", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteEvent_Admin", p);
 
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LogExceptionToFile(ex, @"E:\exceptionLog.txt");
                 return 0;
             }
         }

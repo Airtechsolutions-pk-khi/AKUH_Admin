@@ -11,14 +11,26 @@ namespace AKU_Admin._Models
 
     public class AppSetingBLL
     {
-        public int AppsettingID { get; set; }
-        public string Discount { get; set; }
-        public string DeliveryCharges { get; set; }      
-        public string Tax { get; set; }
-        public string MinimumOrderAmount { get; set; }
-        public int StatusID { get; set; }
-        public string LastUpdatedBy { get; set; }
-        public Nullable<System.DateTime> LastUpdatedDate { get; set; }
+        public int SettingID { get; set; }
+
+        public string About { get; set; }
+
+        public string PrivacyPolicy { get; set; }
+        public string? SplashScreen { get; set; } = "";
+
+        public string AppName { get; set; }
+        public string FacebookUrl { get; set; }
+        public string InstagramUrl { get; set; }
+        public string TwitterUrl { get; set; }
+        public string YoutubeUrl { get; set; }
+
+        public string AppVersion { get; set; }
+
+        public int? StatusID { get; set; }
+
+        public DateTime? Createdon { get; set; }
+
+        public DateTime? Updatedon { get; set; }
     }
 
 }

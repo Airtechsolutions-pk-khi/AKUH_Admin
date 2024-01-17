@@ -9,34 +9,78 @@
         <div class="card-header">Setting Details</div>
         <div class="card-body">
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-8">
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">App Name</label>
-                <input type="text" class="form-control" id=discount placeholder="" formControlName="discount">
+                <input type="text" class="form-control" id=appName placeholder="" formControlName="appName">
               </div>
+            
+             
 
-            </div>
-            <div class="form-group col-md-6">
+            <div class="form-row">
+            <div class="form-group col-md-12">
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">App Version</label>
-                <input type="text" class="form-control" id=tax placeholder="" formControlName="tax">
+                <input type="text" class="form-control" id=appVersion placeholder="" formControlName="appVersion">
               </div>
             </div>
+          </div>
             <!-- Form Row-->
-
-            <div class="form-group col-md-6">
+            <div class="form-row">
+            <div class="form-group col-md-12">
               <label class="small mb-1" for="inputFirstName">About</label>
               <textarea type="text" class="form-control" id=about placeholder="" formControlName="about"></textarea>
             </div>
-            <div class="form-group col-md-6">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
               <label class="small mb-1" for="inputFirstName">Privacy Policy</label>
               <textarea type="text" class="form-control" id=privacyPolicy placeholder="" formControlName="privacyPolicy"></textarea>
             </div>
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Splash Screen</label>
-              <textarea type="text" class="form-control" id=splashScreen placeholder="" formControlName="splashScreen"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputFirstName">Facebook URL</label>              
+              <input type="text" class="form-control" id=facebookUrl placeholder="" formControlName="facebookUrl">
             </div>
           </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputFirstName">Instagram URL</label>              
+              <input type="text" class="form-control" id=instagramUrl placeholder="" formControlName="instagramUrl">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputFirstName">Twitter URL</label>              
+              <input type="text" class="form-control" id=twitterUrl placeholder="" formControlName="twitterUrl">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputFirstName">YouTube URL</label>              
+              <input type="text" class="form-control" id=youtubeUrl placeholder="" formControlName="youtubeUrl">
+            </div>
+          </div>
+
+        </div>
+          <div class="form-group col-md-4 text-center">
+            <label for="inputFirstName" style="margin-bottom: 0rem;margin-top: 20px;">Upload Splash</label>
+            <app-imageupload></app-imageupload>
+            
+          </div>
+
+          </div>
+            <!-- <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputFirstName">Splash Screen</label>
+              <textarea type="text" class="form-control" id=splashScreen placeholder="" formControlName="splashScreen"></textarea>
+            </div> -->
+          
           <div class="form-row">
             <div class="form-group col-lg-12">
               <label for="Item Status">Status</label>

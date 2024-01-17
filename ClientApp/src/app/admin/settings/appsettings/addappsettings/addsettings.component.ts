@@ -49,41 +49,40 @@ export class AddsettingsComponent implements OnInit {
       about: [''],
       privacyPolicy: [''],
       splashScreen: [''],
+      facebookUrl: [''],
+      instagramUrl: [''],
+      twitterUrl: [''],
+      youtubeUrl: [''],
       statusID: [true],
       settingID: 1,
     });
   }
 
   private editForm(obj) {
+    debugger
     this.f.settingID.setValue(obj.settingID);
     this.f.appName.setValue(obj.appName);
     this.f.appVersion.setValue(obj.appVersion);
     this.f.about.setValue(obj.about);
     this.f.privacyPolicy.setValue(obj.privacyPolicy);
     this.f.splashScreen.setValue(obj.splashScreen);
+    this.f.facebookUrl.setValue(obj.facebookUrl);
+    this.f.instagramUrl.setValue(obj.instagramUrl);
+    this.f.twitterUrl.setValue(obj.twitterUrl);
+    this.f.youtubeUrl.setValue(obj.youtubeUrl);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.imgComp.imageUrl = obj.splashScreen;
   }
 
   setSelectedSetting() {
-    
+    debugger
     this.loadingSetting = true;
     this.settingService.getById(1).subscribe(res => {
       //Set Forms
       this.editForm(res);
       this.loadingSetting = false;
     });
-    // this.route.paramMap.subscribe(param => {
-    //   const sid = +param.get('id');
-    //   if (sid) {
-    //     this.loadingSetting = true;
-    //     this.f.appSettingID.setValue(sid);
-    //     this.settingService.getById(sid).subscribe(res => {
-    //       //Set Forms
-    //       this.editForm(res);
-    //       this.loadingSetting = false;
-    //     });
-    //   }
-    // })
+     
   }
 
   onSubmit() {

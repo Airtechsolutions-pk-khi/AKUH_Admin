@@ -70,6 +70,7 @@ export class AppsettingService {
     return this._allData$.asObservable();
   }
   getById(id) {
+    debugger
     return this.http.get<Appsetting[]>(`api/appsetting/${id}`);
   }
   getAllData() {

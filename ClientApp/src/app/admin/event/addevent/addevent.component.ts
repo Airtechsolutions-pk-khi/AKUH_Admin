@@ -32,10 +32,12 @@ export class AddEventComponent implements OnInit {
   AddonsList = [];
   selectedModifierIds: string[];
   selectedAddonIds: string[];
-
+  //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+  eventTime = { hour: new Date().getHours() % 12 || 12, minute: new Date().getMinutes(), ampm: new Date().getHours() >= 12 ? 'PM' : 'AM' };
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+ 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -59,6 +61,7 @@ export class AddEventComponent implements OnInit {
     this.setSelecteditem();
   }
 
+  
   get f() { return this.eventForm.controls; }
 
   private createForm() {
@@ -72,9 +75,10 @@ export class AddEventComponent implements OnInit {
       fromDate: '',
       toDate: '',
       eventCity: [''],
-      eventCategoryID: [],
+      eventCategoryID: [null],
       locationLink: [''],
       phoneNo: [''],
+      eventTime:[''],
       email: [''],
       eventCategories: [],
       speakers: [],
@@ -91,6 +95,7 @@ export class AddEventComponent implements OnInit {
     });
   }
 
+
   private editForm(obj) {
     debugger
     this.f.eventID.setValue(obj.eventID);
@@ -101,6 +106,13 @@ export class AddEventComponent implements OnInit {
     this.f.location.setValue(obj.location);
     this.f.fromDate.setValue(obj.fromDate);
     this.f.toDate.setValue(obj.toDate);
+    //this.f.eventTime.setValue(obj.eventTime);
+    this.eventTime = {
+      hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
+      minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
+      ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+    };
+    
     this.f.eventCity.setValue(obj.eventCity);
     this.f.eventCategoryID.setValue(obj.eventCategoryID);
     this.f.locationLink.setValue(obj.locationLink);
@@ -112,7 +124,7 @@ export class AddEventComponent implements OnInit {
     this.f.twitter.setValue(obj.twitter);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.isFeatured.setValue(obj.isFeatured);
-
+    //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };
     if (obj.organizers != "") {
       debugger
       var stringToConvert = obj.organizers;
@@ -163,6 +175,9 @@ export class AddEventComponent implements OnInit {
     this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
     this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
     this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
+    //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
+    this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
+    
     this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
     this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

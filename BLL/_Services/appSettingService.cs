@@ -44,7 +44,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Createdon = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
@@ -59,7 +59,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Updatedon = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
                 return result;
@@ -74,7 +74,7 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Updatedon = _UTCDateTime_SA();
                 var result = _service.Delete(data);
 
                 return result;

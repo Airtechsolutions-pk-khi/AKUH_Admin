@@ -58,7 +58,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetSettingbyID_Admin", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetSettingsByID_Admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -82,14 +82,14 @@ namespace BAL.Repositories
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[8];
 
-                p[0] = new SqlParameter("@Discount", data.Discount);
-                p[1] = new SqlParameter("@DeliveryCharges", data.DeliveryCharges);
-                p[2] = new SqlParameter("@Tax", data.Tax);
-                p[3] = new SqlParameter("@MinimumOrderAmount", data.MinimumOrderAmount);
+                p[0] = new SqlParameter("@About", data.About);
+                p[1] = new SqlParameter("@PrivacyPolicy", data.PrivacyPolicy);
+                p[2] = new SqlParameter("@SplashScreen", data.SplashScreen);
+                p[3] = new SqlParameter("@AppName", data.AppName);
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@AppsettingID", data.AppsettingID);
+                p[5] = new SqlParameter("@AppVersion", data.AppVersion);
+                p[6] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
+                p[7] = new SqlParameter("@SettingID", data.SettingID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertSetting_Admin", p);
 
@@ -106,18 +106,22 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[12];
 
-                p[0] = new SqlParameter("@Discount", data.Discount);
-                p[1] = new SqlParameter("@DeliveryCharges", data.DeliveryCharges);
-                p[2] = new SqlParameter("@Tax", data.Tax);
-                p[3] = new SqlParameter("@MinimumOrderAmount", data.MinimumOrderAmount);
+                p[0] = new SqlParameter("@About", data.About);
+                p[1] = new SqlParameter("@PrivacyPolicy", data.PrivacyPolicy);
+                p[2] = new SqlParameter("@SplashScreen", data.SplashScreen);
+                p[3] = new SqlParameter("@AppName", data.AppName);
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                 
+                p[5] = new SqlParameter("@AppVersion", data.AppVersion);
+                p[6] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
+                p[7] = new SqlParameter("@SettingID", data.SettingID);
+                p[8] = new SqlParameter("@FacebookUrl", data.FacebookUrl);
+                p[9] = new SqlParameter("@InstagramUrl", data.InstagramUrl);
+                p[10] = new SqlParameter("@TwitterUrl", data.TwitterUrl);
+                p[11] = new SqlParameter("@YoutubeUrl", data.YoutubeUrl);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateSetting_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateSetting_Admin", p);
                 return rtn;
             }
             catch (Exception)
@@ -132,8 +136,8 @@ namespace BAL.Repositories
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
-                p[0] = new SqlParameter("@id", data.AppsettingID);
-                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[0] = new SqlParameter("@id", data.SettingID);
+                p[1] = new SqlParameter("@LastUpdatedDate", data.Createdon);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteSetting", p);
 

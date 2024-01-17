@@ -45,6 +45,7 @@ instagram : string;
 twitter : string;
 image : string;
 displayOrder:number;
+eventTime:string;
   
 }
 export class EventImageJunc {

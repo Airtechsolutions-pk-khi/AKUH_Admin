@@ -124,6 +124,8 @@ import { EventCategoryComponent } from './admin/eventCategory/eventcategory.comp
 import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcategory.component';
 import { AddEventComponent } from './admin/event/addevent/addevent.component';
 import { EventComponent } from './admin/event/event.component';
+import { FaqComponent } from './admin/faq/faq.component';
+import { AddFaqComponent } from './admin/faq/add/addfaq.component';
 
 @NgModule({
   declarations: [
@@ -209,7 +211,9 @@ import { EventComponent } from './admin/event/event.component';
     EventCategoryComponent,
     AddEventCategoryComponent,
     PartnerComponent,
-    AddPartnerComponent
+    AddPartnerComponent,
+    FaqComponent,
+    AddFaqComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -375,6 +379,10 @@ import { EventComponent } from './admin/event/event.component';
           { path: 'eventcategory', component: EventCategoryComponent },
           { path: 'eventcategory/add', component: AddEventCategoryComponent },
           { path: 'eventcategory/edit/:id', component: AddEventCategoryComponent },
+
+          { path: 'faq', component: FaqComponent },
+          { path: 'faq/add', component: AddFaqComponent },
+          { path: 'faq/edit/:id', component: AddFaqComponent },
         ]
       }
     ]),

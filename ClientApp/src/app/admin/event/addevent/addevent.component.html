@@ -127,6 +127,12 @@
                 <label class="custom-control-label" for="isFeatured"></label>
               </div>
             </div>
+
+            <div class="form-group col-md-4">
+              <label class="small mb-1" for="inputFirstName">Event Time</label>
+              <ngb-timepicker [(ngModel)]="eventTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
+            </div>
+
           </div>
           <div class="form-row">
             <div class="col-md-12 form-group">

@@ -99,6 +99,21 @@ namespace AKU_Admin._Models
         public int? UpdatedBy { get; set; }
 
     }
+    public class FaqBLL
+    {
+        public int FaqID { get; set; }
+
+        public string FaqQ { get; set; }
+
+        public string FaqA { get; set; }        
+
+        public int? StatusID { get; set; }
+
+        public DateTime? Createdon { get; set; }
+
+       
+
+    }
     public class EventImageJuncBLL
     {
         public int EventImageID { get; set; }
