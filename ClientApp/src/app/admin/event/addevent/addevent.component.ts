@@ -33,7 +33,16 @@ export class AddEventComponent implements OnInit {
   selectedModifierIds: string[];
   selectedAddonIds: string[];
   //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-  eventTime = { hour: new Date().getHours() % 12 || 12, minute: new Date().getMinutes(), ampm: new Date().getHours() >= 12 ? 'PM' : 'AM' };
+  eventTime = 
+  { 
+    hour: new Date().getHours() % 12 || 12, 
+    minute: new Date().getMinutes(), 
+    ampm: new Date().getHours() >= 12 ? 'PM' : 'AM' 
+    
+  };
+
+   
+
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -176,8 +185,14 @@ export class AddEventComponent implements OnInit {
     this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
     this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
     //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
-    this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
+    //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
     
+    const formattedHour = (this.eventTime.hour % 12 || 12);  
+    const formattedMinute = this.pad(this.eventTime.minute);
+    const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
+    const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+    this.f.eventTime.setValue(formattedTime);
+
     this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
     this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
@@ -203,13 +218,16 @@ export class AddEventComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Event updated successfully.")
-          this.router.navigate(['/admin/item']);
+          this.router.navigate(['/admin/event']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update Event.")
         this.loading = false;
       });
     }
+  }
+  pad(value: number): string {
+    return value < 10 ? `0${value}` : `${value}`;
   }
   onFileChange(event) {
     if (event.target.files && event.target.files[0]) {

@@ -18,7 +18,7 @@ namespace AKU_Admin.Controllers
         }
 
         [HttpGet("all")]
-        public List<DashboardSummary> GetAll ()
+        public List<DashboardSummary> GetAll()
         {
             return _service.GetAll();
         }
@@ -27,6 +27,11 @@ namespace AKU_Admin.Controllers
         public RspDashboard GetChart()
         {
             return _service.GetChart();
+        }
+        [HttpGet("getchartsMonth")]
+        public RspDashboard getchartsMonth()
+        {
+            return _service.getchartsMonth();
         }
     }
 }

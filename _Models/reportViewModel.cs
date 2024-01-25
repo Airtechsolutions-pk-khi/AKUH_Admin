@@ -8,7 +8,22 @@ namespace AKU_Admin._Models
     public class reportViewModel
     {
     }
-
+    public class EventDetailsBLL
+    {
+        public int? EventID { get; set; }
+        public string EventName { get; set; }
+        public string Type { get; set; }
+        public string Description { get; set; }
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+        public string EventTime { get; set; }
+        public int? AttendeesID { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNo { get; set; }
+        public string Occupation { get; set; }
+        public string Gender { get; set; }
+    }
     public class salesSummarytBLL
     {
         public float TotalSales { get; set; }

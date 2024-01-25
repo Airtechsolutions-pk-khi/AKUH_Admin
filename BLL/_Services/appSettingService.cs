@@ -55,15 +55,18 @@ namespace AKU_Admin.BLL._Services
             }
         }
 
-        public int Update(AppSetingBLL data)
+        public int Update(AppSetingBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.SplashScreen = UploadImage(data.SplashScreen, "Banner", _env);
                 data.Updatedon = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
                 return result;
             }
+
+            
             catch (Exception ex)
             {
                 return 0;

@@ -8,6 +8,10 @@ namespace AKU_Admin._Models
     public class dashboardViewModel
     {
     }
+    public class RspDashboardMonth
+    {        
+        public DashboardMonth monthSale { get; set; }
+    }
     public class RspDashboard
     {
         public DashboardSummary summarysales { get; set; }
@@ -16,17 +20,11 @@ namespace AKU_Admin._Models
     }
     public class DashboardSummary
     {
-        public string TotalDoctors { get; set; }
-        public string TotalPatients { get; set; }
-        public string TotalDoctorAppointments { get; set; }
-        public string TotalNursingAppointments { get; set; }
-        public string TotalSales { get; set; }
-
-        public string TodayAppointments { get; set; }
-        public string TodayNursingAppointments { get; set; }
-        public string TodayDoctorAppointments { get; set; }
-        public string TodaySales { get; set; }
-        //public string TodaySales { get; set; }
+        public string totalRegisteredAttendees { get; set; }
+        public string totalConfirmedAttendees { get; set; }
+        public string upcomingEvents { get; set; }
+        public string pastEvents { get; set; }
+         
     }
     public class DashboardToday
     {
@@ -39,5 +37,20 @@ namespace AKU_Admin._Models
         public double Evening { get; set; }
         public double AfterNoon { get; set; }
         public double Night { get; set; }
+    }
+    public class DashboardMonth
+    {
+        public double Jan { get; set; }
+        public double Feb { get; set; }
+        public double Mar { get; set; }
+        public double Apr { get; set; }
+        public double May { get; set; }
+        public double Jun { get; set; }
+        public double Jul { get; set; }
+        public double Aug { get; set; }
+        public double Sept { get; set; }
+        public double Oct { get; set; }
+        public double Nov { get; set; }
+        public double Dec { get; set; }
     }
 }

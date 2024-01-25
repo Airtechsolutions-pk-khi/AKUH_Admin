@@ -126,6 +126,10 @@ import { AddEventComponent } from './admin/event/addevent/addevent.component';
 import { EventComponent } from './admin/event/event.component';
 import { FaqComponent } from './admin/faq/faq.component';
 import { AddFaqComponent } from './admin/faq/add/addfaq.component';
+import { EventdetailComponent } from './admin/eventdetail/eventdetail.component';
+import { ConfirmlistreportComponent } from './admin/confirmlistreport/confirmlistreport.component';
+import { EventAttendeesComponent } from './admin/eventattendees/eventattendees.component';
+import { AddEventAttendeesComponent } from './admin/eventattendees/addeventattendees/addeventattendees.component';
 
 @NgModule({
   declarations: [
@@ -213,7 +217,11 @@ import { AddFaqComponent } from './admin/faq/add/addfaq.component';
     PartnerComponent,
     AddPartnerComponent,
     FaqComponent,
-    AddFaqComponent
+    AddFaqComponent,
+    EventdetailComponent,
+    ConfirmlistreportComponent,
+    EventAttendeesComponent,
+    AddEventAttendeesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -245,6 +253,10 @@ import { AddFaqComponent } from './admin/faq/add/addfaq.component';
           { path: 'event', component: EventComponent },
           { path: 'event/add', component: AddEventComponent },          
           { path: 'event/edit/:id', component: AddEventComponent },
+
+          { path: 'eventattendees', component: EventAttendeesComponent },
+          { path: 'eventattendees/add', component: AddEventAttendeesComponent },          
+          { path: 'eventattendees/edit/:id', component: AddEventAttendeesComponent },
 
           { path: 'modifier', component: ModifiersComponent },
           { path: 'modifier/add', component: AddmodifierComponent },
@@ -379,6 +391,10 @@ import { AddFaqComponent } from './admin/faq/add/addfaq.component';
           { path: 'eventcategory', component: EventCategoryComponent },
           { path: 'eventcategory/add', component: AddEventCategoryComponent },
           { path: 'eventcategory/edit/:id', component: AddEventCategoryComponent },
+
+          { path: 'eventdetail', component: EventdetailComponent },
+
+          { path: 'confirmlistreport', component: ConfirmlistreportComponent },
 
           { path: 'faq', component: FaqComponent },
           { path: 'faq/add', component: AddFaqComponent },

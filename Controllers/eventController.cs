@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using AKU_Admin._Models;
 using AKU_Admin.BLL._Services;
@@ -24,6 +25,11 @@ namespace AKU_Admin.Controllers
         public List<EventBLL> GetAll()
         {
             return _service.GetAll();
+        }
+        [HttpGet("alldropdown")]
+        public List<EventBLL> GetAllDropdown()
+        {
+            return _service.GetAllDropdown();
         }
 
         [HttpGet("{id}")]
@@ -69,5 +75,16 @@ namespace AKU_Admin.Controllers
         {
             return _service.Delete(obj);
         }
+        [HttpGet("EventRpt/{EventID}/{fromDate}/{toDate}")]
+        public List<EventDetailsBLL> GetEventsDetail(string EventID, string FromDate, string ToDate)
+        {
+            return _service.GetEventsDetailRpt(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
+        }
+        [HttpGet("ConfirmListReport/{EventID}/{fromDate}/{toDate}")]
+        public List<EventDetailsBLL> ConfirmListReport(string EventID, string FromDate, string ToDate)
+        {
+            return _service.ConfirmListReport(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
+        }
+        
     }
 }

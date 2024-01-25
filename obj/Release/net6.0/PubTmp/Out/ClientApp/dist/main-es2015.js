@@ -274,6 +274,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.eventName}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.userName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/dashboard/dashboard.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/dashboard/dashboard.component.html ***!
@@ -283,7 +296,124 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Prescription</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Upcoming Events</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.upcomingEvents}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Past Events</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.pastEvents}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Registered Attendees</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalRegisteredAttendees}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Confirmed Attendees</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalConfirmedAttendees}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n \r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Daily Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Monthly Registration Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.title.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Facebook URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=facebook placeholder=\"\" formControlName=\"facebook\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Instagram URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=instagram placeholder=\"\" formControlName=\"instagram\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Twitter URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=twitter placeholder=\"\" formControlName=\"twitter\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Type</label>\r\n              <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Conference</option>\r\n                <option>Educational</option>\r\n                <option>History of Diagnosis</option>\r\n              </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Location Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category</label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n              <!--<ng-select [items]=\"EventCategoryList\" bindLabel=\"name\" bindValue=\"eventCategoryID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"eventCategoryID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>-->\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer</label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers</label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n              <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Choose Start to End Date</label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-4\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-4\">\r\n              <label for=\"Item Status\">Is Featured</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Event Time</label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images </label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Events</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Events List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Type</th>\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Description</th>\r\n            <th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Contact No</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td>{{item.description}}</td>\r\n            <td>{{item.phoneNo}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Event Category Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                        <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                        <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.name.errors.required\">\r\n                            Name is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"description\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"form-group col-md-4 text-center\">\r\n                      <app-imageupload></app-imageupload>\r\n                    </div>\r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Category List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event Category</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Description </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventCategoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Attendies</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventAttendeesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Attendies Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <!-- <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"fullName\">\r\n              <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.fullName.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div> -->\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Occupation</label>\r\n              <input type=\"text\" class=\"form-control\" id=occupation placeholder=\"\" formControlName=\"occupation\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n              <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Male</option>\r\n                <option>Female</option>                \r\n              </select>\r\n            </div>\r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Events</label>\r\n              <!-- <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>               -->\r\n              <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n             \r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n           \r\n           \r\n\r\n          </div>\r\n          \r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Attendees</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Attendees List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Attendee</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\">Attendee Name </th>\r\n            <th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Event Name</th>\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Contact No</th>\r\n            <th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Occupation</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.eventName}} </td>\r\n            <td>{{item.phoneNo}}</td>\r\n            <td>{{item.occupation}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1,'btn-success': item.statusID === 4, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active': item.statusID ==4?'Completed': 'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.attendeesID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.eventName}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.userName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Faq's</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"faqForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">FAQ's Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Question</label>\r\n                        <input type=\"text\" class=\"form-control\" id=faqQ placeholder=\"\" formControlName=\"faqQ\">\r\n                        <div *ngIf=\"f.faqQ.invalid && (f.faqQ.dirty || f.faqQ.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.faqQ.errors.required\">\r\n                            Question is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Answer</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=faqA placeholder=\"\" formControlName=\"faqA\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    \r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">FAQ's</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Faq's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by question\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Faq's</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n             \r\n            <th width=\"35%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Question </th>\r\n            <th width=\"35%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Answer </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            \r\n            <td> {{item.faqQ}} </td>\r\n            <td> {{item.faqA}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.faqID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -492,6 +622,58 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <!--<th width=\"10%\" sortable=\"Status\">Status</th>-->\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <!--<td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>-->\r\n            <td>\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.isRead == 1\">Read</span>\r\n\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.isRead == 0\">UnRead</span>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Organizer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organizerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n              <div class=\"card-header\">Organizer Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                                    <textarea type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\"></textarea>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Organizer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Organizer List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Organizer</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <!-- <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Description </th> -->\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <!-- <td> {{item.description}} </td> -->\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.organizerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Partner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"partnerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Partner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Partner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Partner List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Partner</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.partnerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -764,7 +946,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Update Pharmacy Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Pharmacy Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n             \r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n              <!-- Form Row-->\r\n               \r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Update Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">App Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=appName placeholder=\"\" formControlName=\"appName\">\r\n              </div>\r\n            \r\n             \r\n\r\n            <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">App Version</label>\r\n                <input type=\"text\" class=\"form-control\" id=appVersion placeholder=\"\" formControlName=\"appVersion\">\r\n              </div>\r\n            </div>\r\n          </div>\r\n            <!-- Form Row-->\r\n            <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">About</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Privacy Policy</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=privacyPolicy placeholder=\"\" formControlName=\"privacyPolicy\"></textarea>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Facebook URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=facebookUrl placeholder=\"\" formControlName=\"facebookUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Instagram URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=instagramUrl placeholder=\"\" formControlName=\"instagramUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Twitter URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=twitterUrl placeholder=\"\" formControlName=\"twitterUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">YouTube URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=youtubeUrl placeholder=\"\" formControlName=\"youtubeUrl\">\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n          <div class=\"form-group col-md-4 text-center\">\r\n            <label for=\"inputFirstName\" style=\"margin-bottom: 0rem;margin-top: 20px;\">Upload Splash</label>\r\n            <app-imageupload></app-imageupload>\r\n            \r\n          </div>\r\n\r\n          </div>\r\n            <!-- <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Splash Screen</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=splashScreen placeholder=\"\" formControlName=\"splashScreen\"></textarea>\r\n            </div> -->\r\n          \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -790,7 +972,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Banner Type</label>\r\n                  <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Header</option>\r\n                    <option>Featured</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!-- <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Banner Type</label>              \r\n              <select class=\"custom-select\" formControlName=\"type\" class=\"form-control\">\r\n                <option disabled>Select Type</option>                  \r\n                <option *ngFor=\"let web of NursingTypeActive\" >{{web}}</option>\r\n            </select>          \r\n              </div>\r\n            </div>          \r\n          </div> -->\r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Banner Type</label>\r\n                  <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Header</option>\r\n                    <option>Featured</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Screen</label>\r\n                  <select type=\"text\" class=\"form-control\" id=screen placeholder=\"\" formControlName=\"screen\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Home</option>\r\n                    <option>Event</option>\r\n                    <option>Speaker</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n \r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -803,7 +985,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Banner\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n            <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Banner\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Screen </th>\r\n            <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.screen}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ===1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n");
 
 /***/ }),
 
@@ -1015,6 +1197,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"speakerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Speaker Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Designation</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\">\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Company</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=company placeholder=\"\" formControlName=\"company\">\r\n                                </div>\r\n                            </div>\r\n                          <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">About</label>\r\n                                    <textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Speaker List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Speaker</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Designation\" (sort)=\"onSort($event)\">Designation </th>\r\n            <th width=\"10%\" sortable=\"Company\" (sort)=\"onSort($event)\">Company</th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.designation}} </td>\r\n            <td>{{item.company}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.speakerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html":
 /*!*********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html ***!
@@ -1024,7 +1232,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.userName.errors.required\">\r\n                    User Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <div class=\"input-group\">\r\n                  <input type=\"{{ passwordFieldType }}\" class=\"form-control\" id=\"password\" placeholder=\"\" formControlName=\"password\">\r\n                  <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-outline-secondary\" type=\"button\" (click)=\"togglePasswordVisibility()\">\r\n                      {{ showPassword ? 'Hide' : 'Show' }}\r\n                    </button>\r\n                  </div>\r\n                </div>\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!--<div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>-->\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.email.errors.required\">\r\n                    Email is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <div class=\"form-group col-md-12\">\r\n\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n                <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                  <option selected disabled> -- Please Select -- </option>\r\n                  <option>SuperAdmin</option>\r\n                  <option>Admin</option>\r\n                  <option>Reception</option>\r\n                  <option>Pharmacy</option>\r\n                  <option>Laboratory</option>\r\n                </select>\r\n\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.userName.errors.required\">\r\n                    User Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.email.errors.required\">\r\n                    Email is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Contact No.</label>\r\n                <input type=\"text\" class=\"form-control\" id=contactNo placeholder=\"\" formControlName=\"contactNo\">\r\n                <div *ngIf=\"f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.contactNo.errors.required\">\r\n                    Contact No is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <div class=\"input-group\">\r\n                  <input type=\"{{ passwordFieldType }}\" class=\"form-control\" id=\"password\" placeholder=\"\" formControlName=\"password\">\r\n                  <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-outline-secondary\" type=\"button\" (click)=\"togglePasswordVisibility()\">\r\n                      {{ showPassword ? 'Hide' : 'Show' }}\r\n                    </button>\r\n                  </div>\r\n                </div>\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Address</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\"></textarea>\r\n                <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.address.errors.required\">\r\n                    Address No is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -1063,7 +1271,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <!-- <td> {{item.type}} </td> -->\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.userID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n");
 
 /***/ }),
 
@@ -1154,7 +1362,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <!--<div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>-->\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 100%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>User</span>\r\n        </a>\r\n        <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      \r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n        \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a> \r\n        \r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -1167,7 +1375,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n\r\n    <!-- Outer Row -->\r\n    <div class=\"row justify-content-center\">\r\n\r\n        <div class=\"col-xl-10 col-lg-12 col-md-9\">\r\n\r\n            <div class=\"card o-hidden border-0 shadow-lg my-5\">\r\n                <div class=\"card-body p-0\">\r\n                    <!-- Nested Row within Card Body -->\r\n                    <div class=\"row\">\r\n                        <div class=\"col-lg-6 d-none d-lg-block bg-login-image\"></div>\r\n                        <div class=\"col-lg-6\">\r\n                            <div class=\"p-5\">\r\n                                <div class=\"text-center mb-4\">\r\n                                    <img src=\"../../assets/img/logo-new.png\" style=\"height:150px\" />\r\n                                </div>\r\n                                <div class=\"text-center\">\r\n                                    <h1 class=\"h4 text-gray-900 mb-4\">Welcome Back!</h1>\r\n                                </div>\r\n                                <form [formGroup]=\"loginForm\" class=\"user\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" formControlName=\"username\" class=\"form-control form-control-user\" id=\"username\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email Address...\">\r\n                                        <div *ngIf=\"f.username.invalid && (f.username.dirty || f.username.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.username.errors.required\">\r\n                                                username is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" class=\"form-control form-control-user\" id=\"password\" formControlName=\"password\" placeholder=\"Password\">\r\n                                        <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.password.errors.required\">\r\n                                                password is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <button class=\"btn btn-primary btn-user btn-block\">\r\n                                      Login\r\n                                  </button>\r\n                                    <hr>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n\r\n    <!-- Outer Row -->\r\n    <div class=\"row justify-content-center\">\r\n\r\n        <div class=\"col-xl-10 col-lg-12 col-md-9\">\r\n\r\n            <div class=\"card o-hidden border-0 shadow-lg my-5\">\r\n                <div class=\"card-body p-0\">\r\n                    <!-- Nested Row within Card Body -->\r\n                    <div class=\"row\">\r\n                        <div class=\"col-lg-6 d-none d-lg-block bg-login-image\"></div>\r\n                        <div class=\"col-lg-6\">\r\n                            <div class=\"p-5\">\r\n                                <div class=\"text-center mb-4\">\r\n                                    <img src=\"../../assets/img/logo-new.png\" style=\"height:150px\" />\r\n                                </div>\r\n                                <div class=\"text-center\">\r\n                                    <h1 class=\"h4 text-gray-900 mb-4\">Welcome Back!</h1>\r\n                                </div>\r\n                                <form [formGroup]=\"loginForm\" class=\"user\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" formControlName=\"email\" class=\"form-control form-control-user\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email Address...\">\r\n                                        <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.email.errors.required\">\r\n                                                Email is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" class=\"form-control form-control-user\" id=\"password\" formControlName=\"password\" placeholder=\"Password\">\r\n                                        <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.password.errors.required\">\r\n                                                password is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <button class=\"btn btn-primary btn-user btn-block\">\r\n                                      Login\r\n                                  </button>\r\n                                    <hr>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1180,7 +1388,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">MamjiAdmin</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li\r\n            class=\"nav-item\"\r\n            [routerLinkActive]=\"['link-active']\"\r\n            [routerLinkActiveOptions]=\"{ exact: true }\"\r\n          >\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\"\r\n              >Counter</a\r\n            >\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\"\r\n              >Fetch data</a\r\n            >\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </nav>\r\n</header>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">AKU_Admin</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li\r\n            class=\"nav-item\"\r\n            [routerLinkActive]=\"['link-active']\"\r\n            [routerLinkActiveOptions]=\"{ exact: true }\"\r\n          >\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\"\r\n              >Counter</a\r\n            >\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\"\r\n              >Fetch data</a\r\n            >\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </nav>\r\n</header>\r\n");
 
 /***/ }),
 
@@ -1690,12 +1898,13 @@ class PermissionForms {
 /*!***********************************!*\
   !*** ./src/app/_models/Report.ts ***!
   \***********************************/
-/*! exports provided: Report, SummaryReport, SalesdetailReport, SalesitemwiseReport, SalescustomerwiseReport, SalesuserwiseReport, SalescategorywiseReport */
+/*! exports provided: Report, EventdetailReport, SummaryReport, SalesdetailReport, SalesitemwiseReport, SalescustomerwiseReport, SalesuserwiseReport, SalescategorywiseReport */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Report", function() { return Report; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventdetailReport", function() { return EventdetailReport; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SummaryReport", function() { return SummaryReport; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalesdetailReport", function() { return SalesdetailReport; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalesitemwiseReport", function() { return SalesitemwiseReport; });
@@ -1703,6 +1912,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalesuserwiseReport", function() { return SalesuserwiseReport; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalescategorywiseReport", function() { return SalescategorywiseReport; });
 class Report {
+}
+class EventdetailReport {
 }
 class SummaryReport {
 }
@@ -2216,6 +2427,7 @@ let AppsettingService = class AppsettingService {
         return this._allData$.asObservable();
     }
     getById(id) {
+        debugger;
         return this.http.get(`api/appsetting/${id}`);
     }
     getAllData() {
@@ -2338,7 +2550,7 @@ function sort(data, column, direction) {
     }
 }
 function matches(data, term) {
-    return data.name.toLowerCase().includes(term.toLowerCase());
+    return data.title.toLowerCase().includes(term.toLowerCase());
 }
 let BannerService = class BannerService {
     constructor(http) {
@@ -3274,6 +3486,9 @@ let DashboardService = class DashboardService {
     getAllData() {
         return this.http.get(`api/dashboard/all`);
     }
+    getAllDataMonth() {
+        return this.http.get(`api/dashboard/getchartsMonth`);
+    }
     getChart() {
         return this.http.get(`api/dashboard/getcharts`);
     }
@@ -3770,6 +3985,707 @@ DoctorsService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/event.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/_services/event.service.ts ***!
+  \********************************************/
+/*! exports provided: EventService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventService", function() { return EventService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let EventService = class EventService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/item/all/${brandId}`);
+    }
+    loadCategories(brandId) {
+        return this.http.get(`api/category/all/${brandId}`);
+    }
+    loadActiveCategories() {
+        return this.http.get(`api/eventcategory/DropdownAll`);
+    }
+    loadOrganizer() {
+        return this.http.get(`api/organizer/DropdownAll`);
+    }
+    loadSpeaker() {
+        return this.http.get(`api/speaker/DropdownAll`);
+    }
+    loadItems(brandId) {
+        return this.http.get(`api/item/all/${brandId}`);
+    }
+    loadModifierList(brandId) {
+        return this.http.get(`api/modifier/all/${brandId}`);
+    }
+    loadAddonList(brandId) {
+        return this.http.get(`api/addons/all/${brandId}`);
+    }
+    loadEventImages(id) {
+        return this.http.get(`api/event/images/${id}`);
+    }
+    getById(id) {
+        return this.http.get(`api/event/${id}`);
+    }
+    getTodaysItems(brandId) {
+        return this.http.get(`api/item/settings/${brandId}`);
+    }
+    getAllData() {
+        const url = `api/event/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.event = res;
+                this._data$.next(this.event);
+                this._allData$.next(this.event);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.event, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        debugger;
+        return this.http.post(`api/event/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/event/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    updateSettings(updateData) {
+        return this.http.post(`api/item/update/settings`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/event/delete`, updateData);
+    }
+};
+EventService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+EventService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], EventService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/eventCategory.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/_services/eventCategory.service.ts ***!
+  \****************************************************/
+/*! exports provided: EventCategoryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventCategoryService", function() { return EventCategoryService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let EventCategoryService = class EventCategoryService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/eventcategory/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/eventcategory/eventcategory/${id}`);
+    }
+    getAllData() {
+        const url = `api/eventcategory/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.event = res;
+                this._data$.next(this.event);
+                this._allData$.next(this.event);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.event, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/eventcategory/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/eventcategory/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/eventcategory/delete`, updateData);
+    }
+};
+EventCategoryService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+EventCategoryService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], EventCategoryService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/eventattendees.service.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/_services/eventattendees.service.ts ***!
+  \*****************************************************/
+/*! exports provided: EventAttendeesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventAttendeesService", function() { return EventAttendeesService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.fullName.toLowerCase().includes(term.toLowerCase());
+}
+let EventAttendeesService = class EventAttendeesService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/item/all/${brandId}`);
+    }
+    loadCategories(brandId) {
+        return this.http.get(`api/category/all/${brandId}`);
+    }
+    loadActiveCategories() {
+        return this.http.get(`api/eventcategory/DropdownAll`);
+    }
+    loadOrganizer() {
+        return this.http.get(`api/organizer/DropdownAll`);
+    }
+    loadSpeaker() {
+        return this.http.get(`api/speaker/DropdownAll`);
+    }
+    loadItems(brandId) {
+        return this.http.get(`api/item/all/${brandId}`);
+    }
+    loadModifierList(brandId) {
+        return this.http.get(`api/modifier/all/${brandId}`);
+    }
+    loadActiveEvents() {
+        return this.http.get(`api/eventattendees/DropdownAll`);
+    }
+    loadAddonList(brandId) {
+        return this.http.get(`api/addons/all/${brandId}`);
+    }
+    loadEventImages(id) {
+        return this.http.get(`api/event/images/${id}`);
+    }
+    getById(id) {
+        return this.http.get(`api/eventattendees/${id}`);
+    }
+    getTodaysItems(brandId) {
+        return this.http.get(`api/item/settings/${brandId}`);
+    }
+    getAllData() {
+        const url = `api/eventAttendees/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.eventAttendees = res;
+                this._data$.next(this.eventAttendees);
+                this._allData$.next(this.eventAttendees);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.eventAttendees, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        debugger;
+        return this.http.post(`api/eventattendees/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/eventattendees/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    updateSettings(updateData) {
+        return this.http.post(`api/item/update/settings`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/event/delete`, updateData);
+    }
+};
+EventAttendeesService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+EventAttendeesService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], EventAttendeesService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/faq.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/_services/faq.service.ts ***!
+  \******************************************/
+/*! exports provided: FaqService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FaqService", function() { return FaqService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.faqQ.toLowerCase().includes(term.toLowerCase());
+}
+let FaqService = class FaqService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList() {
+        return this.http.get(`api/faq/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/faq/faq/${id}`);
+    }
+    getAllData() {
+        const url = `api/faq/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.event = res;
+                this._data$.next(this.event);
+                this._allData$.next(this.event);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.event, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/faq/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/faq/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/faq/delete`, updateData);
+    }
+};
+FaqService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+FaqService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], FaqService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/_services/file-upload.service.ts":
 /*!**************************************************!*\
   !*** ./src/app/_services/file-upload.service.ts ***!
@@ -4198,7 +5114,7 @@ let LaboratoryService = class LaboratoryService {
         debugger;
         const formData = new FormData();
         formData.append('pdfFile', file, file.name);
-        const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
+        const url = 'http://AKU_Admin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
         return this.http.post(url, formData);
     }
     getAllData(fromDate, toDate) {
@@ -5683,6 +6599,320 @@ OrdersService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/organizer.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/_services/organizer.service.ts ***!
+  \************************************************/
+/*! exports provided: OrganizerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrganizerService", function() { return OrganizerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let OrganizerService = class OrganizerService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/organizer/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/organizer/organizer/${id}`);
+    }
+    getAllData() {
+        const url = `api/organizer/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.organizer = res;
+                this._data$.next(this.organizer);
+                this._allData$.next(this.organizer);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.organizer, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/organizer/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/organizer/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/organizer/delete`, updateData);
+    }
+};
+OrganizerService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+OrganizerService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], OrganizerService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/partner.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/_services/partner.service.ts ***!
+  \**********************************************/
+/*! exports provided: PartnerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PartnerService", function() { return PartnerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let PartnerService = class PartnerService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/partner/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/partner/partner/${id}`);
+    }
+    getAllData() {
+        const url = `api/partner/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.partner = res;
+                this._data$.next(this.partner);
+                this._allData$.next(this.partner);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.partner, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/partner/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/partner/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/partner/delete`, updateData);
+    }
+};
+PartnerService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+PartnerService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], PartnerService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/_services/prescription.service.ts":
 /*!***************************************************!*\
   !*** ./src/app/_services/prescription.service.ts ***!
@@ -6107,6 +7337,12 @@ let ReportService = class ReportService {
     SalesDetailRpt(brandID, locationID, fromDate, toDate) {
         return this.http.get(`api/report/salesdetail/${brandID}/${locationID}/${fromDate}/${toDate}`);
     }
+    EventDetailRpt(eventID, fromDate, toDate) {
+        return this.http.get(`api/event/EventRpt/$${eventID}/${fromDate}/${toDate}`);
+    }
+    ConfirmListRpt(eventID, fromDate, toDate) {
+        return this.http.get(`api/event/ConfirmListReport/$${eventID}/${fromDate}/${toDate}`);
+    }
     SalesItemwiseRpt(brandID, locationID, fromDate, toDate) {
         return this.http.get(`api/report/salesitemwise/${brandID}/${locationID}/${fromDate}/${toDate}`);
     }
@@ -6122,6 +7358,9 @@ let ReportService = class ReportService {
     loadLocations(brandId) {
         return this.http.get(`api/location/all/${brandId}`);
     }
+    loadEvents() {
+        return this.http.get(`api/Event/alldropdown`);
+    }
 };
 ReportService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
@@ -6132,6 +7371,163 @@ ReportService = __decorate([
     }),
     __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
 ], ReportService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/speaker.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/_services/speaker.service.ts ***!
+  \**********************************************/
+/*! exports provided: SpeakerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpeakerService", function() { return SpeakerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let SpeakerService = class SpeakerService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList(brandId) {
+        return this.http.get(`api/speaker/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/speaker/speaker/${id}`);
+    }
+    getAllData() {
+        const url = `api/speaker/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.speaker = res;
+                this._data$.next(this.speaker);
+                this._allData$.next(this.speaker);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.speaker, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/speaker/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/speaker/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/speaker/delete`, updateData);
+    }
+};
+SpeakerService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+SpeakerService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], SpeakerService);
 
 
 
@@ -6549,7 +7945,7 @@ function sort(data, column, direction) {
     }
 }
 function matches(data, term) {
-    return data.type.toLowerCase().includes(term.toLowerCase());
+    return data.userName.toLowerCase().includes(term.toLowerCase());
 }
 let UserService = class UserService {
     constructor(http) {
@@ -6595,13 +7991,13 @@ let UserService = class UserService {
         return this.http.get(`api/user/permission`);
     }
     ExportList() {
-        return this.http.get(`api/user/all`);
+        return this.http.get(`api/user/getall`);
     }
     getById(id) {
-        return this.http.get(`api/user/user/${id}`);
+        return this.http.get(`api/user/${id}`);
     }
     getAllData() {
-        const url = `api/user/all`;
+        const url = `api/user/getall`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
@@ -6647,21 +8043,21 @@ let UserService = class UserService {
     }
     insert(data) {
         debugger;
-        return this.http.post(`api/user/insert`, data)
+        return this.http.post(`api/user/insertuser`, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
             return res;
         }));
     }
     update(updateData) {
-        return this.http.post(`api/user/update`, updateData)
+        return this.http.post(`api/user/updateuser`, updateData)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
             return res;
         }));
     }
     delete(data) {
-        return this.http.post(`api/user/delete`, data);
+        return this.http.post(`api/user/deleteuser`, data);
     }
     insertpermission(obj) {
         debugger;
@@ -7329,6 +8725,144 @@ LocationsComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/admin/confirmlistreport/confirmlistreport.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/confirmlistreport/confirmlistreport.component.ts ***!
+  \************************************************************************/
+/*! exports provided: ConfirmlistreportComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmlistreportComponent", function() { return ConfirmlistreportComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/report.service */ "./src/app/_services/report.service.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+let ConfirmlistreportComponent = class ConfirmlistreportComponent {
+    constructor(service, ls, ts, excelService, router) {
+        this.service = service;
+        this.ls = ls;
+        this.ts = ts;
+        this.excelService = excelService;
+        this.router = router;
+        this.Events = [];
+        this.eventID = 0;
+        this.orderDetails = [];
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        // this.selectedLocation = this.ls.getSelectedLocation().locationID
+        this.LoadEvents();
+    }
+    ngOnInit() {
+    }
+    getData(eventIDs) {
+        debugger;
+        this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+            .subscribe((res) => {
+            if (res != null) {
+                this.orderDetails = res;
+            }
+            else
+                this.ts.showError("Error", "Something went wrong");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
+        ;
+    }
+    exportAsXLSX() {
+        debugger;
+        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    }
+    LoadEvents() {
+        debugger;
+        this.service.loadEvents().subscribe((res) => {
+            this.Events = res;
+            this.eventID = this.selectedEvent;
+            this.loadEventsMulti()
+                //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+                .subscribe((res) => {
+                this.Events = res;
+                var arr = [];
+                this.Events.forEach(element => {
+                    arr.push(element.eventID);
+                });
+                //this.selectedEvents=arr;
+                this.getData(this.selectedEvents.toString());
+            });
+        });
+    }
+    loadEventsMulti(term = null) {
+        let items = this.Events;
+        if (term) {
+            items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+        }
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
+    }
+    Filter() {
+        debugger;
+        this.getData(this.selectedEvents.toString());
+    }
+};
+ConfirmlistreportComponent.ctorParameters = () => [
+    { type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+ConfirmlistreportComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"],] }],
+    drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
+};
+ConfirmlistreportComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-confirmlistreport',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./confirmlistreport.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+], ConfirmlistreportComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/dashboard/dashboard.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/admin/dashboard/dashboard.component.css ***!
@@ -7395,77 +8929,38 @@ let DashboardComponent = class DashboardComponent {
         this.singlarService = singlarService;
         this.dashboardSummary = new src_app_models_Dashboard__WEBPACK_IMPORTED_MODULE_2__["DashboardSummary"]();
         this.loading$ = service.loading$;
-        //this.chartOptions = {
-        //  series: [
-        //    {
-        //      name: "Appointment",
-        //      data: [5, 3, 7, 9, 2, 8, 11]
-        //    },
-        //  ],
-        //  chart: {
-        //    height: 350,
-        //    type: "bar",
-        //    events: {
-        //      click: function (chart, w, e) {
-        //        // console.log(chart, w, e)
-        //      }
-        //    }
-        //  },
-        //  colors: [
-        //    "#008FFB",
-        //    "#00E396",
-        //    "#FEB019",
-        //    "#FF4560",
-        //    "#775DD0",
-        //    "#546E7A",
-        //    "#26a69a"
-        //  ],
-        //  plotOptions: {
-        //    bar: {
-        //      columnWidth: "45%",
-        //      distributed: true
-        //    }
-        //  },
-        //  dataLabels: {
-        //    enabled: false
-        //  },
-        //  legend: {
-        //    show: false
-        //  },
-        //  grid: {
-        //    show: false
-        //  },
-        //  xaxis: {
-        //    categories: [
-        //      ["16/Jan/2023"],
-        //      ["17/Jan/2023"],
-        //      ["18/Jan/2023"],
-        //      ["19/Jan/2023"],
-        //      ["20/Jan/2023"],
-        //      ["21/Jan/2023"],
-        //      ["22/Jan/2023"]
-        //    ],
-        //    labels: {
-        //      style: {
-        //        colors: [
-        //          "#008FFB",
-        //          "#00E396",
-        //          "#FEB019",
-        //          "#FF4560",
-        //          "#775DD0",
-        //          "#546E7A",
-        //          "#26a69a"
-        //        ],
-        //        fontSize: "12px"
-        //      }
-        //    }
-        //  }
-        //};
-        this.lineChartOptions = {
+    }
+    ngOnInit() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.GetDashboard();
+            this.GetDashboardMonth();
+            this.GetChart();
+            yield this.singlarService.startConnection();
+        });
+    }
+    BindTodaysSales(sales, timeSlot) {
+        this.chartOptions = {
             series: [
                 {
                     name: "Sales",
-                    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    data: sales
+                }
+            ],
+            chart: {
+                height: 300,
+                type: "bar"
+            },
+            xaxis: {
+                categories: timeSlot
+            }
+        };
+    }
+    BindMonthData(sales, timeSlot) {
+        this.lineChartOptions = {
+            series: [
+                {
+                    name: "Booking",
+                    data: sales
                 }
             ],
             chart: {
@@ -7492,40 +8987,6 @@ let DashboardComponent = class DashboardComponent {
                 }
             },
             xaxis: {
-                categories: [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep"
-                ]
-            }
-        };
-    }
-    ngOnInit() {
-        return __awaiter(this, void 0, void 0, function* () {
-            this.GetDashboard();
-            this.GetChart();
-            yield this.singlarService.startConnection();
-        });
-    }
-    BindTodaysSales(sales, timeSlot) {
-        this.chartOptions = {
-            series: [
-                {
-                    name: "Sales",
-                    data: sales
-                }
-            ],
-            chart: {
-                height: 300,
-                type: "bar"
-            },
-            xaxis: {
                 categories: timeSlot
             }
         };
@@ -7534,6 +8995,14 @@ let DashboardComponent = class DashboardComponent {
         debugger;
         this.service.getAllData().subscribe((res) => {
             this.dashboardSummary = res[0];
+        });
+    }
+    GetDashboardMonth() {
+        debugger;
+        this.service.getAllDataMonth().subscribe((res) => {
+            //this.dashboardSummary = res[0];
+            console.log(res);
+            this.BindMonthData(res.todaysales.sales, res.todaysales.timeSlot);
         });
     }
     GetChart() {
@@ -7562,6 +9031,1585 @@ DashboardComponent = __decorate([
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
         src_app_services_SignalrService__WEBPACK_IMPORTED_MODULE_6__["SignalrService"]])
 ], DashboardComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/event/addevent/addevent.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/admin/event/addevent/addevent.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50L2FkZGV2ZW50L2FkZGV2ZW50LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/event/addevent/addevent.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/event/addevent/addevent.component.ts ***!
+  \************************************************************/
+/*! exports provided: AddEventComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddEventComponent", function() { return AddEventComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/event.service */ "./src/app/_services/event.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+//import { ItemsService } from 'src/app/_services/items.service';
+
+
+
+
+
+
+
+//import { CategoryService } from 'src/app/_services/category.service';
+const now = new Date();
+let AddEventComponent = class AddEventComponent {
+    constructor(formBuilder, router, route, ls, ts, eventService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.eventService = eventService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingItems = false;
+        this.Images = [];
+        this.EventCategoryList = [];
+        this.OrganizerList = [];
+        this.SpeakerList = [];
+        this.ModifiersList = [];
+        this.AddonsList = [];
+        //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+        this.eventTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.createForm();
+        this.loadEventCategory();
+        this.loadOrganizer();
+        this.loadSpeaker();
+    }
+    ngOnInit() {
+        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbDate"](now.getFullYear(), now.getMonth() + 1, 1);
+        this._datepicker.fromDate = date;
+        this.setSelecteditem();
+    }
+    get f() { return this.eventForm.controls; }
+    createForm() {
+        this.eventForm = this.formBuilder.group({
+            eventID: 0,
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            type: [''],
+            description: [''],
+            statusID: [true],
+            location: [''],
+            fromDate: '',
+            toDate: '',
+            eventCity: [''],
+            eventCategoryID: [null],
+            locationLink: [''],
+            phoneNo: [''],
+            eventTime: [''],
+            email: [''],
+            eventCategories: [],
+            speakers: [],
+            organizers: [],
+            remainingTicket: [0],
+            facebook: [''],
+            instagram: [''],
+            twitter: [''],
+            image: [''],
+            displayOrder: [0],
+            file: [''],
+            imagesSource: [''],
+            isFeatured: [false]
+        });
+    }
+    editForm(obj) {
+        debugger;
+        this.f.eventID.setValue(obj.eventID);
+        this.f.name.setValue(obj.name);
+        this.f.type.setValue(obj.type);
+        this.f.description.setValue(obj.description);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.f.location.setValue(obj.location);
+        this.f.fromDate.setValue(obj.fromDate);
+        this.f.toDate.setValue(obj.toDate);
+        //this.f.eventTime.setValue(obj.eventTime);
+        this.eventTime = {
+            hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
+            minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
+            ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.f.eventCity.setValue(obj.eventCity);
+        this.f.eventCategoryID.setValue(obj.eventCategoryID);
+        this.f.locationLink.setValue(obj.locationLink);
+        this.f.phoneNo.setValue(obj.phoneNo);
+        this.f.email.setValue(obj.email);
+        this.f.remainingTicket.setValue(obj.remainingTicket);
+        this.f.facebook.setValue(obj.facebook);
+        this.f.instagram.setValue(obj.instagram);
+        this.f.twitter.setValue(obj.twitter);
+        this.f.displayOrder.setValue(obj.displayOrder);
+        this.f.isFeatured.setValue(obj.isFeatured);
+        //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };
+        if (obj.organizers != "") {
+            debugger;
+            var stringToConvert = obj.organizers;
+            this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
+            this.f.organizers.setValue(obj.organizers);
+        }
+        if (obj.speakers != "") {
+            debugger;
+            var stringToConvert = obj.speakers;
+            this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
+            this.f.speakers.setValue(obj.speakers);
+        }
+        //if (obj.eventCategories != "") {
+        //  debugger
+        //  var stringToConvert = obj.eventCategories;
+        //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
+        //  this.f.eventCategories.setValue(obj.eventCategories);
+        //}
+        this.loadItemImages(this.f.eventID.value);
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
+        ;
+    }
+    setSelecteditem() {
+        debugger;
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingItems = true;
+                this.f.eventID.setValue(sid);
+                this.eventService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingItems = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        debugger;
+        this.eventForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.eventForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
+        this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
+        this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
+        //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
+        //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
+        const formattedHour = (this.eventTime.hour % 12 || 12);
+        const formattedMinute = this.pad(this.eventTime.minute);
+        const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM';
+        const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+        this.f.eventTime.setValue(formattedTime);
+        this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
+        this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        //this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.eventID.value) === 0) {
+            //Insert item
+            console.log(JSON.stringify(this.eventForm.value));
+            this.eventService.insert(this.eventForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Event added successfully.");
+                    this.router.navigate(['/admin/event']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert Event.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update item
+            this.eventService.update(this.eventForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Event updated successfully.");
+                    this.router.navigate(['/admin/event']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update Event.");
+                this.loading = false;
+            });
+        }
+    }
+    pad(value) {
+        return value < 10 ? `0${value}` : `${value}`;
+    }
+    onFileChange(event) {
+        if (event.target.files && event.target.files[0]) {
+            var filesAmount = event.target.files.length;
+            for (let i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+                debugger;
+                var fileSize = event.target.files[i].size / 100000;
+                if (fileSize > 5) {
+                    alert("Filesize exceed 500 KB");
+                }
+                else {
+                    reader.onload = (event) => {
+                        console.log(event.target.result);
+                        this.Images.push(event.target.result);
+                        this.eventForm.patchValue({
+                            imagesSource: this.Images
+                        });
+                    };
+                    reader.readAsDataURL(event.target.files[i]);
+                }
+            }
+        }
+    }
+    loadEventCategory() {
+        this.eventService.loadActiveCategories().subscribe((res) => {
+            this.EventCategoryList = res;
+        });
+    }
+    loadOrganizer() {
+        this.eventService.loadOrganizer().subscribe((res) => {
+            this.OrganizerList = res;
+        });
+    }
+    loadSpeaker() {
+        this.eventService.loadSpeaker().subscribe((res) => {
+            this.SpeakerList = res;
+        });
+    }
+    loadItemImages(id) {
+        this.eventService.loadEventImages(id).subscribe((res) => {
+            this.Images = res;
+            this.f.imagesSource.setValue(this.Images);
+        });
+    }
+    removeImage(obj) {
+        const index = this.Images.indexOf(obj);
+        this.Images.splice(index, 1);
+        this.f.imagesSource.setValue(this.Images);
+    }
+};
+AddEventComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] }
+];
+AddEventComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], { static: true },] }],
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddEventComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addevent',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addevent.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addevent.component.css */ "./src/app/admin/event/addevent/addevent.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])
+], AddEventComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/event/event.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/admin/event/event.component.ts ***!
+  \************************************************/
+/*! exports provided: EventComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventComponent", function() { return EventComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/event.service */ "./src/app/_services/event.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let EventComponent = class EventComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+            /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(items) {
+        this.router.navigate(["admin/event/edit", items]);
+    }
+    Delete(obj) {
+        debugger;
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        debugger;
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+    Deactive(id, rowVersion) {
+        //   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {
+        //     this.alertService.success("items has been Deactived");
+        //     this.getBrandData();
+        //   }, error => {
+        //     this.alertService.error(error);
+        //   });
+    }
+};
+EventComponent.ctorParameters = () => [
+    { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"] }
+];
+EventComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+EventComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-event',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./event.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])
+], EventComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/eventCategory/add/addeventcategory.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/eventCategory/add/addeventcategory.component.css ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50Q2F0ZWdvcnkvYWRkL2FkZGV2ZW50Y2F0ZWdvcnkuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/eventCategory/add/addeventcategory.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/admin/eventCategory/add/addeventcategory.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: AddEventCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddEventCategoryComponent", function() { return AddEventCategoryComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../_services/eventCategory.service */ "./src/app/_services/eventCategory.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddEventCategoryComponent = class AddEventCategoryComponent {
+    constructor(formBuilder, router, route, ts, ls, eventService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ts = ts;
+        this.ls = ls;
+        this.eventService = eventService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingOrganizer = false;
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedaddon();
+    }
+    get f() { return this.eventForm.controls; }
+    createForm() {
+        this.eventForm = this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            description: [''],
+            image: [''],
+            statusID: [true],
+            eventCategoryID: 0,
+        });
+    }
+    editForm(obj) {
+        this.f.name.setValue(obj.name);
+        this.f.description.setValue(obj.description);
+        this.f.eventCategoryID.setValue(obj.eventCategoryID);
+        this.f.image.setValue(obj.image);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.image;
+    }
+    setSelectedaddon() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingOrganizer = true;
+                this.f.eventCategoryID.setValue(sid);
+                this.eventService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingOrganizer = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.eventForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.eventForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.eventCategoryID.value) === 0) {
+            //Insert modifier
+            console.log(JSON.stringify(this.eventForm.value));
+            this.eventService.insert(this.eventForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/eventcategory']);
+                }
+                // this.alertService.success("Item has been created");
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update modifier
+            this.eventService.update(this.eventForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/eventcategory']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddEventCategoryComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"] }
+];
+AddEventCategoryComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddEventCategoryComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addeventcategory',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addeventcategory.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addeventcategory.component.css */ "./src/app/admin/eventCategory/add/addeventcategory.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"]])
+], AddEventCategoryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/eventCategory/eventcategory.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/admin/eventCategory/eventcategory.component.ts ***!
+  \****************************************************************/
+/*! exports provided: EventCategoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventCategoryComponent", function() { return EventCategoryComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_services/eventCategory.service */ "./src/app/_services/eventCategory.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let EventCategoryComponent = class EventCategoryComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+            //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(data) {
+        this.router.navigate(["admin/eventcategory/edit", data]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+EventCategoryComponent.ctorParameters = () => [
+    { type: _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"] }
+];
+EventCategoryComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+EventCategoryComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventcategory',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./eventcategory.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [_services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])
+], EventCategoryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css":
+/*!****************************************************************************************!*\
+  !*** ./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50YXR0ZW5kZWVzL2FkZGV2ZW50YXR0ZW5kZWVzL2FkZGV2ZW50YXR0ZW5kZWVzLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: AddEventAttendeesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddEventAttendeesComponent", function() { return AddEventAttendeesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/eventattendees.service */ "./src/app/_services/eventattendees.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+//import { ItemsService } from 'src/app/_services/items.service';
+
+
+
+
+
+
+//import { CategoryService } from 'src/app/_services/category.service';
+const now = new Date();
+let AddEventAttendeesComponent = class AddEventAttendeesComponent {
+    constructor(formBuilder, router, route, ls, ts, eventAttendeesService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.eventAttendeesService = eventAttendeesService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingItems = false;
+        this.Images = [];
+        this.EventList = [];
+        this.OrganizerList = [];
+        this.SpeakerList = [];
+        this.ModifiersList = [];
+        this.AddonsList = [];
+        //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+        this.eventTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.createForm();
+        this.loadEvent();
+        // this.loadOrganizer();
+        // this.loadSpeaker();
+    }
+    ngOnInit() {
+        this.setSelecteditem();
+    }
+    get f() { return this.eventAttendeesForm.controls; }
+    createForm() {
+        this.eventAttendeesForm = this.formBuilder.group({
+            attendeesID: 0,
+            fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            email: [''],
+            phoneNo: [''],
+            statusID: [true],
+            occupation: [''],
+            gender: [''],
+            eventID: [null]
+        });
+    }
+    editForm(obj) {
+        this.f.attendeesID.setValue(obj.attendeesID);
+        this.f.fullName.setValue(obj.fullName);
+        this.f.email.setValue(obj.email);
+        this.f.phoneNo.setValue(obj.phoneNo);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.f.occupation.setValue(obj.occupation);
+        this.f.gender.setValue(obj.gender);
+        this.f.eventID.setValue(obj.eventID);
+        // if (obj.organizers != "") {
+        //   debugger
+        //   var stringToConvert = obj.organizers;
+        //   this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
+        //   this.f.organizers.setValue(obj.organizers);
+        // }
+        // if (obj.speakers != "") {
+        //   debugger
+        //   var stringToConvert = obj.speakers;
+        //   this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
+        //   this.f.speakers.setValue(obj.speakers);
+        // }
+    }
+    setSelecteditem() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingItems = true;
+                this.f.attendeesID.setValue(sid);
+                this.eventAttendeesService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingItems = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.eventAttendeesForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.eventAttendeesForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        if (parseInt(this.f.attendeesID.value) === 0) {
+            //Insert item
+            console.log(JSON.stringify(this.eventAttendeesForm.value));
+            this.eventAttendeesService.insert(this.eventAttendeesForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Event added successfully.");
+                    this.router.navigate(['/admin/event']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert Event.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update item
+            this.eventAttendeesService.update(this.eventAttendeesForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Event updated successfully.");
+                    this.router.navigate(['/admin/event']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update Event.");
+                this.loading = false;
+            });
+        }
+    }
+    pad(value) {
+        return value < 10 ? `0${value}` : `${value}`;
+    }
+    loadEvent() {
+        debugger;
+        this.eventAttendeesService.loadActiveEvents().subscribe((res) => {
+            this.EventList = res;
+            console.log(res);
+        });
+    }
+};
+AddEventAttendeesComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"] }
+];
+AddEventAttendeesComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__["NgbdDatepickerRangePopup"], { static: true },] }],
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddEventAttendeesComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addeventattendees',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addeventattendees.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addeventattendees.component.css */ "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"]])
+], AddEventAttendeesComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/eventattendees/eventattendees.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/admin/eventattendees/eventattendees.component.ts ***!
+  \******************************************************************/
+/*! exports provided: EventAttendeesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventAttendeesComponent", function() { return EventAttendeesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/eventattendees.service */ "./src/app/_services/eventattendees.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let EventAttendeesComponent = class EventAttendeesComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+            /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(items) {
+        debugger;
+        this.router.navigate(["admin/eventattendees/edit", items]);
+    }
+    Delete(obj) {
+        debugger;
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        debugger;
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+    Deactive(id, rowVersion) {
+        //   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {
+        //     this.alertService.success("items has been Deactived");
+        //     this.getBrandData();
+        //   }, error => {
+        //     this.alertService.error(error);
+        //   });
+    }
+};
+EventAttendeesComponent.ctorParameters = () => [
+    { type: src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"] }
+];
+EventAttendeesComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+EventAttendeesComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventattendees',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./eventattendees.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])
+], EventAttendeesComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/eventdetail/eventdetail.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/eventdetail/eventdetail.component.ts ***!
+  \************************************************************/
+/*! exports provided: EventdetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventdetailComponent", function() { return EventdetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/report.service */ "./src/app/_services/report.service.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+let EventdetailComponent = class EventdetailComponent {
+    constructor(service, ls, ts, excelService, router) {
+        this.service = service;
+        this.ls = ls;
+        this.ts = ts;
+        this.excelService = excelService;
+        this.router = router;
+        this.Events = [];
+        this.eventID = 0;
+        this.orderDetails = [];
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        // this.selectedLocation = this.ls.getSelectedLocation().locationID
+        this.LoadEvents();
+    }
+    ngOnInit() {
+    }
+    getData(eventIDs) {
+        debugger;
+        this.service.EventDetailRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+            .subscribe((res) => {
+            if (res != null) {
+                this.orderDetails = res;
+            }
+            else
+                this.ts.showError("Error", "Something went wrong");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
+        ;
+    }
+    exportAsXLSX() {
+        debugger;
+        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    }
+    LoadEvents() {
+        debugger;
+        this.service.loadEvents().subscribe((res) => {
+            this.Events = res;
+            this.eventID = this.selectedEvent;
+            this.loadEventsMulti()
+                //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+                .subscribe((res) => {
+                this.Events = res;
+                var arr = [];
+                this.Events.forEach(element => {
+                    arr.push(element.eventID);
+                });
+                //this.selectedEvents=arr;
+                this.getData(this.selectedEvents.toString());
+            });
+        });
+    }
+    loadEventsMulti(term = null) {
+        let items = this.Events;
+        if (term) {
+            items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+        }
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
+    }
+    Filter() {
+        debugger;
+        this.getData(this.selectedEvents.toString());
+    }
+};
+EventdetailComponent.ctorParameters = () => [
+    { type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+EventdetailComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"],] }],
+    drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
+};
+EventdetailComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventdetail',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./eventdetail.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+], EventdetailComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/faq/add/addfaq.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/admin/faq/add/addfaq.component.css ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2ZhcS9hZGQvYWRkZmFxLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/faq/add/addfaq.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/admin/faq/add/addfaq.component.ts ***!
+  \***************************************************/
+/*! exports provided: AddFaqComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddFaqComponent", function() { return AddFaqComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/faq.service */ "./src/app/_services/faq.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddFaqComponent = class AddFaqComponent {
+    constructor(formBuilder, router, route, ts, ls, faqService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ts = ts;
+        this.ls = ls;
+        this.faqService = faqService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingOrganizer = false;
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedaddon();
+    }
+    get f() { return this.faqForm.controls; }
+    createForm() {
+        this.faqForm = this.formBuilder.group({
+            faqQ: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            faqA: [''],
+            statusID: [true],
+            faqID: 0,
+        });
+    }
+    editForm(obj) {
+        this.f.faqQ.setValue(obj.faqQ);
+        this.f.faqA.setValue(obj.faqA);
+        this.f.faqID.setValue(obj.faqID);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    }
+    setSelectedaddon() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingOrganizer = true;
+                this.f.faqID.setValue(sid);
+                this.faqService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingOrganizer = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.faqForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.faqForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        if (parseInt(this.f.faqID.value) === 0) {
+            //Insert modifier
+            console.log(JSON.stringify(this.faqForm.value));
+            this.faqService.insert(this.faqForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/faq']);
+                }
+                // this.alertService.success("Item has been created");
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            this.faqService.update(this.faqForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/faq']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddFaqComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__["FaqService"] }
+];
+AddFaqComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddFaqComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addfaq',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addfaq.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addfaq.component.css */ "./src/app/admin/faq/add/addfaq.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__["FaqService"]])
+], AddFaqComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/faq/faq.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/admin/faq/faq.component.ts ***!
+  \********************************************/
+/*! exports provided: FaqComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FaqComponent", function() { return FaqComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/faq.service */ "./src/app/_services/faq.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let FaqComponent = class FaqComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList().subscribe((res) => {
+            //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(data) {
+        this.router.navigate(["admin/faq/edit", data]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+FaqComponent.ctorParameters = () => [
+    { type: src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__["FaqService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"] }
+];
+FaqComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+FaqComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-faq',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./faq.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__["FaqService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])
+], FaqComponent);
 
 
 
@@ -8097,7 +11145,7 @@ AddreportsComponent = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" \r\n.btnDownload {\r\n    background-color: #cf2e2e;\r\n    border: none;\r\n    color: white;\r\n    padding: 5px 13px;\r\n    cursor: pointer;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n}\r\n\r\n/* Darker background on mouse-over */\r\n\r\n.btnDownload:hover {\r\n  background-color: #149063;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGFib3JhdG9yeS91cGxvYWRyZXBvcnQvdXBsb2FkcmVwb3J0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBLG9DQUFvQzs7QUFDcEM7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIFxyXG4uYnRuRG93bmxvYWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2NmMmUyZTtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDVweCAxM3B4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4vKiBEYXJrZXIgYmFja2dyb3VuZCBvbiBtb3VzZS1vdmVyICovXHJcbi5idG5Eb3dubG9hZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE0OTA2MztcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiAiXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (" \r\n.btnDownload {\r\n    background-color: #00843D;\r\n    border: none;\r\n    color: white;\r\n    padding: 5px 13px;\r\n    cursor: pointer;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n}\r\n\r\n/* Darker background on mouse-over */\r\n\r\n.btnDownload:hover {\r\n  background-color: #149063;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGFib3JhdG9yeS91cGxvYWRyZXBvcnQvdXBsb2FkcmVwb3J0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBLG9DQUFvQzs7QUFDcEM7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIFxyXG4uYnRuRG93bmxvYWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwODQzRDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDVweCAxM3B4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4vKiBEYXJrZXIgYmFja2dyb3VuZCBvbiBtb3VzZS1vdmVyICovXHJcbi5idG5Eb3dubG9hZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE0OTA2MztcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiAiXX0= */");
 
 /***/ }),
 
@@ -10157,6 +13205,589 @@ NotificationComponent = __decorate([
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], NotificationComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/organizer/add/addorganizer.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/admin/organizer/add/addorganizer.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL29yZ2FuaXplci9hZGQvYWRkb3JnYW5pemVyLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/organizer/add/addorganizer.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/admin/organizer/add/addorganizer.component.ts ***!
+  \***************************************************************/
+/*! exports provided: AddOrganizerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddOrganizerComponent", function() { return AddOrganizerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../_services/organizer.service */ "./src/app/_services/organizer.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddOrganizerComponent = class AddOrganizerComponent {
+    constructor(formBuilder, router, route, ts, ls, organizerService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ts = ts;
+        this.ls = ls;
+        this.organizerService = organizerService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingOrganizer = false;
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedaddon();
+    }
+    get f() { return this.organizerForm.controls; }
+    createForm() {
+        this.organizerForm = this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            description: [''],
+            statusID: [true],
+            organizerID: 0,
+            image: [''],
+        });
+    }
+    editForm(obj) {
+        this.f.name.setValue(obj.name);
+        this.f.description.setValue(obj.description);
+        this.f.organizerID.setValue(obj.organizerID);
+        this.f.image.setValue(obj.image);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.image;
+    }
+    setSelectedaddon() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingOrganizer = true;
+                this.f.organizerID.setValue(sid);
+                this.organizerService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingOrganizer = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.organizerForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.organizerForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.organizerID.value) === 0) {
+            //Insert modifier
+            console.log(JSON.stringify(this.organizerForm.value));
+            this.organizerService.insert(this.organizerForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/organizer']);
+                }
+                // this.alertService.success("Item has been created");
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update modifier
+            this.organizerService.update(this.organizerForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/organizer']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddOrganizerComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"] }
+];
+AddOrganizerComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddOrganizerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addorganizer',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addorganizer.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addorganizer.component.css */ "./src/app/admin/organizer/add/addorganizer.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"]])
+], AddOrganizerComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/organizer/organizer.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/admin/organizer/organizer.component.ts ***!
+  \********************************************************/
+/*! exports provided: OrganizerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrganizerComponent", function() { return OrganizerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_services/organizer.service */ "./src/app/_services/organizer.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let OrganizerComponent = class OrganizerComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+            //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(organizer) {
+        this.router.navigate(["admin/organizer/edit", organizer]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+OrganizerComponent.ctorParameters = () => [
+    { type: _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"] }
+];
+OrganizerComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+OrganizerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-organizer',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./organizer.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [_services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])
+], OrganizerComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/partner/add/addpartner.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/admin/partner/add/addpartner.component.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3BhcnRuZXIvYWRkL2FkZHBhcnRuZXIuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/partner/add/addpartner.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/admin/partner/add/addpartner.component.ts ***!
+  \***********************************************************/
+/*! exports provided: AddPartnerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddPartnerComponent", function() { return AddPartnerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_partner_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../_services/partner.service */ "./src/app/_services/partner.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddPartnerComponent = class AddPartnerComponent {
+    constructor(formBuilder, router, route, ts, ls, partnerService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ts = ts;
+        this.ls = ls;
+        this.partnerService = partnerService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingPartner = false;
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedaddon();
+    }
+    get f() { return this.partnerForm.controls; }
+    createForm() {
+        this.partnerForm = this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            statusID: [true],
+            partnerID: 0,
+            image: [''],
+        });
+    }
+    editForm(obj) {
+        this.f.name.setValue(obj.name);
+        this.f.partnerID.setValue(obj.partnerID);
+        this.f.image.setValue(obj.image);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.image;
+    }
+    setSelectedaddon() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingPartner = true;
+                this.f.partnerID.setValue(sid);
+                this.partnerService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingPartner = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.partnerForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.partnerForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.partnerID.value) === 0) {
+            //Insert modifier
+            console.log(JSON.stringify(this.partnerForm.value));
+            this.partnerService.insert(this.partnerForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/partner']);
+                }
+                // this.alertService.success("Item has been created");
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update modifier
+            this.partnerService.update(this.partnerForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/partner']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddPartnerComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"] }
+];
+AddPartnerComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddPartnerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addpartner',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addpartner.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addpartner.component.css */ "./src/app/admin/partner/add/addpartner.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"]])
+], AddPartnerComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/partner/partner.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/admin/partner/partner.component.ts ***!
+  \****************************************************/
+/*! exports provided: PartnerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PartnerComponent", function() { return PartnerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _services_partner_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_services/partner.service */ "./src/app/_services/partner.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let PartnerComponent = class PartnerComponent {
+    constructor(service, ls, excelService, ts, router) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(partner) {
+        this.router.navigate(["admin/partner/edit", partner]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+};
+PartnerComponent.ctorParameters = () => [
+    { type: _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+PartnerComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+PartnerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-partner',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./partner.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [_services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+], PartnerComponent);
 
 
 
@@ -13046,41 +16677,42 @@ let AddsettingsComponent = class AddsettingsComponent {
     get f() { return this.settingForm.controls; }
     createForm() {
         this.settingForm = this.formBuilder.group({
-            discount: [0],
-            deliveryCharges: [0],
-            minimumOrderAmount: [0],
-            tax: [0],
+            appName: [''],
+            appVersion: [''],
+            about: [''],
+            privacyPolicy: [''],
+            splashScreen: [''],
+            facebookUrl: [''],
+            instagramUrl: [''],
+            twitterUrl: [''],
+            youtubeUrl: [''],
             statusID: [true],
-            appSettingID: 1,
+            settingID: 1,
         });
     }
     editForm(obj) {
-        this.f.discount.setValue(obj.discount);
-        this.f.deliveryCharges.setValue(obj.deliveryCharges);
-        this.f.appSettingID.setValue(obj.appSettingID);
-        this.f.minimumOrderAmount.setValue(obj.minimumOrderAmount);
+        debugger;
+        this.f.settingID.setValue(obj.settingID);
+        this.f.appName.setValue(obj.appName);
+        this.f.appVersion.setValue(obj.appVersion);
+        this.f.about.setValue(obj.about);
+        this.f.privacyPolicy.setValue(obj.privacyPolicy);
+        this.f.splashScreen.setValue(obj.splashScreen);
+        this.f.facebookUrl.setValue(obj.facebookUrl);
+        this.f.instagramUrl.setValue(obj.instagramUrl);
+        this.f.twitterUrl.setValue(obj.twitterUrl);
+        this.f.youtubeUrl.setValue(obj.youtubeUrl);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-        this.f.tax.setValue(obj.tax);
+        this.imgComp.imageUrl = obj.splashScreen;
     }
     setSelectedSetting() {
+        debugger;
         this.loadingSetting = true;
         this.settingService.getById(1).subscribe(res => {
             //Set Forms
             this.editForm(res);
             this.loadingSetting = false;
         });
-        // this.route.paramMap.subscribe(param => {
-        //   const sid = +param.get('id');
-        //   if (sid) {
-        //     this.loadingSetting = true;
-        //     this.f.appSettingID.setValue(sid);
-        //     this.settingService.getById(sid).subscribe(res => {
-        //       //Set Forms
-        //       this.editForm(res);
-        //       this.loadingSetting = false;
-        //     });
-        //   }
-        // })
     }
     onSubmit() {
         debugger;
@@ -13091,6 +16723,7 @@ let AddsettingsComponent = class AddsettingsComponent {
         }
         this.loading = true;
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.splashScreen.setValue(this.imgComp.imageUrl);
         if (parseInt('1') === 0) {
             //Insert banner
             console.log(JSON.stringify(this.settingForm.value));
@@ -13323,16 +16956,18 @@ let AddbannerComponent = class AddbannerComponent {
     get f() { return this.bannerForm.controls; }
     createForm() {
         this.bannerForm = this.formBuilder.group({
-            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             type: [''],
             description: [''],
+            screen: [''],
             statusID: [true],
             bannerID: 0,
             image: [''],
         });
     }
     editForm(obj) {
-        this.f.name.setValue(obj.name);
+        this.f.title.setValue(obj.title);
+        this.f.screen.setValue(obj.screen);
         this.f.type.setValue(obj.type);
         this.f.description.setValue(obj.description);
         this.f.bannerID.setValue(obj.bannerID);
@@ -15810,6 +19445,317 @@ TimeSlotComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/admin/speaker/addspeaker/addspeaker.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/admin/speaker/addspeaker/addspeaker.component.css ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NwZWFrZXIvYWRkc3BlYWtlci9hZGRzcGVha2VyLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/speaker/addspeaker/addspeaker.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/admin/speaker/addspeaker/addspeaker.component.ts ***!
+  \******************************************************************/
+/*! exports provided: AddSpeakerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddSpeakerComponent", function() { return AddSpeakerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../_services/speaker.service */ "./src/app/_services/speaker.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddSpeakerComponent = class AddSpeakerComponent {
+    constructor(formBuilder, router, route, ts, ls, speakerService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ts = ts;
+        this.ls = ls;
+        this.speakerService = speakerService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingSpeaker = false;
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedaddon();
+    }
+    get f() { return this.speakerForm.controls; }
+    createForm() {
+        this.speakerForm = this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            designation: [''],
+            company: [''],
+            about: [''],
+            statusID: [true],
+            speakerID: 0,
+            image: [''],
+            locationID: null
+        });
+    }
+    editForm(obj) {
+        this.f.name.setValue(obj.name);
+        this.f.designation.setValue(obj.designation);
+        this.f.company.setValue(obj.company);
+        this.f.about.setValue(obj.about);
+        this.f.speakerID.setValue(obj.speakerID);
+        this.f.image.setValue(obj.image);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.image;
+    }
+    setSelectedaddon() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingSpeaker = true;
+                this.f.speakerID.setValue(sid);
+                this.speakerService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingSpeaker = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.speakerForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.speakerForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.speakerID.value) === 0) {
+            //Insert modifier
+            console.log(JSON.stringify(this.speakerForm.value));
+            this.speakerService.insert(this.speakerForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/speaker']);
+                }
+                // this.alertService.success("Item has been created");
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update modifier
+            this.speakerService.update(this.speakerForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/speaker']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddSpeakerComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"] }
+];
+AddSpeakerComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddSpeakerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addspeaker',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addspeaker.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addspeaker.component.css */ "./src/app/admin/speaker/addspeaker/addspeaker.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"]])
+], AddSpeakerComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/speaker/speaker.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/admin/speaker/speaker.component.ts ***!
+  \****************************************************/
+/*! exports provided: SpeakerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpeakerComponent", function() { return SpeakerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_services/speaker.service */ "./src/app/_services/speaker.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let SpeakerComponent = class SpeakerComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList(this.selectedBrand).subscribe((res) => {
+            //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(addons) {
+        this.router.navigate(["admin/speaker/edit", addons]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+};
+SpeakerComponent.ctorParameters = () => [
+    { type: _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"] }
+];
+SpeakerComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+SpeakerComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-speaker',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./speaker.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [_services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])
+], SpeakerComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/user/add/adduser.component.ts":
 /*!*****************************************************!*\
   !*** ./src/app/admin/user/add/adduser.component.ts ***!
@@ -15876,27 +19822,31 @@ let AdduserComponent = class AdduserComponent {
         this.userForm = this.formBuilder.group({
             userName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            statusID: [true],
+            image: [''],
+            address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            contactNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            id: 0,
+            statusID: [true],
+            userID: 0,
         });
     }
     editForm(obj) {
         this.f.userName.setValue(obj.userName);
         this.f.email.setValue(obj.email);
+        this.f.address.setValue(obj.address);
+        this.f.contactNo.setValue(obj.contactNo);
         this.f.password.setValue(obj.password);
-        this.f.type.setValue(obj.type);
-        this.f.id.setValue(obj.id);
+        this.f.userID.setValue(obj.userID);
+        this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-        //this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
+        this.imgComp.imageUrl = obj.image;
     }
     setSelectedCustomer() {
         this.route.paramMap.subscribe(param => {
             const sid = +param.get('id');
             if (sid) {
                 this.loadingCustomer = true;
-                this.f.id.setValue(sid);
+                this.f.userID.setValue(sid);
                 this.userService.getById(sid).subscribe(res => {
                     //Set Forms
                     this.editForm(res);
@@ -15914,7 +19864,8 @@ let AdduserComponent = class AdduserComponent {
         }
         this.loading = true;
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        if (parseInt(this.f.id.value) === 0) {
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.userID.value) === 0) {
             //Insert customer
             console.log(JSON.stringify(this.userForm.value));
             this.userService.insert(this.userForm.value).subscribe(data => {
@@ -16511,6 +20462,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./admin/settings/delivery/adddelivery/adddelivery.component */ "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts");
 /* harmony import */ var _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./admin/settings/corporateclient/corporateclient.component */ "./src/app/admin/settings/corporateclient/corporateclient.component.ts");
 /* harmony import */ var _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./admin/settings/corporateclient/addcorporateclient/addcorporateclient.component */ "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts");
+/* harmony import */ var _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./admin/speaker/speaker.component */ "./src/app/admin/speaker/speaker.component.ts");
+/* harmony import */ var _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./admin/speaker/addspeaker/addspeaker.component */ "./src/app/admin/speaker/addspeaker/addspeaker.component.ts");
+/* harmony import */ var _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./admin/organizer/organizer.component */ "./src/app/admin/organizer/organizer.component.ts");
+/* harmony import */ var _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./admin/organizer/add/addorganizer.component */ "./src/app/admin/organizer/add/addorganizer.component.ts");
+/* harmony import */ var _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./admin/partner/partner.component */ "./src/app/admin/partner/partner.component.ts");
+/* harmony import */ var _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./admin/partner/add/addpartner.component */ "./src/app/admin/partner/add/addpartner.component.ts");
+/* harmony import */ var _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./admin/eventCategory/eventcategory.component */ "./src/app/admin/eventCategory/eventcategory.component.ts");
+/* harmony import */ var _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./admin/eventCategory/add/addeventcategory.component */ "./src/app/admin/eventCategory/add/addeventcategory.component.ts");
+/* harmony import */ var _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./admin/event/addevent/addevent.component */ "./src/app/admin/event/addevent/addevent.component.ts");
+/* harmony import */ var _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./admin/event/event.component */ "./src/app/admin/event/event.component.ts");
+/* harmony import */ var _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./admin/faq/faq.component */ "./src/app/admin/faq/faq.component.ts");
+/* harmony import */ var _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./admin/faq/add/addfaq.component */ "./src/app/admin/faq/add/addfaq.component.ts");
+/* harmony import */ var _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./admin/eventdetail/eventdetail.component */ "./src/app/admin/eventdetail/eventdetail.component.ts");
+/* harmony import */ var _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./admin/confirmlistreport/confirmlistreport.component */ "./src/app/admin/confirmlistreport/confirmlistreport.component.ts");
+/* harmony import */ var _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./admin/eventattendees/eventattendees.component */ "./src/app/admin/eventattendees/eventattendees.component.ts");
+/* harmony import */ var _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./admin/eventattendees/addeventattendees/addeventattendees.component */ "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16607,6 +20574,22 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -16623,6 +20606,8 @@ AppModule = __decorate([
             _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"],
             _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"],
             _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"],
+            _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"],
+            _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"],
             _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"],
             _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"],
             _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"],
@@ -16685,6 +20670,20 @@ AppModule = __decorate([
             _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"],
             _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"],
             _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"],
+            _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"],
+            _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"],
+            _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"],
+            _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"],
+            _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"],
+            _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"],
+            _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"],
+            _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"],
+            _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"],
+            _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"],
+            _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"],
+            _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"],
+            _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"],
+            _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
@@ -16711,6 +20710,12 @@ AppModule = __decorate([
                         { path: 'item/add', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"] },
                         { path: 'item/settings', component: _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"] },
                         { path: 'item/edit/:id', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"] },
+                        { path: 'event', component: _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"] },
+                        { path: 'event/add', component: _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"] },
+                        { path: 'event/edit/:id', component: _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"] },
+                        { path: 'eventattendees', component: _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"] },
+                        { path: 'eventattendees/add', component: _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"] },
+                        { path: 'eventattendees/edit/:id', component: _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"] },
                         { path: 'modifier', component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"] },
                         { path: 'modifier/add', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"] },
                         { path: 'modifier/edit/:id', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"] },
@@ -16799,7 +20804,24 @@ AppModule = __decorate([
                         { path: 'settings/timeslot', component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"] },
                         { path: 'settings/timeslot/add', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
                         { path: 'settings/timeslot/edit/:id', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
-                        { path: 'formpermission', component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"] }
+                        { path: 'formpermission', component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"] },
+                        { path: 'speaker', component: _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"] },
+                        { path: 'speaker/add', component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"] },
+                        { path: 'speaker/edit/:id', component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"] },
+                        { path: 'organizer', component: _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"] },
+                        { path: 'organizer/add', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
+                        { path: 'organizer/edit/:id', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
+                        { path: 'partner', component: _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"] },
+                        { path: 'partner/add', component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"] },
+                        { path: 'partner/edit/:id', component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"] },
+                        { path: 'eventcategory', component: _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"] },
+                        { path: 'eventcategory/add', component: _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"] },
+                        { path: 'eventcategory/edit/:id', component: _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"] },
+                        { path: 'eventdetail', component: _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"] },
+                        { path: 'confirmlistreport', component: _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"] },
+                        { path: 'faq', component: _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"] },
+                        { path: 'faq/add', component: _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"] },
+                        { path: 'faq/edit/:id', component: _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"] },
                     ]
                 }
             ]),
@@ -17212,7 +21234,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_locations_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_services/locations.service */ "./src/app/_services/locations.service.ts");
 /* harmony import */ var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/user.service */ "./src/app/_services/user.service.ts");
-/* harmony import */ var _models_Permission__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_models/Permission */ "./src/app/_models/Permission.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17230,43 +21251,42 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
 let LayoutComponent = class LayoutComponent {
     constructor(router, service, userService, ls) {
+        // this.userName = this.ls.getSelectedBrand().userName;
+        // this.type = this.ls.getSelectedBrand().type;
         this.router = router;
         this.service = service;
         this.userService = userService;
         this.ls = ls;
         this._Langname = "";
-        this.userName = "";
-        this.type = "";
+        this.name = "";
         this.email = "";
-        this.isDiagnostic = true;
-        this.isDoctor = true;
-        this.isUser = true;
-        this.isNoti = true;
-        this.isPharmacy = true;
-        this.isReception = true;
-        this.isReport = true;
-        this.isSetting = true;
-        this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_5__["Permission"]();
-        this.userName = this.ls.getSelectedBrand().userName;
-        this.type = this.ls.getSelectedBrand().type;
-        //  this.permission=environment.rootScope;
-        this.permission = this.ls.getSelectedBrand();
-        var role = this.permission.permissionForm.find(element => element.roleName == this.type);
-        var roleNameType = role.roleName;
-        this.isDiagnostic = role.diagnostic === 1 ? true : false;
-        this.isDoctor = role.doctor === 1 ? true : false;
-        this.isUser = role.mamjiUser === 1 ? true : false;
-        this.isNoti = role.notification === 1 ? true : false;
-        this.isPharmacy = role.pharmacy === 1 ? true : false;
-        this.isReception = role.reception === 1 ? true : false;
-        this.isReport = role.reports === 1 ? true : false;
-        this.isSetting = role.setting === 1 ? true : false;
+        // //  this.permission=environment.rootScope;
+        // this.permission=this.ls.getSelectedBrand(); 
+        //  var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
+        //  var roleNameType= role.roleName;
+        //  this.isDiagnostic = role.diagnostic === 1 ? true : false;
+        //  this.isDoctor = role.doctor === 1 ? true : false;
+        //  this.isUser = role.mamjiUser === 1 ? true : false;
+        //  this.isNoti = role.notification === 1 ? true : false;
+        //  this.isPharmacy = role.pharmacy === 1 ? true : false;
+        //  this.isReception = role.reception === 1 ? true : false;
+        //  this.isReport = role.reports === 1 ? true : false;
+        //  this.isSetting = role.setting === 1 ? true : false;
     }
+    // roleName;
+    // isDiagnostic: boolean = true;
+    // isDoctor: boolean = true;
+    // isUser: boolean = true;
+    // isNoti: boolean = true;
+    // isPharmacy: boolean = true;
+    // isReception: boolean = true;
+    // isReport: boolean = true;
+    // isSetting: boolean = true;
+    // public permission = new Permission();
     ngOnInit() {
-        this.type = this.ls.getSelectedBrand().type;
+        //this.type = this.ls.getSelectedBrand().type;
     }
     Logout() {
         sessionStorage.clear();
@@ -17339,7 +21359,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/user.service */ "./src/app/_services/user.service.ts");
-/* harmony import */ var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment.prod */ "./src/environments/environment.prod.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17352,7 +21371,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-
 
 
 
@@ -17374,22 +21392,22 @@ let LoginComponent = class LoginComponent {
         this.createForm();
     }
     onSubmit() {
+        debugger;
         this.loginForm.markAllAsTouched();
         if (this.loginForm.invalid) {
             return;
         }
-        this.service.login(this.f.username.value, this.f.password.value)
+        this.service.login(this.f.email.value, this.f.password.value)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
             .subscribe(data => {
             if (data != null) {
                 this.ls.setSelectedBrand(data);
-                this.userService.getAllData();
-                //this.userService.getpermission();
-                src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
+                //this.userService.getAllData();
+                //environment.rootScope = data;
                 this.router.navigate(["/admin/dashboard"]);
             }
             else {
-                this.ts.showError("Error", "Username or password is not correct.");
+                this.ts.showError("Error", "Email or password is not correct.");
             }
         }, error => {
             this.ts.showError("Error", "Something went wrong.");
@@ -17398,7 +21416,7 @@ let LoginComponent = class LoginComponent {
     get f() { return this.loginForm.controls; }
     createForm() {
         this.loginForm = this.formBuilder.group({
-            username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
         });
     }
@@ -17485,24 +21503,6 @@ NavMenuComponent = __decorate([
 
 /***/ }),
 
-/***/ "./src/environments/environment.prod.ts":
-/*!**********************************************!*\
-  !*** ./src/environments/environment.prod.ts ***!
-  \**********************************************/
-/*! exports provided: environment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-const environment = {
-    production: true,
-    rootScope: null,
-};
-
-
-/***/ }),
-
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -17576,7 +21576,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Project\AghaKhan\AKUH_Admin_GIT\ClientApp\src\main.ts */"./src/main.ts");
 
 
 /***/ }),

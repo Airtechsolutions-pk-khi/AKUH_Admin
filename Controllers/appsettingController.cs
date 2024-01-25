@@ -43,7 +43,7 @@ namespace AKU_Admin.Controllers
         [Route("update")]
         public int Put([FromBody] AppSetingBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
 
         [HttpPost]

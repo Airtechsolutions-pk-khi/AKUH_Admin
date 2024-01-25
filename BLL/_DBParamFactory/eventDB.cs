@@ -52,7 +52,30 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public List<EventBLL> GetAllDropdown()
+        {
+            try
+            {
+                var lst = new List<EventBLL>();
+                SqlParameter[] p = new SqlParameter[0];
 
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllDropdownEvents", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventBLL>>();
+                    }
+                }
+
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        
         public EventBLL Get(int id)
         {
             try
@@ -142,7 +165,7 @@ namespace BAL.Repositories
         public int Insert(EventBLL data)
         {
             try
-            {
+            {                 
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[20];
 
@@ -160,8 +183,9 @@ namespace BAL.Repositories
                 p[11] = new SqlParameter("@Facebook", data.Facebook);
                 p[12] = new SqlParameter("@Instagram", data.Instagram);
                 p[13] = new SqlParameter("@Twitter", data.Twitter);
+                //p[14] = new SqlParameter("@Image", data.EventImages[0].Image);
                 p[14] = new SqlParameter("@Image", data.Image);
-                p[15] = new SqlParameter("@Createdon", data.Createdon);
+                p[15] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
                 p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
                 p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
@@ -196,7 +220,7 @@ namespace BAL.Repositories
                     SqlParameter[] p3 = new SqlParameter[3];
                     p3[0] = new SqlParameter("@Images", imgStr);
                     p3[1] = new SqlParameter("@EventID", rtn);
-                    p3[2] = new SqlParameter("@Createdon", data.Updatedon);
+                    p3[2] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventImages_Admin", p3);
                 }
                 catch { }
@@ -235,7 +259,7 @@ namespace BAL.Repositories
                 p[2] = new SqlParameter("@Description", data.Description);
                 p[3] = new SqlParameter("@FromDate", data.FromDate);
                 p[4] = new SqlParameter("@ToDate", data.ToDate);
-                p[5] = new SqlParameter("@EventDate", data.EventDate);
+                p[5] = new SqlParameter("@EventDate", data.FromDate);
                 p[6] = new SqlParameter("@EventCity", data.EventCity);
                 p[7] = new SqlParameter("@LocationLink", data.LocationLink);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
@@ -245,32 +269,33 @@ namespace BAL.Repositories
                 p[12] = new SqlParameter("@Instagram", data.Instagram);
                 p[13] = new SqlParameter("@Twitter", data.Twitter);
                 p[14] = new SqlParameter("@Image", data.Image);
-                p[15] = new SqlParameter("@Updatedon", data.Updatedon);
+                p[15] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
                 p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
                 p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
                 p[19] = new SqlParameter("@EventID", data.EventID);
                 p[20] = new SqlParameter("@EventTime", data.EventTime);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin", p);
+                
 
                 if (data.EventCategoryID != null )
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
+                    p1[0] = new SqlParameter("@EventID", data.EventID);
                     p1[1] = new SqlParameter("@EventCategory", data.EventCategoryID.ToString());
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventCatMapping_Admin", p1);
                 }
                 if (data.Speakers != "" && data.Speakers != null)
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
+                    p1[0] = new SqlParameter("@EventID", data.EventID);
                     p1[1] = new SqlParameter("@Speaker", data.Speakers);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertSpeakerMapping_Admin", p1);
                 }
                 if (data.Organizers != "" && data.Organizers != null)
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
+                    p1[0] = new SqlParameter("@EventID", data.EventID);
                     p1[1] = new SqlParameter("@Organizer", data.Organizers);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertOrganizerMapping_Admin", p1);
                 }
@@ -279,7 +304,7 @@ namespace BAL.Repositories
                     var imgStr = String.Join(",", data.EventImages.Select(p => p.Image));
                     SqlParameter[] p3 = new SqlParameter[3];
                     p3[0] = new SqlParameter("@Images", imgStr);
-                    p3[1] = new SqlParameter("@EventID", rtn);
+                    p3[1] = new SqlParameter("@EventID", data.EventID);
                     p3[2] = new SqlParameter("@Createdon", data.Updatedon);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventImages_Admin", p3);
                 }
@@ -347,5 +372,66 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        public List<EventDetailsBLL> GetEventsDetailRpt(string EventID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                string a = EventID.Replace("$", "");
+                var lst = new List<EventDetailsBLL>();
+
+                SqlParameter[] p = new SqlParameter[3];
+                
+                p[0] = new SqlParameter("@EventID", a);
+                p[1] = new SqlParameter("@fromdate", FromDate);
+                p[2] = new SqlParameter("@todate", ToDate);
+                
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_rptEventDetailsReport", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventDetailsBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }
+        public List<EventDetailsBLL> ConfirmListReport(string EventID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                string a = EventID.Replace("$", "");
+                var lst = new List<EventDetailsBLL>();
+
+                SqlParameter[] p = new SqlParameter[3];
+
+                p[0] = new SqlParameter("@EventID", a);
+                p[1] = new SqlParameter("@fromdate", FromDate);
+                p[2] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_rptConfirmListReport", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventDetailsBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }
+        
     }
 }

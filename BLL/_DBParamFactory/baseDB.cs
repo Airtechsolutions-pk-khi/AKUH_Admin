@@ -23,8 +23,8 @@ namespace BAL.Repositories
         {
             try
             {
-                var applicationID = "AAAAHm8JKdI:APA91bGAVlMvziAvTG1rb8maXIR9bIZQ0x9OJtPJRU8jOr1O3D8UgPXPTI7UfnCBxruRgoS7tSM1-SlOAQ8btQVrB2v9lr7EYsZSGspG5r1nuqjBuhOmhfrJJsqGg3yubGSm1tVLFRRf";
-                var senderId = "130711890386";
+                var applicationID = "AAAA_pHx1WA:APA91bHZZdZb6r-0IfnisWfw81-ovD3oAbAqJr6kEFKQJaf_YsKkT8x69lgiRKTJd50LgziVABJmpC_rm6L8OmVZvM9b63_1heNeMJbllrUaCdqQLOG0trQ2pWe9lT2Ri4cmHDmiOg6j";
+                var senderId = "1093370238304";
                 string deviceId = obj.DeviceID;
                 WebRequest tRequest = WebRequest.Create("https://fcm.googleapis.com/fcm/send");
                 tRequest.Method = "post";
@@ -67,15 +67,13 @@ namespace BAL.Repositories
                 string str = ex.Message;
             }
         }
-        public DataSet GetToken(int CustomerID)
+        public DataSet GetToken()
         {
             try
             {
                 var _obj = new PushTokenBLL();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@CustomerID", CustomerID);
-
-
+                SqlParameter[] p = new SqlParameter[0];
+                 
                 _ds = (new DBHelper().GetDatasetFromSP)("sp_GetToken", p);
 
                 return _ds;

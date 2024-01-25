@@ -51,5 +51,21 @@ namespace AKU_Admin.BLL._Services
             return rsp;
 
         }
+        public RspDashboard getchartsMonth()
+        {
+            var rsp = new RspDashboard();
+            try
+            {
+                rsp.todaysales = _service.GetChartMonth();
+            }
+            catch (Exception)
+            {
+                rsp.todaysales = new DashboardToday();
+            }
+            
+
+            return rsp;
+
+        }
     }
 }

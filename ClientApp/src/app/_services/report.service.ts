@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SummaryReport, SalesdetailReport, SalescategorywiseReport, SalescustomerwiseReport, SalesitemwiseReport, Report } from '../_models/Report';
+import { SummaryReport, SalesdetailReport, SalescategorywiseReport, SalescustomerwiseReport, SalesitemwiseReport, Report, EventdetailReport } from '../_models/Report';
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { SortColumn, SortDirection, State } from '../_models/State';
 import { switchMap, tap, map } from 'rxjs/operators';
@@ -113,6 +113,12 @@ clear() {
   SalesDetailRpt(brandID,locationID,fromDate,toDate) {
     return this.http.get<SalesdetailReport[]>(`api/report/salesdetail/${brandID}/${locationID}/${fromDate}/${toDate}`);
   }
+  EventDetailRpt(eventID,fromDate,toDate) {
+    return this.http.get<EventdetailReport[]>(`api/event/EventRpt/$${eventID}/${fromDate}/${toDate}`);
+  }
+  ConfirmListRpt(eventID,fromDate,toDate) {
+    return this.http.get<EventdetailReport[]>(`api/event/ConfirmListReport/$${eventID}/${fromDate}/${toDate}`);
+  }
 
   SalesItemwiseRpt(brandID,locationID,fromDate,toDate) {
     return this.http.get<SalesitemwiseReport[]>(`api/report/salesitemwise/${brandID}/${locationID}/${fromDate}/${toDate}`);
@@ -132,6 +138,9 @@ clear() {
   
   loadLocations(brandId) {
     return this.http.get<Location[]>(`api/location/all/${brandId}`);
+  }
+  loadEvents() {
+    return this.http.get<Location[]>(`api/Event/alldropdown`);
   }
 
 

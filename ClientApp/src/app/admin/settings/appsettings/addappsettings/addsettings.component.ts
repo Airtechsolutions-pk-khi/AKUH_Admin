@@ -92,7 +92,7 @@ export class AddsettingsComponent implements OnInit {
     if (this.settingForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-
+    this.f.splashScreen.setValue(this.imgComp.imageUrl);
     if (parseInt('1') === 0) {
       //Insert banner
       console.log(JSON.stringify(this.settingForm.value));

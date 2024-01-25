@@ -347,6 +347,26 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html":
+    /*!****************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html ***!
+      \****************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminConfirmlistreportConfirmlistreportComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.eventName}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.userName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/dashboard/dashboard.component.html":
     /*!************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/dashboard/dashboard.component.html ***!
@@ -362,7 +382,187 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Prescription</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Upcoming Events</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.upcomingEvents}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Past Events</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.pastEvents}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Registered Attendees</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalRegisteredAttendees}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Confirmed Attendees</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalConfirmedAttendees}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n \r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Daily Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Monthly Registration Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html":
+    /*!****************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html ***!
+      \****************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventAddeventAddeventComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.title.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Facebook URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=facebook placeholder=\"\" formControlName=\"facebook\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Instagram URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=instagram placeholder=\"\" formControlName=\"instagram\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Twitter URL</label>\r\n              <input type=\"text\" class=\"form-control\" id=twitter placeholder=\"\" formControlName=\"twitter\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Type</label>\r\n              <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Conference</option>\r\n                <option>Educational</option>\r\n                <option>History of Diagnosis</option>\r\n              </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Location Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category</label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n              <!--<ng-select [items]=\"EventCategoryList\" bindLabel=\"name\" bindValue=\"eventCategoryID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"eventCategoryID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>-->\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer</label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers</label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n              <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Choose Start to End Date</label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-4\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-4\">\r\n              <label for=\"Item Status\">Is Featured</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Event Time</label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images </label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html":
+    /*!****************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html ***!
+      \****************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventEventComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Events</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Events List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Type</th>\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Description</th>\r\n            <th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Contact No</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td>{{item.description}}</td>\r\n            <td>{{item.phoneNo}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html":
+    /*!***************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html ***!
+      \***************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventCategoryAddAddeventcategoryComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Event Category Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                        <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                        <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.name.errors.required\">\r\n                            Name is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"description\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"form-group col-md-4 text-center\">\r\n                      <app-imageupload></app-imageupload>\r\n                    </div>\r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html":
+    /*!********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html ***!
+      \********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventCategoryEventcategoryComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Category List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event Category</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Description </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventCategoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html":
+    /*!*******************************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html ***!
+      \*******************************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventattendeesAddeventattendeesAddeventattendeesComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Event Attendies</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventAttendeesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Attendies Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <!-- <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"fullName\">\r\n              <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.fullName.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div> -->\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Occupation</label>\r\n              <input type=\"text\" class=\"form-control\" id=occupation placeholder=\"\" formControlName=\"occupation\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n              <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Male</option>\r\n                <option>Female</option>                \r\n              </select>\r\n            </div>\r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Events</label>\r\n              <!-- <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>               -->\r\n              <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n             \r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n           \r\n           \r\n\r\n          </div>\r\n          \r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html":
+    /*!**********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html ***!
+      \**********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventattendeesEventattendeesComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Attendees</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Attendees List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Attendee</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\">Attendee Name </th>\r\n            <th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Event Name</th>\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Contact No</th>\r\n            <th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Occupation</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.eventName}} </td>\r\n            <td>{{item.phoneNo}}</td>\r\n            <td>{{item.occupation}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1,'btn-success': item.statusID === 4, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active': item.statusID ==4?'Completed': 'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.attendeesID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html":
+    /*!****************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html ***!
+      \****************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminEventdetailEventdetailComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.eventName}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.userName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html":
+    /*!*******************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html ***!
+      \*******************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminFaqAddAddfaqComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Faq's</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"faqForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">FAQ's Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Question</label>\r\n                        <input type=\"text\" class=\"form-control\" id=faqQ placeholder=\"\" formControlName=\"faqQ\">\r\n                        <div *ngIf=\"f.faqQ.invalid && (f.faqQ.dirty || f.faqQ.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.faqQ.errors.required\">\r\n                            Question is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Answer</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=faqA placeholder=\"\" formControlName=\"faqA\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    \r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html":
+    /*!************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html ***!
+      \************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminFaqFaqComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">FAQ's</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Faq's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by question\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Faq's</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n             \r\n            <th width=\"35%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Question </th>\r\n            <th width=\"35%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Answer </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            \r\n            <td> {{item.faqQ}} </td>\r\n            <td> {{item.faqA}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.faqID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
       /***/
     },
 
@@ -683,6 +883,86 @@
 
 
       __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <!--<th width=\"10%\" sortable=\"Status\">Status</th>-->\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <!--<td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>-->\r\n            <td>\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.isRead == 1\">Read</span>\r\n\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.isRead == 0\">UnRead</span>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html":
+    /*!*******************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html ***!
+      \*******************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminOrganizerAddAddorganizerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Organizer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organizerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n              <div class=\"card-header\">Organizer Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                                    <textarea type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\"></textarea>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html":
+    /*!************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html ***!
+      \************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminOrganizerOrganizerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Organizer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Organizer List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Organizer</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <!-- <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Description </th> -->\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <!-- <td> {{item.description}} </td> -->\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.organizerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html":
+    /*!***************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html ***!
+      \***************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminPartnerAddAddpartnerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Partner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"partnerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Partner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html":
+    /*!********************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html ***!
+      \********************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminPartnerPartnerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Partner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Partner List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Partner</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.partnerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1102,7 +1382,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Update Pharmacy Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Pharmacy Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n             \r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n              <!-- Form Row-->\r\n               \r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Update Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">App Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=appName placeholder=\"\" formControlName=\"appName\">\r\n              </div>\r\n            \r\n             \r\n\r\n            <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">App Version</label>\r\n                <input type=\"text\" class=\"form-control\" id=appVersion placeholder=\"\" formControlName=\"appVersion\">\r\n              </div>\r\n            </div>\r\n          </div>\r\n            <!-- Form Row-->\r\n            <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">About</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Privacy Policy</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=privacyPolicy placeholder=\"\" formControlName=\"privacyPolicy\"></textarea>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Facebook URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=facebookUrl placeholder=\"\" formControlName=\"facebookUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Instagram URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=instagramUrl placeholder=\"\" formControlName=\"instagramUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Twitter URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=twitterUrl placeholder=\"\" formControlName=\"twitterUrl\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">YouTube URL</label>              \r\n              <input type=\"text\" class=\"form-control\" id=youtubeUrl placeholder=\"\" formControlName=\"youtubeUrl\">\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n          <div class=\"form-group col-md-4 text-center\">\r\n            <label for=\"inputFirstName\" style=\"margin-bottom: 0rem;margin-top: 20px;\">Upload Splash</label>\r\n            <app-imageupload></app-imageupload>\r\n            \r\n          </div>\r\n\r\n          </div>\r\n            <!-- <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Splash Screen</label>\r\n              <textarea type=\"text\" class=\"form-control\" id=splashScreen placeholder=\"\" formControlName=\"splashScreen\"></textarea>\r\n            </div> -->\r\n          \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1142,7 +1422,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Banner Type</label>\r\n                  <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Header</option>\r\n                    <option>Featured</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!-- <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Banner Type</label>              \r\n              <select class=\"custom-select\" formControlName=\"type\" class=\"form-control\">\r\n                <option disabled>Select Type</option>                  \r\n                <option *ngFor=\"let web of NursingTypeActive\" >{{web}}</option>\r\n            </select>          \r\n              </div>\r\n            </div>          \r\n          </div> -->\r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Banner Type</label>\r\n                  <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Header</option>\r\n                    <option>Featured</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Screen</label>\r\n                  <select type=\"text\" class=\"form-control\" id=screen placeholder=\"\" formControlName=\"screen\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Home</option>\r\n                    <option>Event</option>\r\n                    <option>Speaker</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n \r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1162,7 +1442,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Banner\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n            <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Banner\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Screen </th>\r\n            <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.screen}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ===1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
       /***/
     },
 
@@ -1487,6 +1767,46 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html":
+    /*!**********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html ***!
+      \**********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSpeakerAddspeakerAddspeakerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"speakerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Speaker Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Designation</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\">\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Company</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=company placeholder=\"\" formControlName=\"company\">\r\n                                </div>\r\n                            </div>\r\n                          <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">About</label>\r\n                                    <textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html":
+    /*!********************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html ***!
+      \********************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSpeakerSpeakerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Speaker List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Speaker</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Designation\" (sort)=\"onSort($event)\">Designation </th>\r\n            <th width=\"10%\" sortable=\"Company\" (sort)=\"onSort($event)\">Company</th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.designation}} </td>\r\n            <td>{{item.company}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.speakerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html":
     /*!*********************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html ***!
@@ -1502,7 +1822,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.userName.errors.required\">\r\n                    User Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <div class=\"input-group\">\r\n                  <input type=\"{{ passwordFieldType }}\" class=\"form-control\" id=\"password\" placeholder=\"\" formControlName=\"password\">\r\n                  <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-outline-secondary\" type=\"button\" (click)=\"togglePasswordVisibility()\">\r\n                      {{ showPassword ? 'Hide' : 'Show' }}\r\n                    </button>\r\n                  </div>\r\n                </div>\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!--<div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>-->\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.email.errors.required\">\r\n                    Email is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <div class=\"form-group col-md-12\">\r\n\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n                <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                  <option selected disabled> -- Please Select -- </option>\r\n                  <option>SuperAdmin</option>\r\n                  <option>Admin</option>\r\n                  <option>Reception</option>\r\n                  <option>Pharmacy</option>\r\n                  <option>Laboratory</option>\r\n                </select>\r\n\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.userName.errors.required\">\r\n                    User Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.email.errors.required\">\r\n                    Email is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Contact No.</label>\r\n                <input type=\"text\" class=\"form-control\" id=contactNo placeholder=\"\" formControlName=\"contactNo\">\r\n                <div *ngIf=\"f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.contactNo.errors.required\">\r\n                    Contact No is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <div class=\"input-group\">\r\n                  <input type=\"{{ passwordFieldType }}\" class=\"form-control\" id=\"password\" placeholder=\"\" formControlName=\"password\">\r\n                  <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-outline-secondary\" type=\"button\" (click)=\"togglePasswordVisibility()\">\r\n                      {{ showPassword ? 'Hide' : 'Show' }}\r\n                    </button>\r\n                  </div>\r\n                </div>\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Address</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\"></textarea>\r\n                <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.address.errors.required\">\r\n                    Address No is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1562,7 +1882,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <!-- <td> {{item.type}} </td> -->\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.userID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
       /***/
     },
 
@@ -1702,7 +2022,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <!--<div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>-->\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 100%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>User</span>\r\n        </a>\r\n        <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      \r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n        \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a> \r\n        \r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -1722,7 +2042,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"container\">\r\n\r\n    <!-- Outer Row -->\r\n    <div class=\"row justify-content-center\">\r\n\r\n        <div class=\"col-xl-10 col-lg-12 col-md-9\">\r\n\r\n            <div class=\"card o-hidden border-0 shadow-lg my-5\">\r\n                <div class=\"card-body p-0\">\r\n                    <!-- Nested Row within Card Body -->\r\n                    <div class=\"row\">\r\n                        <div class=\"col-lg-6 d-none d-lg-block bg-login-image\"></div>\r\n                        <div class=\"col-lg-6\">\r\n                            <div class=\"p-5\">\r\n                                <div class=\"text-center mb-4\">\r\n                                    <img src=\"../../assets/img/logo-new.png\" style=\"height:150px\" />\r\n                                </div>\r\n                                <div class=\"text-center\">\r\n                                    <h1 class=\"h4 text-gray-900 mb-4\">Welcome Back!</h1>\r\n                                </div>\r\n                                <form [formGroup]=\"loginForm\" class=\"user\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" formControlName=\"username\" class=\"form-control form-control-user\" id=\"username\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email Address...\">\r\n                                        <div *ngIf=\"f.username.invalid && (f.username.dirty || f.username.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.username.errors.required\">\r\n                                                username is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" class=\"form-control form-control-user\" id=\"password\" formControlName=\"password\" placeholder=\"Password\">\r\n                                        <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.password.errors.required\">\r\n                                                password is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <button class=\"btn btn-primary btn-user btn-block\">\r\n                                      Login\r\n                                  </button>\r\n                                    <hr>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<div class=\"container\">\r\n\r\n    <!-- Outer Row -->\r\n    <div class=\"row justify-content-center\">\r\n\r\n        <div class=\"col-xl-10 col-lg-12 col-md-9\">\r\n\r\n            <div class=\"card o-hidden border-0 shadow-lg my-5\">\r\n                <div class=\"card-body p-0\">\r\n                    <!-- Nested Row within Card Body -->\r\n                    <div class=\"row\">\r\n                        <div class=\"col-lg-6 d-none d-lg-block bg-login-image\"></div>\r\n                        <div class=\"col-lg-6\">\r\n                            <div class=\"p-5\">\r\n                                <div class=\"text-center mb-4\">\r\n                                    <img src=\"../../assets/img/logo-new.png\" style=\"height:150px\" />\r\n                                </div>\r\n                                <div class=\"text-center\">\r\n                                    <h1 class=\"h4 text-gray-900 mb-4\">Welcome Back!</h1>\r\n                                </div>\r\n                                <form [formGroup]=\"loginForm\" class=\"user\" (ngSubmit)=\"onSubmit()\">\r\n\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"email\" formControlName=\"email\" class=\"form-control form-control-user\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email Address...\">\r\n                                        <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.email.errors.required\">\r\n                                                Email is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class=\"form-group\">\r\n                                        <input type=\"password\" class=\"form-control form-control-user\" id=\"password\" formControlName=\"password\" placeholder=\"Password\">\r\n                                        <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                                            <div *ngIf=\"f.password.errors.required\">\r\n                                                password is required.\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n\r\n                                    <button class=\"btn btn-primary btn-user btn-block\">\r\n                                      Login\r\n                                  </button>\r\n                                    <hr>\r\n                                </form>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1742,7 +2062,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">MamjiAdmin</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li\r\n            class=\"nav-item\"\r\n            [routerLinkActive]=\"['link-active']\"\r\n            [routerLinkActiveOptions]=\"{ exact: true }\"\r\n          >\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\"\r\n              >Counter</a\r\n            >\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\"\r\n              >Fetch data</a\r\n            >\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </nav>\r\n</header>\r\n";
+      __webpack_exports__["default"] = "<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">AKU_Admin</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li\r\n            class=\"nav-item\"\r\n            [routerLinkActive]=\"['link-active']\"\r\n            [routerLinkActiveOptions]=\"{ exact: true }\"\r\n          >\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\"\r\n              >Counter</a\r\n            >\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\"\r\n              >Fetch data</a\r\n            >\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </nav>\r\n</header>\r\n";
       /***/
     },
 
@@ -2675,7 +2995,7 @@
       !*** ./src/app/_models/Report.ts ***!
       \***********************************/
 
-    /*! exports provided: Report, SummaryReport, SalesdetailReport, SalesitemwiseReport, SalescustomerwiseReport, SalesuserwiseReport, SalescategorywiseReport */
+    /*! exports provided: Report, EventdetailReport, SummaryReport, SalesdetailReport, SalesitemwiseReport, SalescustomerwiseReport, SalesuserwiseReport, SalescategorywiseReport */
 
     /***/
     function srcApp_modelsReportTs(module, __webpack_exports__, __webpack_require__) {
@@ -2687,6 +3007,12 @@
 
       __webpack_require__.d(__webpack_exports__, "Report", function () {
         return Report;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventdetailReport", function () {
+        return EventdetailReport;
       });
       /* harmony export (binding) */
 
@@ -2727,6 +3053,10 @@
 
       var Report = function Report() {
         _classCallCheck(this, Report);
+      };
+
+      var EventdetailReport = function EventdetailReport() {
+        _classCallCheck(this, EventdetailReport);
       };
 
       var SummaryReport = function SummaryReport() {
@@ -3630,6 +3960,7 @@
         _createClass(AppsettingService, [{
           key: "getById",
           value: function getById(id) {
+            debugger;
             return this.http.get("api/appsetting/".concat(id));
           }
         }, {
@@ -3892,7 +4223,7 @@
       }
 
       function matches(data, term) {
-        return data.name.toLowerCase().includes(term.toLowerCase());
+        return data.title.toLowerCase().includes(term.toLowerCase());
       }
 
       var BannerService = /*#__PURE__*/function () {
@@ -5604,6 +5935,11 @@
             return this.http.get("api/dashboard/all");
           }
         }, {
+          key: "getAllDataMonth",
+          value: function getAllDataMonth() {
+            return this.http.get("api/dashboard/getchartsMonth");
+          }
+        }, {
           key: "getChart",
           value: function getChart() {
             return this.http.get("api/dashboard/getcharts");
@@ -6515,6 +6851,1275 @@
     },
 
     /***/
+    "./src/app/_services/event.service.ts":
+    /*!********************************************!*\
+      !*** ./src/app/_services/event.service.ts ***!
+      \********************************************/
+
+    /*! exports provided: EventService */
+
+    /***/
+    function srcApp_servicesEventServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventService", function () {
+        return EventService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var EventService = /*#__PURE__*/function () {
+        function EventService(http) {
+          _classCallCheck(this, EventService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(EventService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/item/all/".concat(brandId));
+          }
+        }, {
+          key: "loadCategories",
+          value: function loadCategories(brandId) {
+            return this.http.get("api/category/all/".concat(brandId));
+          }
+        }, {
+          key: "loadActiveCategories",
+          value: function loadActiveCategories() {
+            return this.http.get("api/eventcategory/DropdownAll");
+          }
+        }, {
+          key: "loadOrganizer",
+          value: function loadOrganizer() {
+            return this.http.get("api/organizer/DropdownAll");
+          }
+        }, {
+          key: "loadSpeaker",
+          value: function loadSpeaker() {
+            return this.http.get("api/speaker/DropdownAll");
+          }
+        }, {
+          key: "loadItems",
+          value: function loadItems(brandId) {
+            return this.http.get("api/item/all/".concat(brandId));
+          }
+        }, {
+          key: "loadModifierList",
+          value: function loadModifierList(brandId) {
+            return this.http.get("api/modifier/all/".concat(brandId));
+          }
+        }, {
+          key: "loadAddonList",
+          value: function loadAddonList(brandId) {
+            return this.http.get("api/addons/all/".concat(brandId));
+          }
+        }, {
+          key: "loadEventImages",
+          value: function loadEventImages(id) {
+            return this.http.get("api/event/images/".concat(id));
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/event/".concat(id));
+          }
+        }, {
+          key: "getTodaysItems",
+          value: function getTodaysItems(brandId) {
+            return this.http.get("api/item/settings/".concat(brandId));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this16 = this;
+
+            var url = "api/event/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this16._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this16.event = res;
+
+              _this16._data$.next(_this16.event);
+
+              _this16._allData$.next(_this16.event);
+
+              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this16._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this16._loading$.next(false);
+              })).subscribe(function (result) {
+                _this16._data$.next(result.data);
+
+                _this16._total$.next(result.total);
+              });
+
+              _this16._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state13 = this._state,
+                sortColumn = _this$_state13.sortColumn,
+                sortDirection = _this$_state13.sortDirection,
+                pageSize = _this$_state13.pageSize,
+                page = _this$_state13.page,
+                searchTerm = _this$_state13.searchTerm; // 1. sort
+
+            var sortedData = sort(this.event, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/event/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/event/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "updateSettings",
+          value: function updateSettings(updateData) {
+            return this.http.post("api/item/update/settings", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/event/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return EventService;
+      }();
+
+      EventService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      EventService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], EventService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/eventCategory.service.ts":
+    /*!****************************************************!*\
+      !*** ./src/app/_services/eventCategory.service.ts ***!
+      \****************************************************/
+
+    /*! exports provided: EventCategoryService */
+
+    /***/
+    function srcApp_servicesEventCategoryServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventCategoryService", function () {
+        return EventCategoryService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var EventCategoryService = /*#__PURE__*/function () {
+        function EventCategoryService(http) {
+          _classCallCheck(this, EventCategoryService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(EventCategoryService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/eventcategory/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/eventcategory/eventcategory/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this17 = this;
+
+            var url = "api/eventcategory/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this17._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this17.event = res;
+
+              _this17._data$.next(_this17.event);
+
+              _this17._allData$.next(_this17.event);
+
+              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this17._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this17._loading$.next(false);
+              })).subscribe(function (result) {
+                _this17._data$.next(result.data);
+
+                _this17._total$.next(result.total);
+              });
+
+              _this17._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state14 = this._state,
+                sortColumn = _this$_state14.sortColumn,
+                sortDirection = _this$_state14.sortDirection,
+                pageSize = _this$_state14.pageSize,
+                page = _this$_state14.page,
+                searchTerm = _this$_state14.searchTerm; // 1. sort
+
+            var sortedData = sort(this.event, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post("api/eventcategory/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/eventcategory/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/eventcategory/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return EventCategoryService;
+      }();
+
+      EventCategoryService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      EventCategoryService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], EventCategoryService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/eventattendees.service.ts":
+    /*!*****************************************************!*\
+      !*** ./src/app/_services/eventattendees.service.ts ***!
+      \*****************************************************/
+
+    /*! exports provided: EventAttendeesService */
+
+    /***/
+    function srcApp_servicesEventattendeesServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventAttendeesService", function () {
+        return EventAttendeesService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.fullName.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var EventAttendeesService = /*#__PURE__*/function () {
+        function EventAttendeesService(http) {
+          _classCallCheck(this, EventAttendeesService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(EventAttendeesService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/item/all/".concat(brandId));
+          }
+        }, {
+          key: "loadCategories",
+          value: function loadCategories(brandId) {
+            return this.http.get("api/category/all/".concat(brandId));
+          }
+        }, {
+          key: "loadActiveCategories",
+          value: function loadActiveCategories() {
+            return this.http.get("api/eventcategory/DropdownAll");
+          }
+        }, {
+          key: "loadOrganizer",
+          value: function loadOrganizer() {
+            return this.http.get("api/organizer/DropdownAll");
+          }
+        }, {
+          key: "loadSpeaker",
+          value: function loadSpeaker() {
+            return this.http.get("api/speaker/DropdownAll");
+          }
+        }, {
+          key: "loadItems",
+          value: function loadItems(brandId) {
+            return this.http.get("api/item/all/".concat(brandId));
+          }
+        }, {
+          key: "loadModifierList",
+          value: function loadModifierList(brandId) {
+            return this.http.get("api/modifier/all/".concat(brandId));
+          }
+        }, {
+          key: "loadActiveEvents",
+          value: function loadActiveEvents() {
+            return this.http.get("api/eventattendees/DropdownAll");
+          }
+        }, {
+          key: "loadAddonList",
+          value: function loadAddonList(brandId) {
+            return this.http.get("api/addons/all/".concat(brandId));
+          }
+        }, {
+          key: "loadEventImages",
+          value: function loadEventImages(id) {
+            return this.http.get("api/event/images/".concat(id));
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/eventattendees/".concat(id));
+          }
+        }, {
+          key: "getTodaysItems",
+          value: function getTodaysItems(brandId) {
+            return this.http.get("api/item/settings/".concat(brandId));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this18 = this;
+
+            var url = "api/eventAttendees/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this18._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this18.eventAttendees = res;
+
+              _this18._data$.next(_this18.eventAttendees);
+
+              _this18._allData$.next(_this18.eventAttendees);
+
+              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this18._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this18._loading$.next(false);
+              })).subscribe(function (result) {
+                _this18._data$.next(result.data);
+
+                _this18._total$.next(result.total);
+              });
+
+              _this18._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state15 = this._state,
+                sortColumn = _this$_state15.sortColumn,
+                sortDirection = _this$_state15.sortDirection,
+                pageSize = _this$_state15.pageSize,
+                page = _this$_state15.page,
+                searchTerm = _this$_state15.searchTerm; // 1. sort
+
+            var sortedData = sort(this.eventAttendees, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/eventattendees/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/eventattendees/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "updateSettings",
+          value: function updateSettings(updateData) {
+            return this.http.post("api/item/update/settings", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/event/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return EventAttendeesService;
+      }();
+
+      EventAttendeesService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      EventAttendeesService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], EventAttendeesService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/faq.service.ts":
+    /*!******************************************!*\
+      !*** ./src/app/_services/faq.service.ts ***!
+      \******************************************/
+
+    /*! exports provided: FaqService */
+
+    /***/
+    function srcApp_servicesFaqServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FaqService", function () {
+        return FaqService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.faqQ.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var FaqService = /*#__PURE__*/function () {
+        function FaqService(http) {
+          _classCallCheck(this, FaqService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(FaqService, [{
+          key: "ExportList",
+          value: function ExportList() {
+            return this.http.get("api/faq/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/faq/faq/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this19 = this;
+
+            var url = "api/faq/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this19._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this19.event = res;
+
+              _this19._data$.next(_this19.event);
+
+              _this19._allData$.next(_this19.event);
+
+              _this19._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this19._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this19._loading$.next(false);
+              })).subscribe(function (result) {
+                _this19._data$.next(result.data);
+
+                _this19._total$.next(result.total);
+              });
+
+              _this19._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state16 = this._state,
+                sortColumn = _this$_state16.sortColumn,
+                sortDirection = _this$_state16.sortDirection,
+                pageSize = _this$_state16.pageSize,
+                page = _this$_state16.page,
+                searchTerm = _this$_state16.searchTerm; // 1. sort
+
+            var sortedData = sort(this.event, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post("api/faq/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/faq/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/faq/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return FaqService;
+      }();
+
+      FaqService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      FaqService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], FaqService);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/file-upload.service.ts":
     /*!**************************************************!*\
       !*** ./src/app/_services/file-upload.service.ts ***!
@@ -6886,30 +8491,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this16 = this;
+            var _this20 = this;
 
             var url = "api/item/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this16._loading$.next(true);
+              return _this20._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this16.items = res;
+              _this20.items = res;
 
-              _this16._data$.next(_this16.items);
+              _this20._data$.next(_this20.items);
 
-              _this16._allData$.next(_this16.items);
+              _this20._allData$.next(_this20.items);
 
-              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this16._search();
+              _this20._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this20._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this16._loading$.next(false);
+                return _this20._loading$.next(false);
               })).subscribe(function (result) {
-                _this16._data$.next(result.data);
+                _this20._data$.next(result.data);
 
-                _this16._total$.next(result.total);
+                _this20._total$.next(result.total);
               });
 
-              _this16._search$.next();
+              _this20._search$.next();
             });
           }
         }, {
@@ -6922,12 +8527,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state13 = this._state,
-                sortColumn = _this$_state13.sortColumn,
-                sortDirection = _this$_state13.sortDirection,
-                pageSize = _this$_state13.pageSize,
-                page = _this$_state13.page,
-                searchTerm = _this$_state13.searchTerm; // 1. sort
+            var _this$_state17 = this._state,
+                sortColumn = _this$_state17.sortColumn,
+                sortDirection = _this$_state17.sortDirection,
+                pageSize = _this$_state17.pageSize,
+                page = _this$_state17.page,
+                searchTerm = _this$_state17.searchTerm; // 1. sort
 
             var sortedData = sort(this.items, sortColumn, sortDirection); //// 2. filter
 
@@ -7203,38 +8808,38 @@
             debugger;
             var formData = new FormData();
             formData.append('pdfFile', file, file.name);
-            var url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
+            var url = 'http://AKU_Admin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
             return this.http.post(url, formData);
           }
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this17 = this;
+            var _this21 = this;
 
             debugger;
             var url = "api/Laboratory/all/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this17._loading$.next(true);
+              return _this21._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
               debugger;
-              _this17.laboratory = res;
+              _this21.laboratory = res;
 
-              _this17._data$.next(_this17.laboratory);
+              _this21._data$.next(_this21.laboratory);
 
-              _this17._allData$.next(_this17.laboratory);
+              _this21._allData$.next(_this21.laboratory);
 
-              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this17._search();
+              _this21._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this21._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this17._loading$.next(false);
+                return _this21._loading$.next(false);
               })).subscribe(function (result) {
-                _this17._data$.next(result.data);
+                _this21._data$.next(result.data);
 
-                _this17._total$.next(result.total);
+                _this21._total$.next(result.total);
               });
 
-              _this17._search$.next();
+              _this21._search$.next();
             });
           }
         }, {
@@ -7247,12 +8852,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state14 = this._state,
-                sortColumn = _this$_state14.sortColumn,
-                sortDirection = _this$_state14.sortDirection,
-                pageSize = _this$_state14.pageSize,
-                page = _this$_state14.page,
-                searchTerm = _this$_state14.searchTerm; // 1. sort
+            var _this$_state18 = this._state,
+                sortColumn = _this$_state18.sortColumn,
+                sortDirection = _this$_state18.sortDirection,
+                pageSize = _this$_state18.pageSize,
+                page = _this$_state18.page,
+                searchTerm = _this$_state18.searchTerm; // 1. sort
 
             var sortedData = sort(this.laboratory, sortColumn, sortDirection); //// 2. filter
 
@@ -7648,30 +9253,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this18 = this;
+            var _this22 = this;
 
             var url = "api/location/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this18._loading$.next(true);
+              return _this22._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this18.locations = res;
+              _this22.locations = res;
 
-              _this18._data$.next(_this18.locations);
+              _this22._data$.next(_this22.locations);
 
-              _this18._allData$.next(_this18.locations);
+              _this22._allData$.next(_this22.locations);
 
-              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this18._search();
+              _this22._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this22._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this18._loading$.next(false);
+                return _this22._loading$.next(false);
               })).subscribe(function (result) {
-                _this18._data$.next(result.data);
+                _this22._data$.next(result.data);
 
-                _this18._total$.next(result.total);
+                _this22._total$.next(result.total);
               });
 
-              _this18._search$.next();
+              _this22._search$.next();
             });
           }
         }, {
@@ -7684,12 +9289,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state15 = this._state,
-                sortColumn = _this$_state15.sortColumn,
-                sortDirection = _this$_state15.sortDirection,
-                pageSize = _this$_state15.pageSize,
-                page = _this$_state15.page,
-                searchTerm = _this$_state15.searchTerm; // 1. sort
+            var _this$_state19 = this._state,
+                sortColumn = _this$_state19.sortColumn,
+                sortDirection = _this$_state19.sortDirection,
+                pageSize = _this$_state19.pageSize,
+                page = _this$_state19.page,
+                searchTerm = _this$_state19.searchTerm; // 1. sort
 
             var sortedData = sort(this.locations, sortColumn, sortDirection); //// 2. filter
 
@@ -8030,30 +9635,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this19 = this;
+            var _this23 = this;
 
             var url = "api/medicalservice/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this19._loading$.next(true);
+              return _this23._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this19.medical = res;
+              _this23.medical = res;
 
-              _this19._data$.next(_this19.medical);
+              _this23._data$.next(_this23.medical);
 
-              _this19._allData$.next(_this19.medical);
+              _this23._allData$.next(_this23.medical);
 
-              _this19._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this19._search();
+              _this23._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this23._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this19._loading$.next(false);
+                return _this23._loading$.next(false);
               })).subscribe(function (result) {
-                _this19._data$.next(result.data);
+                _this23._data$.next(result.data);
 
-                _this19._total$.next(result.total);
+                _this23._total$.next(result.total);
               });
 
-              _this19._search$.next();
+              _this23._search$.next();
             });
           }
         }, {
@@ -8066,12 +9671,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state16 = this._state,
-                sortColumn = _this$_state16.sortColumn,
-                sortDirection = _this$_state16.sortDirection,
-                pageSize = _this$_state16.pageSize,
-                page = _this$_state16.page,
-                searchTerm = _this$_state16.searchTerm; // 1. sort
+            var _this$_state20 = this._state,
+                sortColumn = _this$_state20.sortColumn,
+                sortDirection = _this$_state20.sortDirection,
+                pageSize = _this$_state20.pageSize,
+                page = _this$_state20.page,
+                searchTerm = _this$_state20.searchTerm; // 1. sort
 
             var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
 
@@ -8326,31 +9931,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this20 = this;
+            var _this24 = this;
 
             debugger;
             var url = "api/nursing/Alltype";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this20._loading$.next(true);
+              return _this24._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this20.medical = res;
+              _this24.medical = res;
 
-              _this20._data$.next(_this20.medical);
+              _this24._data$.next(_this24.medical);
 
-              _this20._allData$.next(_this20.medical);
+              _this24._allData$.next(_this24.medical);
 
-              _this20._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this20._search();
+              _this24._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this24._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this20._loading$.next(false);
+                return _this24._loading$.next(false);
               })).subscribe(function (result) {
-                _this20._data$.next(result.data);
+                _this24._data$.next(result.data);
 
-                _this20._total$.next(result.total);
+                _this24._total$.next(result.total);
               });
 
-              _this20._search$.next();
+              _this24._search$.next();
             });
           }
         }, {
@@ -8363,12 +9968,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state17 = this._state,
-                sortColumn = _this$_state17.sortColumn,
-                sortDirection = _this$_state17.sortDirection,
-                pageSize = _this$_state17.pageSize,
-                page = _this$_state17.page,
-                searchTerm = _this$_state17.searchTerm; // 1. sort
+            var _this$_state21 = this._state,
+                sortColumn = _this$_state21.sortColumn,
+                sortDirection = _this$_state21.sortDirection,
+                pageSize = _this$_state21.pageSize,
+                page = _this$_state21.page,
+                searchTerm = _this$_state21.searchTerm; // 1. sort
 
             var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
 
@@ -8616,30 +10221,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this21 = this;
+            var _this25 = this;
 
             var url = "api/medicine/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this21._loading$.next(true);
+              return _this25._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this21.medicine = res;
+              _this25.medicine = res;
 
-              _this21._data$.next(_this21.medicine);
+              _this25._data$.next(_this25.medicine);
 
-              _this21._allData$.next(_this21.medicine);
+              _this25._allData$.next(_this25.medicine);
 
-              _this21._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this21._search();
+              _this25._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this25._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this21._loading$.next(false);
+                return _this25._loading$.next(false);
               })).subscribe(function (result) {
-                _this21._data$.next(result.data);
+                _this25._data$.next(result.data);
 
-                _this21._total$.next(result.total);
+                _this25._total$.next(result.total);
               });
 
-              _this21._search$.next();
+              _this25._search$.next();
             });
           }
         }, {
@@ -8652,12 +10257,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state18 = this._state,
-                sortColumn = _this$_state18.sortColumn,
-                sortDirection = _this$_state18.sortDirection,
-                pageSize = _this$_state18.pageSize,
-                page = _this$_state18.page,
-                searchTerm = _this$_state18.searchTerm; // 1. sort
+            var _this$_state22 = this._state,
+                sortColumn = _this$_state22.sortColumn,
+                sortDirection = _this$_state22.sortDirection,
+                pageSize = _this$_state22.pageSize,
+                page = _this$_state22.page,
+                searchTerm = _this$_state22.searchTerm; // 1. sort
 
             var sortedData = sort(this.medicine, sortColumn, sortDirection); //// 2. filter
 
@@ -8906,30 +10511,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this22 = this;
+            var _this26 = this;
 
             var url = "api/modifier/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this22._loading$.next(true);
+              return _this26._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this22.modifiers = res;
+              _this26.modifiers = res;
 
-              _this22._data$.next(_this22.modifiers);
+              _this26._data$.next(_this26.modifiers);
 
-              _this22._allData$.next(_this22.modifiers);
+              _this26._allData$.next(_this26.modifiers);
 
-              _this22._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this22._search();
+              _this26._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this26._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this22._loading$.next(false);
+                return _this26._loading$.next(false);
               })).subscribe(function (result) {
-                _this22._data$.next(result.data);
+                _this26._data$.next(result.data);
 
-                _this22._total$.next(result.total);
+                _this26._total$.next(result.total);
               });
 
-              _this22._search$.next();
+              _this26._search$.next();
             });
           }
         }, {
@@ -8942,12 +10547,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state19 = this._state,
-                sortColumn = _this$_state19.sortColumn,
-                sortDirection = _this$_state19.sortDirection,
-                pageSize = _this$_state19.pageSize,
-                page = _this$_state19.page,
-                searchTerm = _this$_state19.searchTerm; // 1. sort
+            var _this$_state23 = this._state,
+                sortColumn = _this$_state23.sortColumn,
+                sortDirection = _this$_state23.sortDirection,
+                pageSize = _this$_state23.pageSize,
+                page = _this$_state23.page,
+                searchTerm = _this$_state23.searchTerm; // 1. sort
 
             var sortedData = sort(this.modifiers, sortColumn, sortDirection); //// 2. filter
 
@@ -9190,30 +10795,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this23 = this;
+            var _this27 = this;
 
             var url = "api/notification/all/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this23._loading$.next(true);
+              return _this27._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this23.notification = res;
+              _this27.notification = res;
 
-              _this23._data$.next(_this23.notification);
+              _this27._data$.next(_this27.notification);
 
-              _this23._allData$.next(_this23.notification);
+              _this27._allData$.next(_this27.notification);
 
-              _this23._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this23._search();
+              _this27._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this27._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this23._loading$.next(false);
+                return _this27._loading$.next(false);
               })).subscribe(function (result) {
-                _this23._data$.next(result.data);
+                _this27._data$.next(result.data);
 
-                _this23._total$.next(result.total);
+                _this27._total$.next(result.total);
               });
 
-              _this23._search$.next();
+              _this27._search$.next();
             });
           }
         }, {
@@ -9226,12 +10831,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state20 = this._state,
-                sortColumn = _this$_state20.sortColumn,
-                sortDirection = _this$_state20.sortDirection,
-                pageSize = _this$_state20.pageSize,
-                page = _this$_state20.page,
-                searchTerm = _this$_state20.searchTerm; // 1. sort
+            var _this$_state24 = this._state,
+                sortColumn = _this$_state24.sortColumn,
+                sortDirection = _this$_state24.sortDirection,
+                pageSize = _this$_state24.pageSize,
+                page = _this$_state24.page,
+                searchTerm = _this$_state24.searchTerm; // 1. sort
 
             var sortedData = sort(this.notification, sortColumn, sortDirection); //// 2. filter
 
@@ -9479,30 +11084,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this24 = this;
+            var _this28 = this;
 
             var url = "api/nursingappointment/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this24._loading$.next(true);
+              return _this28._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this24.appointments = res;
+              _this28.appointments = res;
 
-              _this24._data$.next(_this24.appointments);
+              _this28._data$.next(_this28.appointments);
 
-              _this24._allData$.next(_this24.appointments);
+              _this28._allData$.next(_this28.appointments);
 
-              _this24._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this24._search();
+              _this28._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this28._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this24._loading$.next(false);
+                return _this28._loading$.next(false);
               })).subscribe(function (result) {
-                _this24._data$.next(result.data);
+                _this28._data$.next(result.data);
 
-                _this24._total$.next(result.total);
+                _this28._total$.next(result.total);
               });
 
-              _this24._search$.next();
+              _this28._search$.next();
             });
           }
         }, {
@@ -9515,12 +11120,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state21 = this._state,
-                sortColumn = _this$_state21.sortColumn,
-                sortDirection = _this$_state21.sortDirection,
-                pageSize = _this$_state21.pageSize,
-                page = _this$_state21.page,
-                searchTerm = _this$_state21.searchTerm; // 1. sort
+            var _this$_state25 = this._state,
+                sortColumn = _this$_state25.sortColumn,
+                sortDirection = _this$_state25.sortDirection,
+                pageSize = _this$_state25.pageSize,
+                page = _this$_state25.page,
+                searchTerm = _this$_state25.searchTerm; // 1. sort
 
             var sortedData = sort(this.appointments, sortColumn, sortDirection); //// 2. filter
 
@@ -9779,30 +11384,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this25 = this;
+            var _this29 = this;
 
             var url = "api/orders/all/0/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this25._loading$.next(true);
+              return _this29._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this25.orders = res;
+              _this29.orders = res;
 
-              _this25._data$.next(_this25.orders);
+              _this29._data$.next(_this29.orders);
 
-              _this25._allData$.next(_this25.orders);
+              _this29._allData$.next(_this29.orders);
 
-              _this25._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this25._search();
+              _this29._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this29._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this25._loading$.next(false);
+                return _this29._loading$.next(false);
               })).subscribe(function (result) {
-                _this25._data$.next(result.data);
+                _this29._data$.next(result.data);
 
-                _this25._total$.next(result.total);
+                _this29._total$.next(result.total);
               });
 
-              _this25._search$.next();
+              _this29._search$.next();
             });
           }
         }, {
@@ -9815,12 +11420,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state22 = this._state,
-                sortColumn = _this$_state22.sortColumn,
-                sortDirection = _this$_state22.sortDirection,
-                pageSize = _this$_state22.pageSize,
-                page = _this$_state22.page,
-                searchTerm = _this$_state22.searchTerm; // 1. sort
+            var _this$_state26 = this._state,
+                sortColumn = _this$_state26.sortColumn,
+                sortDirection = _this$_state26.sortDirection,
+                pageSize = _this$_state26.pageSize,
+                page = _this$_state26.page,
+                searchTerm = _this$_state26.searchTerm; // 1. sort
 
             var sortedData = sort(this.orders, sortColumn, sortDirection); //// 2. filter
 
@@ -9952,6 +11557,584 @@
     },
 
     /***/
+    "./src/app/_services/organizer.service.ts":
+    /*!************************************************!*\
+      !*** ./src/app/_services/organizer.service.ts ***!
+      \************************************************/
+
+    /*! exports provided: OrganizerService */
+
+    /***/
+    function srcApp_servicesOrganizerServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "OrganizerService", function () {
+        return OrganizerService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var OrganizerService = /*#__PURE__*/function () {
+        function OrganizerService(http) {
+          _classCallCheck(this, OrganizerService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(OrganizerService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/organizer/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/organizer/organizer/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this30 = this;
+
+            var url = "api/organizer/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this30._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this30.organizer = res;
+
+              _this30._data$.next(_this30.organizer);
+
+              _this30._allData$.next(_this30.organizer);
+
+              _this30._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this30._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this30._loading$.next(false);
+              })).subscribe(function (result) {
+                _this30._data$.next(result.data);
+
+                _this30._total$.next(result.total);
+              });
+
+              _this30._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state27 = this._state,
+                sortColumn = _this$_state27.sortColumn,
+                sortDirection = _this$_state27.sortDirection,
+                pageSize = _this$_state27.pageSize,
+                page = _this$_state27.page,
+                searchTerm = _this$_state27.searchTerm; // 1. sort
+
+            var sortedData = sort(this.organizer, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post("api/organizer/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/organizer/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/organizer/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return OrganizerService;
+      }();
+
+      OrganizerService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      OrganizerService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], OrganizerService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/partner.service.ts":
+    /*!**********************************************!*\
+      !*** ./src/app/_services/partner.service.ts ***!
+      \**********************************************/
+
+    /*! exports provided: PartnerService */
+
+    /***/
+    function srcApp_servicesPartnerServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PartnerService", function () {
+        return PartnerService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var PartnerService = /*#__PURE__*/function () {
+        function PartnerService(http) {
+          _classCallCheck(this, PartnerService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(PartnerService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/partner/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/partner/partner/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this31 = this;
+
+            var url = "api/partner/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this31._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this31.partner = res;
+
+              _this31._data$.next(_this31.partner);
+
+              _this31._allData$.next(_this31.partner);
+
+              _this31._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this31._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this31._loading$.next(false);
+              })).subscribe(function (result) {
+                _this31._data$.next(result.data);
+
+                _this31._total$.next(result.total);
+              });
+
+              _this31._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state28 = this._state,
+                sortColumn = _this$_state28.sortColumn,
+                sortDirection = _this$_state28.sortDirection,
+                pageSize = _this$_state28.pageSize,
+                page = _this$_state28.page,
+                searchTerm = _this$_state28.searchTerm; // 1. sort
+
+            var sortedData = sort(this.partner, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post("api/partner/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/partner/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/partner/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return PartnerService;
+      }();
+
+      PartnerService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      PartnerService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], PartnerService);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/prescription.service.ts":
     /*!***************************************************!*\
       !*** ./src/app/_services/prescription.service.ts ***!
@@ -10060,31 +12243,31 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this26 = this;
+            var _this32 = this;
 
             var url = "api/prescription/all/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this26._loading$.next(true);
+              return _this32._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
               debugger;
-              _this26.prescription = res;
+              _this32.prescription = res;
 
-              _this26._data$.next(_this26.prescription);
+              _this32._data$.next(_this32.prescription);
 
-              _this26._allData$.next(_this26.prescription);
+              _this32._allData$.next(_this32.prescription);
 
-              _this26._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this26._search();
+              _this32._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this32._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this26._loading$.next(false);
+                return _this32._loading$.next(false);
               })).subscribe(function (result) {
-                _this26._data$.next(result.data);
+                _this32._data$.next(result.data);
 
-                _this26._total$.next(result.total);
+                _this32._total$.next(result.total);
               });
 
-              _this26._search$.next();
+              _this32._search$.next();
             });
           }
         }, {
@@ -10097,12 +12280,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state23 = this._state,
-                sortColumn = _this$_state23.sortColumn,
-                sortDirection = _this$_state23.sortDirection,
-                pageSize = _this$_state23.pageSize,
-                page = _this$_state23.page,
-                searchTerm = _this$_state23.searchTerm; // 1. sort
+            var _this$_state29 = this._state,
+                sortColumn = _this$_state29.sortColumn,
+                sortDirection = _this$_state29.sortDirection,
+                pageSize = _this$_state29.pageSize,
+                page = _this$_state29.page,
+                searchTerm = _this$_state29.searchTerm; // 1. sort
 
             var sortedData = sort(this.prescription, sortColumn, sortDirection); //// 2. filter
 
@@ -10351,30 +12534,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this27 = this;
+            var _this33 = this;
 
             var url = "api/promotion/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this27._loading$.next(true);
+              return _this33._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this27.promotions = res;
+              _this33.promotions = res;
 
-              _this27._data$.next(_this27.promotions);
+              _this33._data$.next(_this33.promotions);
 
-              _this27._allData$.next(_this27.promotions);
+              _this33._allData$.next(_this33.promotions);
 
-              _this27._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this27._search();
+              _this33._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this33._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this27._loading$.next(false);
+                return _this33._loading$.next(false);
               })).subscribe(function (result) {
-                _this27._data$.next(result.data);
+                _this33._data$.next(result.data);
 
-                _this27._total$.next(result.total);
+                _this33._total$.next(result.total);
               });
 
-              _this27._search$.next();
+              _this33._search$.next();
             });
           }
         }, {
@@ -10387,12 +12570,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state24 = this._state,
-                sortColumn = _this$_state24.sortColumn,
-                sortDirection = _this$_state24.sortDirection,
-                pageSize = _this$_state24.pageSize,
-                page = _this$_state24.page,
-                searchTerm = _this$_state24.searchTerm; // 1. sort
+            var _this$_state30 = this._state,
+                sortColumn = _this$_state30.sortColumn,
+                sortDirection = _this$_state30.sortDirection,
+                pageSize = _this$_state30.pageSize,
+                page = _this$_state30.page,
+                searchTerm = _this$_state30.searchTerm; // 1. sort
 
             var sortedData = sort(this.promotions, sortColumn, sortDirection); //// 2. filter
 
@@ -10631,12 +12814,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state25 = this._state,
-                sortColumn = _this$_state25.sortColumn,
-                sortDirection = _this$_state25.sortDirection,
-                pageSize = _this$_state25.pageSize,
-                page = _this$_state25.page,
-                searchTerm = _this$_state25.searchTerm; // 1. sort
+            var _this$_state31 = this._state,
+                sortColumn = _this$_state31.sortColumn,
+                sortDirection = _this$_state31.sortDirection,
+                pageSize = _this$_state31.pageSize,
+                page = _this$_state31.page,
+                searchTerm = _this$_state31.searchTerm; // 1. sort
 
             var sortedData = sort(this.salescategorywiseReport, sortColumn, sortDirection); //// 2. filter
 
@@ -10684,6 +12867,16 @@
             return this.http.get("api/report/salesdetail/".concat(brandID, "/").concat(locationID, "/").concat(fromDate, "/").concat(toDate));
           }
         }, {
+          key: "EventDetailRpt",
+          value: function EventDetailRpt(eventID, fromDate, toDate) {
+            return this.http.get("api/event/EventRpt/$".concat(eventID, "/").concat(fromDate, "/").concat(toDate));
+          }
+        }, {
+          key: "ConfirmListRpt",
+          value: function ConfirmListRpt(eventID, fromDate, toDate) {
+            return this.http.get("api/event/ConfirmListReport/$".concat(eventID, "/").concat(fromDate, "/").concat(toDate));
+          }
+        }, {
           key: "SalesItemwiseRpt",
           value: function SalesItemwiseRpt(brandID, locationID, fromDate, toDate) {
             return this.http.get("api/report/salesitemwise/".concat(brandID, "/").concat(locationID, "/").concat(fromDate, "/").concat(toDate));
@@ -10707,6 +12900,11 @@
           key: "loadLocations",
           value: function loadLocations(brandId) {
             return this.http.get("api/location/all/".concat(brandId));
+          }
+        }, {
+          key: "loadEvents",
+          value: function loadEvents() {
+            return this.http.get("api/Event/alldropdown");
           }
         }, {
           key: "total$",
@@ -10786,6 +12984,295 @@
       ReportService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
         providedIn: 'root'
       }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], ReportService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/speaker.service.ts":
+    /*!**********************************************!*\
+      !*** ./src/app/_services/speaker.service.ts ***!
+      \**********************************************/
+
+    /*! exports provided: SpeakerService */
+
+    /***/
+    function srcApp_servicesSpeakerServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SpeakerService", function () {
+        return SpeakerService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var SpeakerService = /*#__PURE__*/function () {
+        function SpeakerService(http) {
+          _classCallCheck(this, SpeakerService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(SpeakerService, [{
+          key: "ExportList",
+          value: function ExportList(brandId) {
+            return this.http.get("api/speaker/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/speaker/speaker/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this34 = this;
+
+            var url = "api/speaker/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this34._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this34.speaker = res;
+
+              _this34._data$.next(_this34.speaker);
+
+              _this34._allData$.next(_this34.speaker);
+
+              _this34._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this34._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this34._loading$.next(false);
+              })).subscribe(function (result) {
+                _this34._data$.next(result.data);
+
+                _this34._total$.next(result.total);
+              });
+
+              _this34._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state32 = this._state,
+                sortColumn = _this$_state32.sortColumn,
+                sortDirection = _this$_state32.sortDirection,
+                pageSize = _this$_state32.pageSize,
+                page = _this$_state32.page,
+                searchTerm = _this$_state32.searchTerm; // 1. sort
+
+            var sortedData = sort(this.speaker, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post("api/speaker/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/speaker/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/speaker/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return SpeakerService;
+      }();
+
+      SpeakerService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      SpeakerService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], SpeakerService);
       /***/
     },
 
@@ -10893,30 +13380,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this28 = this;
+            var _this35 = this;
 
             var url = "api/speciality/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this28._loading$.next(true);
+              return _this35._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this28.speciality = res;
+              _this35.speciality = res;
 
-              _this28._data$.next(_this28.speciality);
+              _this35._data$.next(_this35.speciality);
 
-              _this28._allData$.next(_this28.speciality);
+              _this35._allData$.next(_this35.speciality);
 
-              _this28._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this28._search();
+              _this35._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this35._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this28._loading$.next(false);
+                return _this35._loading$.next(false);
               })).subscribe(function (result) {
-                _this28._data$.next(result.data);
+                _this35._data$.next(result.data);
 
-                _this28._total$.next(result.total);
+                _this35._total$.next(result.total);
               });
 
-              _this28._search$.next();
+              _this35._search$.next();
             });
           }
         }, {
@@ -10929,12 +13416,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state26 = this._state,
-                sortColumn = _this$_state26.sortColumn,
-                sortDirection = _this$_state26.sortDirection,
-                pageSize = _this$_state26.pageSize,
-                page = _this$_state26.page,
-                searchTerm = _this$_state26.searchTerm; // 1. sort
+            var _this$_state33 = this._state,
+                sortColumn = _this$_state33.sortColumn,
+                sortDirection = _this$_state33.sortDirection,
+                pageSize = _this$_state33.pageSize,
+                page = _this$_state33.page,
+                searchTerm = _this$_state33.searchTerm; // 1. sort
 
             var sortedData = sort(this.speciality, sortColumn, sortDirection); //// 2. filter
 
@@ -11178,30 +13665,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this29 = this;
+            var _this36 = this;
 
             var url = "api/timeslot/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this29._loading$.next(true);
+              return _this36._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this29.timeslot = res;
+              _this36.timeslot = res;
 
-              _this29._data$.next(_this29.timeslot);
+              _this36._data$.next(_this36.timeslot);
 
-              _this29._allData$.next(_this29.timeslot);
+              _this36._allData$.next(_this36.timeslot);
 
-              _this29._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this29._search();
+              _this36._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this36._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this29._loading$.next(false);
+                return _this36._loading$.next(false);
               })).subscribe(function (result) {
-                _this29._data$.next(result.data);
+                _this36._data$.next(result.data);
 
-                _this29._total$.next(result.total);
+                _this36._total$.next(result.total);
               });
 
-              _this29._search$.next();
+              _this36._search$.next();
             });
           }
         }, {
@@ -11214,12 +13701,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state27 = this._state,
-                sortColumn = _this$_state27.sortColumn,
-                sortDirection = _this$_state27.sortDirection,
-                pageSize = _this$_state27.pageSize,
-                page = _this$_state27.page,
-                searchTerm = _this$_state27.searchTerm; // 1. sort
+            var _this$_state34 = this._state,
+                sortColumn = _this$_state34.sortColumn,
+                sortDirection = _this$_state34.sortDirection,
+                pageSize = _this$_state34.pageSize,
+                page = _this$_state34.page,
+                searchTerm = _this$_state34.searchTerm; // 1. sort
 
             var sortedData = sort(this.timeslot, sortColumn, sortDirection); //// 2. filter
 
@@ -11534,7 +14021,7 @@
       }
 
       function matches(data, term) {
-        return data.type.toLowerCase().includes(term.toLowerCase());
+        return data.userName.toLowerCase().includes(term.toLowerCase());
       }
 
       var UserService = /*#__PURE__*/function () {
@@ -11566,40 +14053,40 @@
         }, {
           key: "ExportList",
           value: function ExportList() {
-            return this.http.get("api/user/all");
+            return this.http.get("api/user/getall");
           }
         }, {
           key: "getById",
           value: function getById(id) {
-            return this.http.get("api/user/user/".concat(id));
+            return this.http.get("api/user/".concat(id));
           }
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this30 = this;
+            var _this37 = this;
 
-            var url = "api/user/all";
+            var url = "api/user/getall";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this30._loading$.next(true);
+              return _this37._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this30.user = res;
+              _this37.user = res;
 
-              _this30._data$.next(_this30.user);
+              _this37._data$.next(_this37.user);
 
-              _this30._allData$.next(_this30.user);
+              _this37._allData$.next(_this37.user);
 
-              _this30._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this30._search();
+              _this37._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this37._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this30._loading$.next(false);
+                return _this37._loading$.next(false);
               })).subscribe(function (result) {
-                _this30._data$.next(result.data);
+                _this37._data$.next(result.data);
 
-                _this30._total$.next(result.total);
+                _this37._total$.next(result.total);
               });
 
-              _this30._search$.next();
+              _this37._search$.next();
             });
           }
         }, {
@@ -11612,12 +14099,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state28 = this._state,
-                sortColumn = _this$_state28.sortColumn,
-                sortDirection = _this$_state28.sortDirection,
-                pageSize = _this$_state28.pageSize,
-                page = _this$_state28.page,
-                searchTerm = _this$_state28.searchTerm; // 1. sort
+            var _this$_state35 = this._state,
+                sortColumn = _this$_state35.sortColumn,
+                sortDirection = _this$_state35.sortDirection,
+                pageSize = _this$_state35.pageSize,
+                page = _this$_state35.page,
+                searchTerm = _this$_state35.searchTerm; // 1. sort
 
             var sortedData = sort(this.user, sortColumn, sortDirection); //// 2. filter
 
@@ -11658,7 +14145,7 @@
           key: "insert",
           value: function insert(data) {
             debugger;
-            return this.http.post("api/user/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return this.http.post("api/user/insertuser", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
             }));
@@ -11666,7 +14153,7 @@
         }, {
           key: "update",
           value: function update(updateData) {
-            return this.http.post("api/user/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+            return this.http.post("api/user/updateuser", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
             }));
@@ -11674,7 +14161,7 @@
         }, {
           key: "delete",
           value: function _delete(data) {
-            return this.http.post("api/user/delete", data);
+            return this.http.post("api/user/deleteuser", data);
           }
         }, {
           key: "insertpermission",
@@ -11702,19 +14189,19 @@
         }, {
           key: "getpermission",
           value: function getpermission() {
-            var _this31 = this;
+            var _this38 = this;
 
             debugger;
             var url = "api/user/allpermission";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this31._loading$.next(true);
+              return _this38._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this31.permission = res;
+              _this38.permission = res;
 
-              _this31._obj$.next(_this31.permission);
+              _this38._obj$.next(_this38.permission);
 
-              _this31._allObj$.next(_this31.permission); //this._search$.pipe(
+              _this38._allObj$.next(_this38.permission); //this._search$.pipe(
               //  switchMap(() => this._search()),
               //  tap(() => this._loading$.next(false))
               //).subscribe(result => {
@@ -11723,7 +14210,7 @@
               //});
 
 
-              _this31._search$.next();
+              _this38._search$.next();
             });
           }
         }, {
@@ -11976,21 +14463,21 @@
         }, {
           key: "setSelectedBrand",
           value: function setSelectedBrand() {
-            var _this32 = this;
+            var _this39 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this32.loadingBrand = true;
+                _this39.loadingBrand = true;
 
-                _this32.f.brandID.setValue(sid);
+                _this39.f.brandID.setValue(sid);
 
-                _this32.brandService.getById(sid, _this32.f.brandID.value).subscribe(function (res) {
+                _this39.brandService.getById(sid, _this39.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this32.editForm(res);
+                  _this39.editForm(res);
 
-                  _this32.loadingBrand = false;
+                  _this39.loadingBrand = false;
                 });
               }
             });
@@ -11998,7 +14485,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this33 = this;
+            var _this40 = this;
 
             this.brandForm.markAllAsTouched();
             this.submitted = true;
@@ -12016,38 +14503,38 @@
               console.log(JSON.stringify(this.brandForm.value));
               this.brandService.insert(this.brandForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this33.ts.showSuccess("Success", "Record added successfully.");
+                  _this40.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this33.router.navigate(['/admin/brand']);
+                  _this40.router.navigate(['/admin/brand']);
                 }
 
-                _this33.loading = false;
+                _this40.loading = false;
               }, function (error) {
-                _this33.ts.showError("Error", "Failed to insert record.");
+                _this40.ts.showError("Error", "Failed to insert record.");
 
-                _this33.loading = false;
+                _this40.loading = false;
               });
             } else {
               //Update brand
               this.brandService.update(this.brandForm.value).subscribe(function (data) {
-                _this33.loading = false;
+                _this40.loading = false;
 
                 if (data != 0) {
-                  _this33.ts.showSuccess("Success", "Record updated successfully.");
+                  _this40.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this33.router.navigate(['/admin/brand']);
+                  _this40.router.navigate(['/admin/brand']);
                 }
               }, function (error) {
-                _this33.ts.showError("Error", "Failed to update record.");
+                _this40.ts.showError("Error", "Failed to update record.");
 
-                _this33.loading = false;
+                _this40.loading = false;
               });
             }
           }
         }, {
           key: "selectFile",
           value: function selectFile(event) {
-            var _this34 = this;
+            var _this41 = this;
 
             this.fileData = event.target.files[0];
 
@@ -12056,9 +14543,9 @@
               reader.readAsDataURL(this.fileData);
 
               reader.onload = function () {
-                _this34.imageBgUrl = reader.result;
+                _this41.imageBgUrl = reader.result;
 
-                _this34.f.companyURl.setValue(_this34.imageBgUrl);
+                _this41.f.companyURl.setValue(_this41.imageBgUrl);
               };
             } else {
               alert("file type should be image");
@@ -12233,16 +14720,16 @@
         }, {
           key: "Delete",
           value: function Delete(id) {
-            var _this35 = this;
+            var _this42 = this;
 
             this.service["delete"](parseInt(id)).subscribe(function (res) {
               if (res != 0) {
-                _this35.ts.showSuccess("Success", "Record deleted successfully.");
+                _this42.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this35.getData();
-              } else _this35.ts.showError("Error", "Failed to delete record.");
+                _this42.getData();
+              } else _this42.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this35.ts.showError("Error", "Failed to delete record.");
+              _this42.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -12480,21 +14967,21 @@
         }, {
           key: "setSelectedLocations",
           value: function setSelectedLocations() {
-            var _this36 = this;
+            var _this43 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this36.loadingLocations = true;
+                _this43.loadingLocations = true;
 
-                _this36.f.locationID.setValue(sid);
+                _this43.f.locationID.setValue(sid);
 
-                _this36.locationService.getById(sid, _this36.f.brandID.value).subscribe(function (res) {
+                _this43.locationService.getById(sid, _this43.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this36.editForm(res);
+                  _this43.editForm(res);
 
-                  _this36.loadingLocations = false;
+                  _this43.loadingLocations = false;
                 });
               }
             });
@@ -12502,7 +14989,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this37 = this;
+            var _this44 = this;
 
             this.locationForm.markAllAsTouched();
             this.submitted = true;
@@ -12521,32 +15008,32 @@
             if (parseInt(this.f.locationID.value) === 0) {
               //Insert location
               this.locationService.insert(this.locationForm.value).subscribe(function (data) {
-                _this37.loading = false;
+                _this44.loading = false;
 
                 if (data != 0) {
-                  _this37.ts.showSuccess("Success", "Record added successfully.");
+                  _this44.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this37.router.navigate(['/admin/location']);
+                  _this44.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this37.ts.showError("Error", "Failed to insert record.");
+                _this44.ts.showError("Error", "Failed to insert record.");
 
-                _this37.loading = false;
+                _this44.loading = false;
               });
             } else {
               //Update location
               this.locationService.update(this.locationForm.value).subscribe(function (data) {
-                _this37.loading = false;
+                _this44.loading = false;
 
                 if (data != 0) {
-                  _this37.ts.showSuccess("Success", "Record updated successfully.");
+                  _this44.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this37.router.navigate(['/admin/location']);
+                  _this44.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this37.ts.showError("Error", "Failed to update record.");
+                _this44.ts.showError("Error", "Failed to update record.");
 
-                _this37.loading = false;
+                _this44.loading = false;
               });
             }
           }
@@ -12711,16 +15198,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this38 = this;
+            var _this45 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this38.ts.showSuccess("Success", "Record deleted successfully.");
+                _this45.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this38.getData();
-              } else _this38.ts.showError("Error", "Failed to delete record.");
+                _this45.getData();
+              } else _this45.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this38.ts.showError("Error", "Failed to delete record.");
+              _this45.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -12762,6 +15249,241 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/company/locations/locations.component.html"))["default"],
         providers: []
       }), __metadata("design:paramtypes", [src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], LocationsComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/confirmlistreport/confirmlistreport.component.ts":
+    /*!************************************************************************!*\
+      !*** ./src/app/admin/confirmlistreport/confirmlistreport.component.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: ConfirmlistreportComponent */
+
+    /***/
+    function srcAppAdminConfirmlistreportConfirmlistreportComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ConfirmlistreportComponent", function () {
+        return ConfirmlistreportComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/report.service */
+      "./src/app/_services/report.service.ts");
+      /* harmony import */
+
+
+      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/datepicker-range/datepicker-range-popup */
+      "./src/app/datepicker-range/datepicker-range-popup.ts");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var ConfirmlistreportComponent = /*#__PURE__*/function () {
+        function ConfirmlistreportComponent(service, ls, ts, excelService, router) {
+          _classCallCheck(this, ConfirmlistreportComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.ts = ts;
+          this.excelService = excelService;
+          this.router = router;
+          this.Events = [];
+          this.eventID = 0;
+          this.orderDetails = [];
+          this.selectedBrand = this.ls.getSelectedBrand().brandID; // this.selectedLocation = this.ls.getSelectedLocation().locationID
+
+          this.LoadEvents();
+        }
+
+        _createClass(ConfirmlistreportComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "getData",
+          value: function getData(eventIDs) {
+            var _this46 = this;
+
+            debugger;
+            this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
+              if (res != null) {
+                _this46.orderDetails = res;
+              } else _this46.ts.showError("Error", "Something went wrong");
+            }, function (error) {
+              _this46.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "parseDate",
+          value: function parseDate(obj) {
+            return obj.year + "-" + obj.month + "-" + obj.day;
+            ;
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            debugger;
+            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "LoadEvents",
+          value: function LoadEvents() {
+            var _this47 = this;
+
+            debugger;
+            this.service.loadEvents().subscribe(function (res) {
+              _this47.Events = res;
+              _this47.eventID = _this47.selectedEvent;
+
+              _this47.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+              .subscribe(function (res) {
+                _this47.Events = res;
+                var arr = [];
+
+                _this47.Events.forEach(function (element) {
+                  arr.push(element.eventID);
+                }); //this.selectedEvents=arr;
+
+
+                _this47.getData(_this47.selectedEvents.toString());
+              });
+            });
+          }
+        }, {
+          key: "loadEventsMulti",
+          value: function loadEventsMulti() {
+            var term = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+            var items = this.Events;
+
+            if (term) {
+              items = items.filter(function (x) {
+                return x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1;
+              });
+            }
+
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
+          }
+        }, {
+          key: "Filter",
+          value: function Filter() {
+            debugger;
+            this.getData(this.selectedEvents.toString());
+          }
+        }]);
+
+        return ConfirmlistreportComponent;
+      }();
+
+      ConfirmlistreportComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }];
+      };
+
+      ConfirmlistreportComponent.propDecorators = {
+        _datepicker: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], {
+            "static": true
+          }]
+        }],
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"]]
+        }],
+        drplocation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: ['locationDrp']
+        }]
+      };
+      ConfirmlistreportComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-confirmlistreport',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./confirmlistreport.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/confirmlistreport/confirmlistreport.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], ConfirmlistreportComponent);
       /***/
     },
 
@@ -12908,105 +15630,7 @@
           this.router = router;
           this.singlarService = singlarService;
           this.dashboardSummary = new src_app_models_Dashboard__WEBPACK_IMPORTED_MODULE_2__["DashboardSummary"]();
-          this.loading$ = service.loading$; //this.chartOptions = {
-          //  series: [
-          //    {
-          //      name: "Appointment",
-          //      data: [5, 3, 7, 9, 2, 8, 11]
-          //    },
-          //  ],
-          //  chart: {
-          //    height: 350,
-          //    type: "bar",
-          //    events: {
-          //      click: function (chart, w, e) {
-          //        // console.log(chart, w, e)
-          //      }
-          //    }
-          //  },
-          //  colors: [
-          //    "#008FFB",
-          //    "#00E396",
-          //    "#FEB019",
-          //    "#FF4560",
-          //    "#775DD0",
-          //    "#546E7A",
-          //    "#26a69a"
-          //  ],
-          //  plotOptions: {
-          //    bar: {
-          //      columnWidth: "45%",
-          //      distributed: true
-          //    }
-          //  },
-          //  dataLabels: {
-          //    enabled: false
-          //  },
-          //  legend: {
-          //    show: false
-          //  },
-          //  grid: {
-          //    show: false
-          //  },
-          //  xaxis: {
-          //    categories: [
-          //      ["16/Jan/2023"],
-          //      ["17/Jan/2023"],
-          //      ["18/Jan/2023"],
-          //      ["19/Jan/2023"],
-          //      ["20/Jan/2023"],
-          //      ["21/Jan/2023"],
-          //      ["22/Jan/2023"]
-          //    ],
-          //    labels: {
-          //      style: {
-          //        colors: [
-          //          "#008FFB",
-          //          "#00E396",
-          //          "#FEB019",
-          //          "#FF4560",
-          //          "#775DD0",
-          //          "#546E7A",
-          //          "#26a69a"
-          //        ],
-          //        fontSize: "12px"
-          //      }
-          //    }
-          //  }
-          //};
-
-          this.lineChartOptions = {
-            series: [{
-              name: "Sales",
-              data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-            }],
-            chart: {
-              height: 350,
-              type: "line",
-              zoom: {
-                enabled: false
-              }
-            },
-            dataLabels: {
-              enabled: false
-            },
-            stroke: {
-              curve: "straight"
-            },
-            title: {
-              text: "",
-              align: "left"
-            },
-            grid: {
-              row: {
-                colors: ["#f3f3f3", "transparent"],
-                opacity: 0.5
-              }
-            },
-            xaxis: {
-              categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"]
-            }
-          };
+          this.loading$ = service.loading$;
         }
 
         _createClass(DashboardComponent, [{
@@ -13018,11 +15642,12 @@
                   switch (_context2.prev = _context2.next) {
                     case 0:
                       this.GetDashboard();
+                      this.GetDashboardMonth();
                       this.GetChart();
-                      _context2.next = 4;
+                      _context2.next = 5;
                       return this.singlarService.startConnection();
 
-                    case 4:
+                    case 5:
                     case "end":
                       return _context2.stop();
                   }
@@ -13048,22 +15673,71 @@
             };
           }
         }, {
+          key: "BindMonthData",
+          value: function BindMonthData(sales, timeSlot) {
+            this.lineChartOptions = {
+              series: [{
+                name: "Booking",
+                data: sales
+              }],
+              chart: {
+                height: 350,
+                type: "line",
+                zoom: {
+                  enabled: false
+                }
+              },
+              dataLabels: {
+                enabled: false
+              },
+              stroke: {
+                curve: "straight"
+              },
+              title: {
+                text: "",
+                align: "left"
+              },
+              grid: {
+                row: {
+                  colors: ["#f3f3f3", "transparent"],
+                  opacity: 0.5
+                }
+              },
+              xaxis: {
+                categories: timeSlot
+              }
+            };
+          }
+        }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this39 = this;
+            var _this48 = this;
 
             debugger;
             this.service.getAllData().subscribe(function (res) {
-              _this39.dashboardSummary = res[0];
+              _this48.dashboardSummary = res[0];
+            });
+          }
+        }, {
+          key: "GetDashboardMonth",
+          value: function GetDashboardMonth() {
+            var _this49 = this;
+
+            debugger;
+            this.service.getAllDataMonth().subscribe(function (res) {
+              //this.dashboardSummary = res[0];
+              console.log(res);
+
+              _this49.BindMonthData(res.todaysales.sales, res.todaysales.timeSlot);
             });
           }
         }, {
           key: "GetChart",
           value: function GetChart() {
-            var _this40 = this;
+            var _this50 = this;
 
             this.service.getChart().subscribe(function (res) {
-              _this40.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+              _this50.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
             });
           }
         }]);
@@ -13098,6 +15772,2466 @@
         /*! ./dashboard.component.css */
         "./src/app/admin/dashboard/dashboard.component.css"))["default"]]
       }), __metadata("design:paramtypes", [src_app_services_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], src_app_services_SignalrService__WEBPACK_IMPORTED_MODULE_6__["SignalrService"]])], DashboardComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/event/addevent/addevent.component.css":
+    /*!*************************************************************!*\
+      !*** ./src/app/admin/event/addevent/addevent.component.css ***!
+      \*************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminEventAddeventAddeventComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50L2FkZGV2ZW50L2FkZGV2ZW50LmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/event/addevent/addevent.component.ts":
+    /*!************************************************************!*\
+      !*** ./src/app/admin/event/addevent/addevent.component.ts ***!
+      \************************************************************/
+
+    /*! exports provided: AddEventComponent */
+
+    /***/
+    function srcAppAdminEventAddeventAddeventComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddEventComponent", function () {
+        return AddEventComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/event.service */
+      "./src/app/_services/event.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! src/app/datepicker-range/datepicker-range-popup */
+      "./src/app/datepicker-range/datepicker-range-popup.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      }; //import { ItemsService } from 'src/app/_services/items.service';
+      //import { CategoryService } from 'src/app/_services/category.service';
+
+
+      var now = new Date();
+
+      var AddEventComponent = /*#__PURE__*/function () {
+        function AddEventComponent(formBuilder, router, route, ls, ts, eventService) {
+          _classCallCheck(this, AddEventComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.eventService = eventService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingItems = false;
+          this.Images = [];
+          this.EventCategoryList = [];
+          this.OrganizerList = [];
+          this.SpeakerList = [];
+          this.ModifiersList = [];
+          this.AddonsList = []; //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+
+          this.eventTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+          };
+          this.createForm();
+          this.loadEventCategory();
+          this.loadOrganizer();
+          this.loadSpeaker();
+        }
+
+        _createClass(AddEventComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            var date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbDate"](now.getFullYear(), now.getMonth() + 1, 1);
+            this._datepicker.fromDate = date;
+            this.setSelecteditem();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.eventForm = this.formBuilder.group({
+              eventID: 0,
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              type: [''],
+              description: [''],
+              statusID: [true],
+              location: [''],
+              fromDate: '',
+              toDate: '',
+              eventCity: [''],
+              eventCategoryID: [null],
+              locationLink: [''],
+              phoneNo: [''],
+              eventTime: [''],
+              email: [''],
+              eventCategories: [],
+              speakers: [],
+              organizers: [],
+              remainingTicket: [0],
+              facebook: [''],
+              instagram: [''],
+              twitter: [''],
+              image: [''],
+              displayOrder: [0],
+              file: [''],
+              imagesSource: [''],
+              isFeatured: [false]
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            debugger;
+            this.f.eventID.setValue(obj.eventID);
+            this.f.name.setValue(obj.name);
+            this.f.type.setValue(obj.type);
+            this.f.description.setValue(obj.description);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.f.location.setValue(obj.location);
+            this.f.fromDate.setValue(obj.fromDate);
+            this.f.toDate.setValue(obj.toDate); //this.f.eventTime.setValue(obj.eventTime);
+
+            this.eventTime = {
+              hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
+              minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
+              ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+            };
+            this.f.eventCity.setValue(obj.eventCity);
+            this.f.eventCategoryID.setValue(obj.eventCategoryID);
+            this.f.locationLink.setValue(obj.locationLink);
+            this.f.phoneNo.setValue(obj.phoneNo);
+            this.f.email.setValue(obj.email);
+            this.f.remainingTicket.setValue(obj.remainingTicket);
+            this.f.facebook.setValue(obj.facebook);
+            this.f.instagram.setValue(obj.instagram);
+            this.f.twitter.setValue(obj.twitter);
+            this.f.displayOrder.setValue(obj.displayOrder);
+            this.f.isFeatured.setValue(obj.isFeatured); //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };
+
+            if (obj.organizers != "") {
+              debugger;
+              var stringToConvert = obj.organizers;
+              this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
+              this.f.organizers.setValue(obj.organizers);
+            }
+
+            if (obj.speakers != "") {
+              debugger;
+              var stringToConvert = obj.speakers;
+              this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
+              this.f.speakers.setValue(obj.speakers);
+            } //if (obj.eventCategories != "") {
+            //  debugger
+            //  var stringToConvert = obj.eventCategories;
+            //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
+            //  this.f.eventCategories.setValue(obj.eventCategories);
+            //}
+
+
+            this.loadItemImages(this.f.eventID.value);
+          }
+        }, {
+          key: "parseDate",
+          value: function parseDate(obj) {
+            return obj.year + "-" + obj.month + "-" + obj.day;
+            ;
+          }
+        }, {
+          key: "setSelecteditem",
+          value: function setSelecteditem() {
+            var _this51 = this;
+
+            debugger;
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this51.loadingItems = true;
+
+                _this51.f.eventID.setValue(sid);
+
+                _this51.eventService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this51.editForm(res);
+
+                  _this51.loadingItems = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this52 = this;
+
+            debugger;
+            this.eventForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.eventForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
+            this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
+            this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString()); //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
+            //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
+
+            var formattedHour = this.eventTime.hour % 12 || 12;
+            var formattedMinute = this.pad(this.eventTime.minute);
+            var formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM';
+            var formattedTime = "".concat(formattedHour, ":").concat(formattedMinute, " ").concat(formattedAMPM);
+            this.f.eventTime.setValue(formattedTime);
+            this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
+            this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2); //this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.eventID.value) === 0) {
+              //Insert item
+              console.log(JSON.stringify(this.eventForm.value));
+              this.eventService.insert(this.eventForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this52.ts.showSuccess("Success", "Event added successfully.");
+
+                  _this52.router.navigate(['/admin/event']);
+                }
+
+                _this52.loading = false;
+              }, function (error) {
+                _this52.ts.showError("Error", "Failed to insert Event.");
+
+                _this52.loading = false;
+              });
+            } else {
+              //Update item
+              this.eventService.update(this.eventForm.value).subscribe(function (data) {
+                _this52.loading = false;
+
+                if (data != 0) {
+                  _this52.ts.showSuccess("Success", "Event updated successfully.");
+
+                  _this52.router.navigate(['/admin/event']);
+                }
+              }, function (error) {
+                _this52.ts.showError("Error", "Failed to update Event.");
+
+                _this52.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "pad",
+          value: function pad(value) {
+            return value < 10 ? "0".concat(value) : "".concat(value);
+          }
+        }, {
+          key: "onFileChange",
+          value: function onFileChange(event) {
+            var _this53 = this;
+
+            if (event.target.files && event.target.files[0]) {
+              var filesAmount = event.target.files.length;
+
+              for (var i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+                debugger;
+                var fileSize = event.target.files[i].size / 100000;
+
+                if (fileSize > 5) {
+                  alert("Filesize exceed 500 KB");
+                } else {
+                  reader.onload = function (event) {
+                    console.log(event.target.result);
+
+                    _this53.Images.push(event.target.result);
+
+                    _this53.eventForm.patchValue({
+                      imagesSource: _this53.Images
+                    });
+                  };
+
+                  reader.readAsDataURL(event.target.files[i]);
+                }
+              }
+            }
+          }
+        }, {
+          key: "loadEventCategory",
+          value: function loadEventCategory() {
+            var _this54 = this;
+
+            this.eventService.loadActiveCategories().subscribe(function (res) {
+              _this54.EventCategoryList = res;
+            });
+          }
+        }, {
+          key: "loadOrganizer",
+          value: function loadOrganizer() {
+            var _this55 = this;
+
+            this.eventService.loadOrganizer().subscribe(function (res) {
+              _this55.OrganizerList = res;
+            });
+          }
+        }, {
+          key: "loadSpeaker",
+          value: function loadSpeaker() {
+            var _this56 = this;
+
+            this.eventService.loadSpeaker().subscribe(function (res) {
+              _this56.SpeakerList = res;
+            });
+          }
+        }, {
+          key: "loadItemImages",
+          value: function loadItemImages(id) {
+            var _this57 = this;
+
+            this.eventService.loadEventImages(id).subscribe(function (res) {
+              _this57.Images = res;
+
+              _this57.f.imagesSource.setValue(_this57.Images);
+            });
+          }
+        }, {
+          key: "removeImage",
+          value: function removeImage(obj) {
+            var index = this.Images.indexOf(obj);
+            this.Images.splice(index, 1);
+            this.f.imagesSource.setValue(this.Images);
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.eventForm.controls;
+          }
+        }]);
+
+        return AddEventComponent;
+      }();
+
+      AddEventComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]
+        }];
+      };
+
+      AddEventComponent.propDecorators = {
+        _datepicker: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], {
+            "static": true
+          }]
+        }],
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddEventComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addevent',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addevent.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/addevent/addevent.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addevent.component.css */
+        "./src/app/admin/event/addevent/addevent.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])], AddEventComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/event/event.component.ts":
+    /*!************************************************!*\
+      !*** ./src/app/admin/event/event.component.ts ***!
+      \************************************************/
+
+    /*! exports provided: EventComponent */
+
+    /***/
+    function srcAppAdminEventEventComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventComponent", function () {
+        return EventComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/event.service */
+      "./src/app/_services/event.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var EventComponent = /*#__PURE__*/function () {
+        function EventComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, EventComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(EventComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this58 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {
+              /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+            }, function (error) {
+              _this58.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref3) {
+            var column = _ref3.column,
+                direction = _ref3.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(items) {
+            this.router.navigate(["admin/event/edit", items]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this59 = this;
+
+            debugger;
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this59.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this59.getData();
+              } else _this59.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this59.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this60 = this;
+
+            debugger;
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this60.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this60.Delete(obj);
+              }
+            }, function (reason) {
+              _this60.closeResult = "Dismissed ".concat(_this60.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }, {
+          key: "Deactive",
+          value: function Deactive(id, rowVersion) {//   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {
+            //     this.alertService.success("items has been Deactived");
+            //     this.getBrandData();
+            //   }, error => {
+            //     this.alertService.error(error);
+            //   });
+          }
+        }]);
+
+        return EventComponent;
+      }();
+
+      EventComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
+        }];
+      };
+
+      EventComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      EventComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-event',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./event.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/event/event.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], EventComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventCategory/add/addeventcategory.component.css":
+    /*!************************************************************************!*\
+      !*** ./src/app/admin/eventCategory/add/addeventcategory.component.css ***!
+      \************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminEventCategoryAddAddeventcategoryComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50Q2F0ZWdvcnkvYWRkL2FkZGV2ZW50Y2F0ZWdvcnkuY29tcG9uZW50LmNzcyJ9 */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventCategory/add/addeventcategory.component.ts":
+    /*!***********************************************************************!*\
+      !*** ./src/app/admin/eventCategory/add/addeventcategory.component.ts ***!
+      \***********************************************************************/
+
+    /*! exports provided: AddEventCategoryComponent */
+
+    /***/
+    function srcAppAdminEventCategoryAddAddeventcategoryComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddEventCategoryComponent", function () {
+        return AddEventCategoryComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../_services/eventCategory.service */
+      "./src/app/_services/eventCategory.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddEventCategoryComponent = /*#__PURE__*/function () {
+        function AddEventCategoryComponent(formBuilder, router, route, ts, ls, eventService) {
+          _classCallCheck(this, AddEventCategoryComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.eventService = eventService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingOrganizer = false;
+          this.createForm();
+        }
+
+        _createClass(AddEventCategoryComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.eventForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              description: [''],
+              image: [''],
+              statusID: [true],
+              eventCategoryID: 0
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.name.setValue(obj.name);
+            this.f.description.setValue(obj.description);
+            this.f.eventCategoryID.setValue(obj.eventCategoryID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this61 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this61.loadingOrganizer = true;
+
+                _this61.f.eventCategoryID.setValue(sid);
+
+                _this61.eventService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this61.editForm(res);
+
+                  _this61.loadingOrganizer = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this62 = this;
+
+            this.eventForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.eventForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.eventCategoryID.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.eventForm.value));
+              this.eventService.insert(this.eventForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this62.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this62.router.navigate(['/admin/eventcategory']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this62.loading = false;
+              }, function (error) {
+                _this62.ts.showError("Error", "Failed to insert record.");
+
+                _this62.loading = false;
+              });
+            } else {
+              //Update modifier
+              this.eventService.update(this.eventForm.value).subscribe(function (data) {
+                _this62.loading = false;
+
+                if (data != 0) {
+                  _this62.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this62.router.navigate(['/admin/eventcategory']);
+                }
+              }, function (error) {
+                _this62.ts.showError("Error", "Failed to update record.");
+
+                _this62.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.eventForm.controls;
+          }
+        }]);
+
+        return AddEventCategoryComponent;
+      }();
+
+      AddEventCategoryComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"]
+        }];
+      };
+
+      AddEventCategoryComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddEventCategoryComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addeventcategory',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addeventcategory.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/add/addeventcategory.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addeventcategory.component.css */
+        "./src/app/admin/eventCategory/add/addeventcategory.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"]])], AddEventCategoryComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventCategory/eventcategory.component.ts":
+    /*!****************************************************************!*\
+      !*** ./src/app/admin/eventCategory/eventcategory.component.ts ***!
+      \****************************************************************/
+
+    /*! exports provided: EventCategoryComponent */
+
+    /***/
+    function srcAppAdminEventCategoryEventcategoryComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventCategoryComponent", function () {
+        return EventCategoryComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../_services/eventCategory.service */
+      "./src/app/_services/eventCategory.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var EventCategoryComponent = /*#__PURE__*/function () {
+        function EventCategoryComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, EventCategoryComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(EventCategoryComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this63 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this63.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref4) {
+            var column = _ref4.column,
+                direction = _ref4.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(data) {
+            this.router.navigate(["admin/eventcategory/edit", data]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this64 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this64.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this64.getData();
+              } else _this64.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this64.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this65 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this65.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this65.Delete(obj);
+              }
+            }, function (reason) {
+              _this65.closeResult = "Dismissed ".concat(_this65.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return EventCategoryComponent;
+      }();
+
+      EventCategoryComponent.ctorParameters = function () {
+        return [{
+          type: _services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
+        }];
+      };
+
+      EventCategoryComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      EventCategoryComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventcategory',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./eventcategory.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventCategory/eventcategory.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [_services_eventCategory_service__WEBPACK_IMPORTED_MODULE_6__["EventCategoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], EventCategoryComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css":
+    /*!****************************************************************************************!*\
+      !*** ./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css ***!
+      \****************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminEventattendeesAddeventattendeesAddeventattendeesComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2V2ZW50YXR0ZW5kZWVzL2FkZGV2ZW50YXR0ZW5kZWVzL2FkZGV2ZW50YXR0ZW5kZWVzLmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts":
+    /*!***************************************************************************************!*\
+      !*** ./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts ***!
+      \***************************************************************************************/
+
+    /*! exports provided: AddEventAttendeesComponent */
+
+    /***/
+    function srcAppAdminEventattendeesAddeventattendeesAddeventattendeesComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddEventAttendeesComponent", function () {
+        return AddEventAttendeesComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/datepicker-range/datepicker-range-popup */
+      "./src/app/datepicker-range/datepicker-range-popup.ts");
+      /* harmony import */
+
+
+      var src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/eventattendees.service */
+      "./src/app/_services/eventattendees.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      }; //import { ItemsService } from 'src/app/_services/items.service';
+      //import { CategoryService } from 'src/app/_services/category.service';
+
+
+      var now = new Date();
+
+      var AddEventAttendeesComponent = /*#__PURE__*/function () {
+        function AddEventAttendeesComponent(formBuilder, router, route, ls, ts, eventAttendeesService) {
+          _classCallCheck(this, AddEventAttendeesComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.eventAttendeesService = eventAttendeesService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingItems = false;
+          this.Images = [];
+          this.EventList = [];
+          this.OrganizerList = [];
+          this.SpeakerList = [];
+          this.ModifiersList = [];
+          this.AddonsList = []; //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+
+          this.eventTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+          };
+          this.createForm();
+          this.loadEvent(); // this.loadOrganizer();
+          // this.loadSpeaker();
+        }
+
+        _createClass(AddEventAttendeesComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelecteditem();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.eventAttendeesForm = this.formBuilder.group({
+              attendeesID: 0,
+              fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              email: [''],
+              phoneNo: [''],
+              statusID: [true],
+              occupation: [''],
+              gender: [''],
+              eventID: [null]
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.attendeesID.setValue(obj.attendeesID);
+            this.f.fullName.setValue(obj.fullName);
+            this.f.email.setValue(obj.email);
+            this.f.phoneNo.setValue(obj.phoneNo);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.f.occupation.setValue(obj.occupation);
+            this.f.gender.setValue(obj.gender);
+            this.f.eventID.setValue(obj.eventID); // if (obj.organizers != "") {
+            //   debugger
+            //   var stringToConvert = obj.organizers;
+            //   this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
+            //   this.f.organizers.setValue(obj.organizers);
+            // }
+            // if (obj.speakers != "") {
+            //   debugger
+            //   var stringToConvert = obj.speakers;
+            //   this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
+            //   this.f.speakers.setValue(obj.speakers);
+            // }
+          }
+        }, {
+          key: "setSelecteditem",
+          value: function setSelecteditem() {
+            var _this66 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this66.loadingItems = true;
+
+                _this66.f.attendeesID.setValue(sid);
+
+                _this66.eventAttendeesService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this66.editForm(res);
+
+                  _this66.loadingItems = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this67 = this;
+
+            this.eventAttendeesForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.eventAttendeesForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+
+            if (parseInt(this.f.attendeesID.value) === 0) {
+              //Insert item
+              console.log(JSON.stringify(this.eventAttendeesForm.value));
+              this.eventAttendeesService.insert(this.eventAttendeesForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this67.ts.showSuccess("Success", "Event added successfully.");
+
+                  _this67.router.navigate(['/admin/event']);
+                }
+
+                _this67.loading = false;
+              }, function (error) {
+                _this67.ts.showError("Error", "Failed to insert Event.");
+
+                _this67.loading = false;
+              });
+            } else {
+              //Update item
+              this.eventAttendeesService.update(this.eventAttendeesForm.value).subscribe(function (data) {
+                _this67.loading = false;
+
+                if (data != 0) {
+                  _this67.ts.showSuccess("Success", "Event updated successfully.");
+
+                  _this67.router.navigate(['/admin/event']);
+                }
+              }, function (error) {
+                _this67.ts.showError("Error", "Failed to update Event.");
+
+                _this67.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "pad",
+          value: function pad(value) {
+            return value < 10 ? "0".concat(value) : "".concat(value);
+          }
+        }, {
+          key: "loadEvent",
+          value: function loadEvent() {
+            var _this68 = this;
+
+            debugger;
+            this.eventAttendeesService.loadActiveEvents().subscribe(function (res) {
+              _this68.EventList = res;
+              console.log(res);
+            });
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.eventAttendeesForm.controls;
+          }
+        }]);
+
+        return AddEventAttendeesComponent;
+      }();
+
+      AddEventAttendeesComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"]
+        }];
+      };
+
+      AddEventAttendeesComponent.propDecorators = {
+        _datepicker: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__["NgbdDatepickerRangePopup"], {
+            "static": true
+          }]
+        }],
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddEventAttendeesComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addeventattendees',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addeventattendees.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addeventattendees.component.css */
+        "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"]])], AddEventAttendeesComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventattendees/eventattendees.component.ts":
+    /*!******************************************************************!*\
+      !*** ./src/app/admin/eventattendees/eventattendees.component.ts ***!
+      \******************************************************************/
+
+    /*! exports provided: EventAttendeesComponent */
+
+    /***/
+    function srcAppAdminEventattendeesEventattendeesComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventAttendeesComponent", function () {
+        return EventAttendeesComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/eventattendees.service */
+      "./src/app/_services/eventattendees.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var EventAttendeesComponent = /*#__PURE__*/function () {
+        function EventAttendeesComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, EventAttendeesComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(EventAttendeesComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this69 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {
+              /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+            }, function (error) {
+              _this69.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref5) {
+            var column = _ref5.column,
+                direction = _ref5.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(items) {
+            debugger;
+            this.router.navigate(["admin/eventattendees/edit", items]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this70 = this;
+
+            debugger;
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this70.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this70.getData();
+              } else _this70.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this70.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this71 = this;
+
+            debugger;
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this71.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this71.Delete(obj);
+              }
+            }, function (reason) {
+              _this71.closeResult = "Dismissed ".concat(_this71.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }, {
+          key: "Deactive",
+          value: function Deactive(id, rowVersion) {//   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {
+            //     this.alertService.success("items has been Deactived");
+            //     this.getBrandData();
+            //   }, error => {
+            //     this.alertService.error(error);
+            //   });
+          }
+        }]);
+
+        return EventAttendeesComponent;
+      }();
+
+      EventAttendeesComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
+        }];
+      };
+
+      EventAttendeesComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      EventAttendeesComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventattendees',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./eventattendees.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventattendees/eventattendees.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_eventattendees_service__WEBPACK_IMPORTED_MODULE_7__["EventAttendeesService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], EventAttendeesComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/eventdetail/eventdetail.component.ts":
+    /*!************************************************************!*\
+      !*** ./src/app/admin/eventdetail/eventdetail.component.ts ***!
+      \************************************************************/
+
+    /*! exports provided: EventdetailComponent */
+
+    /***/
+    function srcAppAdminEventdetailEventdetailComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EventdetailComponent", function () {
+        return EventdetailComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/report.service */
+      "./src/app/_services/report.service.ts");
+      /* harmony import */
+
+
+      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/datepicker-range/datepicker-range-popup */
+      "./src/app/datepicker-range/datepicker-range-popup.ts");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var EventdetailComponent = /*#__PURE__*/function () {
+        function EventdetailComponent(service, ls, ts, excelService, router) {
+          _classCallCheck(this, EventdetailComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.ts = ts;
+          this.excelService = excelService;
+          this.router = router;
+          this.Events = [];
+          this.eventID = 0;
+          this.orderDetails = [];
+          this.selectedBrand = this.ls.getSelectedBrand().brandID; // this.selectedLocation = this.ls.getSelectedLocation().locationID
+
+          this.LoadEvents();
+        }
+
+        _createClass(EventdetailComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "getData",
+          value: function getData(eventIDs) {
+            var _this72 = this;
+
+            debugger;
+            this.service.EventDetailRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
+              if (res != null) {
+                _this72.orderDetails = res;
+              } else _this72.ts.showError("Error", "Something went wrong");
+            }, function (error) {
+              _this72.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "parseDate",
+          value: function parseDate(obj) {
+            return obj.year + "-" + obj.month + "-" + obj.day;
+            ;
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            debugger;
+            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "LoadEvents",
+          value: function LoadEvents() {
+            var _this73 = this;
+
+            debugger;
+            this.service.loadEvents().subscribe(function (res) {
+              _this73.Events = res;
+              _this73.eventID = _this73.selectedEvent;
+
+              _this73.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+              .subscribe(function (res) {
+                _this73.Events = res;
+                var arr = [];
+
+                _this73.Events.forEach(function (element) {
+                  arr.push(element.eventID);
+                }); //this.selectedEvents=arr;
+
+
+                _this73.getData(_this73.selectedEvents.toString());
+              });
+            });
+          }
+        }, {
+          key: "loadEventsMulti",
+          value: function loadEventsMulti() {
+            var term = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+            var items = this.Events;
+
+            if (term) {
+              items = items.filter(function (x) {
+                return x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1;
+              });
+            }
+
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
+          }
+        }, {
+          key: "Filter",
+          value: function Filter() {
+            debugger;
+            this.getData(this.selectedEvents.toString());
+          }
+        }]);
+
+        return EventdetailComponent;
+      }();
+
+      EventdetailComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }];
+      };
+
+      EventdetailComponent.propDecorators = {
+        _datepicker: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], {
+            "static": true
+          }]
+        }],
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"]]
+        }],
+        drplocation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: ['locationDrp']
+        }]
+      };
+      EventdetailComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-eventdetail',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./eventdetail.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/eventdetail/eventdetail.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], EventdetailComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/faq/add/addfaq.component.css":
+    /*!****************************************************!*\
+      !*** ./src/app/admin/faq/add/addfaq.component.css ***!
+      \****************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminFaqAddAddfaqComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2ZhcS9hZGQvYWRkZmFxLmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/faq/add/addfaq.component.ts":
+    /*!***************************************************!*\
+      !*** ./src/app/admin/faq/add/addfaq.component.ts ***!
+      \***************************************************/
+
+    /*! exports provided: AddFaqComponent */
+
+    /***/
+    function srcAppAdminFaqAddAddfaqComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddFaqComponent", function () {
+        return AddFaqComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/faq.service */
+      "./src/app/_services/faq.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddFaqComponent = /*#__PURE__*/function () {
+        function AddFaqComponent(formBuilder, router, route, ts, ls, faqService) {
+          _classCallCheck(this, AddFaqComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.faqService = faqService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingOrganizer = false;
+          this.createForm();
+        }
+
+        _createClass(AddFaqComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.faqForm = this.formBuilder.group({
+              faqQ: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              faqA: [''],
+              statusID: [true],
+              faqID: 0
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.faqQ.setValue(obj.faqQ);
+            this.f.faqA.setValue(obj.faqA);
+            this.f.faqID.setValue(obj.faqID);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this74 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this74.loadingOrganizer = true;
+
+                _this74.f.faqID.setValue(sid);
+
+                _this74.faqService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this74.editForm(res);
+
+                  _this74.loadingOrganizer = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this75 = this;
+
+            this.faqForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.faqForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+
+            if (parseInt(this.f.faqID.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.faqForm.value));
+              this.faqService.insert(this.faqForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this75.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this75.router.navigate(['/admin/faq']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this75.loading = false;
+              }, function (error) {
+                _this75.ts.showError("Error", "Failed to insert record.");
+
+                _this75.loading = false;
+              });
+            } else {
+              this.faqService.update(this.faqForm.value).subscribe(function (data) {
+                _this75.loading = false;
+
+                if (data != 0) {
+                  _this75.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this75.router.navigate(['/admin/faq']);
+                }
+              }, function (error) {
+                _this75.ts.showError("Error", "Failed to update record.");
+
+                _this75.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.faqForm.controls;
+          }
+        }]);
+
+        return AddFaqComponent;
+      }();
+
+      AddFaqComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__["FaqService"]
+        }];
+      };
+
+      AddFaqComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddFaqComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addfaq',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addfaq.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addfaq.component.css */
+        "./src/app/admin/faq/add/addfaq.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__["FaqService"]])], AddFaqComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/faq/faq.component.ts":
+    /*!********************************************!*\
+      !*** ./src/app/admin/faq/faq.component.ts ***!
+      \********************************************/
+
+    /*! exports provided: FaqComponent */
+
+    /***/
+    function srcAppAdminFaqFaqComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FaqComponent", function () {
+        return FaqComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/faq.service */
+      "./src/app/_services/faq.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var FaqComponent = /*#__PURE__*/function () {
+        function FaqComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, FaqComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(FaqComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this76 = this;
+
+            this.service.ExportList().subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this76.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref6) {
+            var column = _ref6.column,
+                direction = _ref6.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(data) {
+            this.router.navigate(["admin/faq/edit", data]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this77 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this77.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this77.getData();
+              } else _this77.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this77.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this78 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this78.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this78.Delete(obj);
+              }
+            }, function (reason) {
+              _this78.closeResult = "Dismissed ".concat(_this78.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return FaqComponent;
+      }();
+
+      FaqComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__["FaqService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
+        }];
+      };
+
+      FaqComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      FaqComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-faq',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./faq.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/faq.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_7__["FaqService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], FaqComponent);
       /***/
     },
 
@@ -13228,21 +18362,21 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this41 = this;
+            var _this79 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this41.loadingReport = true;
+                _this79.loadingReport = true;
 
-                _this41.f.diagnosticCatID.setValue(sid);
+                _this79.f.diagnosticCatID.setValue(sid);
 
-                _this41.categoryService.getById(sid).subscribe(function (res) {
+                _this79.categoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this41.editForm(res);
+                  _this79.editForm(res);
 
-                  _this41.loadingReport = false;
+                  _this79.loadingReport = false;
                 });
               }
             });
@@ -13250,7 +18384,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this42 = this;
+            var _this80 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -13268,31 +18402,31 @@
               console.log(JSON.stringify(this.categoryForm.value));
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this42.ts.showSuccess("Success", "Record added successfully.");
+                  _this80.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this42.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this80.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
 
-                _this42.loading = false;
+                _this80.loading = false;
               }, function (error) {
-                _this42.ts.showError("Error", "Failed to insert record.");
+                _this80.ts.showError("Error", "Failed to insert record.");
 
-                _this42.loading = false;
+                _this80.loading = false;
               });
             } else {
               //Update customer
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this42.loading = false;
+                _this80.loading = false;
 
                 if (data != 0) {
-                  _this42.ts.showSuccess("Success", "Record updated successfully.");
+                  _this80.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this42.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this80.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
               }, function (error) {
-                _this42.ts.showError("Error", "Failed to update record.");
+                _this80.ts.showError("Error", "Failed to update record.");
 
-                _this42.loading = false;
+                _this80.loading = false;
               });
             }
           }
@@ -13476,9 +18610,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref3) {
-            var column = _ref3.column,
-                direction = _ref3.direction;
+          value: function onSort(_ref7) {
+            var column = _ref7.column,
+                direction = _ref7.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -13495,33 +18629,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this43 = this;
+            var _this81 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this43.ts.showSuccess("Success", "Record deleted successfully.");
+                _this81.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this43.getData();
-              } else _this43.ts.showError("Error", "Failed to delete record.");
+                _this81.getData();
+              } else _this81.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this43.ts.showError("Error", "Failed to delete record.");
+              _this81.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this44 = this;
+            var _this82 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this44.closeResult = "Closed with: ".concat(result);
+              _this82.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this44.Delete(obj);
+                _this82.Delete(obj);
               }
             }, function (reason) {
-              _this44.closeResult = "Dismissed ".concat(_this44.getDismissReason(reason));
+              _this82.closeResult = "Dismissed ".concat(_this82.getDismissReason(reason));
             });
           }
         }, {
@@ -13734,7 +18868,7 @@
         }, {
           key: "search",
           value: function search() {
-            var _this45 = this;
+            var _this83 = this;
 
             console.log('Searching for registration number:', this.formData.registrationNo);
 
@@ -13742,9 +18876,9 @@
               this.loadingReport = true;
               this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(function (res) {
                 //Set Forms
-                _this45.editForm(res);
+                _this83.editForm(res);
 
-                _this45.loadingReport = false;
+                _this83.loadingReport = false;
               });
             }
           }
@@ -13790,19 +18924,19 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this46 = this;
+            var _this84 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this46.loadingReport = true;
+                _this84.loadingReport = true;
 
-                _this46.laboratoryService.getById(sid).subscribe(function (res) {
+                _this84.laboratoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this46.editForm(res);
+                  _this84.editForm(res);
 
-                  _this46.loadingReport = false;
+                  _this84.loadingReport = false;
                 });
               }
             });
@@ -13810,7 +18944,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this47 = this;
+            var _this85 = this;
 
             debugger;
 
@@ -13825,9 +18959,9 @@
               formData1.append('file', this.selectedFile);
               formData1.append('userName', this.userName);
               this.http.post('api/laboratory/insert', formData1).subscribe(function (response) {
-                _this47.ts.showSuccess("Success", "Record added successfully.");
+                _this85.ts.showSuccess("Success", "Record added successfully.");
 
-                _this47.router.navigate(['/admin/laboratory/uploadreport']);
+                _this85.router.navigate(['/admin/laboratory/uploadreport']);
               }, function (error) {});
             } else {
               var _formData = new FormData();
@@ -13851,19 +18985,19 @@
               _formData.append('userName', this.userName);
 
               this.http.post('api/laboratory/update', _formData).subscribe(function (response) {
-                _this47.ts.showSuccess("Success", "Record added successfully.");
+                _this85.ts.showSuccess("Success", "Record added successfully.");
 
-                _this47.router.navigate(['/admin/laboratory/uploadreport']);
+                _this85.router.navigate(['/admin/laboratory/uploadreport']);
               }, function (error) {});
             }
           }
         }, {
           key: "loadCategories",
           value: function loadCategories() {
-            var _this48 = this;
+            var _this86 = this;
 
             this.diagnosticcategoriesService.loadCategory().subscribe(function (res) {
-              _this48.CategoryList = res;
+              _this86.CategoryList = res;
             });
           }
         }]);
@@ -13926,7 +19060,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = " \r\n.btnDownload {\r\n    background-color: #cf2e2e;\r\n    border: none;\r\n    color: white;\r\n    padding: 5px 13px;\r\n    cursor: pointer;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n}\r\n\r\n/* Darker background on mouse-over */\r\n\r\n.btnDownload:hover {\r\n  background-color: #149063;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGFib3JhdG9yeS91cGxvYWRyZXBvcnQvdXBsb2FkcmVwb3J0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBLG9DQUFvQzs7QUFDcEM7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIFxyXG4uYnRuRG93bmxvYWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2NmMmUyZTtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDVweCAxM3B4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4vKiBEYXJrZXIgYmFja2dyb3VuZCBvbiBtb3VzZS1vdmVyICovXHJcbi5idG5Eb3dubG9hZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE0OTA2MztcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiAiXX0= */";
+      __webpack_exports__["default"] = " \r\n.btnDownload {\r\n    background-color: #00843D;\r\n    border: none;\r\n    color: white;\r\n    padding: 5px 13px;\r\n    cursor: pointer;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n}\r\n\r\n/* Darker background on mouse-over */\r\n\r\n.btnDownload:hover {\r\n  background-color: #149063;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGFib3JhdG9yeS91cGxvYWRyZXBvcnQvdXBsb2FkcmVwb3J0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBLG9DQUFvQzs7QUFDcEM7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIFxyXG4uYnRuRG93bmxvYWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwODQzRDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDVweCAxM3B4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4vKiBEYXJrZXIgYmFja2dyb3VuZCBvbiBtb3VzZS1vdmVyICovXHJcbi5idG5Eb3dubG9hZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE0OTA2MztcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiAiXX0= */";
       /***/
     },
 
@@ -14087,9 +19221,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref4) {
-            var column = _ref4.column,
-                direction = _ref4.direction;
+          value: function onSort(_ref8) {
+            var column = _ref8.column,
+                direction = _ref8.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -14106,18 +19240,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this49 = this;
+            var _this87 = this;
 
             debugger;
             obj.userName = this.userName;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this49.ts.showSuccess("Success", "Record deleted successfully.");
+                _this87.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this49.getData();
-              } else _this49.ts.showError("Error", "Failed to delete record.");
+                _this87.getData();
+              } else _this87.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this49.ts.showError("Error", "Failed to delete record.");
+              _this87.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14139,18 +19273,18 @@
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this50 = this;
+            var _this88 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this50.closeResult = "Closed with: ".concat(result);
+              _this88.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this50.Delete(obj);
+                _this88.Delete(obj);
               }
             }, function (reason) {
-              _this50.closeResult = "Dismissed ".concat(_this50.getDismissReason(reason));
+              _this88.closeResult = "Dismissed ".concat(_this88.getDismissReason(reason));
             });
           }
         }, {
@@ -14388,21 +19522,21 @@
         }, {
           key: "setSelectedDoctor",
           value: function setSelectedDoctor() {
-            var _this51 = this;
+            var _this89 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this51.loadingDoctor = true;
+                _this89.loadingDoctor = true;
 
-                _this51.f.doctorID.setValue(sid);
+                _this89.f.doctorID.setValue(sid);
 
-                _this51.doctorService.getById(sid).subscribe(function (res) {
+                _this89.doctorService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this51.editForm(res);
+                  _this89.editForm(res);
 
-                  _this51.loadingDoctor = false;
+                  _this89.loadingDoctor = false;
                 });
               }
             });
@@ -14410,25 +19544,25 @@
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this52 = this;
+            var _this90 = this;
 
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this52.selectedSpecialityList = res;
+              _this90.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadTimeSlotsAll",
           value: function loadTimeSlotsAll() {
-            var _this53 = this;
+            var _this91 = this;
 
             this.appointmentService.loadTimeLists().subscribe(function (res) {
-              _this53.selectedTimeList = res;
+              _this91.selectedTimeList = res;
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this54 = this;
+            var _this92 = this;
 
             this.doctorForm.markAllAsTouched();
             this.submitted = true;
@@ -14448,31 +19582,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this54.ts.showSuccess("Success", "Record added successfully.");
+                  _this92.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this54.router.navigate(['/admin/managedoctor/doctor']);
+                  _this92.router.navigate(['/admin/managedoctor/doctor']);
                 }
 
-                _this54.loading = false;
+                _this92.loading = false;
               }, function (error) {
-                _this54.ts.showError("Error", "Failed to insert record.");
+                _this92.ts.showError("Error", "Failed to insert record.");
 
-                _this54.loading = false;
+                _this92.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this54.loading = false;
+                _this92.loading = false;
 
                 if (data != 0) {
-                  _this54.ts.showSuccess("Success", "Record updated successfully.");
+                  _this92.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this54.router.navigate(['/admin/managedoctor/doctor']);
+                  _this92.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this54.ts.showError("Error", "Failed to update record.");
+                _this92.ts.showError("Error", "Failed to update record.");
 
-                _this54.loading = false;
+                _this92.loading = false;
               });
             }
           }
@@ -14715,12 +19849,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this55 = this;
+            var _this93 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this55.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this93.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this55.ts.showError("Error", "Failed to export");
+              _this93.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14738,9 +19872,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref5) {
-            var column = _ref5.column,
-                direction = _ref5.direction;
+          value: function onSort(_ref9) {
+            var column = _ref9.column,
+                direction = _ref9.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -14757,33 +19891,33 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this56 = this;
+            var _this94 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this56.ts.showSuccess("Success", "Record deleted successfully.");
+                _this94.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this56.getData();
-              } else _this56.ts.showError("Error", "Failed to delete record.");
+                _this94.getData();
+              } else _this94.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this56.ts.showError("Error", "Failed to delete record.");
+              _this94.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this57 = this;
+            var _this95 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this57.closeResult = "Closed with: ".concat(result);
+              _this95.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this57.Delete(obj);
+                _this95.Delete(obj);
               }
             }, function (reason) {
-              _this57.closeResult = "Dismissed ".concat(_this57.getDismissReason(reason));
+              _this95.closeResult = "Dismissed ".concat(_this95.getDismissReason(reason));
             });
           }
         }, {
@@ -14992,21 +20126,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this58 = this;
+            var _this96 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this58.loadingaddon = true;
+                _this96.loadingaddon = true;
 
-                _this58.f.addonID.setValue(sid);
+                _this96.f.addonID.setValue(sid);
 
-                _this58.addonsService.getById(sid, _this58.f.brandID.value).subscribe(function (res) {
+                _this96.addonsService.getById(sid, _this96.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this58.editForm(res);
+                  _this96.editForm(res);
 
-                  _this58.loadingaddon = false;
+                  _this96.loadingaddon = false;
                 });
               }
             });
@@ -15014,7 +20148,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this59 = this;
+            var _this97 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -15032,32 +20166,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this59.ts.showSuccess("Success", "Record added successfully.");
+                  _this97.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this59.router.navigate(['/admin/addons']);
+                  _this97.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this59.loading = false;
+                _this97.loading = false;
               }, function (error) {
-                _this59.ts.showError("Error", "Failed to insert record.");
+                _this97.ts.showError("Error", "Failed to insert record.");
 
-                _this59.loading = false;
+                _this97.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this59.loading = false;
+                _this97.loading = false;
 
                 if (data != 0) {
-                  _this59.ts.showSuccess("Success", "Record updated successfully.");
+                  _this97.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this59.router.navigate(['/admin/addons']);
+                  _this97.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this59.ts.showError("Error", "Failed to update record.");
+                _this97.ts.showError("Error", "Failed to update record.");
 
-                _this59.loading = false;
+                _this97.loading = false;
               });
             }
           }
@@ -15211,11 +20345,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this60 = this;
+            var _this98 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this60.ts.showError("Error", "Failed to export");
+              _this98.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15228,9 +20362,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref6) {
-            var column = _ref6.column,
-                direction = _ref6.direction;
+          value: function onSort(_ref10) {
+            var column = _ref10.column,
+                direction = _ref10.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -15247,16 +20381,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this61 = this;
+            var _this99 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this61.ts.showSuccess("Success", "Record deleted successfully.");
+                _this99.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this61.getData();
-              } else _this61.ts.showError("Error", "Failed to delete record.");
+                _this99.getData();
+              } else _this99.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this61.ts.showError("Error", "Failed to delete record.");
+              _this99.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15457,21 +20591,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this62 = this;
+            var _this100 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this62.loadingCategory = true;
+                _this100.loadingCategory = true;
 
-                _this62.f.categoryID.setValue(sid);
+                _this100.f.categoryID.setValue(sid);
 
-                _this62.categoryService.getById(sid, _this62.f.brandID.value).subscribe(function (res) {
+                _this100.categoryService.getById(sid, _this100.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this62.editForm(res);
+                  _this100.editForm(res);
 
-                  _this62.loadingCategory = false;
+                  _this100.loadingCategory = false;
                 });
               }
             });
@@ -15479,7 +20613,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this63 = this;
+            var _this101 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -15496,31 +20630,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this63.ts.showSuccess("Success", "Record added successfully.");
+                  _this101.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this63.router.navigate(['/admin/category']);
+                  _this101.router.navigate(['/admin/category']);
                 }
 
-                _this63.loading = false;
+                _this101.loading = false;
               }, function (error) {
-                _this63.ts.showError("Error", "Failed to insert record.");
+                _this101.ts.showError("Error", "Failed to insert record.");
 
-                _this63.loading = false;
+                _this101.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this63.loading = false;
+                _this101.loading = false;
 
                 if (data != 0) {
-                  _this63.ts.showSuccess("Success", "Record updated successfully.");
+                  _this101.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this63.router.navigate(['/admin/category']);
+                  _this101.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this63.ts.showError("Error", "Failed to update record.");
+                _this101.ts.showError("Error", "Failed to update record.");
 
-                _this63.loading = false;
+                _this101.loading = false;
               });
             }
           }
@@ -15682,11 +20816,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this64 = this;
+            var _this102 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this64.ts.showError("Error", "Failed to export");
+              _this102.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15699,9 +20833,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref7) {
-            var column = _ref7.column,
-                direction = _ref7.direction;
+          value: function onSort(_ref11) {
+            var column = _ref11.column,
+                direction = _ref11.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -15718,18 +20852,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this65 = this;
+            var _this103 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this65.ts.showSuccess("Success", "Record deleted successfully.");
+                _this103.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this65.getData();
+                _this103.getData();
               } else {
-                _this65.ts.showError("Error", "Failed to delete record.");
+                _this103.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this65.ts.showError("Error", "Failed to delete record.");
+              _this103.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15967,21 +21101,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this66 = this;
+            var _this104 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this66.loadingItems = true;
+                _this104.loadingItems = true;
 
-                _this66.f.itemID.setValue(sid);
+                _this104.f.itemID.setValue(sid);
 
-                _this66.itemsService.getById(sid, _this66.f.brandID.value).subscribe(function (res) {
+                _this104.itemsService.getById(sid, _this104.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this66.editForm(res);
+                  _this104.editForm(res);
 
-                  _this66.loadingItems = false;
+                  _this104.loadingItems = false;
                 });
               }
             });
@@ -15989,7 +21123,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this67 = this;
+            var _this105 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -16009,31 +21143,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this67.ts.showSuccess("Success", "Record added successfully.");
+                  _this105.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this67.router.navigate(['/admin/item']);
+                  _this105.router.navigate(['/admin/item']);
                 }
 
-                _this67.loading = false;
+                _this105.loading = false;
               }, function (error) {
-                _this67.ts.showError("Error", "Failed to insert record.");
+                _this105.ts.showError("Error", "Failed to insert record.");
 
-                _this67.loading = false;
+                _this105.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this67.loading = false;
+                _this105.loading = false;
 
                 if (data != 0) {
-                  _this67.ts.showSuccess("Success", "Record updated successfully.");
+                  _this105.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this67.router.navigate(['/admin/item']);
+                  _this105.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this67.ts.showError("Error", "Failed to update record.");
+                _this105.ts.showError("Error", "Failed to update record.");
 
-                _this67.loading = false;
+                _this105.loading = false;
               });
             }
           } // private loadCategory() {
@@ -16045,28 +21179,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this68 = this;
+            var _this106 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this68.CategoriesActive = res;
+              _this106.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this69 = this;
+            var _this107 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this69.ModifiersList = res;
+              _this107.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this70 = this;
+            var _this108 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this70.AddonsList = res;
+              _this108.AddonsList = res;
             });
           }
         }, {
@@ -16219,12 +21353,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this71 = this;
+            var _this109 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this71.ts.showError("Error", "Failed to export");
+              _this109.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -16237,9 +21371,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref8) {
-            var column = _ref8.column,
-                direction = _ref8.direction;
+          value: function onSort(_ref12) {
+            var column = _ref12.column,
+                direction = _ref12.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -16256,16 +21390,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this72 = this;
+            var _this110 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this72.ts.showSuccess("Success", "Record deleted successfully.");
+                _this110.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this72.getData();
-              } else _this72.ts.showError("Error", "Failed to delete record.");
+                _this110.getData();
+              } else _this110.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this72.ts.showError("Error", "Failed to delete record.");
+              _this110.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16431,19 +21565,19 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this73 = this;
+            var _this111 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               var stringToConvert = res.items;
-              _this73.isItemSetting = res.isItemSetting;
-              _this73.itemSettingTitle = res.itemSettingTitle;
-              _this73.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this111.isItemSetting = res.isItemSetting;
+              _this111.itemSettingTitle = res.itemSettingTitle;
+              _this111.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this74 = this;
+            var _this112 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -16452,28 +21586,28 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this74.loading = false;
+              _this112.loading = false;
 
               if (data != 0) {
-                _this74.ts.showSuccess("Success", "Updated successfully.");
+                _this112.ts.showSuccess("Success", "Updated successfully.");
 
-                _this74.router.navigate(['/admin/item/settings']);
+                _this112.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this74.ts.showError("Error", "Failed to update.");
+              _this112.ts.showError("Error", "Failed to update.");
 
-              _this74.loading = false;
+              _this112.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this75 = this;
+            var _this113 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
-              _this75.ItemsList = res;
+              _this113.ItemsList = res;
 
-              _this75.setSelecteditem();
+              _this113.setSelecteditem();
             });
           }
         }]);
@@ -16664,21 +21798,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this76 = this;
+            var _this114 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this76.loadingmodifier = true;
+                _this114.loadingmodifier = true;
 
-                _this76.f.modifierID.setValue(sid);
+                _this114.f.modifierID.setValue(sid);
 
-                _this76.modifierService.getById(sid, _this76.f.brandID.value).subscribe(function (res) {
+                _this114.modifierService.getById(sid, _this114.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this76.editForm(res);
+                  _this114.editForm(res);
 
-                  _this76.loadingmodifier = false;
+                  _this114.loadingmodifier = false;
                 });
               }
             });
@@ -16686,7 +21820,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this77 = this;
+            var _this115 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -16704,32 +21838,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this77.ts.showSuccess("Success", "Record added successfully.");
+                  _this115.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this77.router.navigate(['/admin/modifier']);
+                  _this115.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this77.loading = false;
+                _this115.loading = false;
               }, function (error) {
-                _this77.ts.showError("Error", "Failed to insert record.");
+                _this115.ts.showError("Error", "Failed to insert record.");
 
-                _this77.loading = false;
+                _this115.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this77.loading = false;
+                _this115.loading = false;
 
                 if (data != 0) {
-                  _this77.ts.showSuccess("Success", "Record updated successfully.");
+                  _this115.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this77.router.navigate(['/admin/modifier']);
+                  _this115.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this77.ts.showError("Error", "Failed to update record.");
+                _this115.ts.showError("Error", "Failed to update record.");
 
-                _this77.loading = false;
+                _this115.loading = false;
               });
             }
           }
@@ -16883,12 +22017,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this78 = this;
+            var _this116 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this78.ts.showError("Error", "Failed to export");
+              _this116.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -16901,9 +22035,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref9) {
-            var column = _ref9.column,
-                direction = _ref9.direction;
+          value: function onSort(_ref13) {
+            var column = _ref13.column,
+                direction = _ref13.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -16920,16 +22054,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this79 = this;
+            var _this117 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this79.ts.showSuccess("Success", "Record deleted successfully.");
+                _this117.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this79.getData();
-              } else _this79.ts.showError("Error", "Failed to delete record.");
+                _this117.getData();
+              } else _this117.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this79.ts.showError("Error", "Failed to delete record.");
+              _this117.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17108,9 +22242,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref10) {
-            var column = _ref10.column,
-                direction = _ref10.direction;
+          value: function onSort(_ref14) {
+            var column = _ref14.column,
+                direction = _ref14.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -17122,18 +22256,18 @@
         }, {
           key: "updateStatus",
           value: function updateStatus(item) {
-            var _this80 = this;
+            var _this118 = this;
 
             item.isRead = 1 ? true : undefined; //Update 
 
             this.service.status(item).subscribe(function (data) {
               if (data != 0) {
-                _this80.ts.showSuccess("Success", "Record updated successfully.");
+                _this118.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this80.router.navigate(['/admin/notification']);
+                _this118.router.navigate(['/admin/notification']);
               }
             }, function (error) {
-              _this80.ts.showError("Error", "Failed to update record.");
+              _this118.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -17183,6 +22317,938 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/notification/notification.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
       }), __metadata("design:paramtypes", [src_app_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], NotificationComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/organizer/add/addorganizer.component.css":
+    /*!****************************************************************!*\
+      !*** ./src/app/admin/organizer/add/addorganizer.component.css ***!
+      \****************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminOrganizerAddAddorganizerComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL29yZ2FuaXplci9hZGQvYWRkb3JnYW5pemVyLmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/organizer/add/addorganizer.component.ts":
+    /*!***************************************************************!*\
+      !*** ./src/app/admin/organizer/add/addorganizer.component.ts ***!
+      \***************************************************************/
+
+    /*! exports provided: AddOrganizerComponent */
+
+    /***/
+    function srcAppAdminOrganizerAddAddorganizerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddOrganizerComponent", function () {
+        return AddOrganizerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../_services/organizer.service */
+      "./src/app/_services/organizer.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddOrganizerComponent = /*#__PURE__*/function () {
+        function AddOrganizerComponent(formBuilder, router, route, ts, ls, organizerService) {
+          _classCallCheck(this, AddOrganizerComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.organizerService = organizerService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingOrganizer = false;
+          this.createForm();
+        }
+
+        _createClass(AddOrganizerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.organizerForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              description: [''],
+              statusID: [true],
+              organizerID: 0,
+              image: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.name.setValue(obj.name);
+            this.f.description.setValue(obj.description);
+            this.f.organizerID.setValue(obj.organizerID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this119 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this119.loadingOrganizer = true;
+
+                _this119.f.organizerID.setValue(sid);
+
+                _this119.organizerService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this119.editForm(res);
+
+                  _this119.loadingOrganizer = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this120 = this;
+
+            this.organizerForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.organizerForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.organizerID.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.organizerForm.value));
+              this.organizerService.insert(this.organizerForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this120.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this120.router.navigate(['/admin/organizer']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this120.loading = false;
+              }, function (error) {
+                _this120.ts.showError("Error", "Failed to insert record.");
+
+                _this120.loading = false;
+              });
+            } else {
+              //Update modifier
+              this.organizerService.update(this.organizerForm.value).subscribe(function (data) {
+                _this120.loading = false;
+
+                if (data != 0) {
+                  _this120.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this120.router.navigate(['/admin/organizer']);
+                }
+              }, function (error) {
+                _this120.ts.showError("Error", "Failed to update record.");
+
+                _this120.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.organizerForm.controls;
+          }
+        }]);
+
+        return AddOrganizerComponent;
+      }();
+
+      AddOrganizerComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"]
+        }];
+      };
+
+      AddOrganizerComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddOrganizerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addorganizer',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addorganizer.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/add/addorganizer.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addorganizer.component.css */
+        "./src/app/admin/organizer/add/addorganizer.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"]])], AddOrganizerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/organizer/organizer.component.ts":
+    /*!********************************************************!*\
+      !*** ./src/app/admin/organizer/organizer.component.ts ***!
+      \********************************************************/
+
+    /*! exports provided: OrganizerComponent */
+
+    /***/
+    function srcAppAdminOrganizerOrganizerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "OrganizerComponent", function () {
+        return OrganizerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../_services/organizer.service */
+      "./src/app/_services/organizer.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var OrganizerComponent = /*#__PURE__*/function () {
+        function OrganizerComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, OrganizerComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(OrganizerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this121 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this121.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref15) {
+            var column = _ref15.column,
+                direction = _ref15.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(organizer) {
+            this.router.navigate(["admin/organizer/edit", organizer]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this122 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this122.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this122.getData();
+              } else _this122.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this122.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this123 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this123.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this123.Delete(obj);
+              }
+            }, function (reason) {
+              _this123.closeResult = "Dismissed ".concat(_this123.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return OrganizerComponent;
+      }();
+
+      OrganizerComponent.ctorParameters = function () {
+        return [{
+          type: _services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
+        }];
+      };
+
+      OrganizerComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      OrganizerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-organizer',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./organizer.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organizer/organizer.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [_services_organizer_service__WEBPACK_IMPORTED_MODULE_6__["OrganizerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], OrganizerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/partner/add/addpartner.component.css":
+    /*!************************************************************!*\
+      !*** ./src/app/admin/partner/add/addpartner.component.css ***!
+      \************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminPartnerAddAddpartnerComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3BhcnRuZXIvYWRkL2FkZHBhcnRuZXIuY29tcG9uZW50LmNzcyJ9 */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/partner/add/addpartner.component.ts":
+    /*!***********************************************************!*\
+      !*** ./src/app/admin/partner/add/addpartner.component.ts ***!
+      \***********************************************************/
+
+    /*! exports provided: AddPartnerComponent */
+
+    /***/
+    function srcAppAdminPartnerAddAddpartnerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddPartnerComponent", function () {
+        return AddPartnerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_partner_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../_services/partner.service */
+      "./src/app/_services/partner.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddPartnerComponent = /*#__PURE__*/function () {
+        function AddPartnerComponent(formBuilder, router, route, ts, ls, partnerService) {
+          _classCallCheck(this, AddPartnerComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.partnerService = partnerService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingPartner = false;
+          this.createForm();
+        }
+
+        _createClass(AddPartnerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.partnerForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              partnerID: 0,
+              image: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.name.setValue(obj.name);
+            this.f.partnerID.setValue(obj.partnerID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this124 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this124.loadingPartner = true;
+
+                _this124.f.partnerID.setValue(sid);
+
+                _this124.partnerService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this124.editForm(res);
+
+                  _this124.loadingPartner = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this125 = this;
+
+            this.partnerForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.partnerForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.partnerID.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.partnerForm.value));
+              this.partnerService.insert(this.partnerForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this125.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this125.router.navigate(['/admin/partner']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this125.loading = false;
+              }, function (error) {
+                _this125.ts.showError("Error", "Failed to insert record.");
+
+                _this125.loading = false;
+              });
+            } else {
+              //Update modifier
+              this.partnerService.update(this.partnerForm.value).subscribe(function (data) {
+                _this125.loading = false;
+
+                if (data != 0) {
+                  _this125.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this125.router.navigate(['/admin/partner']);
+                }
+              }, function (error) {
+                _this125.ts.showError("Error", "Failed to update record.");
+
+                _this125.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.partnerForm.controls;
+          }
+        }]);
+
+        return AddPartnerComponent;
+      }();
+
+      AddPartnerComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"]
+        }];
+      };
+
+      AddPartnerComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddPartnerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addpartner',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addpartner.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/add/addpartner.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addpartner.component.css */
+        "./src/app/admin/partner/add/addpartner.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"]])], AddPartnerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/partner/partner.component.ts":
+    /*!****************************************************!*\
+      !*** ./src/app/admin/partner/partner.component.ts ***!
+      \****************************************************/
+
+    /*! exports provided: PartnerComponent */
+
+    /***/
+    function srcAppAdminPartnerPartnerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PartnerComponent", function () {
+        return PartnerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _services_partner_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../_services/partner.service */
+      "./src/app/_services/partner.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var PartnerComponent = /*#__PURE__*/function () {
+        function PartnerComponent(service, ls, excelService, ts, router) {
+          _classCallCheck(this, PartnerComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(PartnerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this126 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {}, function (error) {
+              _this126.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref16) {
+            var column = _ref16.column,
+                direction = _ref16.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(partner) {
+            this.router.navigate(["admin/partner/edit", partner]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this127 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this127.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this127.getData();
+              } else _this127.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this127.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }]);
+
+        return PartnerComponent;
+      }();
+
+      PartnerComponent.ctorParameters = function () {
+        return [{
+          type: _services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }];
+      };
+
+      PartnerComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      PartnerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-partner',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./partner.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/partner/partner.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [_services_partner_service__WEBPACK_IMPORTED_MODULE_6__["PartnerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], PartnerComponent);
       /***/
     },
 
@@ -17340,21 +23406,21 @@
         }, {
           key: "onSelect",
           value: function onSelect(formName) {
-            var _this81 = this;
+            var _this128 = this;
 
             this.permissionService.getById(formName).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this81.editForm(res);
+                _this128.editForm(res);
 
-                _this81.formName = res[0];
+                _this128.formName = res[0];
               }
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this82 = this;
+            var _this129 = this;
 
             {
               this.permissionForm.markAllAsTouched();
@@ -17376,27 +23442,27 @@
 
               this.f.roleName.setValue(this.f.roleName.value);
               this.permissionService.update(this.permissionForm.value).subscribe(function (data) {
-                _this82.loading = false;
+                _this129.loading = false;
 
                 if (data != 0) {
-                  _this82.ts.showSuccess("Success", "Record updated successfully.");
+                  _this129.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this82.router.navigate(['/admin/permission']);
+                  _this129.router.navigate(['/admin/permission']);
                 }
               }, function (error) {
-                _this82.ts.showError("Error", "Failed to update record.");
+                _this129.ts.showError("Error", "Failed to update record.");
 
-                _this82.loading = false;
+                _this129.loading = false;
               });
             }
           }
         }, {
           key: "loadUser",
           value: function loadUser() {
-            var _this83 = this;
+            var _this130 = this;
 
             this.userService.loadUser().subscribe(function (res) {
-              _this83.UserList = res;
+              _this130.UserList = res;
             }); // this.UserList = [
             //   { "type": "Super Admin" },
             //   { "type": "Admin" },
@@ -17680,21 +23746,21 @@
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this84 = this;
+            var _this131 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this84.loadingmedicine = true;
+                _this131.loadingmedicine = true;
 
-                _this84.f.medicineID.setValue(sid);
+                _this131.f.medicineID.setValue(sid);
 
-                _this84.medicineService.getById(sid).subscribe(function (res) {
+                _this131.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this84.editForm(res);
+                  _this131.editForm(res);
 
-                  _this84.loadingmedicine = false;
+                  _this131.loadingmedicine = false;
                 });
               }
             });
@@ -17702,7 +23768,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this85 = this;
+            var _this132 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -17720,31 +23786,31 @@
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record added successfully.");
+                  _this132.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this85.router.navigate(['/admin/pharmacy/medicine']);
+                  _this132.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this85.loading = false;
+                _this132.loading = false;
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to insert record.");
+                _this132.ts.showError("Error", "Failed to insert record.");
 
-                _this85.loading = false;
+                _this132.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this85.loading = false;
+                _this132.loading = false;
 
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record updated successfully.");
+                  _this132.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this85.router.navigate(['/admin/pharmacy/medicine']);
+                  _this132.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to update record.");
+                _this132.ts.showError("Error", "Failed to update record.");
 
-                _this85.loading = false;
+                _this132.loading = false;
               });
             }
           }
@@ -17915,9 +23981,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref11) {
-            var column = _ref11.column,
-                direction = _ref11.direction;
+          value: function onSort(_ref17) {
+            var column = _ref17.column,
+                direction = _ref17.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -17934,48 +24000,48 @@
         }, {
           key: "Update",
           value: function Update(medicine) {
-            var _this86 = this;
+            var _this133 = this;
 
             debugger;
             this.service.update(medicine).subscribe(function (res) {
               if (res != 0) {
-                _this86.ts.showSuccess("Success", "Price Updated Successfully.");
+                _this133.ts.showSuccess("Success", "Price Updated Successfully.");
 
-                _this86.getData();
+                _this133.getData();
               }
             });
           }
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this87 = this;
+            var _this134 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this87.ts.showSuccess("Success", "Record deleted successfully.");
+                _this134.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this87.getData();
-              } else _this87.ts.showError("Error", "Failed to delete record.");
+                _this134.getData();
+              } else _this134.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this87.ts.showError("Error", "Failed to delete record.");
+              _this134.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this88 = this;
+            var _this135 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this88.closeResult = "Closed with: ".concat(result);
+              _this135.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this88.Delete(obj);
+                _this135.Delete(obj);
               }
             }, function (reason) {
-              _this88.closeResult = "Dismissed ".concat(_this88.getDismissReason(reason));
+              _this135.closeResult = "Dismissed ".concat(_this135.getDismissReason(reason));
             });
           }
         }, {
@@ -18129,15 +24195,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this89 = this;
+            var _this136 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this89.service.getById(sid).subscribe(function (res) {
-                  _this89.editForm(res);
+                _this136.service.getById(sid).subscribe(function (res) {
+                  _this136.editForm(res);
                 });
               }
             });
@@ -18145,7 +24211,7 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this90 = this;
+            var _this137 = this;
 
             debugger;
             order.statusID = status;
@@ -18153,12 +24219,12 @@
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this90.ts.showSuccess("Success", "Record updated successfully.");
+                _this137.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this90.router.navigate(['/admin/orders']);
+                _this137.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this90.ts.showError("Error", "Failed to update record.");
+              _this137.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -18342,9 +24408,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref12) {
-            var column = _ref12.column,
-                direction = _ref12.direction;
+          value: function onSort(_ref18) {
+            var column = _ref18.column,
+                direction = _ref18.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -18361,13 +24427,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this91 = this;
+            var _this138 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this91.printout(res.html);
-              } else _this91.ts.showError("Error", "Failed to print.");
+                _this138.printout(res.html);
+              } else _this138.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -18378,27 +24444,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this92 = this;
+            var _this139 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this92.Locations = res;
-              _this92.locationID = _this92.selectedLocation;
+              _this139.Locations = res;
+              _this139.locationID = _this139.selectedLocation;
 
-              _this92.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this139.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this92.Locations = res;
+                _this139.Locations = res;
                 var arr = [];
 
-                _this92.Locations.forEach(function (element) {
+                _this139.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this92.selectedLocations = arr;
+                _this139.selectedLocations = arr;
 
-                _this92.getData();
+                _this139.getData();
               });
             });
           }
@@ -18431,34 +24497,34 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this93 = this;
+            var _this140 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this93.ts.showSuccess("Success", "Record deleted successfully.");
+                _this140.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this93.getData();
-              } else _this93.ts.showError("Error", "Failed to delete record.");
+                _this140.getData();
+              } else _this140.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this93.ts.showError("Error", "Failed to delete record.");
+              _this140.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this94 = this;
+            var _this141 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this94.closeResult = "Closed with: ".concat(result);
+              _this141.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this94.Delete(obj);
+                _this141.Delete(obj);
               }
             }, function (reason) {
-              _this94.closeResult = "Dismissed ".concat(_this94.getDismissReason(reason));
+              _this141.closeResult = "Dismissed ".concat(_this141.getDismissReason(reason));
             });
           }
         }, {
@@ -18658,21 +24724,21 @@
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this95 = this;
+            var _this142 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this95.loadingPrescription = true;
+                _this142.loadingPrescription = true;
 
-                _this95.f.prescriptionID.setValue(sid);
+                _this142.f.prescriptionID.setValue(sid);
 
-                _this95.prescriptionService.getById(sid).subscribe(function (res) {
+                _this142.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this95.editForm(res);
+                  _this142.editForm(res);
 
-                  _this95.loadingPrescription = false;
+                  _this142.loadingPrescription = false;
                 });
               }
             });
@@ -18680,7 +24746,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this96 = this;
+            var _this143 = this;
 
             debugger;
             this.prescriptionForm.markAllAsTouched();
@@ -18694,17 +24760,17 @@
             //Update doctor
 
             this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-              _this96.loading = false;
+              _this143.loading = false;
 
               if (data != 0) {
-                _this96.ts.showSuccess("Success", "Record updated successfully.");
+                _this143.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this96.router.navigate(['/admin/pharmacy/prescription']);
+                _this143.router.navigate(['/admin/pharmacy/prescription']);
               }
             }, function (error) {
-              _this96.ts.showError("Error", "Failed to update record.");
+              _this143.ts.showError("Error", "Failed to update record.");
 
-              _this96.loading = false;
+              _this143.loading = false;
             });
           }
         }, {
@@ -18898,12 +24964,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this97 = this;
+            var _this144 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this97.ts.showError("Error", "Failed to export");
+              _this144.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18929,9 +24995,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref13) {
-            var column = _ref13.column,
-                direction = _ref13.direction;
+          value: function onSort(_ref19) {
+            var column = _ref19.column,
+                direction = _ref19.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -18955,18 +25021,18 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this98 = this;
+            var _this145 = this;
 
             debugger;
             data.userName = this.userName;
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this98.ts.showSuccess("Success", "Record deleted successfully.");
+                _this145.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this98.getData();
-              } else _this98.ts.showError("Error", "Failed to delete record.");
+                _this145.getData();
+              } else _this145.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this98.ts.showError("Error", "Failed to delete record.");
+              _this145.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19213,9 +25279,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref14) {
-            var column = _ref14.column,
-                direction = _ref14.direction;
+          value: function onSort(_ref20) {
+            var column = _ref20.column,
+                direction = _ref20.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -19227,16 +25293,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this99 = this;
+            var _this146 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this99.ts.showSuccess("Success", "Record deleted successfully.");
+                _this146.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this99.getData();
-              } else _this99.ts.showError("Error", "Failed to delete record.");
+                _this146.getData();
+              } else _this146.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this99.ts.showError("Error", "Failed to delete record.");
+              _this146.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19397,14 +25463,14 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this100 = this;
+            var _this147 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this100.service.getById(sid).subscribe(function (res) {
-                  _this100.editForm(res);
+                _this147.service.getById(sid).subscribe(function (res) {
+                  _this147.editForm(res);
                 });
               }
             });
@@ -19412,7 +25478,7 @@
         }, {
           key: "updateAppointment",
           value: function updateAppointment(appointment, status) {
-            var _this101 = this;
+            var _this148 = this;
 
             debugger;
             appointment.appointmentStatus = status;
@@ -19421,12 +25487,12 @@
 
             this.service.statusUpdate(appointment).subscribe(function (data) {
               if (data != 0) {
-                _this101.ts.showSuccess("Success", "Record updated successfully.");
+                _this148.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this101.router.navigate(['reception/appointment']);
+                _this148.router.navigate(['reception/appointment']);
               }
             }, function (error) {
-              _this101.ts.showError("Error", "Failed to update record.");
+              _this148.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -19617,21 +25683,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this102 = this;
+            var _this149 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this102.loadingCustomer = true;
+                _this149.loadingCustomer = true;
 
-                _this102.f.customerID.setValue(sid);
+                _this149.f.customerID.setValue(sid);
 
-                _this102.customerService.getById(sid).subscribe(function (res) {
+                _this149.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this102.editForm(res);
+                  _this149.editForm(res);
 
-                  _this102.loadingCustomer = false;
+                  _this149.loadingCustomer = false;
                 });
               }
             });
@@ -19639,7 +25705,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this103 = this;
+            var _this150 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -19657,31 +25723,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this103.ts.showSuccess("Success", "Record added successfully.");
+                  _this150.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this103.router.navigate(['/admin/reception/customers']);
+                  _this150.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this103.loading = false;
+                _this150.loading = false;
               }, function (error) {
-                _this103.ts.showError("Error", "Failed to insert record.");
+                _this150.ts.showError("Error", "Failed to insert record.");
 
-                _this103.loading = false;
+                _this150.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this103.loading = false;
+                _this150.loading = false;
 
                 if (data != 0) {
-                  _this103.ts.showSuccess("Success", "Record updated successfully.");
+                  _this150.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this103.router.navigate(['/admin/reception/customers']);
+                  _this150.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this103.ts.showError("Error", "Failed to update record.");
+                _this150.ts.showError("Error", "Failed to update record.");
 
-                _this103.loading = false;
+                _this150.loading = false;
               });
             }
           }
@@ -19835,11 +25901,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this104 = this;
+            var _this151 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this104.ts.showError("Error", "Failed to export");
+              _this151.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -19852,9 +25918,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref15) {
-            var column = _ref15.column,
-                direction = _ref15.direction;
+          value: function onSort(_ref21) {
+            var column = _ref21.column,
+                direction = _ref21.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -19871,16 +25937,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this105 = this;
+            var _this152 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this105.ts.showSuccess("Success", "Record deleted successfully.");
+                _this152.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this105.getData();
-              } else _this105.ts.showError("Error", "Failed to delete record.");
+                _this152.getData();
+              } else _this152.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this105.ts.showError("Error", "Failed to delete record.");
+              _this152.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20083,21 +26149,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this106 = this;
+            var _this153 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this106.loadingAppointment = true;
+                _this153.loadingAppointment = true;
 
-                _this106.f.appointmentID.setValue(sid);
+                _this153.f.appointmentID.setValue(sid);
 
-                _this106.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this153.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this106.editForm(res);
+                  _this153.editForm(res);
 
-                  _this106.loadingAppointment = false;
+                  _this153.loadingAppointment = false;
                 });
               }
             });
@@ -20105,7 +26171,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this107 = this;
+            var _this154 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -20121,71 +26187,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this107.ts.showSuccess("Success", "Record added successfully.");
+                  _this154.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this107.router.navigate(['/admin/reception/appointment']);
+                  _this154.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this107.loading = false;
+                _this154.loading = false;
               }, function (error) {
-                _this107.ts.showError("Error", "Failed to insert record.");
+                _this154.ts.showError("Error", "Failed to insert record.");
 
-                _this107.loading = false;
+                _this154.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this107.loading = false;
+                _this154.loading = false;
 
                 if (data != 0) {
-                  _this107.ts.showSuccess("Success", "Record updated successfully.");
+                  _this154.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this107.router.navigate(['/admin/reception/appointment']);
+                  _this154.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this107.ts.showError("Error", "Failed to update record.");
+                _this154.ts.showError("Error", "Failed to update record.");
 
-                _this107.loading = false;
+                _this154.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this108 = this;
+            var _this155 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this108.DoctorList = res;
+              _this155.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this109 = this;
+            var _this156 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this109.SpecialityList = res;
+              _this156.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this110 = this;
+            var _this157 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this110.selectedSpecialityList = res;
+              _this157.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this111 = this;
+            var _this158 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this111.DoctorDaysList = res;
+              _this158.DoctorDaysList = res;
             });
           }
         }, {
@@ -20396,9 +26462,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref16) {
-            var column = _ref16.column,
-                direction = _ref16.direction;
+          value: function onSort(_ref22) {
+            var column = _ref22.column,
+                direction = _ref22.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -20415,16 +26481,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this112 = this;
+            var _this159 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this112.ts.showSuccess("Success", "Record deleted successfully.");
+                _this159.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this112.getData();
-              } else _this112.ts.showError("Error", "Failed to delete record.");
+                _this159.getData();
+              } else _this159.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this112.ts.showError("Error", "Failed to delete record.");
+              _this159.ts.showError("Error", "Failed to delete record.");
             });
           } //Status(data) {
           //  debugger
@@ -20610,14 +26676,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this113 = this;
+            var _this160 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this113.salesCategoryWise = res;
-              } else _this113.ts.showError("Error", "Something went wrong");
+                _this160.salesCategoryWise = res;
+              } else _this160.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this160.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20629,27 +26695,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this114 = this;
+            var _this161 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this114.Locations = res;
-              _this114.locationID = _this114.selectedLocation;
+              _this161.Locations = res;
+              _this161.locationID = _this161.selectedLocation;
 
-              _this114.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this161.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this114.Locations = res;
+                _this161.Locations = res;
                 var arr = [];
 
-                _this114.Locations.forEach(function (element) {
+                _this161.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this114.selectedLocations = arr;
+                _this161.selectedLocations = arr;
 
-                _this114.getData(_this114.selectedLocations.toString());
+                _this161.getData(_this161.selectedLocations.toString());
               });
             });
           }
@@ -20841,14 +26907,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this115 = this;
+            var _this162 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this115.orders = res;
-              } else _this115.ts.showError("Error", "Something went wrong");
+                _this162.orders = res;
+              } else _this162.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this115.ts.showError("Error", "Failed to delete record.");
+              _this162.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20860,27 +26926,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this116 = this;
+            var _this163 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this116.Locations = res;
-              _this116.locationID = _this116.selectedLocation;
+              _this163.Locations = res;
+              _this163.locationID = _this163.selectedLocation;
 
-              _this116.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this163.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this116.Locations = res;
+                _this163.Locations = res;
                 var arr = [];
 
-                _this116.Locations.forEach(function (element) {
+                _this163.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this116.selectedLocations = arr;
+                _this163.selectedLocations = arr;
 
-                _this116.getData(_this116.selectedLocations.toString());
+                _this163.getData(_this163.selectedLocations.toString());
               });
             });
           }
@@ -21069,14 +27135,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this117 = this;
+            var _this164 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this117.orderDetails = res;
-              } else _this117.ts.showError("Error", "Something went wrong");
+                _this164.orderDetails = res;
+              } else _this164.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this117.ts.showError("Error", "Failed to delete record.");
+              _this164.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21092,27 +27158,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this118 = this;
+            var _this165 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this118.Locations = res;
-              _this118.locationID = _this118.selectedLocation;
+              _this165.Locations = res;
+              _this165.locationID = _this165.selectedLocation;
 
-              _this118.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this165.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this118.Locations = res;
+                _this165.Locations = res;
                 var arr = [];
 
-                _this118.Locations.forEach(function (element) {
+                _this165.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this118.selectedLocations = arr;
+                _this165.selectedLocations = arr;
 
-                _this118.getData(_this118.selectedLocations.toString());
+                _this165.getData(_this165.selectedLocations.toString());
               });
             });
           }
@@ -21307,14 +27373,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this119 = this;
+            var _this166 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this119.salesItemWise = res;
-              } else _this119.ts.showError("Error", "Something went wrong");
+                _this166.salesItemWise = res;
+              } else _this166.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this119.ts.showError("Error", "Failed to delete record.");
+              _this166.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21345,27 +27411,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this120 = this;
+            var _this167 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this120.Locations = res;
-              _this120.locationID = _this120.selectedLocation;
+              _this167.Locations = res;
+              _this167.locationID = _this167.selectedLocation;
 
-              _this120.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this167.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this120.Locations = res;
+                _this167.Locations = res;
                 var arr = [];
 
-                _this120.Locations.forEach(function (element) {
+                _this167.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this120.selectedLocations = arr;
+                _this167.selectedLocations = arr;
 
-                _this120.getData(_this120.selectedLocations.toString());
+                _this167.getData(_this167.selectedLocations.toString());
               });
             });
           }
@@ -21530,14 +27596,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this121 = this;
+            var _this168 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this121.data$ = res;
-              } else _this121.ts.showError("Error", "Something went wrong");
+                _this168.data$ = res;
+              } else _this168.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this168.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21549,11 +27615,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this122 = this;
+            var _this169 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this122.Locations = res;
-              _this122.locationID = _this122.selectedLocation;
+              _this169.Locations = res;
+              _this169.locationID = _this169.selectedLocation;
             });
           }
         }, {
@@ -21720,16 +27786,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this123 = this;
+            var _this170 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this123._model = res[0];
+                _this170._model = res[0];
 
-                _this123["export"].push(_this123._model);
-              } else _this123.ts.showError("Error", "Something went wrong");
+                _this170["export"].push(_this170._model);
+              } else _this170.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this123.ts.showError("Error", "Failed to delete record.");
+              _this170.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21883,52 +27949,54 @@
           key: "createForm",
           value: function createForm() {
             this.settingForm = this.formBuilder.group({
-              discount: [0],
-              deliveryCharges: [0],
-              minimumOrderAmount: [0],
-              tax: [0],
+              appName: [''],
+              appVersion: [''],
+              about: [''],
+              privacyPolicy: [''],
+              splashScreen: [''],
+              facebookUrl: [''],
+              instagramUrl: [''],
+              twitterUrl: [''],
+              youtubeUrl: [''],
               statusID: [true],
-              appSettingID: 1
+              settingID: 1
             });
           }
         }, {
           key: "editForm",
           value: function editForm(obj) {
-            this.f.discount.setValue(obj.discount);
-            this.f.deliveryCharges.setValue(obj.deliveryCharges);
-            this.f.appSettingID.setValue(obj.appSettingID);
-            this.f.minimumOrderAmount.setValue(obj.minimumOrderAmount);
+            debugger;
+            this.f.settingID.setValue(obj.settingID);
+            this.f.appName.setValue(obj.appName);
+            this.f.appVersion.setValue(obj.appVersion);
+            this.f.about.setValue(obj.about);
+            this.f.privacyPolicy.setValue(obj.privacyPolicy);
+            this.f.splashScreen.setValue(obj.splashScreen);
+            this.f.facebookUrl.setValue(obj.facebookUrl);
+            this.f.instagramUrl.setValue(obj.instagramUrl);
+            this.f.twitterUrl.setValue(obj.twitterUrl);
+            this.f.youtubeUrl.setValue(obj.youtubeUrl);
             this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-            this.f.tax.setValue(obj.tax);
+            this.imgComp.imageUrl = obj.splashScreen;
           }
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this124 = this;
+            var _this171 = this;
 
+            debugger;
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this124.editForm(res);
+              _this171.editForm(res);
 
-              _this124.loadingSetting = false;
-            }); // this.route.paramMap.subscribe(param => {
-            //   const sid = +param.get('id');
-            //   if (sid) {
-            //     this.loadingSetting = true;
-            //     this.f.appSettingID.setValue(sid);
-            //     this.settingService.getById(sid).subscribe(res => {
-            //       //Set Forms
-            //       this.editForm(res);
-            //       this.loadingSetting = false;
-            //     });
-            //   }
-            // })
+              _this171.loadingSetting = false;
+            });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this125 = this;
+            var _this172 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -21940,39 +28008,40 @@
 
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.splashScreen.setValue(this.imgComp.imageUrl);
 
             if (parseInt('1') === 0) {
               //Insert banner
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this125.ts.showSuccess("Success", "Record added successfully.");
+                  _this172.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this125.router.navigate(['/admin/settings/appsettings']);
+                  _this172.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this125.loading = false;
+                _this172.loading = false;
               }, function (error) {
-                _this125.ts.showError("Error", "Failed to insert record.");
+                _this172.ts.showError("Error", "Failed to insert record.");
 
-                _this125.loading = false;
+                _this172.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this125.loading = false;
+                _this172.loading = false;
 
                 if (data != 0) {
-                  _this125.ts.showSuccess("Success", "Record updated successfully.");
+                  _this172.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this125.setSelectedSetting();
+                  _this172.setSelectedSetting();
 
-                  _this125.router.navigate(['/admin/settings/appsettings/add']);
+                  _this172.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this125.ts.showError("Error", "Failed to update record.");
+                _this172.ts.showError("Error", "Failed to update record.");
 
-                _this125.loading = false;
+                _this172.loading = false;
               });
             }
           }
@@ -22124,9 +28193,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref17) {
-            var column = _ref17.column,
-                direction = _ref17.direction;
+          value: function onSort(_ref23) {
+            var column = _ref23.column,
+                direction = _ref23.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -22143,16 +28212,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this126 = this;
+            var _this173 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this126.ts.showSuccess("Success", "Record deleted successfully.");
+                _this173.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this126.getData();
-              } else _this126.ts.showError("Error", "Failed to delete record.");
+                _this173.getData();
+              } else _this173.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this126.ts.showError("Error", "Failed to delete record.");
+              _this173.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22317,9 +28386,10 @@
           key: "createForm",
           value: function createForm() {
             this.bannerForm = this.formBuilder.group({
-              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               type: [''],
               description: [''],
+              screen: [''],
               statusID: [true],
               bannerID: 0,
               image: ['']
@@ -22328,7 +28398,8 @@
         }, {
           key: "editForm",
           value: function editForm(obj) {
-            this.f.name.setValue(obj.name);
+            this.f.title.setValue(obj.title);
+            this.f.screen.setValue(obj.screen);
             this.f.type.setValue(obj.type);
             this.f.description.setValue(obj.description);
             this.f.bannerID.setValue(obj.bannerID);
@@ -22339,21 +28410,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this127 = this;
+            var _this174 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this127.loadingCustomer = true;
+                _this174.loadingCustomer = true;
 
-                _this127.f.bannerID.setValue(sid);
+                _this174.f.bannerID.setValue(sid);
 
-                _this127.bannerService.getById(sid).subscribe(function (res) {
+                _this174.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this127.editForm(res);
+                  _this174.editForm(res);
 
-                  _this127.loadingCustomer = false;
+                  _this174.loadingCustomer = false;
                 });
               }
             });
@@ -22361,7 +28432,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this128 = this;
+            var _this175 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -22380,31 +28451,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this128.ts.showSuccess("Success", "Record added successfully.");
+                  _this175.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this128.router.navigate(['/admin/settings/banner']);
+                  _this175.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this128.loading = false;
+                _this175.loading = false;
               }, function (error) {
-                _this128.ts.showError("Error", "Failed to insert record.");
+                _this175.ts.showError("Error", "Failed to insert record.");
 
-                _this128.loading = false;
+                _this175.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this128.loading = false;
+                _this175.loading = false;
 
                 if (data != 0) {
-                  _this128.ts.showSuccess("Success", "Record updated successfully.");
+                  _this175.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this128.router.navigate(['/admin/settings/banner']);
+                  _this175.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this128.ts.showError("Error", "Failed to update record.");
+                _this175.ts.showError("Error", "Failed to update record.");
 
-                _this128.loading = false;
+                _this175.loading = false;
               });
             }
           }
@@ -22565,9 +28636,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref18) {
-            var column = _ref18.column,
-                direction = _ref18.direction;
+          value: function onSort(_ref24) {
+            var column = _ref24.column,
+                direction = _ref24.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -22584,33 +28655,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this129 = this;
+            var _this176 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this129.ts.showSuccess("Success", "Record deleted successfully.");
+                _this176.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this129.getData();
-              } else _this129.ts.showError("Error", "Failed to delete record.");
+                _this176.getData();
+              } else _this176.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this129.ts.showError("Error", "Failed to delete record.");
+              _this176.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this130 = this;
+            var _this177 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this130.closeResult = "Closed with: ".concat(result);
+              _this177.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this130.Delete(obj);
+                _this177.Delete(obj);
               }
             }, function (reason) {
-              _this130.closeResult = "Dismissed ".concat(_this130.getDismissReason(reason));
+              _this177.closeResult = "Dismissed ".concat(_this177.getDismissReason(reason));
             });
           }
         }, {
@@ -22807,22 +28878,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this131 = this;
+            var _this178 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this131.loadingCustomer = true;
+                _this178.loadingCustomer = true;
 
-                _this131.f.corporateClientID.setValue(sid);
+                _this178.f.corporateClientID.setValue(sid);
 
-                _this131.addcorporateclientService.getById(sid).subscribe(function (res) {
+                _this178.addcorporateclientService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this131.editForm(res);
+                  _this178.editForm(res);
 
-                  _this131.loadingCustomer = false;
+                  _this178.loadingCustomer = false;
                 });
               }
             });
@@ -22830,7 +28901,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this132 = this;
+            var _this179 = this;
 
             debugger;
             this.corporateclientForm.markAllAsTouched();
@@ -22849,31 +28920,31 @@
               console.log(JSON.stringify(this.corporateclientForm.value));
               this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this132.ts.showSuccess("Success", "Record added successfully.");
+                  _this179.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this132.router.navigate(['/admin/settings/corporateclient']);
+                  _this179.router.navigate(['/admin/settings/corporateclient']);
                 }
 
-                _this132.loading = false;
+                _this179.loading = false;
               }, function (error) {
-                _this132.ts.showError("Error", "Failed to insert record.");
+                _this179.ts.showError("Error", "Failed to insert record.");
 
-                _this132.loading = false;
+                _this179.loading = false;
               });
             } else {
               //Update banner
               this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(function (data) {
-                _this132.loading = false;
+                _this179.loading = false;
 
                 if (data != 0) {
-                  _this132.ts.showSuccess("Success", "Record updated successfully.");
+                  _this179.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this132.router.navigate(['/admin/settings/corporateclient']);
+                  _this179.router.navigate(['/admin/settings/corporateclient']);
                 }
               }, function (error) {
-                _this132.ts.showError("Error", "Failed to update record.");
+                _this179.ts.showError("Error", "Failed to update record.");
 
-                _this132.loading = false;
+                _this179.loading = false;
               });
             }
           }
@@ -23034,9 +29105,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref19) {
-            var column = _ref19.column,
-                direction = _ref19.direction;
+          value: function onSort(_ref25) {
+            var column = _ref25.column,
+                direction = _ref25.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -23053,33 +29124,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this133 = this;
+            var _this180 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this133.ts.showSuccess("Success", "Record deleted successfully.");
+                _this180.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this133.getData();
-              } else _this133.ts.showError("Error", "Failed to delete record.");
+                _this180.getData();
+              } else _this180.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this133.ts.showError("Error", "Failed to delete record.");
+              _this180.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this134 = this;
+            var _this181 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this134.closeResult = "Closed with: ".concat(result);
+              _this181.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this134.Delete(obj);
+                _this181.Delete(obj);
               }
             }, function (reason) {
-              _this134.closeResult = "Dismissed ".concat(_this134.getDismissReason(reason));
+              _this181.closeResult = "Dismissed ".concat(_this181.getDismissReason(reason));
             });
           }
         }, {
@@ -23257,21 +29328,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this135 = this;
+            var _this182 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this135.loadingCoupon = true;
+                _this182.loadingCoupon = true;
 
-                _this135.f.couponID.setValue(sid);
+                _this182.f.couponID.setValue(sid);
 
-                _this135.couponService.getById(sid).subscribe(function (res) {
+                _this182.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this135.editForm(res);
+                  _this182.editForm(res);
 
-                  _this135.loadingCoupon = false;
+                  _this182.loadingCoupon = false;
                 });
               }
             });
@@ -23279,7 +29350,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this136 = this;
+            var _this183 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -23297,31 +29368,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this136.ts.showSuccess("Success", "Record added successfully.");
+                  _this183.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this136.router.navigate(['/admin/settings/coupon']);
+                  _this183.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this136.loading = false;
+                _this183.loading = false;
               }, function (error) {
-                _this136.ts.showError("Error", "Failed to insert record.");
+                _this183.ts.showError("Error", "Failed to insert record.");
 
-                _this136.loading = false;
+                _this183.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this136.loading = false;
+                _this183.loading = false;
 
                 if (data != 0) {
-                  _this136.ts.showSuccess("Success", "Record updated successfully.");
+                  _this183.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this136.router.navigate(['/admin/settings/coupon']);
+                  _this183.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this136.ts.showError("Error", "Failed to update record.");
+                _this183.ts.showError("Error", "Failed to update record.");
 
-                _this136.loading = false;
+                _this183.loading = false;
               });
             }
           }
@@ -23506,9 +29577,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref20) {
-            var column = _ref20.column,
-                direction = _ref20.direction;
+          value: function onSort(_ref26) {
+            var column = _ref26.column,
+                direction = _ref26.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -23525,17 +29596,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this137 = this;
+            var _this184 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this137.ts.showSuccess("Success", "Record deleted successfully.");
+                _this184.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this137.getData();
-              } else _this137.ts.showError("Error", "Failed to delete record.");
+                _this184.getData();
+              } else _this184.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this137.ts.showError("Error", "Failed to delete record.");
+              _this184.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23733,21 +29804,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this138 = this;
+            var _this185 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this138.loading = true;
+                _this185.loading = true;
 
-                _this138.f.deliveryAreaID.setValue(sid);
+                _this185.f.deliveryAreaID.setValue(sid);
 
-                _this138.deliveryService.getById(sid).subscribe(function (res) {
+                _this185.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this138.editForm(res);
+                  _this185.editForm(res);
 
-                  _this138.loading = false; //BrandsFill
+                  _this185.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -23760,7 +29831,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this139 = this;
+            var _this186 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -23777,41 +29848,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this139.ts.showSuccess("Success", "Record added successfully.");
+                  _this186.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this139.router.navigate(['/admin/delivery']);
+                  _this186.router.navigate(['/admin/delivery']);
                 }
 
-                _this139.loading = false;
+                _this186.loading = false;
               }, function (error) {
-                _this139.ts.showError("Error", "Failed to insert record.");
+                _this186.ts.showError("Error", "Failed to insert record.");
 
-                _this139.loading = false;
+                _this186.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this139.loading = false;
+                _this186.loading = false;
 
                 if (data != 0) {
-                  _this139.ts.showSuccess("Success", "Record updated successfully.");
+                  _this186.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this139.router.navigate(['/admin/delivery']);
+                  _this186.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this139.ts.showError("Error", "Failed to update record.");
+                _this186.ts.showError("Error", "Failed to update record.");
 
-                _this139.loading = false;
+                _this186.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this140 = this;
+            var _this187 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this140.BrandsList = res; // this.setSelecteditem();
+              _this187.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -23991,9 +30062,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref21) {
-            var column = _ref21.column,
-                direction = _ref21.direction;
+          value: function onSort(_ref27) {
+            var column = _ref27.column,
+                direction = _ref27.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24010,33 +30081,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this141 = this;
+            var _this188 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this141.ts.showSuccess("Success", "Record deleted successfully.");
+                _this188.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this141.getData();
-              } else _this141.ts.showError("Error", "Failed to delete record.");
+                _this188.getData();
+              } else _this188.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this141.ts.showError("Error", "Failed to delete record.");
+              _this188.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this142 = this;
+            var _this189 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this142.closeResult = "Closed with: ".concat(result);
+              _this189.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this142.Delete(obj);
+                _this189.Delete(obj);
               }
             }, function (reason) {
-              _this142.closeResult = "Dismissed ".concat(_this142.getDismissReason(reason));
+              _this189.closeResult = "Dismissed ".concat(_this189.getDismissReason(reason));
             });
           }
         }, {
@@ -24224,31 +30295,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this143 = this;
+            var _this190 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this143.NursingTypeActive = res;
+              _this190.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this144 = this;
+            var _this191 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this144.loadingService = true;
+                _this191.loadingService = true;
 
-                _this144.f.medicalServiceID.setValue(sid);
+                _this191.f.medicalServiceID.setValue(sid);
 
-                _this144.services.getById(sid).subscribe(function (res) {
+                _this191.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this144.editForm(res);
+                  _this191.editForm(res);
 
-                  _this144.loadingService = false;
+                  _this191.loadingService = false;
                 });
               }
             });
@@ -24256,7 +30327,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this145 = this;
+            var _this192 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -24275,31 +30346,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this145.ts.showSuccess("Success", "Record added successfully.");
+                  _this192.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this145.router.navigate(['/admin/settings/medicalservices']);
+                  _this192.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this145.loading = false;
+                _this192.loading = false;
               }, function (error) {
-                _this145.ts.showError("Error", "Failed to insert record.");
+                _this192.ts.showError("Error", "Failed to insert record.");
 
-                _this145.loading = false;
+                _this192.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this145.loading = false;
+                _this192.loading = false;
 
                 if (data != 0) {
-                  _this145.ts.showSuccess("Success", "Record updated successfully.");
+                  _this192.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this145.router.navigate(['/admin/settings/medicalservices']);
+                  _this192.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this145.ts.showError("Error", "Failed to update record.");
+                _this192.ts.showError("Error", "Failed to update record.");
 
-                _this145.loading = false;
+                _this192.loading = false;
               });
             }
           }
@@ -24450,9 +30521,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref22) {
-            var column = _ref22.column,
-                direction = _ref22.direction;
+          value: function onSort(_ref28) {
+            var column = _ref28.column,
+                direction = _ref28.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24469,16 +30540,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this146 = this;
+            var _this193 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this146.ts.showSuccess("Success", "Record deleted successfully.");
+                _this193.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this146.getData();
-              } else _this146.ts.showError("Error", "Failed to delete record.");
+                _this193.getData();
+              } else _this193.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this146.ts.showError("Error", "Failed to delete record.");
+              _this193.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24637,22 +30708,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this147 = this;
+            var _this194 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this147.loadingService = true;
+                _this194.loadingService = true;
 
-                _this147.f.nursingTypeID.setValue(sid);
+                _this194.f.nursingTypeID.setValue(sid);
 
-                _this147.services.getById(sid).subscribe(function (res) {
+                _this194.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this147.editForm(res);
+                  _this194.editForm(res);
 
-                  _this147.loadingService = false;
+                  _this194.loadingService = false;
                 });
               }
             });
@@ -24660,7 +30731,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this148 = this;
+            var _this195 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -24677,31 +30748,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this148.ts.showSuccess("Success", "Record added successfully.");
+                  _this195.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this148.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this195.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this148.loading = false;
+                _this195.loading = false;
               }, function (error) {
-                _this148.ts.showError("Error", "Failed to insert record.");
+                _this195.ts.showError("Error", "Failed to insert record.");
 
-                _this148.loading = false;
+                _this195.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this148.loading = false;
+                _this195.loading = false;
 
                 if (data != 0) {
-                  _this148.ts.showSuccess("Success", "Record updated successfully.");
+                  _this195.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this148.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this195.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this148.ts.showError("Error", "Failed to update record.");
+                _this195.ts.showError("Error", "Failed to update record.");
 
-                _this148.loading = false;
+                _this195.loading = false;
               });
             }
           }
@@ -24852,9 +30923,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref23) {
-            var column = _ref23.column,
-                direction = _ref23.direction;
+          value: function onSort(_ref29) {
+            var column = _ref29.column,
+                direction = _ref29.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24872,16 +30943,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this149 = this;
+            var _this196 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this149.ts.showSuccess("Success", "Record deleted successfully.");
+                _this196.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this149.getData();
-              } else _this149.ts.showError("Error", "Failed to delete record.");
+                _this196.getData();
+              } else _this196.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this149.ts.showError("Error", "Failed to delete record.");
+              _this196.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -25068,21 +31139,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this150 = this;
+            var _this197 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this150.loadingOffers = true;
+                _this197.loadingOffers = true;
 
-                _this150.f.promotionID.setValue(sid);
+                _this197.f.promotionID.setValue(sid);
 
-                _this150.promotion.getById(sid).subscribe(function (res) {
+                _this197.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this150.editForm(res);
+                  _this197.editForm(res);
 
-                  _this150.loadingOffers = false;
+                  _this197.loadingOffers = false;
                 });
               }
             });
@@ -25090,7 +31161,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this151 = this;
+            var _this198 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -25108,31 +31179,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this151.ts.showSuccess("Success", "Record added successfully.");
+                  _this198.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this151.router.navigate(['/admin/offers']);
+                  _this198.router.navigate(['/admin/offers']);
                 }
 
-                _this151.loading = false;
+                _this198.loading = false;
               }, function (error) {
-                _this151.ts.showError("Error", "Failed to insert record.");
+                _this198.ts.showError("Error", "Failed to insert record.");
 
-                _this151.loading = false;
+                _this198.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this151.loading = false;
+                _this198.loading = false;
 
                 if (data != 0) {
-                  _this151.ts.showSuccess("Success", "Record updated successfully.");
+                  _this198.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this151.router.navigate(['/admin/offers']);
+                  _this198.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this151.ts.showError("Error", "Failed to update record.");
+                _this198.ts.showError("Error", "Failed to update record.");
 
-                _this151.loading = false;
+                _this198.loading = false;
               });
             }
           }
@@ -25285,9 +31356,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref24) {
-            var column = _ref24.column,
-                direction = _ref24.direction;
+          value: function onSort(_ref30) {
+            var column = _ref30.column,
+                direction = _ref30.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -25304,16 +31375,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this152 = this;
+            var _this199 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this152.ts.showSuccess("Success", "Record deleted successfully.");
+                _this199.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this152.getData();
-              } else _this152.ts.showError("Error", "Failed to delete record.");
+                _this199.getData();
+              } else _this199.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this152.ts.showError("Error", "Failed to delete record.");
+              _this199.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -25479,22 +31550,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this153 = this;
+            var _this200 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this153.loadingService = true;
+                _this200.loadingService = true;
 
-                _this153.f.specialistID.setValue(sid);
+                _this200.f.specialistID.setValue(sid);
 
-                _this153.services.getById(sid).subscribe(function (res) {
+                _this200.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this153.editForm(res);
+                  _this200.editForm(res);
 
-                  _this153.loadingService = false;
+                  _this200.loadingService = false;
                 });
               }
             });
@@ -25502,7 +31573,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this154 = this;
+            var _this201 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -25521,31 +31592,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this154.ts.showSuccess("Success", "Record added successfully.");
+                  _this201.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this154.router.navigate(['/admin/settings/speciality']);
+                  _this201.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this154.loading = false;
+                _this201.loading = false;
               }, function (error) {
-                _this154.ts.showError("Error", "Failed to insert record.");
+                _this201.ts.showError("Error", "Failed to insert record.");
 
-                _this154.loading = false;
+                _this201.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this154.loading = false;
+                _this201.loading = false;
 
                 if (data != 0) {
-                  _this154.ts.showSuccess("Success", "Record updated successfully.");
+                  _this201.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this154.router.navigate(['/admin/settings/speciality']);
+                  _this201.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this154.ts.showError("Error", "Failed to update record.");
+                _this201.ts.showError("Error", "Failed to update record.");
 
-                _this154.loading = false;
+                _this201.loading = false;
               });
             }
           }
@@ -25703,9 +31774,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref25) {
-            var column = _ref25.column,
-                direction = _ref25.direction;
+          value: function onSort(_ref31) {
+            var column = _ref31.column,
+                direction = _ref31.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -25722,33 +31793,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this155 = this;
+            var _this202 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this155.ts.showSuccess("Success", "Record deleted successfully.");
+                _this202.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this155.getData();
-              } else _this155.ts.showError("Error", "Failed to delete record.");
+                _this202.getData();
+              } else _this202.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this155.ts.showError("Error", "Failed to delete record.");
+              _this202.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this156 = this;
+            var _this203 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this156.closeResult = "Closed with: ".concat(result);
+              _this203.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this156.Delete(obj);
+                _this203.Delete(obj);
               }
             }, function (reason) {
-              _this156.closeResult = "Dismissed ".concat(_this156.getDismissReason(reason));
+              _this203.closeResult = "Dismissed ".concat(_this203.getDismissReason(reason));
             });
           }
         }, {
@@ -25922,22 +31993,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this157 = this;
+            var _this204 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this157.loadingService = true;
+                _this204.loadingService = true;
 
-                _this157.f.timeSlotID.setValue(sid);
+                _this204.f.timeSlotID.setValue(sid);
 
-                _this157.services.getById(sid).subscribe(function (res) {
+                _this204.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this157.editForm(res);
+                  _this204.editForm(res);
 
-                  _this157.loadingService = false;
+                  _this204.loadingService = false;
                 });
               }
             });
@@ -25945,7 +32016,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this158 = this;
+            var _this205 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -25963,31 +32034,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this158.ts.showSuccess("Success", "Record added successfully.");
+                  _this205.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this158.router.navigate(['/admin/settings/timeslot']);
+                  _this205.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this158.loading = false;
+                _this205.loading = false;
               }, function (error) {
-                _this158.ts.showError("Error", "Failed to insert record.");
+                _this205.ts.showError("Error", "Failed to insert record.");
 
-                _this158.loading = false;
+                _this205.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this158.loading = false;
+                _this205.loading = false;
 
                 if (data != 0) {
-                  _this158.ts.showSuccess("Success", "Record updated successfully.");
+                  _this205.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this158.router.navigate(['/admin/settings/timeslot']);
+                  _this205.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this158.ts.showError("Error", "Failed to update record.");
+                _this205.ts.showError("Error", "Failed to update record.");
 
-                _this158.loading = false;
+                _this205.loading = false;
               });
             }
           }
@@ -26145,9 +32216,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref26) {
-            var column = _ref26.column,
-                direction = _ref26.direction;
+          value: function onSort(_ref32) {
+            var column = _ref32.column,
+                direction = _ref32.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -26164,34 +32235,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this159 = this;
+            var _this206 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this159.ts.showSuccess("Success", "Record deleted successfully.");
+                _this206.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this159.getData();
-              } else _this159.ts.showError("Error", "Failed to delete record.");
+                _this206.getData();
+              } else _this206.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this159.ts.showError("Error", "Failed to delete record.");
+              _this206.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this160 = this;
+            var _this207 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this160.closeResult = "Closed with: ".concat(result);
+              _this207.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this160.Delete(obj);
+                _this207.Delete(obj);
               }
             }, function (reason) {
-              _this160.closeResult = "Dismissed ".concat(_this160.getDismissReason(reason));
+              _this207.closeResult = "Dismissed ".concat(_this207.getDismissReason(reason));
             });
           }
         }, {
@@ -26237,6 +32308,497 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/timeslot.component.html"))["default"],
         providers: []
       }), __metadata("design:paramtypes", [_services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__["TimeSlotService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], TimeSlotComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/speaker/addspeaker/addspeaker.component.css":
+    /*!*******************************************************************!*\
+      !*** ./src/app/admin/speaker/addspeaker/addspeaker.component.css ***!
+      \*******************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminSpeakerAddspeakerAddspeakerComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NwZWFrZXIvYWRkc3BlYWtlci9hZGRzcGVha2VyLmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/speaker/addspeaker/addspeaker.component.ts":
+    /*!******************************************************************!*\
+      !*** ./src/app/admin/speaker/addspeaker/addspeaker.component.ts ***!
+      \******************************************************************/
+
+    /*! exports provided: AddSpeakerComponent */
+
+    /***/
+    function srcAppAdminSpeakerAddspeakerAddspeakerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddSpeakerComponent", function () {
+        return AddSpeakerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../_services/speaker.service */
+      "./src/app/_services/speaker.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddSpeakerComponent = /*#__PURE__*/function () {
+        function AddSpeakerComponent(formBuilder, router, route, ts, ls, speakerService) {
+          _classCallCheck(this, AddSpeakerComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.speakerService = speakerService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingSpeaker = false;
+          this.createForm();
+        }
+
+        _createClass(AddSpeakerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.speakerForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              designation: [''],
+              company: [''],
+              about: [''],
+              statusID: [true],
+              speakerID: 0,
+              image: [''],
+              locationID: null
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.name.setValue(obj.name);
+            this.f.designation.setValue(obj.designation);
+            this.f.company.setValue(obj.company);
+            this.f.about.setValue(obj.about);
+            this.f.speakerID.setValue(obj.speakerID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this208 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this208.loadingSpeaker = true;
+
+                _this208.f.speakerID.setValue(sid);
+
+                _this208.speakerService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this208.editForm(res);
+
+                  _this208.loadingSpeaker = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this209 = this;
+
+            this.speakerForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.speakerForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.speakerID.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.speakerForm.value));
+              this.speakerService.insert(this.speakerForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this209.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this209.router.navigate(['/admin/speaker']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this209.loading = false;
+              }, function (error) {
+                _this209.ts.showError("Error", "Failed to insert record.");
+
+                _this209.loading = false;
+              });
+            } else {
+              //Update modifier
+              this.speakerService.update(this.speakerForm.value).subscribe(function (data) {
+                _this209.loading = false;
+
+                if (data != 0) {
+                  _this209.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this209.router.navigate(['/admin/speaker']);
+                }
+              }, function (error) {
+                _this209.ts.showError("Error", "Failed to update record.");
+
+                _this209.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.speakerForm.controls;
+          }
+        }]);
+
+        return AddSpeakerComponent;
+      }();
+
+      AddSpeakerComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"]
+        }];
+      };
+
+      AddSpeakerComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddSpeakerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addspeaker',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addspeaker.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/addspeaker/addspeaker.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addspeaker.component.css */
+        "./src/app/admin/speaker/addspeaker/addspeaker.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"]])], AddSpeakerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/speaker/speaker.component.ts":
+    /*!****************************************************!*\
+      !*** ./src/app/admin/speaker/speaker.component.ts ***!
+      \****************************************************/
+
+    /*! exports provided: SpeakerComponent */
+
+    /***/
+    function srcAppAdminSpeakerSpeakerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SpeakerComponent", function () {
+        return SpeakerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../_services/speaker.service */
+      "./src/app/_services/speaker.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var SpeakerComponent = /*#__PURE__*/function () {
+        function SpeakerComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, SpeakerComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(SpeakerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this210 = this;
+
+            this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this210.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref33) {
+            var column = _ref33.column,
+                direction = _ref33.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(addons) {
+            this.router.navigate(["admin/speaker/edit", addons]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this211 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this211.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this211.getData();
+              } else _this211.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this211.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this212 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this212.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this212.Delete(obj);
+              }
+            }, function (reason) {
+              _this212.closeResult = "Dismissed ".concat(_this212.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return SpeakerComponent;
+      }();
+
+      SpeakerComponent.ctorParameters = function () {
+        return [{
+          type: _services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
+        }];
+      };
+
+      SpeakerComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      SpeakerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-speaker',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./speaker.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/speaker/speaker.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [_services_speaker_service__WEBPACK_IMPORTED_MODULE_6__["SpeakerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], SpeakerComponent);
       /***/
     },
 
@@ -26360,10 +32922,12 @@
             this.userForm = this.formBuilder.group({
               userName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              statusID: [true],
+              image: [''],
+              address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              contactNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              id: 0
+              statusID: [true],
+              userID: 0
             });
           }
         }, {
@@ -26371,29 +32935,32 @@
           value: function editForm(obj) {
             this.f.userName.setValue(obj.userName);
             this.f.email.setValue(obj.email);
+            this.f.address.setValue(obj.address);
+            this.f.contactNo.setValue(obj.contactNo);
             this.f.password.setValue(obj.password);
-            this.f.type.setValue(obj.type);
-            this.f.id.setValue(obj.id);
-            this.f.statusID.setValue(obj.statusID === 1 ? true : false); //this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
+            this.f.userID.setValue(obj.userID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this161 = this;
+            var _this213 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this161.loadingCustomer = true;
+                _this213.loadingCustomer = true;
 
-                _this161.f.id.setValue(sid);
+                _this213.f.userID.setValue(sid);
 
-                _this161.userService.getById(sid).subscribe(function (res) {
+                _this213.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this161.editForm(res);
+                  _this213.editForm(res);
 
-                  _this161.loadingCustomer = false;
+                  _this213.loadingCustomer = false;
                 });
               }
             });
@@ -26401,7 +32968,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this162 = this;
+            var _this214 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -26413,37 +32980,38 @@
 
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
 
-            if (parseInt(this.f.id.value) === 0) {
+            if (parseInt(this.f.userID.value) === 0) {
               //Insert customer
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this162.ts.showSuccess("Success", "Record added successfully.");
+                  _this214.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this162.router.navigate(['/admin/user']);
+                  _this214.router.navigate(['/admin/user']);
                 }
 
-                _this162.loading = false;
+                _this214.loading = false;
               }, function (error) {
-                _this162.ts.showError("Error", "Failed to insert record.");
+                _this214.ts.showError("Error", "Failed to insert record.");
 
-                _this162.loading = false;
+                _this214.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this162.loading = false;
+                _this214.loading = false;
 
                 if (data != 0) {
-                  _this162.ts.showSuccess("Success", "Record updated successfully.");
+                  _this214.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this162.router.navigate(['/admin/user']);
+                  _this214.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this162.ts.showError("Error", "Failed to update record.");
+                _this214.ts.showError("Error", "Failed to update record.");
 
-                _this162.loading = false;
+                _this214.loading = false;
               });
             }
           }
@@ -26628,13 +33196,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this163 = this;
+            var _this215 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this163.formName = res[0];
+                _this215.formName = res[0];
               }
 
               debugger;
@@ -26643,22 +33211,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this164 = this;
+            var _this216 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this164.loading = false;
+              _this216.loading = false;
 
               if (obj != 0) {
-                _this164.ts.showSuccess("Success", "Record updated successfully.");
+                _this216.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this164.router.navigate(['/admin/permission']);
+                _this216.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this164.ts.showError("Error", "Failed to update record.");
+              _this216.ts.showError("Error", "Failed to update record.");
 
-              _this164.loading = false;
+              _this216.loading = false;
             });
           }
         }, {
@@ -26822,12 +33390,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this165 = this;
+            var _this217 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this165.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this217.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this165.ts.showError("Error", "Failed to export");
+              _this217.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -26840,9 +33408,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref27) {
-            var column = _ref27.column,
-                direction = _ref27.direction;
+          value: function onSort(_ref34) {
+            var column = _ref34.column,
+                direction = _ref34.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -26859,16 +33427,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this166 = this;
+            var _this218 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this166.ts.showSuccess("Success", "Record deleted successfully.");
+                _this218.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this166.getData();
-              } else _this166.ts.showError("Error", "Failed to delete record.");
+                _this218.getData();
+              } else _this218.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this166.ts.showError("Error", "Failed to delete record.");
+              _this218.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -27020,12 +33588,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this167 = this;
+            var _this219 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this167.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this219.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this167.ts.showError("Error", "Failed to export");
+              _this219.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -27038,9 +33606,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref28) {
-            var column = _ref28.column,
-                direction = _ref28.direction;
+          value: function onSort(_ref35) {
+            var column = _ref35.column,
+                direction = _ref35.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -27057,33 +33625,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this168 = this;
+            var _this220 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this168.ts.showSuccess("Success", "Record deleted successfully.");
+                _this220.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this168.getData();
-              } else _this168.ts.showError("Error", "Failed to delete record.");
+                _this220.getData();
+              } else _this220.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this168.ts.showError("Error", "Failed to delete record.");
+              _this220.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this169 = this;
+            var _this221 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this169.closeResult = "Closed with: ".concat(result);
+              _this221.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this169.Delete(obj);
+                _this221.Delete(obj);
               }
             }, function (reason) {
-              _this169.closeResult = "Dismissed ".concat(_this169.getDismissReason(reason));
+              _this221.closeResult = "Dismissed ".concat(_this221.getDismissReason(reason));
             });
           }
         }, {
@@ -27738,6 +34306,102 @@
       var _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
       /*! ./admin/settings/corporateclient/addcorporateclient/addcorporateclient.component */
       "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts");
+      /* harmony import */
+
+
+      var _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
+      /*! ./admin/speaker/speaker.component */
+      "./src/app/admin/speaker/speaker.component.ts");
+      /* harmony import */
+
+
+      var _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
+      /*! ./admin/speaker/addspeaker/addspeaker.component */
+      "./src/app/admin/speaker/addspeaker/addspeaker.component.ts");
+      /* harmony import */
+
+
+      var _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
+      /*! ./admin/organizer/organizer.component */
+      "./src/app/admin/organizer/organizer.component.ts");
+      /* harmony import */
+
+
+      var _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
+      /*! ./admin/organizer/add/addorganizer.component */
+      "./src/app/admin/organizer/add/addorganizer.component.ts");
+      /* harmony import */
+
+
+      var _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
+      /*! ./admin/partner/partner.component */
+      "./src/app/admin/partner/partner.component.ts");
+      /* harmony import */
+
+
+      var _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
+      /*! ./admin/partner/add/addpartner.component */
+      "./src/app/admin/partner/add/addpartner.component.ts");
+      /* harmony import */
+
+
+      var _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
+      /*! ./admin/eventCategory/eventcategory.component */
+      "./src/app/admin/eventCategory/eventcategory.component.ts");
+      /* harmony import */
+
+
+      var _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
+      /*! ./admin/eventCategory/add/addeventcategory.component */
+      "./src/app/admin/eventCategory/add/addeventcategory.component.ts");
+      /* harmony import */
+
+
+      var _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
+      /*! ./admin/event/addevent/addevent.component */
+      "./src/app/admin/event/addevent/addevent.component.ts");
+      /* harmony import */
+
+
+      var _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
+      /*! ./admin/event/event.component */
+      "./src/app/admin/event/event.component.ts");
+      /* harmony import */
+
+
+      var _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
+      /*! ./admin/faq/faq.component */
+      "./src/app/admin/faq/faq.component.ts");
+      /* harmony import */
+
+
+      var _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
+      /*! ./admin/faq/add/addfaq.component */
+      "./src/app/admin/faq/add/addfaq.component.ts");
+      /* harmony import */
+
+
+      var _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
+      /*! ./admin/eventdetail/eventdetail.component */
+      "./src/app/admin/eventdetail/eventdetail.component.ts");
+      /* harmony import */
+
+
+      var _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
+      /*! ./admin/confirmlistreport/confirmlistreport.component */
+      "./src/app/admin/confirmlistreport/confirmlistreport.component.ts");
+      /* harmony import */
+
+
+      var _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
+      /*! ./admin/eventattendees/eventattendees.component */
+      "./src/app/admin/eventattendees/eventattendees.component.ts");
+      /* harmony import */
+
+
+      var _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
+      /*! ./admin/eventattendees/addeventattendees/addeventattendees.component */
+      "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -27757,7 +34421,7 @@
       };
 
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"], _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"], _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"], _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"], _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"], _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"], _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"], _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"], _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"], _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"], _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"], _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"], _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"], _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"], _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"], _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
         }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
@@ -27795,6 +34459,24 @@
           }, {
             path: 'item/edit/:id',
             component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"]
+          }, {
+            path: 'event',
+            component: _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"]
+          }, {
+            path: 'event/add',
+            component: _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"]
+          }, {
+            path: 'event/edit/:id',
+            component: _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"]
+          }, {
+            path: 'eventattendees',
+            component: _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"]
+          }, {
+            path: 'eventattendees/add',
+            component: _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"]
+          }, {
+            path: 'eventattendees/edit/:id',
+            component: _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"]
           }, {
             path: 'modifier',
             component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"]
@@ -28045,6 +34727,57 @@
           }, {
             path: 'formpermission',
             component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]
+          }, {
+            path: 'speaker',
+            component: _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"]
+          }, {
+            path: 'speaker/add',
+            component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"]
+          }, {
+            path: 'speaker/edit/:id',
+            component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"]
+          }, {
+            path: 'organizer',
+            component: _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"]
+          }, {
+            path: 'organizer/add',
+            component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"]
+          }, {
+            path: 'organizer/edit/:id',
+            component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"]
+          }, {
+            path: 'partner',
+            component: _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"]
+          }, {
+            path: 'partner/add',
+            component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"]
+          }, {
+            path: 'partner/edit/:id',
+            component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"]
+          }, {
+            path: 'eventcategory',
+            component: _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"]
+          }, {
+            path: 'eventcategory/add',
+            component: _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"]
+          }, {
+            path: 'eventcategory/edit/:id',
+            component: _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"]
+          }, {
+            path: 'eventdetail',
+            component: _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"]
+          }, {
+            path: 'confirmlistreport',
+            component: _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"]
+          }, {
+            path: 'faq',
+            component: _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"]
+          }, {
+            path: 'faq/add',
+            component: _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"]
+          }, {
+            path: 'faq/edit/:id',
+            component: _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"]
           }]
         }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', {
           enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production
@@ -28299,12 +35032,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this170 = this;
+        var _this222 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this170.forecasts = result;
+          _this222.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -28487,7 +35220,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this171 = this;
+            var _this223 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -28497,14 +35230,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this171.imageUrl = reader.result;
+                _this223.imageUrl = reader.result;
 
-                _this171.registrationForm.patchValue({
+                _this223.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this171.editFile = false;
-                _this171.removeUpload = true;
+                _this223.editFile = false;
+                _this223.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -28603,7 +35336,7 @@
         _createClass(ImageViewComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this172 = this;
+            var _this224 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -28613,14 +35346,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this172.imageUrl = reader.result;
+                _this224.imageUrl = reader.result;
 
-                _this172.registrationForm.patchValue({
+                _this224.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this172.editFile = false;
-                _this172.removeUpload = true;
+                _this224.editFile = false;
+                _this224.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -28718,12 +35451,6 @@
       var _services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../_services/user.service */
       "./src/app/_services/user.service.ts");
-      /* harmony import */
-
-
-      var _models_Permission__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ../_models/Permission */
-      "./src/app/_models/Permission.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -28747,49 +35474,43 @@
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
-          var _this173 = this;
-
           _classCallCheck(this, LayoutComponent);
 
+          // this.userName = this.ls.getSelectedBrand().userName;
+          // this.type = this.ls.getSelectedBrand().type;
           this.router = router;
           this.service = service;
           this.userService = userService;
           this.ls = ls;
           this._Langname = "";
-          this.userName = "";
-          this.type = "";
-          this.email = "";
-          this.isDiagnostic = true;
-          this.isDoctor = true;
-          this.isUser = true;
-          this.isNoti = true;
-          this.isPharmacy = true;
-          this.isReception = true;
-          this.isReport = true;
-          this.isSetting = true;
-          this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_5__["Permission"]();
-          this.userName = this.ls.getSelectedBrand().userName;
-          this.type = this.ls.getSelectedBrand().type; //  this.permission=environment.rootScope;
+          this.name = "";
+          this.email = ""; // //  this.permission=environment.rootScope;
+          // this.permission=this.ls.getSelectedBrand(); 
+          //  var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
+          //  var roleNameType= role.roleName;
+          //  this.isDiagnostic = role.diagnostic === 1 ? true : false;
+          //  this.isDoctor = role.doctor === 1 ? true : false;
+          //  this.isUser = role.mamjiUser === 1 ? true : false;
+          //  this.isNoti = role.notification === 1 ? true : false;
+          //  this.isPharmacy = role.pharmacy === 1 ? true : false;
+          //  this.isReception = role.reception === 1 ? true : false;
+          //  this.isReport = role.reports === 1 ? true : false;
+          //  this.isSetting = role.setting === 1 ? true : false;
+        } // roleName;
+        // isDiagnostic: boolean = true;
+        // isDoctor: boolean = true;
+        // isUser: boolean = true;
+        // isNoti: boolean = true;
+        // isPharmacy: boolean = true;
+        // isReception: boolean = true;
+        // isReport: boolean = true;
+        // isSetting: boolean = true;
+        // public permission = new Permission();
 
-          this.permission = this.ls.getSelectedBrand();
-          var role = this.permission.permissionForm.find(function (element) {
-            return element.roleName == _this173.type;
-          });
-          var roleNameType = role.roleName;
-          this.isDiagnostic = role.diagnostic === 1 ? true : false;
-          this.isDoctor = role.doctor === 1 ? true : false;
-          this.isUser = role.mamjiUser === 1 ? true : false;
-          this.isNoti = role.notification === 1 ? true : false;
-          this.isPharmacy = role.pharmacy === 1 ? true : false;
-          this.isReception = role.reception === 1 ? true : false;
-          this.isReport = role.reports === 1 ? true : false;
-          this.isSetting = role.setting === 1 ? true : false;
-        }
 
         _createClass(LayoutComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {
-            this.type = this.ls.getSelectedBrand().type;
+          value: function ngOnInit() {//this.type = this.ls.getSelectedBrand().type;
           }
         }, {
           key: "Logout",
@@ -28920,12 +35641,6 @@
       var _services_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ../_services/user.service */
       "./src/app/_services/user.service.ts");
-      /* harmony import */
-
-
-      var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! src/environments/environment.prod */
-      "./src/environments/environment.prod.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -28967,36 +35682,34 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this174 = this;
+            var _this225 = this;
 
+            debugger;
             this.loginForm.markAllAsTouched();
 
             if (this.loginForm.invalid) {
               return;
             }
 
-            this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
+            this.service.login(this.f.email.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this174.ls.setSelectedBrand(data);
+                _this225.ls.setSelectedBrand(data); //this.userService.getAllData();
+                //environment.rootScope = data;
 
-                _this174.userService.getAllData(); //this.userService.getpermission();
 
-
-                src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
-
-                _this174.router.navigate(["/admin/dashboard"]);
+                _this225.router.navigate(["/admin/dashboard"]);
               } else {
-                _this174.ts.showError("Error", "Username or password is not correct.");
+                _this225.ts.showError("Error", "Email or password is not correct.");
               }
             }, function (error) {
-              _this174.ts.showError("Error", "Something went wrong.");
+              _this225.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
           key: "createForm",
           value: function createForm() {
             this.loginForm = this.formBuilder.group({
-              username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
             });
           }
@@ -29132,33 +35845,6 @@
     },
 
     /***/
-    "./src/environments/environment.prod.ts":
-    /*!**********************************************!*\
-      !*** ./src/environments/environment.prod.ts ***!
-      \**********************************************/
-
-    /*! exports provided: environment */
-
-    /***/
-    function srcEnvironmentsEnvironmentProdTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "environment", function () {
-        return environment;
-      });
-
-      var environment = {
-        production: true,
-        rootScope: null
-      };
-      /***/
-    },
-
-    /***/
     "./src/environments/environment.ts":
     /*!*****************************************!*\
       !*** ./src/environments/environment.ts ***!
@@ -29284,7 +35970,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */
+      /*! E:\Project\AghaKhan\AKUH_Admin_GIT\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     },

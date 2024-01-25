@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace AKU_Admin.BLL._Services
 {
@@ -22,6 +23,17 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 return _service.GetAll();
+            }
+            catch (Exception ex)
+            {
+                return new List<EventBLL>();
+            }
+        }
+        public List<EventBLL> GetAllDropdown()
+        {
+            try
+            {
+                return _service.GetAllDropdown();
             }
             catch (Exception ex)
             {
@@ -60,7 +72,7 @@ namespace AKU_Admin.BLL._Services
             List<EventImagesBLL> imBLL = new List<EventImagesBLL>();
             try
             {
-                //data.Image = UploadImage(data.Image, "Items", _env);
+                //data.Image = UploadImage(data.Image, "Event", _env);
                 data.Createdon = DateTime.UtcNow.AddMinutes(300);
                 for (int i = 0; i < data.ImagesSource.Count; i++)
                 {
@@ -80,6 +92,23 @@ namespace AKU_Admin.BLL._Services
                 data.EventImages = imBLL;
 
                 var result = _service.Insert(data);
+
+                try
+                {
+                    var ds = _service.GetToken();
+                    var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                    foreach (var item in getTokens)
+                    {
+                        var token = new PushNotificationBLL();
+                        token.Title = "AKU Surgery Conference" + " | Event Info";
+                        token.Message = data.Name;
+                        token.DeviceID = item.Token;
+                        _service.PushNotificationAndroid(token);
+                    }
+                }
+                catch (Exception)
+                {
+                }
 
                 return result;
             }
@@ -150,6 +179,28 @@ namespace AKU_Admin.BLL._Services
                 return 0;
             }
         }
-
+        public List<EventDetailsBLL> GetEventsDetailRpt(string EventID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetEventsDetailRpt(EventID, FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }
+        public List<EventDetailsBLL> ConfirmListReport(string EventID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.ConfirmListReport(EventID, FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }
+        
     }
 }

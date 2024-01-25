@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
@@ -124,12 +125,25 @@ namespace BAL.Repositories
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateSetting_Admin", p);
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LogExceptionToFile(ex, @"E:\exceptionLog.txt");
                 return 0;
             }
         }
+        private void LogExceptionToFile(Exception ex, string logFilePath)
+        {
 
+            // Log exception details to a text file
+            using (StreamWriter writer = new StreamWriter(logFilePath, append: true))
+            {
+                writer.WriteLine($"Timestamp: {DateTime.Now}");
+                writer.WriteLine($"Exception Type: {ex.GetType().Name}");
+                writer.WriteLine($"Message: {ex.Message}");
+                writer.WriteLine($"StackTrace: {ex.StackTrace}");
+                writer.WriteLine(new string('-', 50)); // Separator for better readability
+            }
+        }
         public int Delete(AppSetingBLL data)
         {
             try

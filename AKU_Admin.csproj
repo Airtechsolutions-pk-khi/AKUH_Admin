@@ -38,18 +38,26 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\dist\assets\Upload\Medicine\**" />
+    <Compile Remove="ClientApp\dist\assets\Upload\Speciality\**" />
     <Compile Remove="ClientApp\src\app\admin\sales\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\dist\assets\Upload\Medicine\**" />
+    <Content Remove="ClientApp\dist\assets\Upload\Speciality\**" />
     <Content Remove="ClientApp\src\app\admin\sales\**" />
+    <EmbeddedResource Remove="ClientApp\dist\assets\Upload\Medicine\**" />
+    <EmbeddedResource Remove="ClientApp\dist\assets\Upload\Speciality\**" />
     <EmbeddedResource Remove="ClientApp\src\app\admin\sales\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\dist\assets\Upload\Medicine\**" />
+    <None Remove="ClientApp\dist\assets\Upload\Speciality\**" />
     <None Remove="ClientApp\src\app\admin\sales\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\dist\assets\Upload\Medicine\" />
-    <Folder Include="ClientApp\dist\assets\Upload\Speciality\" />
+    <Folder Include="ClientApp\dist\assets\Upload\Banner\" />
+    <Folder Include="ClientApp\dist\assets\Upload\Event\" />
     <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
     <Folder Include="pdfFiles\" />
     <Folder Include="Upload\Offers\" />

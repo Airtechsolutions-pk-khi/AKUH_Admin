@@ -60,27 +60,7 @@ namespace AKU_Admin._Models
 
     //}
     
-    public class EventAttendeesBLL
-    {
-        public int AttendeesID { get; set; }
-
-        public int? EventID { get; set; }
-
-        public string FullName { get; set; }
-
-        public string Email { get; set; }
-
-        public string PhoneNo { get; set; }
-
-        public int? StatusID { get; set; }
-
-        public DateTime? Createdon { get; set; }
-
-        public DateTime? Updatedon { get; set; }
-
-        public int? UpdatedBy { get; set; }
-
-    }
+    
     public class EventCategoryBLL
     {
         public int EventCategoryID { get; set; }

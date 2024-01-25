@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
@@ -149,15 +150,29 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@EventCategoryID", data.EventCategoryID);
-                p[1] = new SqlParameter("@Updated", data.Updatedon);
+                p[1] = new SqlParameter("@Updatedon", data.Updatedon);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteEventCategory_Admin", p);
 
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LogExceptionToFile(ex, @"E:\exceptionLog.txt");
                 return 0;
+            }
+        }
+        private void LogExceptionToFile(Exception ex, string logFilePath)
+        {
+
+            // Log exception details to a text file
+            using (StreamWriter writer = new StreamWriter(logFilePath, append: true))
+            {
+                writer.WriteLine($"Timestamp: {DateTime.Now}");
+                writer.WriteLine($"Exception Type: {ex.GetType().Name}");
+                writer.WriteLine($"Message: {ex.Message}");
+                writer.WriteLine($"StackTrace: {ex.StackTrace}");
+                writer.WriteLine(new string('-', 50)); // Separator for better readability
             }
         }
     }

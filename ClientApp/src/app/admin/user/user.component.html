@@ -33,7 +33,7 @@
             <th width="15%" sortable="UserName" (sort)="onSort($event)"> User Name </th>
             <th width="15%" sortable="Email" (sort)="onSort($event)">Email </th>
             <!--<th width="15%" sortable="Password" (sort)="onSort($event)">Password </th>-->
-            <th width="15%" sortable="Role" (sort)="onSort($event)">Role </th>
+            
             <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
             <th width="10%" style="text-align:center">Action</th>
           </tr>
@@ -43,7 +43,7 @@
             <td> {{item.userName}} </td>
             <td> {{item.email}} </td>
             <!--<td class="d-table-cell">{{item.password}}</td>-->
-            <td> {{item.type}} </td>
+            <!-- <td> {{item.type}} </td> -->
 
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
