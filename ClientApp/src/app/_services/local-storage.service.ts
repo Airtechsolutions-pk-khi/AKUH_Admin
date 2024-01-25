@@ -38,12 +38,11 @@ export class LocalStorageService {
     return JSON.parse(sessionStorage.getItem('_Locations'));
   }
   getUsers() {
-    
     return JSON.parse(sessionStorage.getItem('_Users'));
   }
   
   getSelectedBrand() {
-    
+    debugger
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
 

@@ -77,7 +77,7 @@ export class AddEventComponent implements OnInit {
     this.eventForm = this.formBuilder.group({
       eventID: 0,
       name: ['', Validators.required],
-      type: [''],
+      //type: [''],
       description: [''],
       statusID: [true],
       location: [''],
@@ -93,9 +93,9 @@ export class AddEventComponent implements OnInit {
       speakers: [],
       organizers: [],
       remainingTicket: [0],
-      facebook: [''],
-      instagram: [''],
-      twitter: [''],
+      //facebook: [''],
+      //instagram: [''],
+      //twitter: [''],
       image: [''],
       displayOrder: [0],
       file: [''],
@@ -109,7 +109,7 @@ export class AddEventComponent implements OnInit {
     debugger
     this.f.eventID.setValue(obj.eventID);
     this.f.name.setValue(obj.name);
-    this.f.type.setValue(obj.type);
+    //this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.location.setValue(obj.location);
@@ -128,9 +128,9 @@ export class AddEventComponent implements OnInit {
     this.f.phoneNo.setValue(obj.phoneNo);
     this.f.email.setValue(obj.email);
     this.f.remainingTicket.setValue(obj.remainingTicket);
-    this.f.facebook.setValue(obj.facebook);
-    this.f.instagram.setValue(obj.instagram);
-    this.f.twitter.setValue(obj.twitter);
+    //this.f.facebook.setValue(obj.facebook);
+    //this.f.instagram.setValue(obj.instagram);
+    //this.f.twitter.setValue(obj.twitter);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.isFeatured.setValue(obj.isFeatured);
     //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };

@@ -260,7 +260,7 @@ namespace AKU_Admin.BLL._Services
                     UpdateApproved(obj, _env, Body);
                     try
                     {
-                        var ds = _service.GetToken(obj.CustomerID);
+                        var ds = _service.GetToken();
                         var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
                         foreach (var item in getTokens)
                         {
@@ -282,7 +282,7 @@ namespace AKU_Admin.BLL._Services
                     UpdateComplete(obj, _env, Body);
                     try
                     {
-                        var ds = _service.GetToken(obj.CustomerID);
+                        var ds = _service.GetToken();
                         var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
                         foreach (var item in getTokens)
                         {
@@ -304,7 +304,7 @@ namespace AKU_Admin.BLL._Services
                     UpdateCancelled(obj, _env, Body);
                     try
                     {
-                        var ds = _service.GetToken(obj.CustomerID);
+                        var ds = _service.GetToken();
                         var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
                         foreach (var item in getTokens)
                         {

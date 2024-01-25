@@ -34,10 +34,10 @@
         <thead>
           <tr class="table-header">
             <th width="10%">IMAGE</th>
-            <th width="10%" sortable="Name" (sort)="onSort($event)"> Name </th>
-            <th width="15%" sortable="categoryName" (sort)="onSort($event)">Type</th>
-            <th width="15%" sortable="displayOrder" (sort)="onSort($event)">Description</th>
-            <th width="10%" sortable="dalories" (sort)="onSort($event)">Contact No</th>            
+            <th width="25%" sortable="Name" (sort)="onSort($event)"> Name </th>
+            <th width="10%" sortable="categoryName" (sort)="onSort($event)">Type</th>
+            <!--<th width="15%" sortable="displayOrder" (sort)="onSort($event)">Description</th>-->
+            <!--<th width="10%" sortable="dalories" (sort)="onSort($event)">Contact No</th>-->            
             <th width="10%" sortable="Price" (sort)="onSort($event)">Start Date </th>
             <th width="10%" sortable="Price" (sort)="onSort($event)">End Date </th>
             <th width="10%" sortable="status" (sort)="onSort($event)">Status </th>
@@ -52,8 +52,8 @@
             </td>
             <td> {{item.name}} </td>
             <td> {{item.type}} </td>
-            <td>{{item.description}}</td>
-            <td>{{item.phoneNo}}</td>            
+            <!--<td>{{item.description}}</td>-->
+            <!--<td>{{item.phoneNo}}</td>-->            
             <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>
             <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>
             <td>
