@@ -220,6 +220,13 @@ F:\Projects\AKUH_Admin\obj\Debug\net6.0\refint\MamjiAdmin.dll
 F:\Projects\AKUH_Admin\obj\Debug\net6.0\MamjiAdmin.pdb
 F:\Projects\AKUH_Admin\obj\Debug\net6.0\AKU_Admin.genruntimeconfig.cache
 F:\Projects\AKUH_Admin\obj\Debug\net6.0\ref\MamjiAdmin.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Mvc.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Razor.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Helpers.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\appsettings.Development.json
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\appsettings.json
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\libman.json
@@ -231,6 +238,12 @@ E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\MamjiAdmin.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\MamjiAdmin.pdb
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\EntityFramework.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.Mvc.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.Razor.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.Helpers.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\System.Web.WebPages.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.AspNetCore.NodeServices.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.AspNetCore.SpaServices.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
@@ -245,6 +258,7 @@ E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.EntityFrameworkCor
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Nancy.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\bin\Debug\net6.0\Newtonsoft.Json.dll
@@ -294,10 +308,3 @@ E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\refint\MamjiAdmin.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\MamjiAdmin.pdb
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\AKU_Admin.genruntimeconfig.cache
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\ref\MamjiAdmin.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Mvc.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Razor.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Helpers.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.dll
-F:\Projects\AKUH_Admin\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
