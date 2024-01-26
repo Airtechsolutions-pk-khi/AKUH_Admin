@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AKU_Admin._Models
 {
@@ -23,7 +25,7 @@ namespace AKU_Admin._Models
         public string EventTime { get; set; }
 
         public string Type { get; set; }
-
+        [AllowHtml]
         public string Description { get; set; }
 
         public string Location { get; set; }

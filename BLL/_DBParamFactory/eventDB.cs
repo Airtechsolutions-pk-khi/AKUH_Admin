@@ -167,29 +167,29 @@ namespace BAL.Repositories
             try
             {                 
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[20];
+                SqlParameter[] p = new SqlParameter[16];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@Type", data.Type);                
-                p[2] = new SqlParameter("@Description", data.Description);                
-                p[3] = new SqlParameter("@FromDate", data.FromDate);
-                p[4] = new SqlParameter("@ToDate", data.ToDate);
-                p[5] = new SqlParameter("@EventDate", data.FromDate);
-                p[6] = new SqlParameter("@EventCity", data.EventCity);
-                p[7] = new SqlParameter("@LocationLink", data.LocationLink);
-                p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[10] = new SqlParameter("@Email", data.Email);
-                p[11] = new SqlParameter("@Facebook", data.Facebook);
-                p[12] = new SqlParameter("@Instagram", data.Instagram);
-                p[13] = new SqlParameter("@Twitter", data.Twitter);
+               //p[1] = new SqlParameter("@Type", data.Type);                
+                p[1] = new SqlParameter("@Description", data.Description);                
+                p[2] = new SqlParameter("@FromDate", data.FromDate);
+                p[3] = new SqlParameter("@ToDate", data.ToDate);
+                p[4] = new SqlParameter("@EventDate", data.FromDate);
+                p[5] = new SqlParameter("@EventCity", data.EventCity);
+                p[6] = new SqlParameter("@LocationLink", data.LocationLink);
+                p[7] = new SqlParameter("@StatusID", data.StatusID);
+                p[8] = new SqlParameter("@PhoneNo", data.PhoneNo);
+                p[9] = new SqlParameter("@Email", data.Email);
+                //p[11] = new SqlParameter("@Facebook", data.Facebook);
+                //p[12] = new SqlParameter("@Instagram", data.Instagram);
+                //p[13] = new SqlParameter("@Twitter", data.Twitter);
                 //p[14] = new SqlParameter("@Image", data.EventImages[0].Image);
-                p[14] = new SqlParameter("@Image", data.Image);
-                p[15] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
-                p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[19] = new SqlParameter("@EventTime", data.EventTime);
+                p[10] = new SqlParameter("@Image", data.Image);
+                p[11] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
+                p[12] = new SqlParameter("@IsFeatured", data.IsFeatured);
+                p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[15] = new SqlParameter("@EventTime", data.EventTime);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
 
@@ -252,29 +252,29 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[21];
+                SqlParameter[] p = new SqlParameter[17];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@Type", data.Type);
-                p[2] = new SqlParameter("@Description", data.Description);
-                p[3] = new SqlParameter("@FromDate", data.FromDate);
-                p[4] = new SqlParameter("@ToDate", data.ToDate);
-                p[5] = new SqlParameter("@EventDate", data.FromDate);
-                p[6] = new SqlParameter("@EventCity", data.EventCity);
-                p[7] = new SqlParameter("@LocationLink", data.LocationLink);
-                p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[10] = new SqlParameter("@Email", data.Email);
-                p[11] = new SqlParameter("@Facebook", data.Facebook);
-                p[12] = new SqlParameter("@Instagram", data.Instagram);
-                p[13] = new SqlParameter("@Twitter", data.Twitter);
-                p[14] = new SqlParameter("@Image", data.Image);
-                p[15] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
-                p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[19] = new SqlParameter("@EventID", data.EventID);
-                p[20] = new SqlParameter("@EventTime", data.EventTime);
+                //p[1] = new SqlParameter("@Type", data.Type);
+                p[1] = new SqlParameter("@Description", data.Description);
+                p[2] = new SqlParameter("@FromDate", data.FromDate);
+                p[3] = new SqlParameter("@ToDate", data.ToDate);
+                p[4] = new SqlParameter("@EventDate", data.FromDate);
+                p[5] = new SqlParameter("@EventCity", data.EventCity);
+                p[6] = new SqlParameter("@LocationLink", data.LocationLink);
+                p[7] = new SqlParameter("@StatusID", data.StatusID);
+                p[8] = new SqlParameter("@PhoneNo", data.PhoneNo);
+                p[9] = new SqlParameter("@Email", data.Email);
+                //p[11] = new SqlParameter("@Facebook", data.Facebook);
+                //p[12] = new SqlParameter("@Instagram", data.Instagram);
+                //p[13] = new SqlParameter("@Twitter", data.Twitter);
+                p[10] = new SqlParameter("@Image", data.Image);
+                p[11] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
+                p[12] = new SqlParameter("@IsFeatured", data.IsFeatured);
+                p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[15] = new SqlParameter("@EventID", data.EventID);
+                p[16] = new SqlParameter("@EventTime", data.EventTime);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin", p);
                 
 

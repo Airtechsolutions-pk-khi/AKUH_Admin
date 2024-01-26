@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AKU_Admin._Models
 {
@@ -84,7 +85,7 @@ namespace AKU_Admin._Models
         public int FaqID { get; set; }
 
         public string FaqQ { get; set; }
-
+        [AllowHtml]
         public string FaqA { get; set; }        
 
         public int? StatusID { get; set; }
@@ -177,6 +178,7 @@ namespace AKU_Admin._Models
     {
         public int SpeakerID { get; set; }
         public string Name { get; set; }
+        [AllowHtml]
         public string Designation { get; set; }
         public string Company { get; set; }
         public string About { get; set; }
@@ -204,7 +206,9 @@ namespace AKU_Admin._Models
     {
         public int SettingID { get; set;}
         public string SplashScreen { get; set; }
+        [AllowHtml]
         public string About { get; set; }
+        [AllowHtml]
         public string PrivacyPolicy { get; set; }
         public string AppName { get; set; }
         public string AppVersion { get; set; }

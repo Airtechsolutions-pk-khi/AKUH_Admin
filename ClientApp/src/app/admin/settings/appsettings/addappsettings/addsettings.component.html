@@ -27,16 +27,20 @@
           </div>
             <!-- Form Row-->
             <div class="form-row">
-            <div class="form-group col-md-12">
-              <label class="small mb-1" for="inputFirstName">About</label>
-              <textarea type="text" class="form-control" id=about placeholder="" formControlName="about"></textarea>
-            </div>
+              <div class="form-group col-md-12">
+                <label class="small mb-1" for="inputFirstName">About</label>
+                <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="about">
+                </ejs-richtexteditor>
+                <!--<textarea type="text" class="form-control" id=about placeholder="" formControlName="about"></textarea>-->
+              </div>
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-12">
               <label class="small mb-1" for="inputFirstName">Privacy Policy</label>
-              <textarea type="text" class="form-control" id=privacyPolicy placeholder="" formControlName="privacyPolicy"></textarea>
+              <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="privacyPolicy">
+              </ejs-richtexteditor>
+              <!--<textarea type="text" class="form-control" id=privacyPolicy placeholder="" formControlName="privacyPolicy"></textarea>-->
             </div>
           </div>
 

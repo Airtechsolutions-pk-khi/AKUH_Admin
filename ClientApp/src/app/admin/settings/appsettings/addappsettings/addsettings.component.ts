@@ -6,13 +6,27 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { AppsettingService } from 'src/app/_services/appsetting.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { Appsetting } from '../../../../_models/Appsetting';
-
+import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 @Component({
   selector: 'app-Addsettings',
   templateUrl: './Addsettings.component.html',
+  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddsettingsComponent implements OnInit {
-
+  public tools: object = {
+    items: ['Undo', 'Redo', '|',
+      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+      'SubScript', 'SuperScript', '|',
+      'LowerCase', 'UpperCase', '|',
+      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+      'Indent', 'Outdent', '|', 'CreateLink'
+    ]
+  };
+  public quickTools: object = {
+    image: [
+      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  };
   submitted = false;
   settingForm: FormGroup;
   loading = false;

@@ -38,12 +38,15 @@ export class LocalStorageService {
     return JSON.parse(sessionStorage.getItem('_Locations'));
   }
   getUsers() {
-    
     return JSON.parse(sessionStorage.getItem('_Users'));
   }
   
   getSelectedBrand() {
-    
+    debugger
+    return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
+  }
+  getSelectedAttendee() {
+    debugger
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
 
@@ -65,11 +68,9 @@ export class LocalStorageService {
   }
   }
   getSelectedDoctor() {
-    
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
   getSelectedPrescription() {
-
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
 }
