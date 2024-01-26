@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {}
+    "F:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {}
   },
   "projects": {
-    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {
+    "F:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
+        "projectUniqueName": "F:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
-        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\obj\\",
+        "projectPath": "F:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
+        "packagesPath": "C:\\Users\\aarij\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\AKUH_Admin\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aarij\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
