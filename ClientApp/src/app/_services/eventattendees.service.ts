@@ -201,5 +201,8 @@ export class EventAttendeesService {
   //  delete(id) {
   //    return this.http.delete<any[]>(`api/items/delete/${id}`);
   //  }
-
+  loadAttendee() {
+    debugger
+    return this.http.get<EventAttendees[]>(`api/eventAttendees/all`);
+  }
 }

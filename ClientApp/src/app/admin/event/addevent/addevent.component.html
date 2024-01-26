@@ -22,30 +22,30 @@
               <input type="text" class="form-control" id=email placeholder="" formControlName="email">
             </div>
             <!--<div class="form-group col-md-4">
-      <label class="small mb-1" for="inputUsername">Facebook URL</label>
-      <input type="text" class="form-control" id=facebook placeholder="" formControlName="facebook">
-    </div>
-    <div class="form-group col-md-4">
-      <label class="small mb-1" for="inputUsername">Instagram URL</label>
-      <input type="text" class="form-control" id=instagram placeholder="" formControlName="instagram">
-    </div>
-    <div class="form-group col-md-4">
-      <label class="small mb-1" for="inputUsername">Twitter URL</label>
-      <input type="text" class="form-control" id=twitter placeholder="" formControlName="twitter">
-    </div>-->
+              <label class="small mb-1" for="inputUsername">Facebook URL</label>
+              <input type="text" class="form-control" id=facebook placeholder="" formControlName="facebook">
+            </div>
+            <div class="form-group col-md-4">
+              <label class="small mb-1" for="inputUsername">Instagram URL</label>
+              <input type="text" class="form-control" id=instagram placeholder="" formControlName="instagram">
+            </div>
+            <div class="form-group col-md-4">
+              <label class="small mb-1" for="inputUsername">Twitter URL</label>
+              <input type="text" class="form-control" id=twitter placeholder="" formControlName="twitter">
+            </div>-->
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputLastName">Contact No</label>
               <input type="text" class="form-control" id=phoneNo placeholder="" formControlName="phoneNo">
             </div>
             <!--<div class="form-group col-md-4">
-      <label class="small mb-1" for="inputLastName">Type</label>
-      <select type="text" class="form-control" id=type placeholder="" formControlName="type">
-        <option selected disabled> -- Please Select -- </option>
-        <option>Conference</option>
-        <option>Educational</option>
-        <option>History of Diagnosis</option>
-      </select>
-    </div>-->
+              <label class="small mb-1" for="inputLastName">Type</label>
+              <select type="text" class="form-control" id=type placeholder="" formControlName="type">
+                <option selected disabled> -- Please Select -- </option>
+                <option>Conference</option>
+                <option>Educational</option>
+                <option>History of Diagnosis</option>
+              </select>
+            </div>-->
           </div>
           <div class="form-row">
             <div class="form-group col-md-4">
@@ -72,13 +72,13 @@
                 </option>
               </select>
               <!--<ng-select [items]="EventCategoryList" bindLabel="name" bindValue="eventCategoryID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="eventCategoryID">
-        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-          <div class="ng-value" *ngFor="let item of items">
-            <span class="ng-value-label">{{item.name}}</span>
-            <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-          </div>
-        </ng-template>
-      </ng-select>-->
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                  <div class="ng-value" *ngFor="let item of items">
+                    <span class="ng-value-label">{{item.name}}</span>
+                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                  </div>
+                </ng-template>
+              </ng-select>-->
             </div>
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputLocation">Event Organizer</label>
@@ -104,9 +104,12 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
               <label class="small mb-1" for="inputLocation">Description</label>
-              <textarea class="form-control" formControlName="description" height="100px"></textarea>
+
+              <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools'  formControlName="description">
+              </ejs-richtexteditor>
+              <!--<textarea class="form-control" formControlName="description" height="100px"></textarea>-->
             </div>
           </div>
           <div class="form-row">

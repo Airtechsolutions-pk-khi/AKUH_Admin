@@ -7,13 +7,30 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpeakerComponent } from '../speaker.component';
 import { SpeakerService } from '../../../_services/speaker.service';
-
+import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 @Component({
   selector: 'app-addspeaker',
   templateUrl: './addspeaker.component.html',
-  styleUrls: ['./addspeaker.component.css']
+  styleUrls: ['./addspeaker.component.css'],
+  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddSpeakerComponent implements OnInit {
+
+  public tools: object = {
+    items: ['Undo', 'Redo', '|',
+      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+      'SubScript', 'SuperScript', '|',
+      'LowerCase', 'UpperCase', '|',
+      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+      'Indent', 'Outdent', '|', 'CreateLink']
+  };
+  public quickTools: object = {
+    image: [
+      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  };
+
+
   submitted = false;
   speakerForm: FormGroup;
   loading = false;
@@ -79,7 +96,7 @@ export class AddSpeakerComponent implements OnInit {
   }
 
   onSubmit() {
-
+    debugger
     this.speakerForm.markAllAsTouched();
     this.submitted = true;
     if (this.speakerForm.invalid) { return; }

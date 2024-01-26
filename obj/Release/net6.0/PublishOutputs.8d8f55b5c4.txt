@@ -8,6 +8,12 @@ F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.runtimeconfig.js
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.pdb
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\EntityFramework.SqlServer.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\EntityFramework.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.Mvc.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.Razor.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.Helpers.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.Deployment.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.Razor.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\System.Web.WebPages.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.NodeServices.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.SpaServices.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.SpaServices.Extensions.dll
@@ -22,6 +28,7 @@ F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCo
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.PlatformAbstractions.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.Identity.Client.dll
+F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.Web.Infrastructure.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Nancy.dll
 F:\Projects\AKUH_Admin\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll

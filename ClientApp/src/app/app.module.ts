@@ -80,19 +80,15 @@ import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component'
 import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
 import { OrdersComponent } from './admin/pharmacy/orders/orders.component';
 import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetails.component';
-
 import { ServiceComponent } from './admin/settings/medicalservices/service.component';
 import { AddServiceComponent } from './admin/settings/medicalservices/add/addservice.component';
 import { MedicalServicetypeComponent } from './admin/settings/medicalservicetype/medicalservicetype.component';
 import { AddMedicalServicetypeComponent } from './admin/settings/medicalservicetype/add/addmedicalservicetype.component';
 import { NursingAppointmentComponent } from './admin/reception/nursingappointment/nursingappointment.component';
 import { AddnursingappointmentComponent } from './admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component';
-
 import { NotificationComponent } from './admin/notification/notification.component';
-
 import { SpecialityComponent } from '././admin/settings/speciality/speciality.component'
 import { AddSpecialityComponent } from '././admin/settings/speciality/add/addspeciality.component'
-
 import { UserComponent } from './admin/user/user.component';
 import { AdduserComponent } from './admin/user/add/adduser.component';
 import { HasRoleGuard } from './has-role.guard';
@@ -101,25 +97,18 @@ import { UserService } from './_services/user.service';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { PermissionComponent } from './admin/user/permission/permission.component';
 import { AddComponent } from './admin/user/permission/add/add.component';
-//import { DiagnosticCategoriesComponent } from './admin/laboratory/diagnosticcategories/diagnosticcategories.component';
-
 import { TimeSlotComponent } from './admin/settings/timeslot/timeslot.component';
 import { AddTimeSlotComponent } from './admin/settings/timeslot/add/addtimeslot.component';
-
 import { FormPermissionComponent } from './admin/permission/formpermission.component';
 import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/adddelivery.component';
 import { CorporateClientComponent } from './admin/settings/corporateclient/corporateclient.component';
 import { addcorporateclientComponent } from './admin/settings/corporateclient/addcorporateclient/addcorporateclient.component';
-
 import { SpeakerComponent } from './admin/speaker/speaker.component';
 import { AddSpeakerComponent } from './admin/speaker/addspeaker/addspeaker.component';
-
 import { OrganizerComponent } from './admin/organizer/organizer.component';
 import { AddOrganizerComponent } from './admin/organizer/add/addorganizer.component';
-
 import { PartnerComponent } from './admin/partner/partner.component';
 import { AddPartnerComponent } from './admin/partner/add/addpartner.component';
-
 import { EventCategoryComponent } from './admin/eventCategory/eventcategory.component';
 import { AddEventCategoryComponent } from './admin/eventCategory/add/addeventcategory.component';
 import { AddEventComponent } from './admin/event/addevent/addevent.component';
@@ -130,6 +119,9 @@ import { EventdetailComponent } from './admin/eventdetail/eventdetail.component'
 import { ConfirmlistreportComponent } from './admin/confirmlistreport/confirmlistreport.component';
 import { EventAttendeesComponent } from './admin/eventattendees/eventattendees.component';
 import { AddEventAttendeesComponent } from './admin/eventattendees/addeventattendees/addeventattendees.component';
+//import { UserWiseEventComponent } from './admin/report/userwiseeventReport/userwiseeventReport.component';
+// Imported Syncfusion RichTextEditorModule from Rich Text Editor package
+import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 @NgModule({
   declarations: [
@@ -230,10 +222,11 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
     FormsModule,
     NgSelectModule,
     ReactiveFormsModule,
+    RichTextEditorModule,
     AlertModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-/*    MatDialogModule,*/
+    /*    MatDialogModule,*/
     /*    NgApexchartsModule,*/
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -251,11 +244,11 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
           { path: 'item/edit/:id', component: AdditemsComponent },
 
           { path: 'event', component: EventComponent },
-          { path: 'event/add', component: AddEventComponent },          
+          { path: 'event/add', component: AddEventComponent },
           { path: 'event/edit/:id', component: AddEventComponent },
 
           { path: 'eventattendees', component: EventAttendeesComponent },
-          { path: 'eventattendees/add', component: AddEventAttendeesComponent },          
+          { path: 'eventattendees/add', component: AddEventAttendeesComponent },
           { path: 'eventattendees/edit/:id', component: AddEventAttendeesComponent },
 
           { path: 'modifier', component: ModifiersComponent },
@@ -290,6 +283,7 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
           { path: 'report/salescustomerwise', component: SalescustomerwiseComponent },
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },
           { path: 'report/salesitemwise', component: SalesitemwiseComponent },
+          //{ path: 'report/userwise', component: UserWiseEventComponent },
 
           { path: 'delivery', component: DeliveryComponent },
           { path: 'delivery/add', component: AdddeliveryComponent },
@@ -375,7 +369,7 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
           { path: 'settings/timeslot/edit/:id', component: AddTimeSlotComponent },
 
           { path: 'formpermission', component: FormPermissionComponent },
-     
+
           { path: 'speaker', component: SpeakerComponent },
           { path: 'speaker/add', component: AddSpeakerComponent },
           { path: 'speaker/edit/:id', component: AddSpeakerComponent },
@@ -405,7 +399,9 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NgbModule
   ],
-  providers: [HasRoleGuard],
+  providers: [
+    [HasRoleGuard],
+  ],
   exports: [NgbdDatepickerRangePopup],
   bootstrap: [AppComponent, NgbdDatepickerRangePopup]
 })

@@ -9,14 +9,33 @@ import { EventService } from 'src/app/_services/event.service';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 //import { CategoryService } from 'src/app/_services/category.service';
+import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 const now = new Date();
+
 @Component({
   selector: 'app-addevent',
   templateUrl: './addevent.component.html',
-  styleUrls: ['./addevent.component.css']
+  styleUrls: ['./addevent.component.css'],
+  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 
 export class AddEventComponent implements OnInit {
+
+  public tools: object = {
+    items: ['Undo', 'Redo', '|',
+      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+      'SubScript', 'SuperScript', '|',
+      'LowerCase', 'UpperCase', '|',
+      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+      'Indent', 'Outdent', '|', 'CreateLink']
+  //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+  };
+  public quickTools: object = {
+    image: [
+      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  };
+
   submitted = false;
   eventForm: FormGroup;
   loading = false;
@@ -33,20 +52,17 @@ export class AddEventComponent implements OnInit {
   selectedModifierIds: string[];
   selectedAddonIds: string[];
   //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-  eventTime = 
-  { 
-    hour: new Date().getHours() % 12 || 12, 
-    minute: new Date().getMinutes(), 
-    ampm: new Date().getHours() >= 12 ? 'PM' : 'AM' 
-    
-  };
+  eventTime =
+    {
+      hour: new Date().getHours() % 12 || 12,
+      minute: new Date().getMinutes(),
+      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+    };
 
-   
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
-
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
- 
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -70,7 +86,6 @@ export class AddEventComponent implements OnInit {
     this.setSelecteditem();
   }
 
-  
   get f() { return this.eventForm.controls; }
 
   private createForm() {
@@ -87,7 +102,7 @@ export class AddEventComponent implements OnInit {
       eventCategoryID: [null],
       locationLink: [''],
       phoneNo: [''],
-      eventTime:[''],
+      eventTime: [''],
       email: [''],
       eventCategories: [],
       speakers: [],
@@ -121,7 +136,7 @@ export class AddEventComponent implements OnInit {
       minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
       ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
     };
-    
+
     this.f.eventCity.setValue(obj.eventCity);
     this.f.eventCategoryID.setValue(obj.eventCategoryID);
     this.f.locationLink.setValue(obj.locationLink);
@@ -186,8 +201,8 @@ export class AddEventComponent implements OnInit {
     this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
     //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
     //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
-    
-    const formattedHour = (this.eventTime.hour % 12 || 12);  
+
+    const formattedHour = (this.eventTime.hour % 12 || 12);
     const formattedMinute = this.pad(this.eventTime.minute);
     const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
     const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;

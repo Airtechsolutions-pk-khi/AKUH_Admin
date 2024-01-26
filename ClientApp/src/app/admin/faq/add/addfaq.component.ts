@@ -6,13 +6,31 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FaqService } from 'src/app/_services/faq.service';
+import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 @Component({
   selector: 'app-addfaq',
   templateUrl: './addfaq.component.html',
-  styleUrls: ['./addfaq.component.css']
+  styleUrls: ['./addfaq.component.css'],
+  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+
 })
 export class AddFaqComponent implements OnInit {
+  public tools: object = {
+    items: ['Undo', 'Redo', '|',
+      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+      'SubScript', 'SuperScript', '|',
+      'LowerCase', 'UpperCase', '|',
+      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+      'Indent', 'Outdent', '|', 'CreateLink']
+    //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+  };
+  public quickTools: object = {
+    image: [
+      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  };
+
   submitted = false;
   faqForm: FormGroup;
   loading = false;
@@ -39,23 +57,23 @@ export class AddFaqComponent implements OnInit {
 
   private createForm() {
     this.faqForm = this.formBuilder.group({
-      faqQ: ['', Validators.required],      
+      faqQ: ['', Validators.required],
       faqA: [''],
       statusID: [true],
       faqID: 0,
     });
   }
 
-  private editForm(obj) {    
+  private editForm(obj) {
     this.f.faqQ.setValue(obj.faqQ);
     this.f.faqA.setValue(obj.faqA);
     this.f.faqID.setValue(obj.faqID);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    
+
   }
 
   setSelectedaddon() {
-    
+
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
@@ -77,7 +95,7 @@ export class AddFaqComponent implements OnInit {
     if (this.faqForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    
+
     if (parseInt(this.f.faqID.value) === 0) {
 
       //Insert modifier
@@ -95,7 +113,7 @@ export class AddFaqComponent implements OnInit {
       });
 
     } else {
-      
+
       this.faqService.update(this.faqForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {

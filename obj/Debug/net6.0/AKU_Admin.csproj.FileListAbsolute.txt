@@ -294,3 +294,10 @@ E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\refint\MamjiAdmin.dll
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\MamjiAdmin.pdb
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\AKU_Admin.genruntimeconfig.cache
 E:\Project\AghaKhan\AKUH_Admin_GIT\obj\Debug\net6.0\ref\MamjiAdmin.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Mvc.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Razor.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.Helpers.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\System.Web.WebPages.dll
+F:\Projects\AKUH_Admin\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

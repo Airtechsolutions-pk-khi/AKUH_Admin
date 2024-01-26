@@ -45,6 +45,10 @@ export class LocalStorageService {
     debugger
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
+  getSelectedAttendee() {
+    debugger
+    return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
+  }
 
   getSelectedUser() {
     let userInfo = JSON.parse(sessionStorage.getItem("currentUser"));
@@ -64,11 +68,9 @@ export class LocalStorageService {
   }
   }
   getSelectedDoctor() {
-    
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
   getSelectedPrescription() {
-
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
 }
