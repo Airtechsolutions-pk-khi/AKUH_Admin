@@ -71,7 +71,7 @@ export class SpeakerService {
     return this._allData$.asObservable();
   }
   
-  ExportList(brandId) {
+  ExportList() {
     return this.http.get<Speaker[]>(`api/speaker/all`);
   }
   getById(id) {
@@ -152,6 +152,7 @@ export class SpeakerService {
       }));
   }
   delete(updateData) {
+    debugger
     return this.http.post(`api/speaker/delete`, updateData);
   }
   

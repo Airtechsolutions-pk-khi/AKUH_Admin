@@ -70,7 +70,7 @@ export class EventCategoryService {
     return this._allData$.asObservable();
   }
   
-  ExportList(brandId) {
+  ExportList() {
     return this.http.get<EventCategory[]>(`api/eventcategory/all`);
   }
   getById(id) {

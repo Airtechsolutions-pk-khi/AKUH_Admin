@@ -75,8 +75,8 @@ export class EventService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  ExportList(brandId) {
-    return this.http.get<Event[]>(`api/item/all/${brandId}`);
+  ExportList() {
+    return this.http.get<Event[]>(`api/event/all`);
   }
   loadCategories(brandId) {
     return this.http.get<Category[]>( `api/category/all/${brandId}`);

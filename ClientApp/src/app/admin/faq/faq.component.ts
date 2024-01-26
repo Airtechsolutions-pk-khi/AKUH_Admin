@@ -42,8 +42,9 @@ export class FaqComponent implements OnInit {
     this.getData();
   }
   exportAsXLSX(): void {
+    debugger
     this.service.ExportList().subscribe((res: any) => {
-      //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+       this.excelService.exportAsExcelFile(res, 'Report_Export');
     }, error => {
       this.ts.showError("Error", "Failed to export")
     });

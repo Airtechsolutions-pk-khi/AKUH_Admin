@@ -85,20 +85,20 @@ namespace AKU_Admin.BLL._Services
             }
         }
 
-        //public int Delete(CategoryBLL data)
-        //{
-        //    try
-        //    {
-        //        data.LastUpdatedDate = _UTCDateTime_SA();
-        //        var result = _service.Delete(data);
+        public int Delete(SpeakerBLL data)
+        {
+            try
+            {
+                data.Updatedon = DateTime.UtcNow.AddMinutes(300);
+                var result = _service.Delete(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
     }
 }

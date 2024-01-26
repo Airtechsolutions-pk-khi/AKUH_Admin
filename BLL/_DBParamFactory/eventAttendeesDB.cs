@@ -343,16 +343,16 @@ namespace BAL.Repositories
                 return 0;
             }
         }
-        public int Delete(EventBLL data)
+        public int Delete(EventAttendeesBLL data)
         {
             try
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
-                p[0] = new SqlParameter("@EventID", data.EventID);
+                p[0] = new SqlParameter("@AttendeesID", data.AttendeesID);
                 p[1] = new SqlParameter("@Updatedon", data.Updatedon);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteEvent_Admin", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteEventAttendees_Admin", p);
 
                 return _obj;
             }

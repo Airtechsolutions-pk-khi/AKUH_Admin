@@ -70,7 +70,7 @@ export class PartnerService {
     return this._allData$.asObservable();
   }
   
-  ExportList(brandId) {
+  ExportList() {
     return this.http.get<Partner[]>(`api/partner/all`);
   }
   getById(id) {

@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\Hira Farm House.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\Hira Farm House.pdf"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\MyDocument.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\MyDocument.pdf"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\Olive Album-1.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\Olive Album-1.pdf"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\SARDAR-1.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\SARDAR-1.pdf"
+    },
+    {
+      "Id": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\wwwroot\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.MamjiAdmin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.MamjiAdmin.props",
+      "PackagePath": "build\\MamjiAdmin.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MamjiAdmin.props",
+      "PackagePath": "buildMultiTargeting\\MamjiAdmin.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.MamjiAdmin.props",
+      "PackagePath": "buildTransitive\\MamjiAdmin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

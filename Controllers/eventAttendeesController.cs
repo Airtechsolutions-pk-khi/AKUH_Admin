@@ -71,7 +71,7 @@ namespace AKU_Admin.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody]EventBLL obj)
+        public int PostDelete([FromBody] EventAttendeesBLL obj)
         {
             return _service.Delete(obj);
         }

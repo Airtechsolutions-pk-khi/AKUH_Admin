@@ -76,8 +76,8 @@ export class EventAttendeesService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  ExportList(brandId) {
-    return this.http.get<Event[]>(`api/item/all/${brandId}`);
+  ExportList() {
+    return this.http.get<Event[]>(`api/eventAttendees/all`);
   }
   loadCategories(brandId) {
     return this.http.get<Category[]>( `api/category/all/${brandId}`);
@@ -196,7 +196,8 @@ export class EventAttendeesService {
       }));
   }
   delete(updateData) {
-    return this.http.post(`api/event/delete`, updateData);
+    debugger
+    return this.http.post(`api/eventAttendees/delete`, updateData);
   }
   //  delete(id) {
   //    return this.http.delete<any[]>(`api/items/delete/${id}`);

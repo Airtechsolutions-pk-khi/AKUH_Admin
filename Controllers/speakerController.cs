@@ -48,11 +48,11 @@ namespace AKU_Admin.Controllers
         }
 
 
-        //[HttpPost]
-        //[Route("delete")]
-        //public int PostDelete([FromBody]CategoryBLL obj)
-        //{
-        //    return _service.Delete(obj);
-        //}
+        [HttpPost]
+        [Route("delete")]
+        public int PostDelete([FromBody] SpeakerBLL obj)
+        {
+            return _service.Delete(obj);
+        }
     }
 }

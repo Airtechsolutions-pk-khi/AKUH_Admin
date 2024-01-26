@@ -70,7 +70,7 @@ export class OrganizerService {
     return this._allData$.asObservable();
   }
   
-  ExportList(brandId) {
+  ExportList() {
     return this.http.get<Organizer[]>(`api/organizer/all`);
   }
   getById(id) {

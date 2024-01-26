@@ -132,7 +132,7 @@ namespace AKU_Admin.BLL._Services
             }
         }
 
-        public int Delete(EventBLL data)
+        public int Delete(EventAttendeesBLL data)
         {
             try
             {
