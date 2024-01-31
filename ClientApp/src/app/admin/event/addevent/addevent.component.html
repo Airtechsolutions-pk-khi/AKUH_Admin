@@ -9,43 +9,38 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputUsername">Name</label>
-              <input type="text" class="form-control" id=Name placeholder="" formControlName="name">
+              <label class="small mb-1" for="inputUsername">Name<em style="color: red;">*</em></label>
+              <input type="text" class="form-control" id=Name placeholder="" formControlName="name" minlength="3" maxlength="32">                            
               <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
-                <div *ngIf="f.title.errors.required">
-                  Name is required.
+                <div *ngIf="f.name.errors.required">
+                 Event Name is required.
                 </div>
+                <div *ngIf="f.name.errors?.minlength">
+                  Event Name must be at least 3 characters long.
+              </div>
+              <div *ngIf="f.name.errors?.maxlength">
+                Event Name cannot exceed 32 characters.
+              </div>
               </div>
             </div>
             <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLastName">Email</label>
-              <input type="text" class="form-control" id=email placeholder="" formControlName="email">
+              <label class="small mb-1" for="inputLastName">Email<em style="color: red;">*</em></label>
+              <input type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control" id=email placeholder="abc@gmail.com" formControlName="email">
+              <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+                <div *ngIf="f.email.errors?.required">
+                    Email is required.
+                </div>
+                <div *ngIf="f.email.errors?.pattern">
+                    Please enter a valid email address.
+                </div>
             </div>
-            <!--<div class="form-group col-md-4">
-              <label class="small mb-1" for="inputUsername">Facebook URL</label>
-              <input type="text" class="form-control" id=facebook placeholder="" formControlName="facebook">
             </div>
-            <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputUsername">Instagram URL</label>
-              <input type="text" class="form-control" id=instagram placeholder="" formControlName="instagram">
-            </div>
-            <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputUsername">Twitter URL</label>
-              <input type="text" class="form-control" id=twitter placeholder="" formControlName="twitter">
-            </div>-->
+           
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputLastName">Contact No</label>
-              <input type="text" class="form-control" id=phoneNo placeholder="" formControlName="phoneNo">
+              <input type="text" maxlength="12"class="form-control" id=phoneNo placeholder="xxxx-xxxxxxx" formControlName="phoneNo">
             </div>
-            <!--<div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLastName">Type</label>
-              <select type="text" class="form-control" id=type placeholder="" formControlName="type">
-                <option selected disabled> -- Please Select -- </option>
-                <option>Conference</option>
-                <option>Educational</option>
-                <option>History of Diagnosis</option>
-              </select>
-            </div>-->
+            
           </div>
           <div class="form-row">
             <div class="form-group col-md-4">
@@ -63,25 +58,20 @@
 
           </div>
           <div class="form-row">
+
             <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLocation">Event Category</label>
+              <label class="small mb-1" for="inputLocation">Event Category<em style="color: red;">*</em></label>
               <select class="custom-select" formControlName="eventCategoryID">
                 <option [ngValue]="option.eventCategoryID" selected="option.eventCategoryID == eventCategoryID"
                         *ngFor="let option of EventCategoryList">
                   {{option.name}}
                 </option>
-              </select>
-              <!--<ng-select [items]="EventCategoryList" bindLabel="name" bindValue="eventCategoryID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="eventCategoryID">
-                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                  <div class="ng-value" *ngFor="let item of items">
-                    <span class="ng-value-label">{{item.name}}</span>
-                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                  </div>
-                </ng-template>
-              </ng-select>-->
+              </select>              
             </div>
+
+           
             <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLocation">Event Organizer</label>
+              <label class="small mb-1" for="inputLocation">Event Organizer<em style="color: red;">*</em></label>
               <ng-select [items]="OrganizerList" bindLabel="name" bindValue="organizerID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedOrganizerIds">
                 <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                   <div class="ng-value" *ngFor="let item of items">
@@ -92,7 +82,7 @@
               </ng-select>
             </div>
             <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLocation">Event Speakers</label>
+              <label class="small mb-1" for="inputLocation">Event Speakers<em style="color: red;">*</em></label>
               <ng-select [items]="SpeakerList" bindLabel="name" bindValue="speakerID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpeakerIds">
                 <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                   <div class="ng-value" *ngFor="let item of items">
@@ -109,12 +99,12 @@
 
               <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools'  formControlName="description">
               </ejs-richtexteditor>
-              <!--<textarea class="form-control" formControlName="description" height="100px"></textarea>-->
+              
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-5">
-              <label class="mb-1" for="inputLocation">Choose Start to End Date</label>
+              <label class="mb-1" for="inputLocation">Choose Start to End Date<em style="color: red;">*</em></label>
               <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
             </div>
             <div class="form-group col-lg-2">
@@ -133,7 +123,7 @@
             </div>
 
             <div class="form-group col-md-3">
-              <label for="Item Status">Event Time</label>
+              <label for="Item Status">Event Time<em style="color: red;">*</em></label>
               <ngb-timepicker [(ngModel)]="eventTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
             </div>
 
@@ -142,7 +132,7 @@
             <div class="col-md-12 form-group">
               <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>
               <br>
-              <label for="file">Select Images </label>
+              <label for="file">Select Images <em style="color: red;">*</em></label>
               <input formControlName="file" id="file" type="file" class="form-control" multiple="" (change)="onFileChange($event)">
               <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
                 <div *ngIf="f.file.errors.required">File is required.</div>
@@ -158,7 +148,7 @@
               <img [src]="url" style="padding: 7px; max-width: 200px;  width: auto;height: 180px;"> <br />
             </div>
           </div>
-          <!-- Save changes button-->
+          
           <button class="btn btn-primary" type="submit">Save changes</button>
         </div>
       </div>

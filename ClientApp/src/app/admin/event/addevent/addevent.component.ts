@@ -99,7 +99,7 @@ export class AddEventComponent implements OnInit {
       fromDate: '',
       toDate: '',
       eventCity: [''],
-      eventCategoryID: [null],
+      eventCategoryID: [ Validators.required],
       locationLink: [''],
       phoneNo: [''],
       eventTime: [''],
