@@ -464,13 +464,13 @@ namespace BAL.Repositories
 
                 SqlParameter[] p = new SqlParameter[3];
 
-                p[0] = new SqlParameter("@EventID", a);
+                p[0] = new SqlParameter("@AttendeesID", a);
                 p[1] = new SqlParameter("@fromdate", FromDate);
                 p[2] = new SqlParameter("@todate", ToDate);
 
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_rptConfirmListReport", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_rptAttendeesReport", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
