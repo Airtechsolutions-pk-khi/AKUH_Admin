@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MamjiAdmin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8af20e6506048f779e4593afad3a8d4a14905727")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MamjiAdmin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MamjiAdmin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
