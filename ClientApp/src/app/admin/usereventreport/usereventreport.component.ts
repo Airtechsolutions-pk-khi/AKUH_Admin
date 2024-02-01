@@ -49,7 +49,7 @@ export class UserEventReportComponent implements OnInit {
 
   getData(attendeesIDs) {
     debugger
-    this.service.AttendeeEventRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+    this.service.AttendeesRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
       .subscribe((res: any) => {
         if (res != null) {
           debugger
