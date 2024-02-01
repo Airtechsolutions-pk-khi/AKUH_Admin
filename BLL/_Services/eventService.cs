@@ -93,22 +93,22 @@ namespace AKU_Admin.BLL._Services
 
                 var result = _service.Insert(data);
 
-                try
-                {
-                    var ds = _service.GetToken();
-                    var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
-                    foreach (var item in getTokens)
-                    {
-                        var token = new PushNotificationBLL();
-                        token.Title = "AKU Surgery Conference" + " | Event Info";
-                        token.Message = data.Name;
-                        token.DeviceID = item.Token;
-                        _service.PushNotificationAndroid(token);
-                    }
-                }
-                catch (Exception)
-                {
-                }
+                //try
+                //{
+                //    var ds = _service.GetToken();
+                //    var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                //    foreach (var item in getTokens)
+                //    {
+                //        var token = new PushNotificationBLL();
+                //        token.Title = "AKU Surgery Conference" + " | Event Info";
+                //        token.Message = data.Name;
+                //        token.DeviceID = item.Token;
+                //        _service.PushNotificationAndroid(token);
+                //    }
+                //}
+                //catch (Exception)
+                //{
+                //}
 
                 return result;
             }

@@ -10,18 +10,14 @@
           <div class="form-row">
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputUsername">Name<em style="color: red;">*</em></label>
-              <input type="text" class="form-control" id=Name placeholder="" formControlName="name" minlength="3" maxlength="32">                            
+              <input type="text" class="form-control" id=Name placeholder="" formControlName="name" >                            
+              
               <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
                 <div *ngIf="f.name.errors.required">
-                 Event Name is required.
+                   Event Name is required.
                 </div>
-                <div *ngIf="f.name.errors?.minlength">
-                  Event Name must be at least 3 characters long.
-              </div>
-              <div *ngIf="f.name.errors?.maxlength">
-                Event Name cannot exceed 32 characters.
-              </div>
-              </div>
+            </div>
+
             </div>
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputLastName">Email<em style="color: red;">*</em></label>
