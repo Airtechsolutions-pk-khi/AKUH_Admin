@@ -39,6 +39,17 @@ namespace AKU_Admin.BLL._Services
             {
                 return new List<EventBLL>();
             }
+        }    
+        public List<EventAttendeesBLL> GetAllAttendees()
+        {
+            try
+            {
+                return _service.GetAllAttendees();
+            }
+            catch (Exception ex)
+            {
+                return new List<EventAttendeesBLL>();
+            }
         }
 
         public EventBLL Get(int id)
@@ -195,6 +206,17 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 return _service.ConfirmListReport(EventID, FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }   
+        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.AttendeesReport(AttendeesID, FromDate, ToDate);
             }
             catch (Exception ex)
             {

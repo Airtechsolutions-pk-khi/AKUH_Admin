@@ -119,7 +119,7 @@ import { EventdetailComponent } from './admin/eventdetail/eventdetail.component'
 import { ConfirmlistreportComponent } from './admin/confirmlistreport/confirmlistreport.component';
 import { EventAttendeesComponent } from './admin/eventattendees/eventattendees.component';
 import { AddEventAttendeesComponent } from './admin/eventattendees/addeventattendees/addeventattendees.component';
-//import { UserWiseEventComponent } from './admin/report/userwiseeventReport/userwiseeventReport.component';
+import { UserEventReportComponent } from './admin/usereventreport/usereventreport.component';
 // Imported Syncfusion RichTextEditorModule from Rich Text Editor package
 import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 
@@ -213,7 +213,8 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
     EventdetailComponent,
     ConfirmlistreportComponent,
     EventAttendeesComponent,
-    AddEventAttendeesComponent
+    AddEventAttendeesComponent,
+    UserEventReportComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -389,6 +390,8 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
           { path: 'eventdetail', component: EventdetailComponent },
 
           { path: 'confirmlistreport', component: ConfirmlistreportComponent },
+
+          { path: 'userdetailreport', component: UserEventReportComponent },
 
           { path: 'faq', component: FaqComponent },
           { path: 'faq/add', component: AddFaqComponent },

@@ -74,6 +74,29 @@ namespace BAL.Repositories
             {
                 return null;
             }
+        }    
+        public List<EventAttendeesBLL> GetAllAttendees()
+        {
+            try
+            {
+                var lst = new List<EventAttendeesBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllEventAttendees", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventAttendeesBLL>>();
+                    }
+                }
+
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
         
         public EventBLL Get(int id)
@@ -418,6 +441,36 @@ namespace BAL.Repositories
 
 
                 _dt = (new DBHelper().GetTableFromSP)("sp_rptConfirmListReport", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventDetailsBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<EventDetailsBLL>();
+            }
+        }       
+        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                string a = AttendeesID.Replace("$", "");
+                var lst = new List<EventDetailsBLL>();
+
+                SqlParameter[] p = new SqlParameter[3];
+
+                p[0] = new SqlParameter("@AttendeesID", a);
+                p[1] = new SqlParameter("@fromdate", FromDate);
+                p[2] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_rptAttendeesReport", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
