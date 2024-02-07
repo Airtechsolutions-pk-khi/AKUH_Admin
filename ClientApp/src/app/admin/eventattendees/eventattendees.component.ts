@@ -68,9 +68,9 @@ export class EventAttendeesComponent implements OnInit {
     this.service.sortDirection = direction;
   }
 
-  Edit(items) {
+  View(id) {
     debugger
-    this.router.navigate(["admin/eventattendees/edit", items]);
+    this.router.navigate(["admin/eventattendeedetails/edit/", id]);
   }
 
   Delete(obj) {
@@ -107,6 +107,7 @@ export class EventAttendeesComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+ 
   Deactive(id, rowVersion) {
 
   //   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {

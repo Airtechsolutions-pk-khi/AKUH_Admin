@@ -23,10 +23,10 @@ export class AddsettingsComponent implements OnInit {
       'Indent', 'Outdent', '|', 'CreateLink'
     ]
   };
-  public quickTools: object = {
-    image: [
-      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
-  };
+  // public quickTools: object = {
+  //   image: [
+  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // };
   submitted = false;
   settingForm: FormGroup;
   loading = false;
@@ -36,7 +36,13 @@ export class AddsettingsComponent implements OnInit {
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
 
-  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  // @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+
+  @ViewChild('splashImageUpload', { static: true }) splashImageUpload: ImageuploadComponent;
+  @ViewChild('chairImageUpload', { static: true }) chairImageUpload: ImageuploadComponent;
+  @ViewChild('conferenceChairImageUpload', { static: true }) conferenceChairImageUpload: ImageuploadComponent;
+  
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -63,6 +69,10 @@ export class AddsettingsComponent implements OnInit {
       about: [''],
       privacyPolicy: [''],
       splashScreen: [''],
+      msgChair: [''],
+      msgConferenceChair: [''],
+      imgChair: [''],
+      imgConChair: [''],
       facebookUrl: [''],
       instagramUrl: [''],
       twitterUrl: [''],
@@ -79,13 +89,19 @@ export class AddsettingsComponent implements OnInit {
     this.f.appVersion.setValue(obj.appVersion);
     this.f.about.setValue(obj.about);
     this.f.privacyPolicy.setValue(obj.privacyPolicy);
+    this.f.msgChair.setValue(obj.msgChair);
+    this.f.imgChair.setValue(obj.imgChair);
+    this.f.msgConferenceChair.setValue(obj.msgConferenceChair);
+    this.f.imgConChair.setValue(obj.imgConChair);
     this.f.splashScreen.setValue(obj.splashScreen);
     this.f.facebookUrl.setValue(obj.facebookUrl);
     this.f.instagramUrl.setValue(obj.instagramUrl);
     this.f.twitterUrl.setValue(obj.twitterUrl);
     this.f.youtubeUrl.setValue(obj.youtubeUrl);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.imgComp.imageUrl = obj.splashScreen;
+    this.splashImageUpload.imageUrl = obj.splashScreen;
+    this.chairImageUpload.imageUrl = obj.imgChair;
+    this.conferenceChairImageUpload.imageUrl = obj.imgConChair;
   }
 
   setSelectedSetting() {
@@ -106,7 +122,14 @@ export class AddsettingsComponent implements OnInit {
     if (this.settingForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.splashScreen.setValue(this.imgComp.imageUrl);
+
+    this.f.splashScreen.setValue(this.splashImageUpload.imageUrl);
+    this.f.imgChair.setValue(this.chairImageUpload.imageUrl);
+    this.f.imgConChair.setValue(this.conferenceChairImageUpload.imageUrl);
+
+    // this.f.splashScreen.setValue(this.imgComp.imageUrl);
+    // this.f.imgChair.setValue(this.imgComp.imageUrl);
+    // this.f.imgConChair.setValue(this.imgComp.imageUrl);
     if (parseInt('1') === 0) {
       //Insert banner
       console.log(JSON.stringify(this.settingForm.value));

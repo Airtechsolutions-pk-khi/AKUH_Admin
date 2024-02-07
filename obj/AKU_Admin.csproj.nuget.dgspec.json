@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {}
+    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {
+    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
+        "projectUniqueName": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
-        "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\AKUH_Admin\\obj\\",
+        "projectPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
+        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
+            },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -104,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

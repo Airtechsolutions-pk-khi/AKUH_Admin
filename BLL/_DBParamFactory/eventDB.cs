@@ -190,7 +190,7 @@ namespace BAL.Repositories
             try
             {                 
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[16];
+                SqlParameter[] p = new SqlParameter[17];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                //p[1] = new SqlParameter("@Type", data.Type);                
@@ -213,6 +213,7 @@ namespace BAL.Repositories
                 p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
                 p[15] = new SqlParameter("@EventTime", data.EventTime);
+                p[16] = new SqlParameter("@EventEndTime", data.EventEndTime);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
 

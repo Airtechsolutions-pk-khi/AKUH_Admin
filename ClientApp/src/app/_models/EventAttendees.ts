@@ -12,5 +12,9 @@ export class EventAttendees {
   eventName: string;
   startDate: string;
   endDate: string;
+  createdon:string;
+  messageForAttendee:string;
+  meetingLink:string;
+  subjec:string;
 }
  

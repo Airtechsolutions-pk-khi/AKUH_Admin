@@ -10,4 +10,8 @@ export class Appsetting {
   instagramUrl:string;
   twitterUrl:string;
   youtubeUrl:string;
+  msgChair:string;
+  msgConferenceChair:string;
+  imgChair:string;
+  imgConChair:string;
 }

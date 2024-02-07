@@ -109,6 +109,10 @@ export class EventAttendeesService {
   getById(id) {
     return this.http.get<EventAttendees[]>(`api/eventattendees/${id}`);
   }
+  statusUpdate(data) {
+    debugger
+    return this.http.post('api/eventattendees/status', data);
+  }
   getTodaysItems(brandId) {
     return this.http.get<Event[]>(`api/item/settings/${brandId}`);
   }

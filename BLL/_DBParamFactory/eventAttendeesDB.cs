@@ -1,6 +1,7 @@
 ﻿
 
 using AKU_Admin._Models;
+using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection;
 using System.Text;
 using WebAPICode.Helpers;
@@ -76,7 +78,27 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        
+        public int Status(EventAttendeesBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[6];
+                p[0] = new SqlParameter("@AttendeesID", data.AttendeesID);
+                p[1] = new SqlParameter("@StatusID", data.StatusID);
+                p[2] = new SqlParameter("@MessageForAttendee", data.MessageForAttendee);
+                p[3] = new SqlParameter("@Subject", data.Subject);
+                p[4] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
+                p[5] = new SqlParameter("@MeetingLink", data.MeetingLink);
+
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_EventAttendeesStatus", p);
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
         public EventAttendeesBLL Get(int id)
         {
             try
@@ -98,6 +120,79 @@ namespace BAL.Repositories
             catch (Exception)
             {
                 return null;
+            }
+        }
+        public EventAttendeesBLL Getcustomer(int? UserID)
+        {
+            try
+            {
+                var _obj = new EventAttendeesBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@UserID", UserID);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAttendeeByUserID_Admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventAttendeesBLL>>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public int UpdateApproved(EventAttendeesBLL obj, IWebHostEnvironment _env, string Body)
+        {
+            string msg = "";
+            //msg = obj.StatusMsg;
+            string contentRootPath = _env.ContentRootPath;
+
+            string path = "/ClientApp/dist/assets/Upload/";
+            string filePath = contentRootPath + path;
+
+            try
+            {
+                var data = Get(obj.AttendeesID);
+                var email = Getcustomer(obj.UserID);
+
+                string ToEmail, SubJect;
+                ToEmail = email.Email;
+
+                Body = Body.Replace("#description#", data.MessageForAttendee == null || data.MessageForAttendee == "" ? "N/A" : data.MessageForAttendee)
+                    .Replace("#date#", data.Createdon.ToString())
+
+                    .Replace("#name#", email.FullName)
+                    .Replace("#contact#", email.PhoneNo)
+                    .Replace("#username#", obj.Email);
+                SendEmail(obj.Subject, Body, email.Email);
+            }
+            catch { }
+            return 1;
+        }
+        public void SendEmail(string _SubjectEmail, string _BodyEmail, string _To)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.To.Add(_To);
+                mail.From = new MailAddress("akuhevents@gmail.com");
+                mail.Subject = _SubjectEmail;
+                mail.Body = _BodyEmail;
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.UseDefaultCredentials = false;
+                smtp.Port = Int32.Parse("587");
+                smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+                smtp.Credentials = new System.Net.NetworkCredential
+                     ("akuhevents@gmail.com", "ueuzxvrsgtaxdbev");
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+            }
+            catch (Exception ex)
+            {
             }
         }
         public List<string> GetItemImages(int id)

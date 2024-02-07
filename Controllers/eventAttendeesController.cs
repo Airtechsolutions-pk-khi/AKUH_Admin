@@ -47,7 +47,12 @@ namespace AKU_Admin.Controllers
         {
             return _service.GetItemSettings(brandid);
         }
-
+        [HttpPost]
+        [Route("status")]
+        public int Status([FromBody] EventAttendeesBLL obj)
+        {
+            return _service.Status(obj, _env);
+        }
         [HttpPost]
         [Route("insert")]
         public int Post([FromBody]EventBLL obj)

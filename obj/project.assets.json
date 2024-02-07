@@ -1303,6 +1303,15 @@
           }
         }
       },
+      "QRCoder/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -4509,6 +4518,27 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "QRCoder/1.4.3": {
+      "sha512": "fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
+      "type": "package",
+      "path": "qrcoder/1.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/QRCoder.dll",
+        "lib/net40/QRCoder.dll",
+        "lib/net5.0-windows7.0/QRCoder.dll",
+        "lib/net5.0/QRCoder.dll",
+        "lib/net6.0-windows7.0/QRCoder.dll",
+        "lib/net6.0/QRCoder.dll",
+        "lib/netstandard1.3/QRCoder.dll",
+        "lib/netstandard2.0/QRCoder.dll",
+        "nuget-icon.png",
+        "nuget-readme.md",
+        "qrcoder.1.4.3.nupkg.sha512",
+        "qrcoder.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -9251,24 +9281,25 @@
       "Microsoft.Extensions.Configuration >= 3.1.6",
       "Nancy >= 2.0.0",
       "Newtonsoft.Json >= 12.0.3",
+      "QRCoder >= 1.4.3",
       "System.Configuration.ConfigurationManager >= 4.7.0",
       "System.Runtime.Serialization.Json >= 4.3.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MRC\\.nuget\\packages\\": {}
+    "C:\\Users\\Airtech Soutions\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
+      "projectUniqueName": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
-      "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\AKUH_Admin\\obj\\",
+      "projectPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
+      "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
+      "outputPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9330,6 +9361,10 @@
             "target": "Package",
             "version": "[12.0.3, )"
           },
+          "QRCoder": {
+            "target": "Package",
+            "version": "[1.4.3, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[4.7.0, )"
@@ -9358,21 +9393,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
     {
       "code": "NU1701",
       "level": "Warning",

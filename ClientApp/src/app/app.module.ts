@@ -122,6 +122,7 @@ import { AddEventAttendeesComponent } from './admin/eventattendees/addeventatten
 import { UserEventReportComponent } from './admin/usereventreport/usereventreport.component';
 // Imported Syncfusion RichTextEditorModule from Rich Text Editor package
 import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { EventattendeedetailsComponent } from './admin/eventattendeedetails/eventattendeedetails.component';
 
 @NgModule({
   declarations: [
@@ -214,7 +215,8 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
     ConfirmlistreportComponent,
     EventAttendeesComponent,
     AddEventAttendeesComponent,
-    UserEventReportComponent
+    UserEventReportComponent,
+    EventattendeedetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -261,6 +263,8 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
           { path: 'location', component: LocationsComponent },
           { path: 'location/add', component: AddlocationComponent },
           { path: 'location/edit/:id', component: AddlocationComponent },
+
+          { path: 'eventattendeedetails/edit/:id', component: EventattendeedetailsComponent },
 
           { path: 'brand', component: BrandComponent },
           { path: 'brand/add', component: AddbrandComponent },
