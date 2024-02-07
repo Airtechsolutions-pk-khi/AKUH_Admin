@@ -107,7 +107,15 @@ namespace AKU_Admin.BLL._Services
                 qrCodeResource.ContentId = "qrcode";
 
                 // Replace the placeholder in the email body with the embedded image
-                Body = Body.Replace("#QRCode#", $"<img src='cid:{qrCodeResource.ContentId}'/>");
+                Body = Body.Replace("#QRCode#", $"<img src='cid:{qrCodeResource.ContentId}' style='width: 50%;'/>")
+                       .Replace("#name#", obj.FullName)
+                       .Replace("#email#", obj.Email)
+                       .Replace("#contact#", obj.PhoneNo)
+                       .Replace("#eventname#", obj.EventName)
+                       .Replace("#date#", obj.FromDate.ToString("dd/MM/yyyy") + " - " + obj.ToDate.ToString("dd/MM/yyyy"))
+                       .Replace("#meetinglink#", obj.MeetingLink)
+                       .Replace("#message#", obj.MessageForAttendee);
+
 
                 // Create an AlternateView for the HTML email
                 AlternateView htmlView = AlternateView.CreateAlternateViewFromString(Body, null, "text/html");
