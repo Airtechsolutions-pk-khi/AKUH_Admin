@@ -51,7 +51,7 @@ export class EventdetailComponent implements OnInit {
     this.service.EventDetailRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
       .subscribe((res: any) => {
         if (res != null) {
-          
+          debugger
           this.orderDetails = res;
         }
         else

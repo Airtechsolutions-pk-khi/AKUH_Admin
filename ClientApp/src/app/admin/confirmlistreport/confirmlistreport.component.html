@@ -65,23 +65,34 @@
                         <th width="10%">Participant Name </th>
                         <th width="10%">Email </th>
                         <th width="10%">Contact No</th>
-                        <th width="10%">Occupation</th>
-                        <th width="5%">Gender</th>
+                        <th width="10%">Status</th>
+                        <!--<th width="10%">Occupation</th>
+                        <th width="5%">Gender</th>-->
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of orderDetails">
-                        <td>{{item.eventName}} </td>
-                        <td>{{item.type}} </td>
-                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>
-                        <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>
-                        <td>{{item.eventTime}}</td>
-                        <td>{{item.userName}}</td>
-                        <td>{{item.email}}</td>
-                        <td>{{item.phoneNo}}</td>
-                        <td>{{item.occupation}}</td>
-                        <td>{{item.gender}}</td>
-                    </tr>
+                  <tr *ngFor="let item of orderDetails">
+                    <td>{{item.eventName}} </td>
+                    <td>{{item.type}} </td>
+                    <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>
+                    <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>
+                    <td>{{item.eventTime}}</td>
+                    <td>{{item.userName}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phoneNo}}</td>
+                    <td>
+                      <span class="badge badge-warning"
+                            *ngIf="item.statusID == 1">Pending</span>
+
+                      <span class="badge badge-success"
+                            *ngIf="item.statusID == 102">Approved</span>
+
+                      <span class="badge badge-danger"
+                            *ngIf="item.statusID == 103">Cancelled</span>
+                    </td>
+                    <!--<td>{{item.occupation}}</td>
+  <td>{{item.gender}}</td>-->
+                  </tr>
                 </tbody>
             </table>
         </div>

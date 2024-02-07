@@ -35,7 +35,7 @@ namespace BAL.Repositories
             {
                 var lst = new List<EventBLL>();
                 SqlParameter[] p = new SqlParameter[0];
-                 
+
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetAllEvents", p);
                 if (_dt != null)
                 {
@@ -74,7 +74,7 @@ namespace BAL.Repositories
             {
                 return null;
             }
-        }    
+        }
         public List<EventAttendeesBLL> GetAllAttendees()
         {
             try
@@ -98,7 +98,7 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        
+
         public EventBLL Get(int id)
         {
             try
@@ -163,15 +163,15 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@brandid", brandID);
 
                 SqlParameter[] p1 = new SqlParameter[1];
-                p1[0] = new SqlParameter("@AppInfoID",1);
+                p1[0] = new SqlParameter("@AppInfoID", 1);
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetItemSettings_Admin", p);
                 _dt1 = (new DBHelper().GetTableFromSP)("sp_GetItemSettingsTitle_Admin", p1);
-                
+
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj= JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ItemSettingsBLL>>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ItemSettingsBLL>>().FirstOrDefault();
                         _obj.BrandID = brandID;
                         _obj1 = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt1)).ToObject<List<ItemSettingsBLL>>().FirstOrDefault();
                         _obj1.Items = _obj.Items;
@@ -188,35 +188,36 @@ namespace BAL.Repositories
         public int Insert(EventBLL data)
         {
             try
-            {                 
+            {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[16];
+                SqlParameter[] p = new SqlParameter[18];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-               //p[1] = new SqlParameter("@Type", data.Type);                
-                p[1] = new SqlParameter("@Description", data.Description);                
-                p[2] = new SqlParameter("@FromDate", data.FromDate);
-                p[3] = new SqlParameter("@ToDate", data.ToDate);
-                p[4] = new SqlParameter("@EventDate", data.FromDate);
-                p[5] = new SqlParameter("@EventCity", data.EventCity);
-                p[6] = new SqlParameter("@LocationLink", data.LocationLink);
-                p[7] = new SqlParameter("@StatusID", data.StatusID);
-                p[8] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[9] = new SqlParameter("@Email", data.Email);
+                p[1] = new SqlParameter("@Type", data.Type);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@FromDate", data.FromDate);
+                p[4] = new SqlParameter("@ToDate", data.ToDate);
+                p[5] = new SqlParameter("@EventDate", data.FromDate);
+                p[6] = new SqlParameter("@EventCity", data.EventCity);
+                p[7] = new SqlParameter("@LocationLink", data.LocationLink);
+                p[8] = new SqlParameter("@StatusID", data.StatusID);
+                p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
+                p[10] = new SqlParameter("@Email", data.Email);
                 //p[11] = new SqlParameter("@Facebook", data.Facebook);
                 //p[12] = new SqlParameter("@Instagram", data.Instagram);
                 //p[13] = new SqlParameter("@Twitter", data.Twitter);
                 //p[14] = new SqlParameter("@Image", data.EventImages[0].Image);
-                p[10] = new SqlParameter("@Image", data.Image);
-                p[11] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
-                p[12] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[15] = new SqlParameter("@EventTime", data.EventTime);
+                p[11] = new SqlParameter("@Image", data.Image);
+                p[12] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
+                p[13] = new SqlParameter("@IsFeatured", data.IsFeatured);
+                p[14] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[15] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[16] = new SqlParameter("@EventTime", data.EventTime);
+                p[17] = new SqlParameter("@EventLink", data.EventLink);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
 
-                if (data.EventCategoryID != null )
+                if (data.EventCategoryID != null)
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@EventID", rtn);
@@ -258,7 +259,7 @@ namespace BAL.Repositories
         }
         private void LogExceptionToFile(Exception ex, string logFilePath)
         {
-            
+
             // Log exception details to a text file
             using (StreamWriter writer = new StreamWriter(logFilePath, append: true))
             {
@@ -275,33 +276,34 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[17];
+                SqlParameter[] p = new SqlParameter[19];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                //p[1] = new SqlParameter("@Type", data.Type);
-                p[1] = new SqlParameter("@Description", data.Description);
-                p[2] = new SqlParameter("@FromDate", data.FromDate);
-                p[3] = new SqlParameter("@ToDate", data.ToDate);
-                p[4] = new SqlParameter("@EventDate", data.FromDate);
-                p[5] = new SqlParameter("@EventCity", data.EventCity);
-                p[6] = new SqlParameter("@LocationLink", data.LocationLink);
-                p[7] = new SqlParameter("@StatusID", data.StatusID);
-                p[8] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[9] = new SqlParameter("@Email", data.Email);
+                p[1] = new SqlParameter("@Type", data.Type);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@FromDate", data.FromDate);
+                p[4] = new SqlParameter("@ToDate", data.ToDate);
+                p[5] = new SqlParameter("@EventDate", data.FromDate);
+                p[6] = new SqlParameter("@EventCity", data.EventCity);
+                p[7] = new SqlParameter("@LocationLink", data.LocationLink);
+                p[8] = new SqlParameter("@StatusID", data.StatusID);
+                p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
+                p[10] = new SqlParameter("@Email", data.Email);
                 //p[11] = new SqlParameter("@Facebook", data.Facebook);
                 //p[12] = new SqlParameter("@Instagram", data.Instagram);
                 //p[13] = new SqlParameter("@Twitter", data.Twitter);
-                p[10] = new SqlParameter("@Image", data.Image);
-                p[11] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
-                p[12] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[15] = new SqlParameter("@EventID", data.EventID);
-                p[16] = new SqlParameter("@EventTime", data.EventTime);
+                p[11] = new SqlParameter("@Image", data.Image);
+                p[12] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
+                p[13] = new SqlParameter("@IsFeatured", data.IsFeatured);
+                p[14] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[15] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[16] = new SqlParameter("@EventID", data.EventID);
+                p[17] = new SqlParameter("@EventTime", data.EventTime);
+                p[18] = new SqlParameter("@EventLink", data.EventLink);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin", p);
-                
 
-                if (data.EventCategoryID != null )
+
+                if (data.EventCategoryID != null)
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@EventID", data.EventID);
@@ -403,11 +405,11 @@ namespace BAL.Repositories
                 var lst = new List<EventDetailsBLL>();
 
                 SqlParameter[] p = new SqlParameter[3];
-                
+
                 p[0] = new SqlParameter("@EventID", a);
                 p[1] = new SqlParameter("@fromdate", FromDate);
                 p[2] = new SqlParameter("@todate", ToDate);
-                
+
 
 
                 _dt = (new DBHelper().GetTableFromSP)("sp_rptEventDetailsReport", p);
@@ -454,7 +456,7 @@ namespace BAL.Repositories
             {
                 return new List<EventDetailsBLL>();
             }
-        }       
+        }
         public List<EventDetailsBLL> AttendeesReport(string AttendeesID, DateTime FromDate, DateTime ToDate)
         {
             try
@@ -485,6 +487,6 @@ namespace BAL.Repositories
                 return new List<EventDetailsBLL>();
             }
         }
-        
+
     }
 }
