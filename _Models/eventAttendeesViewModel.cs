@@ -15,7 +15,7 @@ namespace AKU_Admin._Models
         public int? EventID { get; set; }
 
         public int? UserID { get; set; }
-
+        public string ImageSS { get; set; }
         public string FullName { get; set; }
         public string Subject { get; set; }
         public string EventName { get; set; }

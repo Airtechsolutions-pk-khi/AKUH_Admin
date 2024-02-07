@@ -99,6 +99,7 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        //aarij
         public EventAttendeesBLL Get(int id)
         {
             try
@@ -113,6 +114,14 @@ namespace BAL.Repositories
                     if (_dt.Rows.Count > 0)
                     {
                         _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventAttendeesBLL>>().FirstOrDefault();
+                        if (_obj.ImageSS != null && _obj.ImageSS != "")
+                        {
+                            _obj.ImageSS = "akuapp-001-site1.mysitepanel.net/" + _obj.ImageSS;
+                        }
+                        else
+                        {
+                            _obj.ImageSS = "";
+                        }
                     }
                 }
                 return _obj;
