@@ -58,7 +58,12 @@ export class AddEventComponent implements OnInit {
       minute: new Date().getMinutes(),
       ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
     };
-
+    eventEndTime =
+    {
+      hour: new Date().getHours() % 12 || 12,
+      minute: new Date().getMinutes(),
+      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+    };
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -103,6 +108,7 @@ export class AddEventComponent implements OnInit {
       locationLink: [''],
       phoneNo: [''],
       eventTime: [''],
+      eventEndTime: [''],
       email: [''],
       eventCategories: [],
       speakers: [],
@@ -137,7 +143,11 @@ export class AddEventComponent implements OnInit {
       minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
       ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
     };
-
+    this.eventEndTime = {
+      hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
+      minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
+      ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
+    };
     this.f.eventCity.setValue(obj.eventCity);
     this.f.eventCategoryID.setValue(obj.eventCategoryID);
     this.f.locationLink.setValue(obj.locationLink);
@@ -209,6 +219,12 @@ export class AddEventComponent implements OnInit {
     const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
     this.f.eventTime.setValue(formattedTime);
 
+    const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
+    const formattedEndMinute = this.pad(this.eventEndTime.minute);
+    const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
+    const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
+    this.f.eventEndTime.setValue(formattedEndTime);
+    
     this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
     this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

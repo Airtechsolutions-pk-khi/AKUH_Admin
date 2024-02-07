@@ -18,7 +18,11 @@ namespace AKU_Admin._Models
         public string PrivacyPolicy { get; set; }
         public string? SplashScreen { get; set; } = "";
 
+        public string? ImgChair { get; set; } = "";
+        public string? ImgConChair { get; set; } = "";
         public string AppName { get; set; }
+        public string MsgChair { get; set; }
+        public string MsgConferenceChair { get; set; }
         public string FacebookUrl { get; set; }
         public string InstagramUrl { get; set; }
         public string TwitterUrl { get; set; }

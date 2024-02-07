@@ -1,0 +1,154 @@
+<!-- Page Heading -->
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-6">
+        <h6 class="m-0 font-weight-bold text-orange">Event Attendee Details - <span class="badge badge-info"> {{
+          eventAttendees.statusID == 1 ? "Pending" : eventAttendees.statusID==102 ?"Accepted" :
+          eventAttendees.statusID == 103? "Cencelled" : "-"
+            }}</span></h6>
+      </div>
+      <div class="col-md-6 text-right">
+
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12 form-group ">
+        <p>Meeting Link</p>
+        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="meetingLink">
+      </div>
+      <div class="col-md-12 form-group ">
+        <p>Subject</p>
+        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="subject">
+      </div>
+      <div class="col-md-12 form-group ">
+        <p>Message For Attendee</p>
+        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="messageForAttendee">
+      </div>
+      <div class="col-md-12 mb-4" *ngIf="eventAttendees.statusID!=2">
+        <div class="card border-left-info shadow mb-4">
+          <div class="card-header border-bottom-0"> Status</div>
+          <div class="card-body">
+            <div class="">
+              <button class="btn btn-info mr-1" (click)="updateAttendeeDetail(eventAttendees,102)">
+                <i class="fas fa-truck"></i> Accepted
+              </button>
+              <button class="btn btn-success mr-1" (click)="updateAttendeeDetail(eventAttendees,103)">
+                <i class="fas fa-people-carry"></i> Cencelled
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card border-left-danger shadow mb-4">
+          <div class="card-body">
+            <div class="card">
+              <div class="card-header border-bottom-0"> Attendee Information</div>
+
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Attendee Name
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.fullName }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Email
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.email }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                       Contact No
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.phoneNo }}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Gender
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.gender }}</div>
+              </div>
+              
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                       Event Name
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.eventName }}</div>
+              </div>
+             
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card border-left-Success shadow mb-4">
+          <div class="card-body">
+            <div class="card">
+              <div class="card-header border-bottom-0">Event Information</div>
+
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                      Event Start Date
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.fromDate | date:'dd/MM/yyyy'}}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                     Event End Date
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.toDate | date:'dd/MM/yyyy'}}</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <div class="list-group list-group-flush small">
+                    <a class="list-group-item list-group-item-action" href="#!">
+                     Registration Date
+                    </a>
+                  </div>
+                </div>
+                <div class="mr-2">{{ eventAttendees.createdon | date:'dd/MM/yyyy' }}</div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -31,9 +31,27 @@
                 <label class="small mb-1" for="inputFirstName">About</label>
                 <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="about">
                 </ejs-richtexteditor>
-                <!--<textarea type="text" class="form-control" id=about placeholder="" formControlName="about"></textarea>-->
+                
               </div>
           </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputFirstName">Message Chair</label>
+              <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="msgChair">
+              </ejs-richtexteditor>
+              
+            </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label class="small mb-1" for="inputFirstName">Message Chair Conference</label>
+            <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="msgConferenceChair">
+            </ejs-richtexteditor>
+            
+          </div>
+      </div>
 
           <div class="form-row">
             <div class="form-group col-md-12">
@@ -75,9 +93,20 @@
         </div>
           <div class="form-group col-md-4 text-center">
             <label for="inputFirstName" style="margin-bottom: 0rem;margin-top: 20px;">Upload Splash</label>
-            <app-imageupload></app-imageupload>
-            
+            <app-imageupload #splashImageUpload></app-imageupload>            
+          
+          <hr>
+          <div class=" text-center">
+            <label for="inputFirstName" style="margin-bottom: 0rem;margin-top: 20px;">Upload Image Chair</label>
+            <app-imageupload #chairImageUpload></app-imageupload>            
           </div>
+              <hr>
+          <div class="  text-center">
+            <label for="inputFirstName" style="margin-bottom: 0rem;margin-top: 20px;">Upload Image Conference Chair</label>
+            <app-imageupload #conferenceChairImageUpload></app-imageupload>            
+          </div>
+          <hr>
+        </div>
 
           </div>
             <!-- <div class="form-group col-md-6">

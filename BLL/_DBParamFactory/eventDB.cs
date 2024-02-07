@@ -190,7 +190,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[18];
+                SqlParameter[] p = new SqlParameter[16];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Type", data.Type);
@@ -207,13 +207,12 @@ namespace BAL.Repositories
                 //p[12] = new SqlParameter("@Instagram", data.Instagram);
                 //p[13] = new SqlParameter("@Twitter", data.Twitter);
                 //p[14] = new SqlParameter("@Image", data.EventImages[0].Image);
-                p[11] = new SqlParameter("@Image", data.Image);
-                p[12] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
-                p[13] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[14] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[15] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[16] = new SqlParameter("@EventTime", data.EventTime);
-                p[17] = new SqlParameter("@EventLink", data.EventLink);
+                p[10] = new SqlParameter("@Image", data.Image);
+                p[11] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
+                p[12] = new SqlParameter("@IsFeatured", data.IsFeatured);
+                p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[15] = new SqlParameter("@EventTime", data.EventTime);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
 

@@ -57,13 +57,43 @@
             <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>
             <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>
             <td>
-              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1,'btn-success': item.statusID === 4, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active': item.statusID ==4?'Completed': 'Inactive'" [term]="service.searchTerm">
+              <ngb-highlight 
+              [ngClass]="{
+                'btn-success': item.statusID === 102,
+                'btn-warning': item.statusID === 1, 
+                'btn-danger':item.statusID === 103 
+              }" 
+              class="btn btn-sm" 
+              [result]="
+              item.statusID ==1?'Pending': 
+              item.statusID ==102?'Accepted': 'Cancelled'
+              " 
+              [term]="service.searchTerm">
               </ngb-highlight>
+
+              <!-- <ngb-highlight 
+              [ngClass]="{
+                'btn-warning': item.statusID === 1,
+                'btn-success': item.statusID === 102,
+                'btn-danger': item.statusID === 103
+              }" 
+              class="btn btn-sm" 
+              [result]="
+                item.statusID === 1 ? 'Pending' :
+                item.statusID === 102 ? 'Accepted' :
+                item.statusID === 103 ? 'Cancelled' : ''
+              " 
+              [term]="service.searchTerm"
+            >
+            </ngb-highlight> -->
+
             </td>
             <td>
-              <a (click)="Edit(item.attendeesID)"><i class="fas fa-fw fa-edit"></i> </a>
+              <!-- <a (click)="Edit(item.attendeesID)"><i class="fas fa-fw fa-edit"></i> </a> -->
 
               <a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+
+              <a (click)="View(item.attendeesID)"><i class="fas fa-fw fa-eye"></i> </a>
             </td>
           </tr>
         </tbody>

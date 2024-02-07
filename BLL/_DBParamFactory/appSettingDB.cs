@@ -107,7 +107,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[12];
+                SqlParameter[] p = new SqlParameter[16];
 
                 p[0] = new SqlParameter("@About", data.About);
                 p[1] = new SqlParameter("@PrivacyPolicy", data.PrivacyPolicy);
@@ -121,6 +121,10 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@InstagramUrl", data.InstagramUrl);
                 p[10] = new SqlParameter("@TwitterUrl", data.TwitterUrl);
                 p[11] = new SqlParameter("@YoutubeUrl", data.YoutubeUrl);
+                p[12] = new SqlParameter("@MsgChair", data.MsgChair);
+                p[13] = new SqlParameter("@MsgConferenceChair", data.MsgConferenceChair);
+                p[14] = new SqlParameter("@ImgChair", data.ImgChair);
+                p[15] = new SqlParameter("@ImgConChair", data.ImgConChair);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateSetting_Admin", p);
                 return rtn;

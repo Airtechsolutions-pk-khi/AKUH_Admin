@@ -17,12 +17,14 @@ namespace AKU_Admin._Models
         public int? UserID { get; set; }
 
         public string FullName { get; set; }
-
+        public string Subject { get; set; }
         public string EventName { get; set; }
 
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
         public string Email { get; set; }
+        public string MeetingLink { get; set; }
+        public string MessageForAttendee { get; set; }
 
         public string PhoneNo { get; set; }
 
@@ -32,7 +34,7 @@ namespace AKU_Admin._Models
 
         public int? StatusID { get; set; }
 
-        public DateTime? Createdon { get; set; }
+        public DateTime Createdon { get; set; }
 
         public DateTime? Updatedon { get; set; }
 

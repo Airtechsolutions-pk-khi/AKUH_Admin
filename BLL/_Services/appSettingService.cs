@@ -60,6 +60,8 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 data.SplashScreen = UploadImage(data.SplashScreen, "Banner", _env);
+                data.ImgChair = UploadImage(data.ImgChair, "Banner", _env);
+                data.ImgConChair = UploadImage(data.ImgConChair, "Banner", _env);
                 data.Updatedon = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

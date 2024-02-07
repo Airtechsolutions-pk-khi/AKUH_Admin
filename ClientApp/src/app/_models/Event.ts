@@ -23,7 +23,6 @@ twitter : string;
 image : string;
 displayOrder:number;
 eventTime:string;
-eventlink:string;
   
 }
 export class EventImageJunc {
