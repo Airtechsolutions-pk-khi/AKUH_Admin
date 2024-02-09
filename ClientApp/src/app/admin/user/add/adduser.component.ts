@@ -49,12 +49,12 @@ export class AdduserComponent implements OnInit {
 
   private createForm() {
     this.userForm = this.formBuilder.group({
-      userName: ['', Validators.required],
+      userName: [''],
       email: ['', Validators.required, Validators.email],
       image: [''],
-      address: ['', Validators.required],
-      contactNo: ['', Validators.required],
-      password: ['', Validators.required],
+      address: [''],
+      contactNo: [''],
+      password: [''],
       statusID: [true],
       userID: 0,
     });

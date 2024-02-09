@@ -23,6 +23,7 @@ namespace AKU_Admin._Models
         public string PhoneNo { get; set; }
         public string Occupation { get; set; }
         public string Gender { get; set; }
+        public int StatusID { get; set; }
     }
     public class salesSummarytBLL
     {

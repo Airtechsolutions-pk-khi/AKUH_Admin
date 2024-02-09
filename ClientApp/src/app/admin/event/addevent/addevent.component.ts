@@ -97,7 +97,7 @@ export class AddEventComponent implements OnInit {
     this.eventForm = this.formBuilder.group({
       eventID: 0,
       name: ['', Validators.required],
-      //type: [''],
+      type: [''],
       description: [''],
       statusID: [true],
       location: [''],
@@ -121,6 +121,7 @@ export class AddEventComponent implements OnInit {
       displayOrder: [0],
       file: [''],
       imagesSource: [''],
+      eventLink: [''],
       isFeatured: [false]
     });
   }
@@ -130,13 +131,13 @@ export class AddEventComponent implements OnInit {
     debugger
     this.f.eventID.setValue(obj.eventID);
     this.f.name.setValue(obj.name);
-    //this.f.type.setValue(obj.type);
+    this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.location.setValue(obj.location);
     this.f.fromDate.setValue(obj.fromDate);
     this.f.toDate.setValue(obj.toDate);
-    //this.f.eventTime.setValue(obj.eventTime);
+    this.f.eventLink.setValue(obj.eventLink);
     this.eventTime = {
       hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
       minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),

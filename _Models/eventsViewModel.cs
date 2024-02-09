@@ -77,6 +77,7 @@ namespace AKU_Admin._Models
         public string EventCategories { get; set; }
         public string Speakers { get; set; }
         public string Organizers { get; set; }
+        public string EventLink { get; set; }
 
         public List<EventImagesBLL> EventImages = new List<EventImagesBLL>();
         public List<string> ImagesSource { get; set; }

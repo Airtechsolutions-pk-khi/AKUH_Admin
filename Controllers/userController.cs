@@ -114,5 +114,11 @@ namespace AKU_Admin.Controllers
         {
             return _service.GetAllPermissions();
         }
+        [HttpPost]
+        [Route("status")]
+        public int Status([FromBody] UserBLL obj)
+        {
+            return _service.Status(obj, _env);
+        }
     }
 }

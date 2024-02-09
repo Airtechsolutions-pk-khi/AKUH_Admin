@@ -39,7 +39,7 @@ namespace BAL.Repositories
                 var lst = new List<EventAttendeesBLL>();
                 SqlParameter[] p = new SqlParameter[0];
                  
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllEventAttendees", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetRegisterUser_Admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -83,13 +83,14 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[6];
+                SqlParameter[] p = new SqlParameter[7];
                 p[0] = new SqlParameter("@AttendeesID", data.AttendeesID);
                 p[1] = new SqlParameter("@StatusID", data.StatusID);
                 p[2] = new SqlParameter("@MessageForAttendee", data.MessageForAttendee);
                 p[3] = new SqlParameter("@Subject", data.Subject);
                 p[4] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
                 p[5] = new SqlParameter("@MeetingLink", data.MeetingLink);
+                p[6] = new SqlParameter("@Password", data.Password);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_EventAttendeesStatus", p);
                 return _obj;

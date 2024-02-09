@@ -11,7 +11,7 @@ import { Category } from '../_models/Cateogry';
 import { EventCategory } from '../_models/EventCategory';
 import { Organizer } from '../_models/Organizer';
 import { Speaker } from '../_models/Speaker';
-import { EventAttendees } from '../_models/EventAttendees';
+import { Attendees, EventAttendees } from '../_models/EventAttendees';
 
 interface SearchEventAttendeesResult {
   data: EventAttendees[];
@@ -32,7 +32,7 @@ function sort(data: EventAttendees[], column: SortColumn, direction: string): Ev
 
 function matches(data: EventAttendees, term: string) {
   
-  return data.fullName.toLowerCase().includes(term.toLowerCase())
+  return data.email.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
@@ -107,7 +107,8 @@ export class EventAttendeesService {
     return this.http.get<EventImageJunc[]>(`api/event/images/${id}`);
   }
   getById(id) {
-    return this.http.get<EventAttendees[]>(`api/eventattendees/${id}`);
+    debugger
+    return this.http.get<Attendees[]>(`api/eventattendees/${id}`);
   }
   statusUpdate(data) {
     debugger

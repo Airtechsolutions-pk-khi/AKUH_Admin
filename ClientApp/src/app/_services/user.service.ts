@@ -97,7 +97,7 @@ export class UserService {
     tap(() => this._loading$.next(true)),
       this.http.get<User[]>(url).subscribe(res => {
         this.user = res;
-          
+
         this._data$.next(this.user);
         this._allData$.next(this.user);
         this._search$.pipe(
@@ -116,7 +116,7 @@ export class UserService {
   }
 
   private _search(): Observable<SearchUsersResult> {
-     
+
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
     // 1. sort
     let sortedData = sort(this.user, sortColumn, sortDirection);
@@ -128,7 +128,7 @@ export class UserService {
     return of({ data, total });
   }
 
-  
+
   clear() {
     // clear by calling subject.next() without parameters
     this._search$.next();
@@ -147,7 +147,7 @@ export class UserService {
   insert(data) {
     debugger
     return this.http.post(`api/user/insertuser`, data)
-      .pipe(map(res => { 
+      .pipe(map(res => {
         console.log(res);
         return res;
       }));
@@ -190,19 +190,14 @@ export class UserService {
     tap(() => this._loading$.next(true)),
       this.http.get<PermissionForms[]>(url).subscribe(res => {
         this.permission = res;
-          
+
         this._obj$.next(this.permission);
         this._allObj$.next(this.permission);
-
-        //this._search$.pipe(
-        //  switchMap(() => this._search()),
-        //  tap(() => this._loading$.next(false))
-        //).subscribe(result => {
-        //  this._data$.next(result.data);
-        //  this._total$.next(result.total);
-        //});
-
         this._search$.next();
       });
+  }
+  statusUpdate(data) {
+    debugger
+    return this.http.post('api/user/status', data);
   }
 }
