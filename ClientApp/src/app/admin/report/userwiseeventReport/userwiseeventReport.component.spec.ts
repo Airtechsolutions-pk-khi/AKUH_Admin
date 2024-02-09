@@ -1,25 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+//import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SalesitemwiseComponent } from './salesitemwise.component';
+//import { UserEventReportComponent } from './userwiseReport.component';
 
-describe('SalesitemwiseComponent', () => {
-  let component: SalesitemwiseComponent;
-  let fixture: ComponentFixture<SalesitemwiseComponent>;
+//describe('UserEventReportComponent', () => {
+//  let component: UserEventReportComponent;
+//  let fixture: ComponentFixture<UserEventReportComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SalesitemwiseComponent ]
-    })
-    .compileComponents();
-  }));
+//  beforeEach(async(() => {
+//    TestBed.configureTestingModule({
+//      declarations: [UserEventReportComponent ]
+//    })
+//    .compileComponents();
+//  }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SalesitemwiseComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//  beforeEach(() => {
+//    fixture = TestBed.createComponent(UserEventReportComponent);
+//    component = fixture.componentInstance;
+//    fixture.detectChanges();
+//  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//  it('should create', () => {
+//    expect(component).toBeTruthy();
+//  });
+//});

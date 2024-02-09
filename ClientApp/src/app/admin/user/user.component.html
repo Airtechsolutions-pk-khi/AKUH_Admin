@@ -33,7 +33,7 @@
             <th width="15%" sortable="UserName" (sort)="onSort($event)"> User Name </th>
             <th width="15%" sortable="Email" (sort)="onSort($event)">Email </th>
             <!--<th width="15%" sortable="Password" (sort)="onSort($event)">Password </th>-->
-            
+
             <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
             <th width="10%" style="text-align:center">Action</th>
           </tr>
@@ -46,20 +46,29 @@
             <!-- <td> {{item.type}} </td> -->
 
             <td>
-              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
+              <ngb-highlight [ngClass]="{
+                'btn-success': item.statusID === 102,
+                'btn-warning': item.statusID === 101,
+                'btn-danger':item.statusID === 103
+              }"
+                             class="btn btn-sm"
+                             [result]="
+              item.statusID ==101?'Pending':
+              item.statusID ==102?'Approved': 'Cancelled'
+              "
+                             [term]="service.searchTerm">
               </ngb-highlight>
             </td>
             <td style="text-align:center">
-              <a (click)="Edit(item.userID)"><i class="fas fa-fw fa-edit"></i> </a>
+              <a (click)="Edit(item.userID)"><i class="fas fa-fw fa-edit"></i></a>
+              <a (click)="View(item.userID)"><i class="fas fa-fw fa-eye"></i> </a>
 
-              <a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+              <!--<a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-
-
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="pagination-count">
@@ -90,4 +99,4 @@
     <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
     <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
   </div>
-</ng-template> 
+</ng-template>

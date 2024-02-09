@@ -86,10 +86,10 @@ namespace AKU_Admin.BLL._Services
             try
             {
                 var data = Get(obj.AttendeesID);
-                var email = Getcustomer(obj.UserID);
+                //var email = Getcustomer(obj.UserID);
 
                 // Create a string with all the data you want to include in the QR code
-                string dataToEncode = $"{data.MessageForAttendee}|{data.Createdon:dd-MM-yyyy}|{data.FullName}|{data.PhoneNo}|{data.Email}|{data.EventName}|{obj.MeetingLink}";
+                string dataToEncode = $"{data.MessageForAttendee}|{data.Createdon:dd-MM-yyyy}|{data.FullName}|{data.PhoneNo}|{data.Email}|{obj.Password}|{obj.MeetingLink}";
 
                 // Generate QR code for the combined data
                 QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -110,8 +110,8 @@ namespace AKU_Admin.BLL._Services
                 Body = Body.Replace("#QRCode#", $"<img src='cid:{qrCodeResource.ContentId}' style='width: 50%;'/>")
                        .Replace("#name#", obj.FullName)
                        .Replace("#email#", obj.Email)
-                       .Replace("#contact#", obj.PhoneNo)
-                       .Replace("#eventname#", obj.EventName)
+                       .Replace("#password#", obj.Password)
+                       .Replace("#contact#", obj.PhoneNo)                      
                        .Replace("#date#", obj.FromDate.ToString("dd/MM/yyyy") + " - " + obj.ToDate.ToString("dd/MM/yyyy"))
                        .Replace("#meetinglink#", obj.MeetingLink)
                        .Replace("#message#", obj.MessageForAttendee);
@@ -148,8 +148,7 @@ namespace AKU_Admin.BLL._Services
             }
 
             return 1;
-        }
-        
+        }        
         public void SendEmail(string _SubjectEmail, string _BodyEmail, string _To)
         {
             try
@@ -206,7 +205,11 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                var data = Getcustomer(obj.UserID);
+                Random random = new Random();
+                string Password = random.Next(10000000, 99999999).ToString();
+
+                obj.Password = Password;
+                var data = Getcustomer(obj.AttendeesID);
                 string contentRootPath = _env.ContentRootPath;
 
                 string path = "/ClientApp/dist/assets/Upload/";
@@ -258,7 +261,6 @@ namespace AKU_Admin.BLL._Services
                     //{
                     //}
                 }
-
                 obj.Updatedon = _UTCDateTime_SA();
                 var result = _service.Status(obj);
 

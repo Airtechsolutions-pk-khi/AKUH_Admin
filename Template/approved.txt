@@ -200,6 +200,12 @@
                                                                                                 </div>
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Password</label>
+                                                                                                        <h2>#password#</h2>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-row">
+                                                                                                    <div class="form-group">
                                                                                                         <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Phone No.</label>
                                                                                                         <h2>#contact#</h2>
                                                                                                     </div>
@@ -207,26 +213,11 @@
                                                                                                 <!--<div style="font-family: inherit; text-align:inherit">Attendee Name: #name#</div>
                                                                                                 <div style="font-family: inherit; text-align:inherit">Contact No: #contact#</div>
                                                                                                 <div style="font-family: inherit; text-align:inherit">Email: #email#</div>
-                                                                                                <div style="font-family: inherit; text-align: inherit">Message Note: #MessageForAttendee#</div>
+                                                                                                <div style="font-family: inherit; text-align:inherit">Password: #password#</div>
+                                                                                                <div style="font-family: inherit; text-align: inherit">Message Note: #message#</div>
                                                                                                 <div style="font-family: inherit; text-align: inherit">Registration Date: #date#</div>
-
-                                                                                                <div style="font-family: inherit; text-align: inherit">Event Name: #eventname#</div>
                                                                                                 <div style="font-family: inherit; text-align: inherit">Meeting Link: #meetinglink#</div>-->
-                                                                                                <br />
-                                                                                                <hr style="border-top:1px dashed" />
-                                                                                                <br />
-                                                                                                <div class="form-row">
-                                                                                                    <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Event</label>
-                                                                                                        <h2>#eventname#</h2>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="form-row">
-                                                                                                    <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Date & Time</label>
-                                                                                                        <h2>#date#</h2>
-                                                                                                    </div>
-                                                                                                </div>
+                                                                                                
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
                                                                                                         <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Online Stream</label>

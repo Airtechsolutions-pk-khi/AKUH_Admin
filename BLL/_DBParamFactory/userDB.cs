@@ -34,7 +34,8 @@ namespace BAL.Repositories
                 var lst = new List<UserBLL>();
                 SqlParameter[] p = new SqlParameter[0];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllUser_Admin", p);
+                //_dt = (new DBHelper().GetTableFromSP)("sp_GetAllUser_Admin", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetRegisterUser_Admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -342,6 +343,27 @@ namespace BAL.Repositories
             catch (Exception)
             {
                 return null;
+            }
+        }
+        public int Status(UserBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[6];
+                p[0] = new SqlParameter("@AttendeesID", data.UserID);
+                p[1] = new SqlParameter("@StatusID", data.StatusID);
+              //p[2] = new SqlParameter("@MessageForAttendee", data.MessageForAttendee);
+              //p[3] = new SqlParameter("@Subject", data.Subject);
+                p[4] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
+              //p[5] = new SqlParameter("@MeetingLink", data.MeetingLink);
+
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_EventAttendeesStatus", p);
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

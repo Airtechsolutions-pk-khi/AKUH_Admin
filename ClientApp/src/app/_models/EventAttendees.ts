@@ -17,4 +17,15 @@ export class EventAttendees {
   meetingLink:string;
   subjec:string;
 }
- 
+export class Attendees {
+
+  attendeesID: number;
+  fullName: string;
+  email: string;
+  phoneNo: string;
+  statusID: number;
+  createdon: string;
+  messageForAttendee: string;
+  meetingLink: string;
+  subject: string;
+}

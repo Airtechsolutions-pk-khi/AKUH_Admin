@@ -72,6 +72,11 @@ export class UserComponent implements OnInit {
         this.router.navigate(["admin/user/edit", customers]);
   }
 
+  View(id) {
+    debugger
+    this.router.navigate(["admin/user/view/", id]);
+  }
+
   Delete(obj) {
     
     this.service.delete(obj).subscribe((res: any) => {

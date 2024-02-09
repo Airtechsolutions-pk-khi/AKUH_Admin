@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
  
 import { ToastService } from 'src/app/_services/toastservice';
  
-import { EventAttendees } from 'src/app/_models/EventAttendees';
+import { Attendees } from 'src/app/_models/EventAttendees';
 import { EventAttendeesService } from 'src/app/_services/eventattendees.service';
 @Component({
   selector: 'app-eventattendeedetails',
@@ -13,7 +13,7 @@ import { EventAttendeesService } from 'src/app/_services/eventattendees.service'
   providers: []
 })
 export class EventattendeedetailsComponent implements OnInit {
-  public eventAttendees = new EventAttendees();
+  public eventAttendees = new Attendees();
    
   subject = "";
   messageForAttendee = "";
@@ -23,18 +23,18 @@ export class EventattendeedetailsComponent implements OnInit {
     public ts: ToastService,
     public router: Router,
     private route: ActivatedRoute) {
-   // this.userName = this.ls.getSelectedBrand().userName;
   }
 
   ngOnInit() {
     this.setSelectedAppointment();
   }
   setSelectedAppointment() {
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.service.getById(sid).subscribe(res => {
-          
+          debugger
           this.editForm(res);
         });
       }
@@ -51,7 +51,7 @@ export class EventattendeedetailsComponent implements OnInit {
 
       if (data != 0) {
         this.ts.showSuccess("Success", "Record updated successfully.")
-        this.router.navigate(['reception/appointment']);
+        this.router.navigate(['admin/eventattendees']);
       }
     }, error => {
       this.ts.showError("Error", "Failed to update record.")
@@ -59,6 +59,6 @@ export class EventattendeedetailsComponent implements OnInit {
   }
   private editForm(obj) {
     this.eventAttendees = obj;
-    
+    debugger
   }
 }
