@@ -161,6 +161,25 @@ namespace AKU_Admin._Models
         public int? UpdatedBy { get; set; }
 
     }
+
+    public class MessageBLL
+    {
+        public int MessageID { get; set; }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+        public string Designation { get; set; }
+
+        public string Image { get; set; }
+
+        public int? StatusID { get; set; }
+
+        public DateTime? Createdon { get; set; }
+
+        public DateTime? Updatedon { get; set; }
+ 
+    }
     //public class PushTokenBLL
     //{
     //    public int TokenID { get; set; }

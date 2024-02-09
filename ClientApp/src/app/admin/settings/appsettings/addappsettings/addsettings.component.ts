@@ -67,12 +67,12 @@ export class AddsettingsComponent implements OnInit {
       appName: [''],
       appVersion: [''],
       about: [''],
-      privacyPolicy: [''],
+      //privacyPolicy: [''],
       splashScreen: [''],
-      msgChair: [''],
-      msgConferenceChair: [''],
-      imgChair: [''],
-      imgConChair: [''],
+      // msgChair: [''],
+      // msgConferenceChair: [''],
+      // imgChair: [''],
+      // imgConChair: [''],
       facebookUrl: [''],
       instagramUrl: [''],
       twitterUrl: [''],
@@ -88,11 +88,11 @@ export class AddsettingsComponent implements OnInit {
     this.f.appName.setValue(obj.appName);
     this.f.appVersion.setValue(obj.appVersion);
     this.f.about.setValue(obj.about);
-    this.f.privacyPolicy.setValue(obj.privacyPolicy);
-    this.f.msgChair.setValue(obj.msgChair);
-    this.f.imgChair.setValue(obj.imgChair);
-    this.f.msgConferenceChair.setValue(obj.msgConferenceChair);
-    this.f.imgConChair.setValue(obj.imgConChair);
+    //this.f.privacyPolicy.setValue(obj.privacyPolicy);
+    // this.f.msgChair.setValue(obj.msgChair);
+    // this.f.imgChair.setValue(obj.imgChair);
+    // this.f.msgConferenceChair.setValue(obj.msgConferenceChair);
+    // this.f.imgConChair.setValue(obj.imgConChair);
     this.f.splashScreen.setValue(obj.splashScreen);
     this.f.facebookUrl.setValue(obj.facebookUrl);
     this.f.instagramUrl.setValue(obj.instagramUrl);
@@ -100,8 +100,8 @@ export class AddsettingsComponent implements OnInit {
     this.f.youtubeUrl.setValue(obj.youtubeUrl);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.splashImageUpload.imageUrl = obj.splashScreen;
-    this.chairImageUpload.imageUrl = obj.imgChair;
-    this.conferenceChairImageUpload.imageUrl = obj.imgConChair;
+    // this.chairImageUpload.imageUrl = obj.imgChair;
+    // this.conferenceChairImageUpload.imageUrl = obj.imgConChair;
   }
 
   setSelectedSetting() {
@@ -124,8 +124,8 @@ export class AddsettingsComponent implements OnInit {
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
 
     this.f.splashScreen.setValue(this.splashImageUpload.imageUrl);
-    this.f.imgChair.setValue(this.chairImageUpload.imageUrl);
-    this.f.imgConChair.setValue(this.conferenceChairImageUpload.imageUrl);
+    // this.f.imgChair.setValue(this.chairImageUpload.imageUrl);
+    // this.f.imgConChair.setValue(this.conferenceChairImageUpload.imageUrl);
 
     // this.f.splashScreen.setValue(this.imgComp.imageUrl);
     // this.f.imgChair.setValue(this.imgComp.imageUrl);

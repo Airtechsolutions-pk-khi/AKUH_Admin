@@ -190,7 +190,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[16];
+                SqlParameter[] p = new SqlParameter[17];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Type", data.Type);
@@ -213,8 +213,9 @@ namespace BAL.Repositories
                 p[13] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[14] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
                 p[15] = new SqlParameter("@EventTime", data.EventTime);
+                p[16] = new SqlParameter("@Location", data.Location);
 
-                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
+                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin_v2", p).Rows[0]["EventID"].ToString());
 
                 if (data.EventCategoryID != null)
                 {
@@ -275,7 +276,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[19];
+                SqlParameter[] p = new SqlParameter[20];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Type", data.Type);
@@ -288,9 +289,7 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
                 p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
                 p[10] = new SqlParameter("@Email", data.Email);
-                //p[11] = new SqlParameter("@Facebook", data.Facebook);
-                //p[12] = new SqlParameter("@Instagram", data.Instagram);
-                //p[13] = new SqlParameter("@Twitter", data.Twitter);
+               
                 p[11] = new SqlParameter("@Image", data.Image);
                 p[12] = new SqlParameter("@Updatedon", DateTime.UtcNow.AddMinutes(300));
                 p[13] = new SqlParameter("@IsFeatured", data.IsFeatured);
@@ -299,7 +298,8 @@ namespace BAL.Repositories
                 p[16] = new SqlParameter("@EventID", data.EventID);
                 p[17] = new SqlParameter("@EventTime", data.EventTime);
                 p[18] = new SqlParameter("@EventLink", data.EventLink);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin", p);
+                p[19] = new SqlParameter("@Location", data.Location);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEvent_Admin_v2", p);
 
 
                 if (data.EventCategoryID != null)

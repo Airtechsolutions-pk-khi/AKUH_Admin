@@ -124,6 +124,8 @@ import { UserEventReportComponent } from './admin/usereventreport/usereventrepor
 import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { EventattendeedetailsComponent } from './admin/eventattendeedetails/eventattendeedetails.component';
 import { UserDetailComponent } from './admin/userdetails/userdetails.component';
+import { MessageComponent } from './admin/message/message.component';
+import { AddMessageComponent } from './admin/message/add/addmessage.component';
 
 @NgModule({
   declarations: [
@@ -218,7 +220,9 @@ import { UserDetailComponent } from './admin/userdetails/userdetails.component';
     AddEventAttendeesComponent,
     UserEventReportComponent,
     EventattendeedetailsComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    MessageComponent,
+    AddMessageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -385,6 +389,10 @@ import { UserDetailComponent } from './admin/userdetails/userdetails.component';
           { path: 'organizer', component: OrganizerComponent },
           { path: 'organizer/add', component: AddOrganizerComponent },
           { path: 'organizer/edit/:id', component: AddOrganizerComponent },
+
+          { path: 'message', component: MessageComponent },
+          { path: 'message/add', component: AddMessageComponent },
+          { path: 'message/edit/:id', component: AddMessageComponent },
 
           { path: 'partner', component: PartnerComponent },
           { path: 'partner/add', component: AddPartnerComponent },
