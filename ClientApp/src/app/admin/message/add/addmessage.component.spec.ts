@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddMessageComponent } from './addmessage.component';
 
-describe('AddOrganizerComponent', () => {
+describe('AddMessageComponent', () => {
   let component: AddMessageComponent;
   let fixture: ComponentFixture<AddMessageComponent>;
 
