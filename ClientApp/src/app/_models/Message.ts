@@ -5,4 +5,5 @@ export class Message {
   designation: string;
   image: string;
   statusID: number;
+  displayOrder: number;
 }

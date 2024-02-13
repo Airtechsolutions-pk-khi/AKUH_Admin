@@ -129,7 +129,7 @@ import { AddMessageComponent } from './admin/message/add/addmessage.component';
 import { OrganisingCommitteeComponent } from './admin/organisingcommittee/organisingcommittee.component';
 import { AddOrganisingCommitteeComponent } from './admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component';
 import { WorkshopComponent } from './admin/workshop/workshop.component';
-import { AddWorkshopComponent } from './admin/workshop/add/addworkshop.component';
+import { AddWorkshopComponent } from './admin/workshop/addworkshop/addworkshop.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -229,7 +229,9 @@ import { CommonModule } from '@angular/common';
     MessageComponent,
     AddMessageComponent,
     OrganisingCommitteeComponent,
-    AddOrganisingCommitteeComponent
+    AddOrganisingCommitteeComponent,
+    WorkshopComponent,
+    AddWorkshopComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

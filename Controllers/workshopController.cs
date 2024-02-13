@@ -20,7 +20,6 @@ namespace AKU_Admin.Controllers
             _service = new workshopService();
             _env = env;
         }
-
         [HttpGet("all")]
         public List<WorkshopBLL> GetAll()
         {
@@ -36,65 +35,28 @@ namespace AKU_Admin.Controllers
         {
             return _service.GetAllAttendees();
         }
-
         [HttpGet("{id}")]
         public WorkshopBLL Get(int id)
         {
             return _service.Get(id);
         }
-        [HttpGet("images/{id}")]
-        public List<string> GetImages(int id)
-        {
-            return _service.GetItemImages(id);
-        }
-        [HttpGet("settings/{brandid}")]
-        public ItemSettingsBLL GetItemSettings(int brandid)
-        {
-            return _service.GetItemSettings(brandid);
-        }
-
         [HttpPost]
         [Route("insert")]
         public int Post([FromBody]WorkshopBLL obj)
         {
             return _service.Insert(obj, _env);
         }
-
         [HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] WorkshopBLL obj)
         {
             return _service.Update(obj, _env);
         }
-
-        [HttpPost]
-        [Route("update/settings")]
-        public int PostUpdateSettings([FromBody] ItemSettingsBLL obj)
-        {
-            return _service.UpdateItemSettings(obj);
-        }
-
         [HttpPost]
         [Route("delete")]
         public int PostDelete([FromBody] WorkshopBLL obj)
         {
             return _service.Delete(obj);
         }
-        [HttpGet("EventRpt/{EventID}/{fromDate}/{toDate}")]
-        public List<EventDetailsBLL> GetEventsDetail(string EventID, string FromDate, string ToDate)
-        {
-            return _service.GetEventsDetailRpt(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
-        }
-        [HttpGet("ConfirmListReport/{EventID}/{fromDate}/{toDate}")]
-        public List<EventDetailsBLL> ConfirmListReport(string EventID, string FromDate, string ToDate)
-        {
-            return _service.ConfirmListReport(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
-        }     
-        [HttpGet("AttendeesReport/{AttendeesID}/{fromDate}/{toDate}")]
-        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, string FromDate, string ToDate)
-        {
-            return _service.AttendeesReport(AttendeesID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
-        }
-        
     }
 }

@@ -4,4 +4,5 @@ export class EventCategory {
   description: string;
   image: string;
   statusID: number;
+  displayOrder: number;
 }

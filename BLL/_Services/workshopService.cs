@@ -63,21 +63,6 @@ namespace AKU_Admin.BLL._Services
                 return null;
             }
         }
-        public List<string> GetItemImages(int id)
-        {
-            try
-            {
-                return _service.GetItemImages(id);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        }
-        public ItemSettingsBLL GetItemSettings(int brandID)
-        {
-            return _service.GetItemSettings(brandID);
-        }
         public int Insert(WorkshopBLL data, IWebHostEnvironment _env)
         {
             
@@ -91,21 +76,6 @@ namespace AKU_Admin.BLL._Services
                 var result = _service.Insert(data);
 
                 
-
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
-
-        public int UpdateItemSettings(ItemSettingsBLL data)
-        {
-            try
-            {
-
-                var result = _service.UpdateItemSettings(data);
 
                 return result;
             }
@@ -145,39 +115,5 @@ namespace AKU_Admin.BLL._Services
                 return 0;
             }
         }
-        public List<EventDetailsBLL> GetEventsDetailRpt(string EventID, DateTime FromDate, DateTime ToDate)
-        {
-            try
-            {
-                return _service.GetEventsDetailRpt(EventID, FromDate, ToDate);
-            }
-            catch (Exception ex)
-            {
-                return new List<EventDetailsBLL>();
-            }
-        }
-        public List<EventDetailsBLL> ConfirmListReport(string EventID, DateTime FromDate, DateTime ToDate)
-        {
-            try
-            {
-                return _service.ConfirmListReport(EventID, FromDate, ToDate);
-            }
-            catch (Exception ex)
-            {
-                return new List<EventDetailsBLL>();
-            }
-        }   
-        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, DateTime FromDate, DateTime ToDate)
-        {
-            try
-            {
-                return _service.AttendeesReport(AttendeesID, FromDate, ToDate);
-            }
-            catch (Exception ex)
-            {
-                return new List<EventDetailsBLL>();
-            }
-        }
-        
     }
 }

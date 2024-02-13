@@ -76,7 +76,7 @@ export class WorkshopService {
   }
   getById(id) {
     
-    return this.http.get<Workshop[]>(`api/workshop/workshop/${id}`);
+    return this.http.get<Workshop[]>(`api/workshop/${id}`);
   }
   getAllData() {
     debugger

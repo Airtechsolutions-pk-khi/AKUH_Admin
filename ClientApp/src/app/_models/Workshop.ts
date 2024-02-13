@@ -3,6 +3,7 @@ export class Workshop {
   organizerID: number;
   name: string;
   description: string;
+  date: string;
   image: string;
   startTime: string;
   endTime: string;
