@@ -126,6 +126,11 @@ import { EventattendeedetailsComponent } from './admin/eventattendeedetails/even
 import { UserDetailComponent } from './admin/userdetails/userdetails.component';
 import { MessageComponent } from './admin/message/message.component';
 import { AddMessageComponent } from './admin/message/add/addmessage.component';
+import { OrganisingCommitteeComponent } from './admin/organisingcommittee/organisingcommittee.component';
+import { AddOrganisingCommitteeComponent } from './admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component';
+import { WorkshopComponent } from './admin/workshop/workshop.component';
+import { AddWorkshopComponent } from './admin/workshop/add/addworkshop.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -222,11 +227,14 @@ import { AddMessageComponent } from './admin/message/add/addmessage.component';
     EventattendeedetailsComponent,
     UserDetailComponent,
     MessageComponent,
-    AddMessageComponent
+    AddMessageComponent,
+    OrganisingCommitteeComponent,
+    AddOrganisingCommitteeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    CommonModule,
     NgApexchartsModule,
     FormsModule,
     NgSelectModule,
@@ -386,9 +394,17 @@ import { AddMessageComponent } from './admin/message/add/addmessage.component';
           { path: 'speaker/add', component: AddSpeakerComponent },
           { path: 'speaker/edit/:id', component: AddSpeakerComponent },
 
+          { path: 'organisingcommittee', component: OrganisingCommitteeComponent },
+          { path: 'organisingcommittee/add', component: AddOrganisingCommitteeComponent },
+          { path: 'organisingcommittee/edit/:id', component: AddOrganisingCommitteeComponent },
+
           { path: 'organizer', component: OrganizerComponent },
           { path: 'organizer/add', component: AddOrganizerComponent },
           { path: 'organizer/edit/:id', component: AddOrganizerComponent },
+
+          { path: 'workshop', component: WorkshopComponent },
+          { path: 'workshop/add', component: AddWorkshopComponent },
+          { path: 'workshop/edit/:id', component: AddWorkshopComponent },
 
           { path: 'message', component: MessageComponent },
           { path: 'message/add', component: AddMessageComponent },

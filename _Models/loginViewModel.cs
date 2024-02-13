@@ -207,6 +207,18 @@ namespace AKU_Admin._Models
         public DateTime? Updatedon { get; set; }
         public int? UpdatedBy { get; set; }
     }
+    public class OrganisingCommitteeBLL
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        [AllowHtml]
+        public string Designation { get; set; }        
+        public string Image { get; set; }
+        public int? StatusID { get; set; }
+        public DateTime? Createdon { get; set; }
+        public DateTime? Updatedon { get; set; }
+        public int? UpdatedBy { get; set; }
+    }
     public class UserBLL
     {
         public int UserID { get; set; }

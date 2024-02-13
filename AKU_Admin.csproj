@@ -60,6 +60,7 @@
   <ItemGroup>
     <Folder Include="ClientApp\dist\assets\Upload\Banner\" />
     <Folder Include="ClientApp\dist\assets\Upload\Event\" />
+    <Folder Include="ClientApp\dist\assets\Upload\OrganisingCommittee\" />
     <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
     <Folder Include="pdfFiles\" />
     <Folder Include="Upload\Offers\" />
