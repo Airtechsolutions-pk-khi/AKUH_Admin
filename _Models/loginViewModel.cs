@@ -72,6 +72,7 @@ namespace AKU_Admin._Models
         public string Image { get; set; }
 
         public int? StatusID { get; set; }
+        public int? DisplayOrder { get; set; }
 
         public DateTime? Createdon { get; set; }
 
@@ -174,6 +175,7 @@ namespace AKU_Admin._Models
         public string Image { get; set; }
 
         public int? StatusID { get; set; }
+        public int? DisplayOrder { get; set; }
 
         public DateTime? Createdon { get; set; }
 

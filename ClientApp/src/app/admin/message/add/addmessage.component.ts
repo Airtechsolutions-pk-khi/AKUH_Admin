@@ -63,6 +63,7 @@ export class AddMessageComponent implements OnInit {
       description: [''],
       designation:[''],
       statusID: [true],
+      displayOrder: [0],
       messageID: 0,
       image: [''],
     });
@@ -75,6 +76,7 @@ export class AddMessageComponent implements OnInit {
     this.f.designation.setValue(obj.designation);
     this.f.messageID.setValue(obj.messageID);
     this.f.image.setValue(obj.image);
+    this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
   }

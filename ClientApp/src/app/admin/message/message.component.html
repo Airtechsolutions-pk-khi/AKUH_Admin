@@ -32,8 +32,9 @@
         <thead>
           <tr class="table-header">
             <th width="10%">IMAGE</th>
-            <th width="15%" sortable="Name" (sort)="onSort($event)"> Name </th>  
-            <th width="15%" sortable="Name" (sort)="onSort($event)"> Designation </th>            
+            <th width="15%" sortable="name" (sort)="onSort($event)"> Name </th>  
+            <th width="15%" sortable="designation" (sort)="onSort($event)"> Designation </th>            
+            <th width="15%" sortable="displayOrder" (sort)="onSort($event)"> Display Order </th>            
             <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
             <th width="15%">Action</th>
           </tr>
@@ -46,6 +47,7 @@
             </td>
             <td> {{item.name}} </td> 
             <td> {{item.designation}} </td>            
+            <td> {{item.displayOrder}} </td>            
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
@@ -59,8 +61,6 @@
         </tbody>
       </table>
     </div>
-
-
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="pagination-count">

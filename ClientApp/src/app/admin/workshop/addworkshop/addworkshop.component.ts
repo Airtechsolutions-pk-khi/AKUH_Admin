@@ -20,7 +20,7 @@ const now = new Date();
   providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 
-export class AddEventComponent implements OnInit {
+export class AddWorkshopComponent implements OnInit {
 
   public tools: object = {
     items: ['Undo', 'Redo', '|',
@@ -38,28 +38,18 @@ export class AddEventComponent implements OnInit {
   };
 
   submitted = false;
-  eventForm: FormGroup;
+  workshopForm: FormGroup;
   loading = false;
   loadingItems = false;
-  Images = [];
-  EventCategoryList = [];
-  selectedEventCategoryIds: string[];
   OrganizerList = [];
   selectedOrganizerIds: string[];
-  SpeakerList = [];
-  selectedSpeakerIds: string[];
-  ModifiersList = [];
-  AddonsList = [];
-  selectedModifierIds: string[];
-  selectedAddonIds: string[];
-  //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-  eventTime =
+  startTime =
     {
       hour: new Date().getHours() % 12 || 12,
       minute: new Date().getMinutes(),
       ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
     };
-    eventEndTime =
+  endTime =
     {
       hour: new Date().getHours() % 12 || 12,
       minute: new Date().getMinutes(),
@@ -75,113 +65,65 @@ export class AddEventComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private workshopService: WorkshopService
+    private workshopService: WorkshopService,
+    private service: EventService
 
   ) {
     this.createForm();
-
-    this.loadEventCategory();
     this.loadOrganizer();
-    this.loadSpeaker();
-
   }
 
   ngOnInit() {
-    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
-    this._datepicker.fromDate = date;
     this.setSelecteditem();
   }
 
-  get f() { return this.eventForm.controls; }
+  get f() { return this.workshopForm.controls; }
 
   private createForm() {
-    this.eventForm = this.formBuilder.group({
-      eventID: 0,
+    this.workshopForm = this.formBuilder.group({
+      workshopID: 0,
       name: ['', Validators.required],
-      type: [''],
       description: [''],
       statusID: [true],
       location: [''],
-      fromDate: '',
-      toDate: '',
-      eventCity: [''],
-      eventCategoryID: [ Validators.required],
-      locationLink: [''],
-      phoneNo: [''],
-      eventTime: [''],
-      eventEndTime: [''],
-      email: [''],
-      eventCategories: [],
-      speakers: [],
-      organizers: [],
-      remainingTicket: [0],
-      //facebook: [''],
-      //instagram: [''],
-      //twitter: [''],
+      pdfLink: [''],
+      link: [''],
+      date: [''],
+      startTime: [''],
+      endTime: [''],
+      organizerID: [],
       image: [''],
       displayOrder: [0],
-      file: [''],
-      imagesSource: [''],
-      eventLink: [''],
-      isFeatured: [false]
     });
   }
 
 
   private editForm(obj) {
     debugger
-    this.f.eventID.setValue(obj.eventID);
+    this.f.workshopID.setValue(obj.workshopID);
     this.f.name.setValue(obj.name);
-    this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.f.location.setValue(obj.location);
-    this.f.fromDate.setValue(obj.fromDate);
-    this.f.toDate.setValue(obj.toDate);
-    this.f.eventLink.setValue(obj.eventLink);
-    this.eventTime = {
-      hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+    this.f.date.setValue(obj.date);
+    this.f.pdfLink.setValue(obj.pdfLink);
+    this.startTime = {
+      hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
+      minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
+      ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
     };
-    this.eventEndTime = {
-      hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
+    this.endTime = {
+      hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
+      minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
+      ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
     };
-    this.f.eventCity.setValue(obj.eventCity);
-    this.f.eventCategoryID.setValue(obj.eventCategoryID);
-    this.f.locationLink.setValue(obj.locationLink);
-    this.f.phoneNo.setValue(obj.phoneNo);
-    this.f.email.setValue(obj.email);
-    this.f.remainingTicket.setValue(obj.remainingTicket);
-    //this.f.facebook.setValue(obj.facebook);
-    //this.f.instagram.setValue(obj.instagram);
-    //this.f.twitter.setValue(obj.twitter);
+    this.f.link.setValue(obj.link);
     this.f.displayOrder.setValue(obj.displayOrder);
-    this.f.isFeatured.setValue(obj.isFeatured);
-    //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };
-    if (obj.organizers != "") {
+    if (obj.organizerID != "") {
       debugger
-      var stringToConvert = obj.organizers;
-      this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
-      this.f.organizers.setValue(obj.organizers);
+      var stringToConvert = obj.organizerID;
+      this.f.organizerID.setValue(obj.organizerID);
     }
-
-    if (obj.speakers != "") {
-      debugger
-      var stringToConvert = obj.speakers;
-      this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
-      this.f.speakers.setValue(obj.speakers);
-    }
-
-    //if (obj.eventCategories != "") {
-    //  debugger
-    //  var stringToConvert = obj.eventCategories;
-    //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
-    //  this.f.eventCategories.setValue(obj.eventCategories);
-    //}
-    this.loadItemImages(this.f.eventID.value);
+    this.imgComp.imageUrl = obj.image;
   }
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
@@ -192,7 +134,7 @@ export class AddEventComponent implements OnInit {
       const sid = +param.get('id');
       if (sid) {
         this.loadingItems = true;
-        this.f.eventID.setValue(sid);
+        this.f.workshopID.setValue(sid);
         this.workshopService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
@@ -204,57 +146,48 @@ export class AddEventComponent implements OnInit {
 
   onSubmit() {
     debugger
-    this.eventForm.markAllAsTouched();
+    this.workshopForm.markAllAsTouched();
     this.submitted = true;
-    if (this.eventForm.invalid) { return; }
+    if (this.workshopForm.invalid) { return; }
     this.loading = true;
-    this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
-    this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
-    this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
-    //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
-    //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
-
-    const formattedHour = (this.eventTime.hour % 12 || 12);
-    const formattedMinute = this.pad(this.eventTime.minute);
-    const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
+    const formattedHour = (this.startTime.hour % 12 || 12);
+    const formattedMinute = this.pad(this.startTime.minute);
+    const formattedAMPM = this.startTime.hour >= 12 ? 'PM' : 'AM'
     const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
-    this.f.eventTime.setValue(formattedTime);
+    this.f.startTime.setValue(formattedTime);
 
-    const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
-    const formattedEndMinute = this.pad(this.eventEndTime.minute);
-    const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
+    const formattedEndHour = (this.endTime.hour % 12 || 12);
+    const formattedEndMinute = this.pad(this.endTime.minute);
+    const formattedEndAMPM = this.endTime.hour >= 12 ? 'PM' : 'AM'
     const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
-    this.f.eventEndTime.setValue(formattedEndTime);
-    
-    this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
-    this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
+    this.f.endTime.setValue(formattedEndTime);
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    //this.f.image.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
 
-    if (parseInt(this.f.eventID.value) === 0) {
+    if (parseInt(this.f.workshopID.value) === 0) {
 
       //Insert item
-      console.log(JSON.stringify(this.eventForm.value));
-      this.workshopService.insert(this.eventForm.value).subscribe(data => {
+      console.log(JSON.stringify(this.workshopForm.value));
+      this.workshopService.insert(this.workshopForm.value).subscribe(data => {
         if (data != 0) {
-          this.ts.showSuccess("Success", "Event added successfully.")
-          this.router.navigate(['/admin/event']);
+          this.ts.showSuccess("Success", "Workshop added successfully.")
+          this.router.navigate(['/admin/workshop']);
         }
         this.loading = false;
       }, error => {
-        this.ts.showError("Error", "Failed to insert Event.")
+        this.ts.showError("Error", "Failed to insert Workshop.")
         this.loading = false;
       });
     } else {
       //Update item
-      this.workshopService.update(this.eventForm.value).subscribe(data => {
+      this.workshopService.update(this.workshopForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
-          this.ts.showSuccess("Success", "Event updated successfully.")
-          this.router.navigate(['/admin/event']);
+          this.ts.showSuccess("Success", "Workshop updated successfully.")
+          this.router.navigate(['/admin/workshop']);
         }
       }, error => {
-        this.ts.showError("Error", "Failed to update Event.")
+        this.ts.showError("Error", "Failed to update Workshop.")
         this.loading = false;
       });
     }
@@ -262,38 +195,10 @@ export class AddEventComponent implements OnInit {
   pad(value: number): string {
     return value < 10 ? `0${value}` : `${value}`;
   }
-  onFileChange(event) {
-    if (event.target.files && event.target.files[0]) {
-      var filesAmount = event.target.files.length;
-      for (let i = 0; i < filesAmount; i++) {
-        var reader = new FileReader();
-        debugger;
-        var fileSize = event.target.files[i].size / 100000;
-        if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
-        else {
-          reader.onload = (event: any) => {
-            console.log(event.target.result);
-            this.Images.push(event.target.result);
-            this.eventForm.patchValue({
-              imagesSource: this.Images
-            });
-          }
-          reader.readAsDataURL(event.target.files[i]);
-        }
-      }
-    }
-  }
   
   private loadOrganizer() {
-    this.workshopService.loadOrganizer().subscribe((res: any) => {
+    this.service.loadOrganizer().subscribe((res: any) => {
       this.OrganizerList = res;
     });
-  }
-  
-  
-  removeImage(obj) {
-    const index = this.Images.indexOf(obj);
-    this.Images.splice(index, 1);
-    this.f.imagesSource.setValue(this.Images);
   }
 }

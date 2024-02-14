@@ -44,6 +44,7 @@ export class AddEventCategoryComponent implements OnInit {
       description: [''],
       image: [''],
       statusID: [true],
+      displayOrder: [],
       eventCategoryID: 0,
     });
   }
@@ -53,6 +54,7 @@ export class AddEventCategoryComponent implements OnInit {
     this.f.description.setValue(obj.description);
     this.f.eventCategoryID.setValue(obj.eventCategoryID);
     this.f.image.setValue(obj.image);
+    this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
   }

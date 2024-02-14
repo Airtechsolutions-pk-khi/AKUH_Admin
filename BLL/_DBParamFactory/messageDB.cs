@@ -100,7 +100,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[6];
+                SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);
@@ -108,6 +108,7 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@Image", data.Image);
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@CreatedOn", DateTime.UtcNow.AddMinutes(300));
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertMessage_Admin", p);
 
@@ -124,7 +125,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 1;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[8];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);
@@ -133,6 +134,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@UpdatedOn", DateTime.UtcNow.AddMinutes(300));
                 p[6] = new SqlParameter("@MessageID", data.MessageID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateMessage_Admin", p);
 

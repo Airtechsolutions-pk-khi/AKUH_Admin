@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {}
+    "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {}
   },
   "projects": {
-    "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj": {
+    "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
+        "projectUniqueName": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\AKU_Admin.csproj",
-        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\AghaKhan\\AKUH_Admin_GIT\\obj\\",
+        "projectPath": "E:\\Projects\\AKUH_Admin\\AKU_Admin.csproj",
+        "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\AKUH_Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
