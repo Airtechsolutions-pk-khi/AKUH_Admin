@@ -115,14 +115,14 @@ namespace BAL.Repositories
                     if (_dt.Rows.Count > 0)
                     {
                         _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<EventAttendeesBLL>>().FirstOrDefault();
-                        if (_obj.ImageSS != null && _obj.ImageSS != "")
-                        {
-                            _obj.ImageSS = "akuapp-001-site1.mysitepanel.net/" + _obj.ImageSS;
-                        }
-                        else
-                        {
-                            _obj.ImageSS = "";
-                        }
+                        //if (_obj.ImageSS != null && _obj.ImageSS != "")
+                        //{
+                        //    _obj.ImageSS = "akuapp-001-site1.mysitepanel.net/" + _obj.ImageSS;
+                        //}
+                        //else
+                        //{
+                        //    _obj.ImageSS = "";
+                        //}
                     }
                 }
                 return _obj;
@@ -268,68 +268,21 @@ namespace BAL.Repositories
                 return new ItemSettingsBLL();
             }
         }
-        public int Insert(EventBLL data)
+        public int Insert(EventAttendeesBLL data)
         {
             try
             {                 
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[20];
+                SqlParameter[] p = new SqlParameter[5];
 
-                p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@Type", data.Type);                
-                p[2] = new SqlParameter("@Description", data.Description);                
-                p[3] = new SqlParameter("@FromDate", data.FromDate);
-                p[4] = new SqlParameter("@ToDate", data.ToDate);
-                p[5] = new SqlParameter("@EventDate", DateTime.UtcNow.AddMinutes(300));
-                p[6] = new SqlParameter("@EventCity", data.EventCity);
-                p[7] = new SqlParameter("@LocationLink", data.LocationLink);
-                p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[10] = new SqlParameter("@Email", data.Email);
-                p[11] = new SqlParameter("@Facebook", data.Facebook);
-                p[12] = new SqlParameter("@Instagram", data.Instagram);
-                p[13] = new SqlParameter("@Twitter", data.Twitter);
-                //p[14] = new SqlParameter("@Image", data.EventImages[0].Image);
-                p[14] = new SqlParameter("@Image", data.Image);
-                p[15] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
-                p[16] = new SqlParameter("@IsFeatured", data.IsFeatured);
-                p[17] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[18] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
-                p[19] = new SqlParameter("@EventTime", data.EventTime);
+                p[0] = new SqlParameter("@FullName", data.FullName);
+                p[1] = new SqlParameter("@Email", data.Email);                
+                p[2] = new SqlParameter("@PhoneNo", data.PhoneNo);
+                p[3] = new SqlParameter("@StatusID", 101);
+                p[4] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
 
-                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertEvent_Admin", p).Rows[0]["EventID"].ToString());
-
-                if (data.EventCategoryID != null )
-                {
-                    SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
-                    p1[1] = new SqlParameter("@EventCategory", data.EventCategoryID.ToString());
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventCatMapping_Admin", p1);
-                }
-                if (data.Speakers != "" && data.Speakers != null)
-                {
-                    SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
-                    p1[1] = new SqlParameter("@Speaker", data.Speakers);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertSpeakerMapping_Admin", p1);
-                }
-                if (data.Organizers != "" && data.Organizers != null)
-                {
-                    SqlParameter[] p1 = new SqlParameter[2];
-                    p1[0] = new SqlParameter("@EventID", rtn);
-                    p1[1] = new SqlParameter("@Organizer", data.Organizers);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertOrganizerMapping_Admin", p1);
-                }
-                try
-                {
-                    var imgStr = String.Join(",", data.EventImages.Select(p => p.Image));
-                    SqlParameter[] p3 = new SqlParameter[3];
-                    p3[0] = new SqlParameter("@Images", imgStr);
-                    p3[1] = new SqlParameter("@EventID", rtn);
-                    p3[2] = new SqlParameter("@Createdon", DateTime.UtcNow.AddMinutes(300));
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventImages_Admin", p3);
-                }
-                catch { }
+                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertEventAttendees", p).Rows[0]["AttendeesID"].ToString());
+                 
                 return rtn;
             }
             catch (Exception ex)
@@ -358,52 +311,16 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[9];
+                SqlParameter[] p = new SqlParameter[5];
 
-                p[0] = new SqlParameter("@FullName", data.FullName);
-                p[1] = new SqlParameter("@EventID", data.EventID);
-                p[2] = new SqlParameter("@Email", data.Email);
-                p[3] = new SqlParameter("@PhoneNo", data.PhoneNo);
-                p[4] = new SqlParameter("@Occupation", data.Occupation);
-                p[5] = new SqlParameter("@Gender", data.Gender);                
-                p[6] = new SqlParameter("@StatusID", data.StatusID);                
-                p[7] = new SqlParameter("@AttendeesID", data.AttendeesID);
-                p[8] = new SqlParameter("@Updatedon", data.Updatedon);
+                p[0] = new SqlParameter("@FullName", data.FullName);                
+                p[1] = new SqlParameter("@Email", data.Email);
+                p[2] = new SqlParameter("@PhoneNo", data.PhoneNo);                                                       
+                p[3] = new SqlParameter("@AttendeesID", data.AttendeesID);
+                p[4] = new SqlParameter("@Updatedon", data.Updatedon);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateEventAttendees_Admin", p);
-                
-
-                //if (data.EventCategoryID != null )
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[2];
-                //    p1[0] = new SqlParameter("@EventID", data.EventID);
-                //    p1[1] = new SqlParameter("@EventCategory", data.EventCategoryID.ToString());
-                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventCatMapping_Admin", p1);
-                //}
-                //if (data.Speakers != "" && data.Speakers != null)
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[2];
-                //    p1[0] = new SqlParameter("@EventID", data.EventID);
-                //    p1[1] = new SqlParameter("@Speaker", data.Speakers);
-                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertSpeakerMapping_Admin", p1);
-                //}
-                //if (data.Organizers != "" && data.Organizers != null)
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[2];
-                //    p1[0] = new SqlParameter("@EventID", data.EventID);
-                //    p1[1] = new SqlParameter("@Organizer", data.Organizers);
-                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertOrganizerMapping_Admin", p1);
-                //}
-                //try
-                //{
-                //    var imgStr = String.Join(",", data.EventImages.Select(p => p.Image));
-                //    SqlParameter[] p3 = new SqlParameter[3];
-                //    p3[0] = new SqlParameter("@Images", imgStr);
-                //    p3[1] = new SqlParameter("@EventID", data.EventID);
-                //    p3[2] = new SqlParameter("@Createdon", data.Updatedon);
-                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertEventImages_Admin", p3);
-                //}
-                //catch { }
+               
                 return rtn;
             }
             catch (Exception ex)

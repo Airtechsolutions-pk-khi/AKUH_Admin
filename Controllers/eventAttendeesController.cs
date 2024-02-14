@@ -55,7 +55,7 @@ namespace AKU_Admin.Controllers
         }
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody]EventBLL obj)
+        public int Post([FromBody] EventAttendeesBLL obj)
         {
             return _service.Insert(obj, _env);
         }

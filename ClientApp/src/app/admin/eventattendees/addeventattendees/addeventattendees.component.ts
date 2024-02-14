@@ -33,16 +33,7 @@ export class AddEventAttendeesComponent implements OnInit {
   AddonsList = [];
   selectedModifierIds: string[];
   selectedAddonIds: string[];
-  //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-  eventTime = 
-  { 
-    hour: new Date().getHours() % 12 || 12, 
-    minute: new Date().getMinutes(), 
-    ampm: new Date().getHours() >= 12 ? 'PM' : 'AM' 
-    
-  };
-
-   
+  
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
@@ -60,8 +51,7 @@ export class AddEventAttendeesComponent implements OnInit {
     this.createForm();
 
     this.loadEvent();
-    // this.loadOrganizer();
-    // this.loadSpeaker();
+     
 
   }
 
@@ -77,41 +67,18 @@ export class AddEventAttendeesComponent implements OnInit {
     this.eventAttendeesForm = this.formBuilder.group({
       attendeesID: 0,
       fullName: ['', Validators.required],
-      email: [''],
-      phoneNo: [''],
-      statusID: [true],
-      occupation: [''],     
-      gender: [''],            
-      eventID: [null]
+      email: ['',Validators.required],
+      phoneNo: ['',Validators.required],
+      
     });
   }
 
 
   private editForm(obj) {
     
-    this.f.attendeesID.setValue(obj.attendeesID);
     this.f.fullName.setValue(obj.fullName);
     this.f.email.setValue(obj.email);
     this.f.phoneNo.setValue(obj.phoneNo);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.f.occupation.setValue(obj.occupation);
-    this.f.gender.setValue(obj.gender);
-    this.f.eventID.setValue(obj.eventID);
-    
-    // if (obj.organizers != "") {
-    //   debugger
-    //   var stringToConvert = obj.organizers;
-    //   this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
-    //   this.f.organizers.setValue(obj.organizers);
-    // }
-
-    // if (obj.speakers != "") {
-    //   debugger
-    //   var stringToConvert = obj.speakers;
-    //   this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
-    //   this.f.speakers.setValue(obj.speakers);
-    // }
-
      
   }
    
@@ -138,7 +105,7 @@ export class AddEventAttendeesComponent implements OnInit {
     if (this.eventAttendeesForm.invalid) { return; }
     this.loading = true;
     
-    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    //this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
      
     if (parseInt(this.f.attendeesID.value) === 0) {
 
@@ -147,7 +114,7 @@ export class AddEventAttendeesComponent implements OnInit {
       this.eventAttendeesService.insert(this.eventAttendeesForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Event added successfully.")
-          this.router.navigate(['/admin/event']);
+          this.router.navigate(['/admin/eventattendees']);
         }
         this.loading = false;
       }, error => {

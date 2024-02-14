@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Event Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Type</label>\r\n              <select class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option>Onsite</option>\r\n                <option>Online</option>\r\n                <option>Both</option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventLink placeholder=\"\" formControlName=\"eventLink\">\r\n            </div>\r\n\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" class=\"form-control\" id=email placeholder=\"abc@gmail.com\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors?.required\">\r\n                  Email is required.\r\n                </div>\r\n                <div *ngIf=\"f.email.errors?.pattern\">\r\n                  Please enter a valid email address.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" maxlength=\"12\" class=\"form-control\" id=phoneNo placeholder=\"xxxx-xxxxxxx\" formControlName=\"phoneNo\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Workshop Detail Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Venue</label>\r\n              <input type=\"text\" class=\"form-control\" id=location placeholder=\"\" formControlName=\"location\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category<em style=\"color: red;\">*</em></label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n\r\n              <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n              </ejs-richtexteditor>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"mb-1\" for=\"inputLocation\">Choose Start to End Date<em style=\"color: red;\">*</em></label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Is Workshop</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event Start Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event End Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventEndTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images <em style=\"color: red;\">*</em></label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Event Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Type</label>\r\n              <select class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option>Onsite</option>\r\n                <option>Online</option>\r\n                <option>Both</option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventLink placeholder=\"\" formControlName=\"eventLink\">\r\n            </div>\r\n\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" class=\"form-control\" id=email placeholder=\"abc@gmail.com\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors?.required\">\r\n                  Email is required.\r\n                </div>\r\n                <div *ngIf=\"f.email.errors?.pattern\">\r\n                  Please enter a valid email address.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" maxlength=\"12\" class=\"form-control\" id=phoneNo placeholder=\"xxxx-xxxxxxx\" formControlName=\"phoneNo\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Workshop Detail Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Venue</label>\r\n              <input type=\"text\" class=\"form-control\" id=location placeholder=\"\" formControlName=\"location\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category<em style=\"color: red;\">*</em></label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n\r\n              <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n              </ejs-richtexteditor>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"mb-1\" for=\"inputLocation\">Choose Start to End Date<em style=\"color: red;\">*</em></label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\" style=\"display: none;\">\r\n              <label for=\"Item Status\">Is Workshop</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event Start Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event End Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventEndTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images <em style=\"color: red;\">*</em></label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Event Category Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                        <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                        <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.name.errors.required\">\r\n                            Name is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"description\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"form-group col-md-4 text-center\">\r\n                      <app-imageupload></app-imageupload>\r\n                    </div>\r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Event Category Details</div>\r\n                <div class=\"card-body\">\r\n                  <div class=\"form-row\">\r\n                    <div class=\"form-group col-md-8\">\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                        <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                        <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                          <div *ngIf=\"f.name.errors.required\">\r\n                            Name is required.\r\n                          </div>\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Display Order</label>\r\n                        <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                      </div>\r\n                      <div class=\"form-group\">\r\n                        <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                        <textarea type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"description\"></textarea>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"form-group col-md-4 text-center\">\r\n                      <app-imageupload></app-imageupload>\r\n                    </div>\r\n                  </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -348,7 +348,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Category List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event Category</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Description </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventCategoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Category List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Event Category</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Descripiton\" (sort)=\"onSort($event)\">Display Order </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.displayOrder}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.eventCategoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -374,7 +374,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Attendies</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventAttendeesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Attendies Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <!-- <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"fullName\">\r\n              <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.fullName.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div> -->\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Occupation</label>\r\n              <input type=\"text\" class=\"form-control\" id=occupation placeholder=\"\" formControlName=\"occupation\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n              <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Male</option>\r\n                <option>Female</option>                \r\n              </select>\r\n            </div>\r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Events</label>\r\n              <!-- <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>               -->\r\n              <select class=\"custom-select\" formControlName=\"eventID\">\r\n                <option [ngValue]=\"option.eventID\" selected=\"option.eventID == eventID\"\r\n                        *ngFor=\"let option of EventList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n             \r\n          </div>\r\n         \r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n           \r\n           \r\n\r\n          </div>\r\n          \r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event Attendies</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventAttendeesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Attendies Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            \r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Full Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=phoneNo placeholder=\"\" formControlName=\"phoneNo\">\r\n            </div>\r\n            \r\n            \r\n          </div>\r\n          \r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -387,7 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Attendees</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Attendees List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <!-- <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Attendee</span>\r\n        </button> -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\">Attendee Name </th>\r\n            <th width=\"10%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Event Name</th>-->\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Contact No</th>\r\n            <!--<th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Occupation</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>-->\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td> {{item.eventName}} </td>-->\r\n            <td>{{item.phoneNo}}</td>\r\n            <!--<td>{{item.occupation}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>-->\r\n            <td>\r\n              <ngb-highlight \r\n              [ngClass]=\"{\r\n                'btn-success': item.statusID === 102,\r\n                'btn-warning': item.statusID === 101, \r\n                'btn-danger':item.statusID === 103 \r\n              }\" \r\n              class=\"btn btn-sm\" \r\n              [result]=\"\r\n              item.statusID ==101?'Pending': \r\n              item.statusID ==102?'Approved': 'Rejected'\r\n              \" \r\n              [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <!-- <a (click)=\"Edit(item.attendeesID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n\r\n              <a (click)=\"View(item.attendeesID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Event Attendees</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Event Attendees List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Attendee</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"10%\" sortable=\"Name\" (sort)=\"onSort($event)\">Attendee Name </th>\r\n            <th width=\"10%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Event Name</th>-->\r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\">Contact No</th>\r\n            <!--<th width=\"10%\" sortable=\"dalories\" (sort)=\"onSort($event)\">Occupation</th>            \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Date </th>-->\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td> {{item.eventName}} </td>-->\r\n            <td>{{item.phoneNo}}</td>\r\n            <!--<td>{{item.occupation}}</td>            \r\n            <td>{{item.fromDate | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.toDate | date:'dd/MM/yyyy'}}</td>-->\r\n            <td>\r\n              <ngb-highlight \r\n              [ngClass]=\"{\r\n                'btn-success': item.statusID === 102,\r\n                'btn-warning': item.statusID === 101, \r\n                'btn-danger':item.statusID === 103 \r\n              }\" \r\n              class=\"btn btn-sm\" \r\n              [result]=\"\r\n              item.statusID ==101?'Pending': \r\n              item.statusID ==102?'Approved': 'Rejected'\r\n              \" \r\n              [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <!-- <a (click)=\"Edit(item.attendeesID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n\r\n              <a (click)=\"View(item.attendeesID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -634,7 +634,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Message</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"messageForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n              <div class=\"card-header\">Message Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Designation</label>\r\n                                <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\">\r\n                                \r\n                            </div>\r\n                            \r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                  <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                    \r\n                                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n                                  </ejs-richtexteditor>\r\n                    \r\n                                </div>\r\n                              </div>\r\n\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Message</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"messageForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n              <div class=\"card-header\">Message Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                      <div class=\"form-group col-md-8\">\r\n                        <div class=\"form-group\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                          <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                          <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                            <div *ngIf=\"f.name.errors.required\">\r\n                              Name is required.\r\n                            </div>\r\n                          </div>\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Designation</label>\r\n                          <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\">\r\n\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Display Order</label>\r\n                          <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                          <div class=\"form-group col-md-12\">\r\n                            <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n\r\n                            <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n                            </ejs-richtexteditor>\r\n\r\n                          </div>\r\n                        </div>\r\n\r\n                      </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -647,7 +647,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Message</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Message List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Message</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>  \r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Designation </th>            \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td> \r\n            <td> {{item.designation}} </td>            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.messageID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Message</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Message List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Message</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>  \r\n            <th width=\"15%\" sortable=\"designation\" (sort)=\"onSort($event)\"> Designation </th>            \r\n            <th width=\"15%\" sortable=\"displayOrder\" (sort)=\"onSort($event)\"> Display Order </th>            \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td> \r\n            <td> {{item.designation}} </td>            \r\n            <td> {{item.displayOrder}} </td>            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.messageID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -673,7 +673,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organisingcommitteeForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Speaker Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              \r\n             \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Designation</label>\r\n                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"designation\">\r\n                  </ejs-richtexteditor>\r\n                  <!--<textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>-->\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Organising Committee</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organisingcommitteeForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Organising Committee Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              \r\n             \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Designation</label>\r\n                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"designation\">\r\n                  </ejs-richtexteditor>\r\n                  <!--<textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>-->\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -686,7 +686,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Speaker</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Speaker List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Speaker</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"Designation\" (sort)=\"onSort($event)\">Designation </th>\r\n          \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.designation}} </td>\r\n            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Organising Committee</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Organising Committee List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Organising Committee</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <!-- <th width=\"20%\" sortable=\"Designation\" (sort)=\"onSort($event)\">Designation </th> -->\r\n          \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <!-- <td> {{item.designation}} </td> -->\r\n            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -998,7 +998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Sales Summary</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\">\r\n\r\n            </div>\r\n        </div>\r\n        <hr/>\r\n        <div class=\"row\">\r\n\r\n            <div class=\"col-md-9 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n            <div class=\"col-md-3 form-group\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"getData()\" type=\"submit\">Search</button>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-primary shadow h-100 py-2\">\r\n\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Sales</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalSales}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Tax</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalTax}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Discount</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalDiscount}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total NetSales</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalNetSales}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-primary shadow h-100 py-2\">\r\n\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalSalesOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Delivery Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalDeliveryOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total PickUp Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalPickUpOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Cancel Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalCancelOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Sales Summary</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\">\r\n\r\n            </div>\r\n        </div>\r\n        <hr/>\r\n        <div class=\"row\">\r\n\r\n            <div class=\"col-md-9 form-group\">\r\n                <label>Select Date</label>\r\n                <input type=\"date\" name=\"date\" id=\"date\"/>\r\n            </div>\r\n            <div class=\"col-md-3 form-group\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"getData()\" type=\"submit\">Search</button>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-primary shadow h-100 py-2\">\r\n\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Sales</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalSales}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Tax</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalTax}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Discount</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalDiscount}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total NetSales</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalNetSales}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-primary shadow h-100 py-2\">\r\n\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalSalesOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Delivery Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalDeliveryOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total PickUp Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalPickUpOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col mr-2\">\r\n                                <div class=\"text-xs font-weight-bold text-primary text-uppercase mb-1\">Total Cancel Orders</div>\r\n                                <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{_model.totalCancelOrders}}</div>\r\n                            </div>\r\n                            <div class=\"col-auto\">\r\n\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>");
 
 /***/ }),
 
@@ -1366,6 +1366,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/addworkshop/addworkshop.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/addworkshop/addworkshop.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Workshop</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"workshopForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Workshop Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n                  <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.name.errors.required\">\r\n                      Event Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Pdf Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=pdfLink placeholder=\"\" formControlName=\"pdfLink\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=link placeholder=\"\" formControlName=\"link\">\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n                  <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n                  <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"organizerID\" formControlName=\"organizerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"mb-1\" for=\"inputLocation\">Date<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"date\" class=\"form-control\" checked id=\"date\" formControlName=\"date\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">Start Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"startTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">End Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"endTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n                  </ejs-richtexteditor>\r\n\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-lg-4\">\r\n                  <label for=\"Item Status\">Status</label>\r\n                  <div class=\"custom-control custom-switch custom-switch-md\">\r\n                    <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                    <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/workshop.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/workshop.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Workshops</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Workshop List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Workshop</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"20%\" sortable=\"categoryName\" (sort)=\"onSort($event)\">Organised by</th>\r\n               \r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\"> Date </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Start Time </th>\r\n            <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">End Time </th>\r\n            <th width=\"10%\" sortable=\"status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.organizerName}} </td>\r\n                 \r\n            <td>{{item.date | date:'dd/MM/yyyy'}}</td>\r\n            <td>{{item.startTime}}</td>\r\n            <td>{{item.endTime}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.workshopID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -1453,7 +1479,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n\r\n      <!--<hr class=\"sidebar-divider\">\r\n \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>User</span>\r\n        </a>\r\n        <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users</a>                               \r\n          </div>\r\n        </div>\r\n      </li>-->\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -8575,6 +8601,164 @@ UserService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/workshop.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/_services/workshop.service.ts ***!
+  \***********************************************/
+/*! exports provided: WorkshopService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkshopService", function() { return WorkshopService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let WorkshopService = class WorkshopService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    ExportList() {
+        return this.http.get(`api/workshop/all`);
+    }
+    getById(id) {
+        return this.http.get(`api/workshop/${id}`);
+    }
+    getAllData() {
+        debugger;
+        const url = `api/workshop/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.workshop = res;
+                this._data$.next(this.workshop);
+                this._allData$.next(this.workshop);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.workshop, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post(`api/workshop/insert`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/workshop/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(updateData) {
+        return this.http.post(`api/workshop/delete`, updateData);
+    }
+};
+WorkshopService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+WorkshopService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], WorkshopService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/company/brands/addbrand/addbrand.component.css":
 /*!**********************************************************************!*\
   !*** ./src/app/admin/company/brands/addbrand/addbrand.component.css ***!
@@ -10077,6 +10261,7 @@ let AddEventCategoryComponent = class AddEventCategoryComponent {
             description: [''],
             image: [''],
             statusID: [true],
+            displayOrder: [],
             eventCategoryID: 0,
         });
     }
@@ -10085,6 +10270,7 @@ let AddEventCategoryComponent = class AddEventCategoryComponent {
         this.f.description.setValue(obj.description);
         this.f.eventCategoryID.setValue(obj.eventCategoryID);
         this.f.image.setValue(obj.image);
+        this.f.displayOrder.setValue(obj.displayOrder);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.imgComp.imageUrl = obj.image;
     }
@@ -10488,16 +10674,8 @@ let AddEventAttendeesComponent = class AddEventAttendeesComponent {
         this.SpeakerList = [];
         this.ModifiersList = [];
         this.AddonsList = [];
-        //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-        this.eventTime = {
-            hour: new Date().getHours() % 12 || 12,
-            minute: new Date().getMinutes(),
-            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-        };
         this.createForm();
         this.loadEvent();
-        // this.loadOrganizer();
-        // this.loadSpeaker();
     }
     ngOnInit() {
         this.setSelecteditem();
@@ -10507,35 +10685,14 @@ let AddEventAttendeesComponent = class AddEventAttendeesComponent {
         this.eventAttendeesForm = this.formBuilder.group({
             attendeesID: 0,
             fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            email: [''],
-            phoneNo: [''],
-            statusID: [true],
-            occupation: [''],
-            gender: [''],
-            eventID: [null]
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            phoneNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
         });
     }
     editForm(obj) {
-        this.f.attendeesID.setValue(obj.attendeesID);
         this.f.fullName.setValue(obj.fullName);
         this.f.email.setValue(obj.email);
         this.f.phoneNo.setValue(obj.phoneNo);
-        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-        this.f.occupation.setValue(obj.occupation);
-        this.f.gender.setValue(obj.gender);
-        this.f.eventID.setValue(obj.eventID);
-        // if (obj.organizers != "") {
-        //   debugger
-        //   var stringToConvert = obj.organizers;
-        //   this.selectedOrganizerIds = stringToConvert.split(',').map(Number);
-        //   this.f.organizers.setValue(obj.organizers);
-        // }
-        // if (obj.speakers != "") {
-        //   debugger
-        //   var stringToConvert = obj.speakers;
-        //   this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
-        //   this.f.speakers.setValue(obj.speakers);
-        // }
     }
     setSelecteditem() {
         this.route.paramMap.subscribe(param => {
@@ -10558,14 +10715,14 @@ let AddEventAttendeesComponent = class AddEventAttendeesComponent {
             return;
         }
         this.loading = true;
-        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        //this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
         if (parseInt(this.f.attendeesID.value) === 0) {
             //Insert item
             console.log(JSON.stringify(this.eventAttendeesForm.value));
             this.eventAttendeesService.insert(this.eventAttendeesForm.value).subscribe(data => {
                 if (data != 0) {
                     this.ts.showSuccess("Success", "Event added successfully.");
-                    this.router.navigate(['/admin/event']);
+                    this.router.navigate(['/admin/eventattendees']);
                 }
                 this.loading = false;
             }, error => {
@@ -13803,6 +13960,7 @@ let AddMessageComponent = class AddMessageComponent {
             description: [''],
             designation: [''],
             statusID: [true],
+            displayOrder: [0],
             messageID: 0,
             image: [''],
         });
@@ -13814,6 +13972,7 @@ let AddMessageComponent = class AddMessageComponent {
         this.f.designation.setValue(obj.designation);
         this.f.messageID.setValue(obj.messageID);
         this.f.image.setValue(obj.image);
+        this.f.displayOrder.setValue(obj.displayOrder);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.imgComp.imageUrl = obj.image;
     }
@@ -21900,6 +22059,413 @@ UserEventReportComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/admin/workshop/addworkshop/addworkshop.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/admin/workshop/addworkshop/addworkshop.component.css ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3dvcmtzaG9wL2FkZHdvcmtzaG9wL2FkZHdvcmtzaG9wLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/admin/workshop/addworkshop/addworkshop.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/admin/workshop/addworkshop/addworkshop.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: AddWorkshopComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddWorkshopComponent", function() { return AddWorkshopComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/event.service */ "./src/app/_services/event.service.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @syncfusion/ej2-angular-richtexteditor */ "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
+/* harmony import */ var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/_services/workshop.service */ "./src/app/_services/workshop.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+//import { ItemsService } from 'src/app/_services/items.service';
+
+
+
+
+
+
+//import { CategoryService } from 'src/app/_services/category.service';
+
+
+const now = new Date();
+let AddWorkshopComponent = class AddWorkshopComponent {
+    constructor(formBuilder, router, route, ls, ts, workshopService, service) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.workshopService = workshopService;
+        this.service = service;
+        this.tools = {
+            items: ['Undo', 'Redo', '|',
+                'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+                'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+                'SubScript', 'SuperScript', '|',
+                'LowerCase', 'UpperCase', '|',
+                'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+                'Indent', 'Outdent', '|', 'CreateLink']
+            //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+        };
+        this.quickTools = {
+            image: [
+                'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension'
+            ]
+        };
+        this.submitted = false;
+        this.loading = false;
+        this.loadingItems = false;
+        this.OrganizerList = [];
+        this.startTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.endTime = {
+            hour: new Date().getHours() % 12 || 12,
+            minute: new Date().getMinutes(),
+            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.createForm();
+        this.loadOrganizer();
+    }
+    ngOnInit() {
+        this.setSelecteditem();
+    }
+    get f() { return this.workshopForm.controls; }
+    createForm() {
+        this.workshopForm = this.formBuilder.group({
+            workshopID: 0,
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            description: [''],
+            statusID: [true],
+            location: [''],
+            pdfLink: [''],
+            link: [''],
+            date: [''],
+            startTime: [''],
+            endTime: [''],
+            organizerID: [],
+            image: [''],
+            displayOrder: [0],
+        });
+    }
+    editForm(obj) {
+        debugger;
+        this.f.workshopID.setValue(obj.workshopID);
+        this.f.name.setValue(obj.name);
+        this.f.description.setValue(obj.description);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.f.date.setValue(obj.date);
+        this.f.pdfLink.setValue(obj.pdfLink);
+        this.startTime = {
+            hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
+            minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
+            ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.endTime = {
+            hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
+            minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
+            ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
+        };
+        this.f.link.setValue(obj.link);
+        this.f.displayOrder.setValue(obj.displayOrder);
+        if (obj.organizerID != "") {
+            debugger;
+            var stringToConvert = obj.organizerID;
+            this.f.organizerID.setValue(obj.organizerID);
+        }
+        this.imgComp.imageUrl = obj.image;
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
+        ;
+    }
+    setSelecteditem() {
+        debugger;
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingItems = true;
+                this.f.workshopID.setValue(sid);
+                this.workshopService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingItems = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        debugger;
+        this.workshopForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.workshopForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        const formattedHour = (this.startTime.hour % 12 || 12);
+        const formattedMinute = this.pad(this.startTime.minute);
+        const formattedAMPM = this.startTime.hour >= 12 ? 'PM' : 'AM';
+        const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+        this.f.startTime.setValue(formattedTime);
+        const formattedEndHour = (this.endTime.hour % 12 || 12);
+        const formattedEndMinute = this.pad(this.endTime.minute);
+        const formattedEndAMPM = this.endTime.hour >= 12 ? 'PM' : 'AM';
+        const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;
+        this.f.endTime.setValue(formattedEndTime);
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.workshopID.value) === 0) {
+            //Insert item
+            console.log(JSON.stringify(this.workshopForm.value));
+            this.workshopService.insert(this.workshopForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Workshop added successfully.");
+                    this.router.navigate(['/admin/workshop']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert Workshop.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update item
+            this.workshopService.update(this.workshopForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Workshop updated successfully.");
+                    this.router.navigate(['/admin/workshop']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update Workshop.");
+                this.loading = false;
+            });
+        }
+    }
+    pad(value) {
+        return value < 10 ? `0${value}` : `${value}`;
+    }
+    loadOrganizer() {
+        this.service.loadOrganizer().subscribe((res) => {
+            this.OrganizerList = res;
+        });
+    }
+};
+AddWorkshopComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"] },
+    { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] }
+];
+AddWorkshopComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddWorkshopComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addworkshop',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addworkshop.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/addworkshop/addworkshop.component.html")).default,
+        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["HtmlEditorService"]],
+        styles: [__importDefault(__webpack_require__(/*! ./addworkshop.component.css */ "./src/app/admin/workshop/addworkshop/addworkshop.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"],
+        src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])
+], AddWorkshopComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/workshop/workshop.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/admin/workshop/workshop.component.ts ***!
+  \******************************************************/
+/*! exports provided: WorkshopComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkshopComponent", function() { return WorkshopComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/workshop.service */ "./src/app/_services/workshop.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let WorkshopComponent = class WorkshopComponent {
+    constructor(service, ls, excelService, ts, router, modalService) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.modalService = modalService;
+        this.selectedBrand = this.ls.getSelectedBrand().brandID;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList().subscribe((res) => {
+            this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(items) {
+        this.router.navigate(["admin/workshop/edit", items]);
+    }
+    Delete(obj) {
+        debugger;
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        debugger;
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
+    Deactive(id, rowVersion) {
+        //   this.service.deactive(parseInt(id), rowVersion).subscribe((res: any) => {
+        //     this.alertService.success("items has been Deactived");
+        //     this.getBrandData();
+        //   }, error => {
+        //     this.alertService.error(error);
+        //   });
+    }
+};
+WorkshopComponent.ctorParameters = () => [
+    { type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_7__["WorkshopService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"] }
+];
+WorkshopComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+WorkshopComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-workshop',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./workshop.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/workshop.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_7__["WorkshopService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])
+], WorkshopComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.ts":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -22059,6 +22625,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./admin/message/add/addmessage.component */ "./src/app/admin/message/add/addmessage.component.ts");
 /* harmony import */ var _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./admin/organisingcommittee/organisingcommittee.component */ "./src/app/admin/organisingcommittee/organisingcommittee.component.ts");
 /* harmony import */ var _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component */ "./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.ts");
+/* harmony import */ var _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./admin/workshop/workshop.component */ "./src/app/admin/workshop/workshop.component.ts");
+/* harmony import */ var _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./admin/workshop/addworkshop/addworkshop.component */ "./src/app/admin/workshop/addworkshop/addworkshop.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22179,6 +22748,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -22279,11 +22851,14 @@ AppModule = __decorate([
             _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"],
             _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"],
             _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"],
-            _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"]
+            _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"],
+            _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"],
+            _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_114__["CommonModule"],
             ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"],
@@ -22414,6 +22989,9 @@ AppModule = __decorate([
                         { path: 'organizer', component: _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"] },
                         { path: 'organizer/add', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
                         { path: 'organizer/edit/:id', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
+                        { path: 'workshop', component: _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"] },
+                        { path: 'workshop/add', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"] },
+                        { path: 'workshop/edit/:id', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"] },
                         { path: 'message', component: _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"] },
                         { path: 'message/add', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"] },
                         { path: 'message/edit/:id', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"] },

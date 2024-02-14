@@ -8,15 +8,7 @@
         <div class="card-header">Event Attendies Details</div>
         <div class="card-body">
           <div class="form-row">
-            <!-- <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputUsername">Full Name</label>
-              <input type="text" class="form-control" id=Name placeholder="" formControlName="fullName">
-              <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.name.touched)" class="alert alert-danger">
-                <div *ngIf="f.fullName.errors.required">
-                  Name is required.
-                </div>
-              </div>
-            </div> -->
+            
             <div class="form-group col-md-4">
               <label class="small mb-1" for="inputUsername">Full Name</label>
               <input type="text" class="form-control" id=fullName placeholder="" formControlName="fullName">
@@ -29,50 +21,8 @@
               <label class="small mb-1" for="inputUsername">Contact No</label>
               <input type="text" class="form-control" id=phoneNo placeholder="" formControlName="phoneNo">
             </div>
-            <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLastName">Occupation</label>
-              <input type="text" class="form-control" id=occupation placeholder="" formControlName="occupation">
-            </div>
-            <div class="form-group col-md-4">
-              <label class="small mb-1" for="inputLastName">Gender</label>
-              <select type="text" class="form-control" id=gender placeholder="" formControlName="gender">
-                <option selected disabled> -- Please Select -- </option>
-                <option>Male</option>
-                <option>Female</option>                
-              </select>
-            </div>
-          </div>
-         
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Events</label>
-              <!-- <select class="custom-select" formControlName="eventID">
-                <option [ngValue]="option.eventID" selected="option.eventID == eventID"
-                        *ngFor="let option of EventList">
-                  {{option.name}}
-                </option>
-              </select>               -->
-              <select class="custom-select" formControlName="eventID">
-                <option [ngValue]="option.eventID" selected="option.eventID == eventID"
-                        *ngFor="let option of EventList">
-                  {{option.name}}
-                </option>
-              </select>
-            </div>
-             
-          </div>
-         
-          <div class="form-row">
-            <div class="form-group col-lg-12">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>
-           
-           
-
+            
+            
           </div>
           
           <!-- Save changes button-->

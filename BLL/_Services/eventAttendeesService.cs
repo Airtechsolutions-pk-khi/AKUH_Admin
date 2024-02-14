@@ -276,29 +276,29 @@ namespace AKU_Admin.BLL._Services
         {
             return _service.GetItemSettings(brandID);
         }
-        public int Insert(EventBLL data, IWebHostEnvironment _env)
+        public int Insert(EventAttendeesBLL data, IWebHostEnvironment _env)
         {
             List<EventImagesBLL> imBLL = new List<EventImagesBLL>();
             try
             {
                 //data.Image = UploadImage(data.Image, "Event", _env);
                 data.Createdon = DateTime.UtcNow.AddMinutes(300);
-                for (int i = 0; i < data.ImagesSource.Count; i++)
-                {
-                    var img = data.ImagesSource[i].ToString();
-                    if (i == 0)
-                    {
-                        data.Image = UploadImage(img, "Event", _env);
-                    }
+                //for (int i = 0; i < data.ImagesSource.Count; i++)
+                //{
+                //    var img = data.ImagesSource[i].ToString();
+                //    if (i == 0)
+                //    {
+                //        data.Image = UploadImage(img, "Event", _env);
+                //    }
 
-                    imBLL.Add(new EventImagesBLL
-                    {
-                        Image = UploadImage(img, "Event", _env),
-                        Createdon = data.Createdon
-                    });
+                //    imBLL.Add(new EventImagesBLL
+                //    {
+                //        Image = UploadImage(img, "Event", _env),
+                //        Createdon = data.Createdon
+                //    });
 
-                }
-                data.EventImages = imBLL;
+                //}
+                //data.EventImages = imBLL;
 
                 var result = _service.Insert(data);
 
