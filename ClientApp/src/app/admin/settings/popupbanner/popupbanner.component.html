@@ -1,0 +1,92 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Popup Banners</h1>
+<p class="mb-4"></p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-5">
+        <h6 class="m-0 font-weight-bold text-orange">Popup Banners List</h6>
+      </div>
+      <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+      </div>
+
+      <div class="col-md-3 text-right">
+        <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
+          <span translate>Export</span>
+        </button>
+        <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
+          <span translate>Add Popup Banner</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="tile-body p-0 table-responsive ">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-header">
+            <th width="10%">IMAGE</th>
+            <th width="15%" sortable="name" (sort)="onSort($event)"> Name </th>  
+                
+            <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
+            <th width="15%">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data$ | async ">
+            <td>
+              <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
+              <div *ngIf="item.image === ''" class="image-replace"></div>
+            </td>
+            <td> {{item.name}} </td> 
+                 
+            <td>
+              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
+              </ngb-highlight>
+            </td>
+            <td>
+              <a (click)="Edit(item.id)"><i class="fas fa-fw fa-edit"></i> </a>
+
+              <a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="pagination-count">
+          Showing
+          <strong>{{(service.pageSize * service.page)-9}}</strong> to
+          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+          <strong>{{(total$ | async)!}}</strong> results
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+        </ngb-pagination>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure to delete this?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
+    <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
+  </div>
+</ng-template>

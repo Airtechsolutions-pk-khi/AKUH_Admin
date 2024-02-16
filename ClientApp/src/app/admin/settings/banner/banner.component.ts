@@ -43,7 +43,8 @@ export class BannerComponent implements OnInit {
     this.getData();
   }
 
-  getData() {    
+  getData() {  
+    debugger  
     this.service.getAllData();    
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;

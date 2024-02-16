@@ -131,6 +131,9 @@ import { AddOrganisingCommitteeComponent } from './admin/organisingcommittee/add
 import { WorkshopComponent } from './admin/workshop/workshop.component';
 import { AddWorkshopComponent } from './admin/workshop/addworkshop/addworkshop.component';
 import { CommonModule } from '@angular/common';
+import { PopupBannerComponent } from './admin/settings/popupbanner/popupbanner.component';
+import { AddPopupBannerComponent } from './admin/settings/popupbanner/add/addpopupbanner.component';
+
 
 @NgModule({
   declarations: [
@@ -231,7 +234,9 @@ import { CommonModule } from '@angular/common';
     OrganisingCommitteeComponent,
     AddOrganisingCommitteeComponent,
     WorkshopComponent,
-    AddWorkshopComponent
+    AddWorkshopComponent,
+    PopupBannerComponent,
+    AddPopupBannerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -289,6 +294,10 @@ import { CommonModule } from '@angular/common';
           { path: 'settings/banner', component: BannerComponent },
           { path: 'settings/banner/add', component: AddbannerComponent },
           { path: 'settings/banner/edit/:id', component: AddbannerComponent },
+
+          { path: 'settings/popupbanner', component: PopupBannerComponent },
+          { path: 'settings/popupbanner/add', component: AddPopupBannerComponent },
+          { path: 'settings/popupbanner/edit/:id', component: AddPopupBannerComponent },
 
           { path: 'settings/corporateclient', component: CorporateClientComponent },
           { path: 'settings/corporateclient/add', component: addcorporateclientComponent },

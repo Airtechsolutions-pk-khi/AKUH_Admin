@@ -1747,6 +1747,46 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/add/addpopupbanner.component.html":
+    /*!********************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/add/addpopupbanner.component.html ***!
+      \********************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsPopupbannerAddAddpopupbannerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Popup Banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"popupbannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n              <div class=\"card-header\">Popup Banner Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                      <div class=\"form-group col-md-8\">\r\n                        <div class=\"form-group\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                          <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                          \r\n                        </div>\r\n                       \r\n\r\n                      </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/popupbanner.component.html":
+    /*!*************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/popupbanner.component.html ***!
+      \*************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsPopupbannerPopupbannerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Popup Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Popup Banners List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-3 text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Add Popup Banner</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>  \r\n                \r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td> \r\n                 \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/addpromotion/addpromotion.component.html":
     /*!*************************************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/addpromotion/addpromotion.component.html ***!
@@ -2202,7 +2242,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/popupbanner']\">popup Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -12982,6 +13022,292 @@
     },
 
     /***/
+    "./src/app/_services/popupbanner.service.ts":
+    /*!**************************************************!*\
+      !*** ./src/app/_services/popupbanner.service.ts ***!
+      \**************************************************/
+
+    /*! exports provided: PopupBannerService */
+
+    /***/
+    function srcApp_servicesPopupbannerServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PopupBannerService", function () {
+        return PopupBannerService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var PopupBannerService = /*#__PURE__*/function () {
+        function PopupBannerService(http) {
+          _classCallCheck(this, PopupBannerService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(PopupBannerService, [{
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/popupbanner/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this34 = this;
+
+            debugger;
+            var url = "api/popupbanner/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this34._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this34.popupBanner = res;
+
+              _this34._data$.next(_this34.popupBanner);
+
+              _this34._allData$.next(_this34.popupBanner);
+
+              _this34._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this34._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this34._loading$.next(false);
+              })).subscribe(function (result) {
+                _this34._data$.next(result.data);
+
+                _this34._total$.next(result.total);
+              });
+
+              _this34._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state31 = this._state,
+                sortColumn = _this$_state31.sortColumn,
+                sortDirection = _this$_state31.sortDirection,
+                pageSize = _this$_state31.pageSize,
+                page = _this$_state31.page,
+                searchTerm = _this$_state31.searchTerm; // 1. sort
+
+            var sortedData = sort(this.popupBanner, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/popupbanner/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/popupbanner/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/popupbanner/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return PopupBannerService;
+      }();
+
+      PopupBannerService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      PopupBannerService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], PopupBannerService);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/prescription.service.ts":
     /*!***************************************************!*\
       !*** ./src/app/_services/prescription.service.ts ***!
@@ -13090,31 +13416,31 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this34 = this;
+            var _this35 = this;
 
             var url = "api/prescription/all/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this34._loading$.next(true);
+              return _this35._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
               debugger;
-              _this34.prescription = res;
+              _this35.prescription = res;
 
-              _this34._data$.next(_this34.prescription);
+              _this35._data$.next(_this35.prescription);
 
-              _this34._allData$.next(_this34.prescription);
+              _this35._allData$.next(_this35.prescription);
 
-              _this34._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this34._search();
+              _this35._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this35._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this34._loading$.next(false);
+                return _this35._loading$.next(false);
               })).subscribe(function (result) {
-                _this34._data$.next(result.data);
+                _this35._data$.next(result.data);
 
-                _this34._total$.next(result.total);
+                _this35._total$.next(result.total);
               });
 
-              _this34._search$.next();
+              _this35._search$.next();
             });
           }
         }, {
@@ -13127,12 +13453,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state31 = this._state,
-                sortColumn = _this$_state31.sortColumn,
-                sortDirection = _this$_state31.sortDirection,
-                pageSize = _this$_state31.pageSize,
-                page = _this$_state31.page,
-                searchTerm = _this$_state31.searchTerm; // 1. sort
+            var _this$_state32 = this._state,
+                sortColumn = _this$_state32.sortColumn,
+                sortDirection = _this$_state32.sortDirection,
+                pageSize = _this$_state32.pageSize,
+                page = _this$_state32.page,
+                searchTerm = _this$_state32.searchTerm; // 1. sort
 
             var sortedData = sort(this.prescription, sortColumn, sortDirection); //// 2. filter
 
@@ -13381,30 +13707,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this35 = this;
+            var _this36 = this;
 
             var url = "api/promotion/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this35._loading$.next(true);
+              return _this36._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this35.promotions = res;
+              _this36.promotions = res;
 
-              _this35._data$.next(_this35.promotions);
+              _this36._data$.next(_this36.promotions);
 
-              _this35._allData$.next(_this35.promotions);
+              _this36._allData$.next(_this36.promotions);
 
-              _this35._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this35._search();
+              _this36._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this36._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this35._loading$.next(false);
+                return _this36._loading$.next(false);
               })).subscribe(function (result) {
-                _this35._data$.next(result.data);
+                _this36._data$.next(result.data);
 
-                _this35._total$.next(result.total);
+                _this36._total$.next(result.total);
               });
 
-              _this35._search$.next();
+              _this36._search$.next();
             });
           }
         }, {
@@ -13417,12 +13743,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state32 = this._state,
-                sortColumn = _this$_state32.sortColumn,
-                sortDirection = _this$_state32.sortDirection,
-                pageSize = _this$_state32.pageSize,
-                page = _this$_state32.page,
-                searchTerm = _this$_state32.searchTerm; // 1. sort
+            var _this$_state33 = this._state,
+                sortColumn = _this$_state33.sortColumn,
+                sortDirection = _this$_state33.sortDirection,
+                pageSize = _this$_state33.pageSize,
+                page = _this$_state33.page,
+                searchTerm = _this$_state33.searchTerm; // 1. sort
 
             var sortedData = sort(this.promotions, sortColumn, sortDirection); //// 2. filter
 
@@ -13661,12 +13987,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state33 = this._state,
-                sortColumn = _this$_state33.sortColumn,
-                sortDirection = _this$_state33.sortDirection,
-                pageSize = _this$_state33.pageSize,
-                page = _this$_state33.page,
-                searchTerm = _this$_state33.searchTerm; // 1. sort
+            var _this$_state34 = this._state,
+                sortColumn = _this$_state34.sortColumn,
+                sortDirection = _this$_state34.sortDirection,
+                pageSize = _this$_state34.pageSize,
+                page = _this$_state34.page,
+                searchTerm = _this$_state34.searchTerm; // 1. sort
 
             var sortedData = sort(this.salescategorywiseReport, sortColumn, sortDirection); //// 2. filter
 
@@ -13953,30 +14279,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this36 = this;
+            var _this37 = this;
 
             var url = "api/speaker/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this36._loading$.next(true);
+              return _this37._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this36.speaker = res;
+              _this37.speaker = res;
 
-              _this36._data$.next(_this36.speaker);
+              _this37._data$.next(_this37.speaker);
 
-              _this36._allData$.next(_this36.speaker);
+              _this37._allData$.next(_this37.speaker);
 
-              _this36._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this36._search();
+              _this37._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this37._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this36._loading$.next(false);
+                return _this37._loading$.next(false);
               })).subscribe(function (result) {
-                _this36._data$.next(result.data);
+                _this37._data$.next(result.data);
 
-                _this36._total$.next(result.total);
+                _this37._total$.next(result.total);
               });
 
-              _this36._search$.next();
+              _this37._search$.next();
             });
           }
         }, {
@@ -13989,12 +14315,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state34 = this._state,
-                sortColumn = _this$_state34.sortColumn,
-                sortDirection = _this$_state34.sortDirection,
-                pageSize = _this$_state34.pageSize,
-                page = _this$_state34.page,
-                searchTerm = _this$_state34.searchTerm; // 1. sort
+            var _this$_state35 = this._state,
+                sortColumn = _this$_state35.sortColumn,
+                sortDirection = _this$_state35.sortDirection,
+                pageSize = _this$_state35.pageSize,
+                page = _this$_state35.page,
+                searchTerm = _this$_state35.searchTerm; // 1. sort
 
             var sortedData = sort(this.speaker, sortColumn, sortDirection); //// 2. filter
 
@@ -14238,30 +14564,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this37 = this;
+            var _this38 = this;
 
             var url = "api/speciality/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this37._loading$.next(true);
+              return _this38._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this37.speciality = res;
+              _this38.speciality = res;
 
-              _this37._data$.next(_this37.speciality);
+              _this38._data$.next(_this38.speciality);
 
-              _this37._allData$.next(_this37.speciality);
+              _this38._allData$.next(_this38.speciality);
 
-              _this37._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this37._search();
+              _this38._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this38._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this37._loading$.next(false);
+                return _this38._loading$.next(false);
               })).subscribe(function (result) {
-                _this37._data$.next(result.data);
+                _this38._data$.next(result.data);
 
-                _this37._total$.next(result.total);
+                _this38._total$.next(result.total);
               });
 
-              _this37._search$.next();
+              _this38._search$.next();
             });
           }
         }, {
@@ -14274,12 +14600,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state35 = this._state,
-                sortColumn = _this$_state35.sortColumn,
-                sortDirection = _this$_state35.sortDirection,
-                pageSize = _this$_state35.pageSize,
-                page = _this$_state35.page,
-                searchTerm = _this$_state35.searchTerm; // 1. sort
+            var _this$_state36 = this._state,
+                sortColumn = _this$_state36.sortColumn,
+                sortDirection = _this$_state36.sortDirection,
+                pageSize = _this$_state36.pageSize,
+                page = _this$_state36.page,
+                searchTerm = _this$_state36.searchTerm; // 1. sort
 
             var sortedData = sort(this.speciality, sortColumn, sortDirection); //// 2. filter
 
@@ -14523,30 +14849,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this38 = this;
+            var _this39 = this;
 
             var url = "api/timeslot/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this38._loading$.next(true);
+              return _this39._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this38.timeslot = res;
+              _this39.timeslot = res;
 
-              _this38._data$.next(_this38.timeslot);
+              _this39._data$.next(_this39.timeslot);
 
-              _this38._allData$.next(_this38.timeslot);
+              _this39._allData$.next(_this39.timeslot);
 
-              _this38._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this38._search();
+              _this39._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this39._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this38._loading$.next(false);
+                return _this39._loading$.next(false);
               })).subscribe(function (result) {
-                _this38._data$.next(result.data);
+                _this39._data$.next(result.data);
 
-                _this38._total$.next(result.total);
+                _this39._total$.next(result.total);
               });
 
-              _this38._search$.next();
+              _this39._search$.next();
             });
           }
         }, {
@@ -14559,12 +14885,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state36 = this._state,
-                sortColumn = _this$_state36.sortColumn,
-                sortDirection = _this$_state36.sortDirection,
-                pageSize = _this$_state36.pageSize,
-                page = _this$_state36.page,
-                searchTerm = _this$_state36.searchTerm; // 1. sort
+            var _this$_state37 = this._state,
+                sortColumn = _this$_state37.sortColumn,
+                sortDirection = _this$_state37.sortDirection,
+                pageSize = _this$_state37.pageSize,
+                page = _this$_state37.page,
+                searchTerm = _this$_state37.searchTerm; // 1. sort
 
             var sortedData = sort(this.timeslot, sortColumn, sortDirection); //// 2. filter
 
@@ -14921,30 +15247,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this39 = this;
+            var _this40 = this;
 
             var url = "api/user/getall";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this39._loading$.next(true);
+              return _this40._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this39.user = res;
+              _this40.user = res;
 
-              _this39._data$.next(_this39.user);
+              _this40._data$.next(_this40.user);
 
-              _this39._allData$.next(_this39.user);
+              _this40._allData$.next(_this40.user);
 
-              _this39._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this39._search();
+              _this40._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this40._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this39._loading$.next(false);
+                return _this40._loading$.next(false);
               })).subscribe(function (result) {
-                _this39._data$.next(result.data);
+                _this40._data$.next(result.data);
 
-                _this39._total$.next(result.total);
+                _this40._total$.next(result.total);
               });
 
-              _this39._search$.next();
+              _this40._search$.next();
             });
           }
         }, {
@@ -14957,12 +15283,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state37 = this._state,
-                sortColumn = _this$_state37.sortColumn,
-                sortDirection = _this$_state37.sortDirection,
-                pageSize = _this$_state37.pageSize,
-                page = _this$_state37.page,
-                searchTerm = _this$_state37.searchTerm; // 1. sort
+            var _this$_state38 = this._state,
+                sortColumn = _this$_state38.sortColumn,
+                sortDirection = _this$_state38.sortDirection,
+                pageSize = _this$_state38.pageSize,
+                page = _this$_state38.page,
+                searchTerm = _this$_state38.searchTerm; // 1. sort
 
             var sortedData = sort(this.user, sortColumn, sortDirection); //// 2. filter
 
@@ -15047,21 +15373,21 @@
         }, {
           key: "getpermission",
           value: function getpermission() {
-            var _this40 = this;
+            var _this41 = this;
 
             debugger;
             var url = "api/user/allpermission";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this40._loading$.next(true);
+              return _this41._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this40.permission = res;
+              _this41.permission = res;
 
-              _this40._obj$.next(_this40.permission);
+              _this41._obj$.next(_this41.permission);
 
-              _this40._allObj$.next(_this40.permission);
+              _this41._allObj$.next(_this41.permission);
 
-              _this40._search$.next();
+              _this41._search$.next();
             });
           }
         }, {
@@ -15270,31 +15596,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this41 = this;
+            var _this42 = this;
 
             debugger;
             var url = "api/workshop/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this41._loading$.next(true);
+              return _this42._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this41.workshop = res;
+              _this42.workshop = res;
 
-              _this41._data$.next(_this41.workshop);
+              _this42._data$.next(_this42.workshop);
 
-              _this41._allData$.next(_this41.workshop);
+              _this42._allData$.next(_this42.workshop);
 
-              _this41._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this41._search();
+              _this42._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this42._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this41._loading$.next(false);
+                return _this42._loading$.next(false);
               })).subscribe(function (result) {
-                _this41._data$.next(result.data);
+                _this42._data$.next(result.data);
 
-                _this41._total$.next(result.total);
+                _this42._total$.next(result.total);
               });
 
-              _this41._search$.next();
+              _this42._search$.next();
             });
           }
         }, {
@@ -15307,12 +15633,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state38 = this._state,
-                sortColumn = _this$_state38.sortColumn,
-                sortDirection = _this$_state38.sortDirection,
-                pageSize = _this$_state38.pageSize,
-                page = _this$_state38.page,
-                searchTerm = _this$_state38.searchTerm; // 1. sort
+            var _this$_state39 = this._state,
+                sortColumn = _this$_state39.sortColumn,
+                sortDirection = _this$_state39.sortDirection,
+                pageSize = _this$_state39.pageSize,
+                page = _this$_state39.page,
+                searchTerm = _this$_state39.searchTerm; // 1. sort
 
             var sortedData = sort(this.workshop, sortColumn, sortDirection); //// 2. filter
 
@@ -15610,21 +15936,21 @@
         }, {
           key: "setSelectedBrand",
           value: function setSelectedBrand() {
-            var _this42 = this;
+            var _this43 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this42.loadingBrand = true;
+                _this43.loadingBrand = true;
 
-                _this42.f.brandID.setValue(sid);
+                _this43.f.brandID.setValue(sid);
 
-                _this42.brandService.getById(sid, _this42.f.brandID.value).subscribe(function (res) {
+                _this43.brandService.getById(sid, _this43.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this42.editForm(res);
+                  _this43.editForm(res);
 
-                  _this42.loadingBrand = false;
+                  _this43.loadingBrand = false;
                 });
               }
             });
@@ -15632,7 +15958,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this43 = this;
+            var _this44 = this;
 
             this.brandForm.markAllAsTouched();
             this.submitted = true;
@@ -15650,38 +15976,38 @@
               console.log(JSON.stringify(this.brandForm.value));
               this.brandService.insert(this.brandForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this43.ts.showSuccess("Success", "Record added successfully.");
+                  _this44.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this43.router.navigate(['/admin/brand']);
+                  _this44.router.navigate(['/admin/brand']);
                 }
 
-                _this43.loading = false;
+                _this44.loading = false;
               }, function (error) {
-                _this43.ts.showError("Error", "Failed to insert record.");
+                _this44.ts.showError("Error", "Failed to insert record.");
 
-                _this43.loading = false;
+                _this44.loading = false;
               });
             } else {
               //Update brand
               this.brandService.update(this.brandForm.value).subscribe(function (data) {
-                _this43.loading = false;
+                _this44.loading = false;
 
                 if (data != 0) {
-                  _this43.ts.showSuccess("Success", "Record updated successfully.");
+                  _this44.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this43.router.navigate(['/admin/brand']);
+                  _this44.router.navigate(['/admin/brand']);
                 }
               }, function (error) {
-                _this43.ts.showError("Error", "Failed to update record.");
+                _this44.ts.showError("Error", "Failed to update record.");
 
-                _this43.loading = false;
+                _this44.loading = false;
               });
             }
           }
         }, {
           key: "selectFile",
           value: function selectFile(event) {
-            var _this44 = this;
+            var _this45 = this;
 
             this.fileData = event.target.files[0];
 
@@ -15690,9 +16016,9 @@
               reader.readAsDataURL(this.fileData);
 
               reader.onload = function () {
-                _this44.imageBgUrl = reader.result;
+                _this45.imageBgUrl = reader.result;
 
-                _this44.f.companyURl.setValue(_this44.imageBgUrl);
+                _this45.f.companyURl.setValue(_this45.imageBgUrl);
               };
             } else {
               alert("file type should be image");
@@ -15867,16 +16193,16 @@
         }, {
           key: "Delete",
           value: function Delete(id) {
-            var _this45 = this;
+            var _this46 = this;
 
             this.service["delete"](parseInt(id)).subscribe(function (res) {
               if (res != 0) {
-                _this45.ts.showSuccess("Success", "Record deleted successfully.");
+                _this46.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this45.getData();
-              } else _this45.ts.showError("Error", "Failed to delete record.");
+                _this46.getData();
+              } else _this46.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this45.ts.showError("Error", "Failed to delete record.");
+              _this46.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16114,21 +16440,21 @@
         }, {
           key: "setSelectedLocations",
           value: function setSelectedLocations() {
-            var _this46 = this;
+            var _this47 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this46.loadingLocations = true;
+                _this47.loadingLocations = true;
 
-                _this46.f.locationID.setValue(sid);
+                _this47.f.locationID.setValue(sid);
 
-                _this46.locationService.getById(sid, _this46.f.brandID.value).subscribe(function (res) {
+                _this47.locationService.getById(sid, _this47.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this46.editForm(res);
+                  _this47.editForm(res);
 
-                  _this46.loadingLocations = false;
+                  _this47.loadingLocations = false;
                 });
               }
             });
@@ -16136,7 +16462,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this47 = this;
+            var _this48 = this;
 
             this.locationForm.markAllAsTouched();
             this.submitted = true;
@@ -16155,32 +16481,32 @@
             if (parseInt(this.f.locationID.value) === 0) {
               //Insert location
               this.locationService.insert(this.locationForm.value).subscribe(function (data) {
-                _this47.loading = false;
+                _this48.loading = false;
 
                 if (data != 0) {
-                  _this47.ts.showSuccess("Success", "Record added successfully.");
+                  _this48.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this47.router.navigate(['/admin/location']);
+                  _this48.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this47.ts.showError("Error", "Failed to insert record.");
+                _this48.ts.showError("Error", "Failed to insert record.");
 
-                _this47.loading = false;
+                _this48.loading = false;
               });
             } else {
               //Update location
               this.locationService.update(this.locationForm.value).subscribe(function (data) {
-                _this47.loading = false;
+                _this48.loading = false;
 
                 if (data != 0) {
-                  _this47.ts.showSuccess("Success", "Record updated successfully.");
+                  _this48.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this47.router.navigate(['/admin/location']);
+                  _this48.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this47.ts.showError("Error", "Failed to update record.");
+                _this48.ts.showError("Error", "Failed to update record.");
 
-                _this47.loading = false;
+                _this48.loading = false;
               });
             }
           }
@@ -16345,16 +16671,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this48 = this;
+            var _this49 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this48.ts.showSuccess("Success", "Record deleted successfully.");
+                _this49.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this48.getData();
-              } else _this48.ts.showError("Error", "Failed to delete record.");
+                _this49.getData();
+              } else _this49.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this48.ts.showError("Error", "Failed to delete record.");
+              _this49.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16522,15 +16848,15 @@
         }, {
           key: "getData",
           value: function getData(eventIDs) {
-            var _this49 = this;
+            var _this50 = this;
 
             debugger;
             this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this49.orderDetails = res;
-              } else _this49.ts.showError("Error", "Something went wrong");
+                _this50.orderDetails = res;
+              } else _this50.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this49.ts.showError("Error", "Failed to delete record.");
+              _this50.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16548,24 +16874,24 @@
         }, {
           key: "LoadEvents",
           value: function LoadEvents() {
-            var _this50 = this;
+            var _this51 = this;
 
             debugger;
             this.service.loadEvents().subscribe(function (res) {
-              _this50.Events = res;
-              _this50.eventID = _this50.selectedEvent;
+              _this51.Events = res;
+              _this51.eventID = _this51.selectedEvent;
 
-              _this50.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+              _this51.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
               .subscribe(function (res) {
-                _this50.Events = res;
+                _this51.Events = res;
                 var arr = [];
 
-                _this50.Events.forEach(function (element) {
+                _this51.Events.forEach(function (element) {
                   arr.push(element.eventID);
                 }); //this.selectedEvents=arr;
 
 
-                _this50.getData(_this50.selectedEvents.toString());
+                _this51.getData(_this51.selectedEvents.toString());
               });
             });
           }
@@ -16858,33 +17184,33 @@
         }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this51 = this;
+            var _this52 = this;
 
             debugger;
             this.service.getAllData().subscribe(function (res) {
-              _this51.dashboardSummary = res[0];
+              _this52.dashboardSummary = res[0];
             });
           }
         }, {
           key: "GetDashboardMonth",
           value: function GetDashboardMonth() {
-            var _this52 = this;
+            var _this53 = this;
 
             debugger;
             this.service.getAllDataMonth().subscribe(function (res) {
               //this.dashboardSummary = res[0];
               console.log(res);
 
-              _this52.BindMonthData(res.todaysales.sales, res.todaysales.timeSlot);
+              _this53.BindMonthData(res.todaysales.sales, res.todaysales.timeSlot);
             });
           }
         }, {
           key: "GetChart",
           value: function GetChart() {
-            var _this53 = this;
+            var _this54 = this;
 
             this.service.getChart().subscribe(function (res) {
-              _this53.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+              _this54.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
             });
           }
         }]);
@@ -17196,22 +17522,22 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this54 = this;
+            var _this55 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this54.loadingItems = true;
+                _this55.loadingItems = true;
 
-                _this54.f.eventID.setValue(sid);
+                _this55.f.eventID.setValue(sid);
 
-                _this54.eventService.getById(sid).subscribe(function (res) {
+                _this55.eventService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this54.editForm(res);
+                  _this55.editForm(res);
 
-                  _this54.loadingItems = false;
+                  _this55.loadingItems = false;
                 });
               }
             });
@@ -17219,7 +17545,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this55 = this;
+            var _this56 = this;
 
             debugger;
             this.eventForm.markAllAsTouched();
@@ -17254,31 +17580,31 @@
               console.log(JSON.stringify(this.eventForm.value));
               this.eventService.insert(this.eventForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this55.ts.showSuccess("Success", "Event added successfully.");
+                  _this56.ts.showSuccess("Success", "Event added successfully.");
 
-                  _this55.router.navigate(['/admin/event']);
+                  _this56.router.navigate(['/admin/event']);
                 }
 
-                _this55.loading = false;
+                _this56.loading = false;
               }, function (error) {
-                _this55.ts.showError("Error", "Failed to insert Event.");
+                _this56.ts.showError("Error", "Failed to insert Event.");
 
-                _this55.loading = false;
+                _this56.loading = false;
               });
             } else {
               //Update item
               this.eventService.update(this.eventForm.value).subscribe(function (data) {
-                _this55.loading = false;
+                _this56.loading = false;
 
                 if (data != 0) {
-                  _this55.ts.showSuccess("Success", "Event updated successfully.");
+                  _this56.ts.showSuccess("Success", "Event updated successfully.");
 
-                  _this55.router.navigate(['/admin/event']);
+                  _this56.router.navigate(['/admin/event']);
                 }
               }, function (error) {
-                _this55.ts.showError("Error", "Failed to update Event.");
+                _this56.ts.showError("Error", "Failed to update Event.");
 
-                _this55.loading = false;
+                _this56.loading = false;
               });
             }
           }
@@ -17290,7 +17616,7 @@
         }, {
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this56 = this;
+            var _this57 = this;
 
             if (event.target.files && event.target.files[0]) {
               var filesAmount = event.target.files.length;
@@ -17306,10 +17632,10 @@
                   reader.onload = function (event) {
                     console.log(event.target.result);
 
-                    _this56.Images.push(event.target.result);
+                    _this57.Images.push(event.target.result);
 
-                    _this56.eventForm.patchValue({
-                      imagesSource: _this56.Images
+                    _this57.eventForm.patchValue({
+                      imagesSource: _this57.Images
                     });
                   };
 
@@ -17321,39 +17647,39 @@
         }, {
           key: "loadEventCategory",
           value: function loadEventCategory() {
-            var _this57 = this;
+            var _this58 = this;
 
             this.eventService.loadActiveCategories().subscribe(function (res) {
-              _this57.EventCategoryList = res;
+              _this58.EventCategoryList = res;
             });
           }
         }, {
           key: "loadOrganizer",
           value: function loadOrganizer() {
-            var _this58 = this;
+            var _this59 = this;
 
             this.eventService.loadOrganizer().subscribe(function (res) {
-              _this58.OrganizerList = res;
+              _this59.OrganizerList = res;
             });
           }
         }, {
           key: "loadSpeaker",
           value: function loadSpeaker() {
-            var _this59 = this;
+            var _this60 = this;
 
             this.eventService.loadSpeaker().subscribe(function (res) {
-              _this59.SpeakerList = res;
+              _this60.SpeakerList = res;
             });
           }
         }, {
           key: "loadItemImages",
           value: function loadItemImages(id) {
-            var _this60 = this;
+            var _this61 = this;
 
             this.eventService.loadEventImages(id).subscribe(function (res) {
-              _this60.Images = res;
+              _this61.Images = res;
 
-              _this60.f.imagesSource.setValue(_this60.Images);
+              _this61.f.imagesSource.setValue(_this61.Images);
             });
           }
         }, {
@@ -17527,12 +17853,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this61 = this;
+            var _this62 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this61.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this62.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this61.ts.showError("Error", "Failed to export");
+              _this62.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -17564,35 +17890,35 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this62 = this;
+            var _this63 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this62.ts.showSuccess("Success", "Record deleted successfully.");
+                _this63.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this62.getData();
-              } else _this62.ts.showError("Error", "Failed to delete record.");
+                _this63.getData();
+              } else _this63.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this62.ts.showError("Error", "Failed to delete record.");
+              _this63.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this63 = this;
+            var _this64 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this63.closeResult = "Closed with: ".concat(result);
+              _this64.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this63.Delete(obj);
+                _this64.Delete(obj);
               }
             }, function (reason) {
-              _this63.closeResult = "Dismissed ".concat(_this63.getDismissReason(reason));
+              _this64.closeResult = "Dismissed ".concat(_this64.getDismissReason(reason));
             });
           }
         }, {
@@ -17801,21 +18127,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this64 = this;
+            var _this65 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this64.loadingOrganizer = true;
+                _this65.loadingOrganizer = true;
 
-                _this64.f.eventCategoryID.setValue(sid);
+                _this65.f.eventCategoryID.setValue(sid);
 
-                _this64.eventService.getById(sid).subscribe(function (res) {
+                _this65.eventService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this64.editForm(res);
+                  _this65.editForm(res);
 
-                  _this64.loadingOrganizer = false;
+                  _this65.loadingOrganizer = false;
                 });
               }
             });
@@ -17823,7 +18149,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this65 = this;
+            var _this66 = this;
 
             this.eventForm.markAllAsTouched();
             this.submitted = true;
@@ -17841,32 +18167,32 @@
               console.log(JSON.stringify(this.eventForm.value));
               this.eventService.insert(this.eventForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this65.ts.showSuccess("Success", "Record added successfully.");
+                  _this66.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this65.router.navigate(['/admin/eventcategory']);
+                  _this66.router.navigate(['/admin/eventcategory']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this65.loading = false;
+                _this66.loading = false;
               }, function (error) {
-                _this65.ts.showError("Error", "Failed to insert record.");
+                _this66.ts.showError("Error", "Failed to insert record.");
 
-                _this65.loading = false;
+                _this66.loading = false;
               });
             } else {
               //Update modifier
               this.eventService.update(this.eventForm.value).subscribe(function (data) {
-                _this65.loading = false;
+                _this66.loading = false;
 
                 if (data != 0) {
-                  _this65.ts.showSuccess("Success", "Record updated successfully.");
+                  _this66.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this65.router.navigate(['/admin/eventcategory']);
+                  _this66.router.navigate(['/admin/eventcategory']);
                 }
               }, function (error) {
-                _this65.ts.showError("Error", "Failed to update record.");
+                _this66.ts.showError("Error", "Failed to update record.");
 
-                _this65.loading = false;
+                _this66.loading = false;
               });
             }
           }
@@ -18027,12 +18353,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this66 = this;
+            var _this67 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this66.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this67.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this66.ts.showError("Error", "Failed to export");
+              _this67.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18064,33 +18390,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this67 = this;
+            var _this68 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this67.ts.showSuccess("Success", "Record deleted successfully.");
+                _this68.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this67.getData();
-              } else _this67.ts.showError("Error", "Failed to delete record.");
+                _this68.getData();
+              } else _this68.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this67.ts.showError("Error", "Failed to delete record.");
+              _this68.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this68 = this;
+            var _this69 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this68.closeResult = "Closed with: ".concat(result);
+              _this69.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this68.Delete(obj);
+                _this69.Delete(obj);
               }
             }, function (reason) {
-              _this68.closeResult = "Dismissed ".concat(_this68.getDismissReason(reason));
+              _this69.closeResult = "Dismissed ".concat(_this69.getDismissReason(reason));
             });
           }
         }, {
@@ -18240,17 +18566,17 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this69 = this;
+            var _this70 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this69.service.getById(sid).subscribe(function (res) {
+                _this70.service.getById(sid).subscribe(function (res) {
                   debugger;
 
-                  _this69.editForm(res);
+                  _this70.editForm(res);
                 });
               }
             });
@@ -18258,7 +18584,7 @@
         }, {
           key: "updateAttendeeDetail",
           value: function updateAttendeeDetail(eventAttendees, status) {
-            var _this70 = this;
+            var _this71 = this;
 
             debugger;
             eventAttendees.statusID = status;
@@ -18268,12 +18594,12 @@
 
             this.service.statusUpdate(eventAttendees).subscribe(function (data) {
               if (data != 0) {
-                _this70.ts.showSuccess("Success", "Record updated successfully.");
+                _this71.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this70.router.navigate(['admin/eventattendees']);
+                _this71.router.navigate(['admin/eventattendees']);
               }
             }, function (error) {
-              _this70.ts.showError("Error", "Failed to update record.");
+              _this71.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -18471,21 +18797,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this71 = this;
+            var _this72 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this71.loadingItems = true;
+                _this72.loadingItems = true;
 
-                _this71.f.attendeesID.setValue(sid);
+                _this72.f.attendeesID.setValue(sid);
 
-                _this71.eventAttendeesService.getById(sid).subscribe(function (res) {
+                _this72.eventAttendeesService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this71.editForm(res);
+                  _this72.editForm(res);
 
-                  _this71.loadingItems = false;
+                  _this72.loadingItems = false;
                 });
               }
             });
@@ -18493,7 +18819,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this72 = this;
+            var _this73 = this;
 
             this.eventAttendeesForm.markAllAsTouched();
             this.submitted = true;
@@ -18509,31 +18835,31 @@
               console.log(JSON.stringify(this.eventAttendeesForm.value));
               this.eventAttendeesService.insert(this.eventAttendeesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this72.ts.showSuccess("Success", "Event added successfully.");
+                  _this73.ts.showSuccess("Success", "Event added successfully.");
 
-                  _this72.router.navigate(['/admin/eventattendees']);
+                  _this73.router.navigate(['/admin/eventattendees']);
                 }
 
-                _this72.loading = false;
+                _this73.loading = false;
               }, function (error) {
-                _this72.ts.showError("Error", "Failed to insert Event.");
+                _this73.ts.showError("Error", "Failed to insert Event.");
 
-                _this72.loading = false;
+                _this73.loading = false;
               });
             } else {
               //Update item
               this.eventAttendeesService.update(this.eventAttendeesForm.value).subscribe(function (data) {
-                _this72.loading = false;
+                _this73.loading = false;
 
                 if (data != 0) {
-                  _this72.ts.showSuccess("Success", "Event updated successfully.");
+                  _this73.ts.showSuccess("Success", "Event updated successfully.");
 
-                  _this72.router.navigate(['/admin/event']);
+                  _this73.router.navigate(['/admin/event']);
                 }
               }, function (error) {
-                _this72.ts.showError("Error", "Failed to update Event.");
+                _this73.ts.showError("Error", "Failed to update Event.");
 
-                _this72.loading = false;
+                _this73.loading = false;
               });
             }
           }
@@ -18545,11 +18871,11 @@
         }, {
           key: "loadEvent",
           value: function loadEvent() {
-            var _this73 = this;
+            var _this74 = this;
 
             debugger;
             this.eventAttendeesService.loadActiveEvents().subscribe(function (res) {
-              _this73.EventList = res;
+              _this74.EventList = res;
               console.log(res);
             });
           }
@@ -18716,12 +19042,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this74 = this;
+            var _this75 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this74.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this75.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this74.ts.showError("Error", "Failed to export");
+              _this75.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18754,35 +19080,35 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this75 = this;
+            var _this76 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this75.ts.showSuccess("Success", "Record deleted successfully.");
+                _this76.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this75.getData();
-              } else _this75.ts.showError("Error", "Failed to delete record.");
+                _this76.getData();
+              } else _this76.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this75.ts.showError("Error", "Failed to delete record.");
+              _this76.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this76 = this;
+            var _this77 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this76.closeResult = "Closed with: ".concat(result);
+              _this77.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this76.Delete(obj);
+                _this77.Delete(obj);
               }
             }, function (reason) {
-              _this76.closeResult = "Dismissed ".concat(_this76.getDismissReason(reason));
+              _this77.closeResult = "Dismissed ".concat(_this77.getDismissReason(reason));
             });
           }
         }, {
@@ -18965,16 +19291,16 @@
         }, {
           key: "getData",
           value: function getData(eventIDs) {
-            var _this77 = this;
+            var _this78 = this;
 
             debugger;
             this.service.EventDetailRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger;
-                _this77.orderDetails = res;
-              } else _this77.ts.showError("Error", "Something went wrong");
+                _this78.orderDetails = res;
+              } else _this78.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this77.ts.showError("Error", "Failed to delete record.");
+              _this78.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18992,24 +19318,24 @@
         }, {
           key: "LoadEvents",
           value: function LoadEvents() {
-            var _this78 = this;
+            var _this79 = this;
 
             debugger;
             this.service.loadEvents().subscribe(function (res) {
-              _this78.Events = res;
-              _this78.eventID = _this78.selectedEvent;
+              _this79.Events = res;
+              _this79.eventID = _this79.selectedEvent;
 
-              _this78.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+              _this79.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
               .subscribe(function (res) {
-                _this78.Events = res;
+                _this79.Events = res;
                 var arr = [];
 
-                _this78.Events.forEach(function (element) {
+                _this79.Events.forEach(function (element) {
                   arr.push(element.eventID);
                 }); //this.selectedEvents=arr;
 
 
-                _this78.getData(_this78.selectedEvents.toString());
+                _this79.getData(_this79.selectedEvents.toString());
               });
             });
           }
@@ -19235,21 +19561,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this79 = this;
+            var _this80 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this79.loadingOrganizer = true;
+                _this80.loadingOrganizer = true;
 
-                _this79.f.faqID.setValue(sid);
+                _this80.f.faqID.setValue(sid);
 
-                _this79.faqService.getById(sid).subscribe(function (res) {
+                _this80.faqService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this79.editForm(res);
+                  _this80.editForm(res);
 
-                  _this79.loadingOrganizer = false;
+                  _this80.loadingOrganizer = false;
                 });
               }
             });
@@ -19257,7 +19583,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this80 = this;
+            var _this81 = this;
 
             this.faqForm.markAllAsTouched();
             this.submitted = true;
@@ -19274,31 +19600,31 @@
               console.log(JSON.stringify(this.faqForm.value));
               this.faqService.insert(this.faqForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this80.ts.showSuccess("Success", "Record added successfully.");
+                  _this81.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this80.router.navigate(['/admin/faq']);
+                  _this81.router.navigate(['/admin/faq']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this80.loading = false;
+                _this81.loading = false;
               }, function (error) {
-                _this80.ts.showError("Error", "Failed to insert record.");
+                _this81.ts.showError("Error", "Failed to insert record.");
 
-                _this80.loading = false;
+                _this81.loading = false;
               });
             } else {
               this.faqService.update(this.faqForm.value).subscribe(function (data) {
-                _this80.loading = false;
+                _this81.loading = false;
 
                 if (data != 0) {
-                  _this80.ts.showSuccess("Success", "Record updated successfully.");
+                  _this81.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this80.router.navigate(['/admin/faq']);
+                  _this81.router.navigate(['/admin/faq']);
                 }
               }, function (error) {
-                _this80.ts.showError("Error", "Failed to update record.");
+                _this81.ts.showError("Error", "Failed to update record.");
 
-                _this80.loading = false;
+                _this81.loading = false;
               });
             }
           }
@@ -19460,13 +19786,13 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this81 = this;
+            var _this82 = this;
 
             debugger;
             this.service.ExportList().subscribe(function (res) {
-              _this81.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this82.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this81.ts.showError("Error", "Failed to export");
+              _this82.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -19498,33 +19824,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this82 = this;
+            var _this83 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this82.ts.showSuccess("Success", "Record deleted successfully.");
+                _this83.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this82.getData();
-              } else _this82.ts.showError("Error", "Failed to delete record.");
+                _this83.getData();
+              } else _this83.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this82.ts.showError("Error", "Failed to delete record.");
+              _this83.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this83 = this;
+            var _this84 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this83.closeResult = "Closed with: ".concat(result);
+              _this84.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this83.Delete(obj);
+                _this84.Delete(obj);
               }
             }, function (reason) {
-              _this83.closeResult = "Dismissed ".concat(_this83.getDismissReason(reason));
+              _this84.closeResult = "Dismissed ".concat(_this84.getDismissReason(reason));
             });
           }
         }, {
@@ -19702,21 +20028,21 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this84 = this;
+            var _this85 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this84.loadingReport = true;
+                _this85.loadingReport = true;
 
-                _this84.f.diagnosticCatID.setValue(sid);
+                _this85.f.diagnosticCatID.setValue(sid);
 
-                _this84.categoryService.getById(sid).subscribe(function (res) {
+                _this85.categoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this84.editForm(res);
+                  _this85.editForm(res);
 
-                  _this84.loadingReport = false;
+                  _this85.loadingReport = false;
                 });
               }
             });
@@ -19724,7 +20050,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this85 = this;
+            var _this86 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -19742,31 +20068,31 @@
               console.log(JSON.stringify(this.categoryForm.value));
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record added successfully.");
+                  _this86.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this85.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this86.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
 
-                _this85.loading = false;
+                _this86.loading = false;
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to insert record.");
+                _this86.ts.showError("Error", "Failed to insert record.");
 
-                _this85.loading = false;
+                _this86.loading = false;
               });
             } else {
               //Update customer
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this85.loading = false;
+                _this86.loading = false;
 
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record updated successfully.");
+                  _this86.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this85.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this86.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to update record.");
+                _this86.ts.showError("Error", "Failed to update record.");
 
-                _this85.loading = false;
+                _this86.loading = false;
               });
             }
           }
@@ -19969,33 +20295,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this86 = this;
+            var _this87 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this86.ts.showSuccess("Success", "Record deleted successfully.");
+                _this87.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this86.getData();
-              } else _this86.ts.showError("Error", "Failed to delete record.");
+                _this87.getData();
+              } else _this87.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this86.ts.showError("Error", "Failed to delete record.");
+              _this87.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this87 = this;
+            var _this88 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this87.closeResult = "Closed with: ".concat(result);
+              _this88.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this87.Delete(obj);
+                _this88.Delete(obj);
               }
             }, function (reason) {
-              _this87.closeResult = "Dismissed ".concat(_this87.getDismissReason(reason));
+              _this88.closeResult = "Dismissed ".concat(_this88.getDismissReason(reason));
             });
           }
         }, {
@@ -20208,7 +20534,7 @@
         }, {
           key: "search",
           value: function search() {
-            var _this88 = this;
+            var _this89 = this;
 
             console.log('Searching for registration number:', this.formData.registrationNo);
 
@@ -20216,9 +20542,9 @@
               this.loadingReport = true;
               this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(function (res) {
                 //Set Forms
-                _this88.editForm(res);
+                _this89.editForm(res);
 
-                _this88.loadingReport = false;
+                _this89.loadingReport = false;
               });
             }
           }
@@ -20264,19 +20590,19 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this89 = this;
+            var _this90 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this89.loadingReport = true;
+                _this90.loadingReport = true;
 
-                _this89.laboratoryService.getById(sid).subscribe(function (res) {
+                _this90.laboratoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this89.editForm(res);
+                  _this90.editForm(res);
 
-                  _this89.loadingReport = false;
+                  _this90.loadingReport = false;
                 });
               }
             });
@@ -20284,7 +20610,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this90 = this;
+            var _this91 = this;
 
             debugger;
 
@@ -20299,9 +20625,9 @@
               formData1.append('file', this.selectedFile);
               formData1.append('userName', this.userName);
               this.http.post('api/laboratory/insert', formData1).subscribe(function (response) {
-                _this90.ts.showSuccess("Success", "Record added successfully.");
+                _this91.ts.showSuccess("Success", "Record added successfully.");
 
-                _this90.router.navigate(['/admin/laboratory/uploadreport']);
+                _this91.router.navigate(['/admin/laboratory/uploadreport']);
               }, function (error) {});
             } else {
               var _formData = new FormData();
@@ -20325,19 +20651,19 @@
               _formData.append('userName', this.userName);
 
               this.http.post('api/laboratory/update', _formData).subscribe(function (response) {
-                _this90.ts.showSuccess("Success", "Record added successfully.");
+                _this91.ts.showSuccess("Success", "Record added successfully.");
 
-                _this90.router.navigate(['/admin/laboratory/uploadreport']);
+                _this91.router.navigate(['/admin/laboratory/uploadreport']);
               }, function (error) {});
             }
           }
         }, {
           key: "loadCategories",
           value: function loadCategories() {
-            var _this91 = this;
+            var _this92 = this;
 
             this.diagnosticcategoriesService.loadCategory().subscribe(function (res) {
-              _this91.CategoryList = res;
+              _this92.CategoryList = res;
             });
           }
         }]);
@@ -20580,18 +20906,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this92 = this;
+            var _this93 = this;
 
             debugger;
             obj.userName = this.userName;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this92.ts.showSuccess("Success", "Record deleted successfully.");
+                _this93.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this92.getData();
-              } else _this92.ts.showError("Error", "Failed to delete record.");
+                _this93.getData();
+              } else _this93.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this92.ts.showError("Error", "Failed to delete record.");
+              _this93.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20613,18 +20939,18 @@
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this93 = this;
+            var _this94 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this93.closeResult = "Closed with: ".concat(result);
+              _this94.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this93.Delete(obj);
+                _this94.Delete(obj);
               }
             }, function (reason) {
-              _this93.closeResult = "Dismissed ".concat(_this93.getDismissReason(reason));
+              _this94.closeResult = "Dismissed ".concat(_this94.getDismissReason(reason));
             });
           }
         }, {
@@ -20862,21 +21188,21 @@
         }, {
           key: "setSelectedDoctor",
           value: function setSelectedDoctor() {
-            var _this94 = this;
+            var _this95 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this94.loadingDoctor = true;
+                _this95.loadingDoctor = true;
 
-                _this94.f.doctorID.setValue(sid);
+                _this95.f.doctorID.setValue(sid);
 
-                _this94.doctorService.getById(sid).subscribe(function (res) {
+                _this95.doctorService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this94.editForm(res);
+                  _this95.editForm(res);
 
-                  _this94.loadingDoctor = false;
+                  _this95.loadingDoctor = false;
                 });
               }
             });
@@ -20884,25 +21210,25 @@
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this95 = this;
+            var _this96 = this;
 
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this95.selectedSpecialityList = res;
+              _this96.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadTimeSlotsAll",
           value: function loadTimeSlotsAll() {
-            var _this96 = this;
+            var _this97 = this;
 
             this.appointmentService.loadTimeLists().subscribe(function (res) {
-              _this96.selectedTimeList = res;
+              _this97.selectedTimeList = res;
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this97 = this;
+            var _this98 = this;
 
             this.doctorForm.markAllAsTouched();
             this.submitted = true;
@@ -20922,31 +21248,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record added successfully.");
+                  _this98.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this97.router.navigate(['/admin/managedoctor/doctor']);
+                  _this98.router.navigate(['/admin/managedoctor/doctor']);
                 }
 
-                _this97.loading = false;
+                _this98.loading = false;
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to insert record.");
+                _this98.ts.showError("Error", "Failed to insert record.");
 
-                _this97.loading = false;
+                _this98.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this97.loading = false;
+                _this98.loading = false;
 
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record updated successfully.");
+                  _this98.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this97.router.navigate(['/admin/managedoctor/doctor']);
+                  _this98.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to update record.");
+                _this98.ts.showError("Error", "Failed to update record.");
 
-                _this97.loading = false;
+                _this98.loading = false;
               });
             }
           }
@@ -21189,12 +21515,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this98 = this;
+            var _this99 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this98.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this99.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this98.ts.showError("Error", "Failed to export");
+              _this99.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -21231,33 +21557,33 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this99 = this;
+            var _this100 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this99.ts.showSuccess("Success", "Record deleted successfully.");
+                _this100.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this99.getData();
-              } else _this99.ts.showError("Error", "Failed to delete record.");
+                _this100.getData();
+              } else _this100.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this99.ts.showError("Error", "Failed to delete record.");
+              _this100.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this100 = this;
+            var _this101 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this100.closeResult = "Closed with: ".concat(result);
+              _this101.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this100.Delete(obj);
+                _this101.Delete(obj);
               }
             }, function (reason) {
-              _this100.closeResult = "Dismissed ".concat(_this100.getDismissReason(reason));
+              _this101.closeResult = "Dismissed ".concat(_this101.getDismissReason(reason));
             });
           }
         }, {
@@ -21466,21 +21792,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this101 = this;
+            var _this102 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this101.loadingaddon = true;
+                _this102.loadingaddon = true;
 
-                _this101.f.addonID.setValue(sid);
+                _this102.f.addonID.setValue(sid);
 
-                _this101.addonsService.getById(sid, _this101.f.brandID.value).subscribe(function (res) {
+                _this102.addonsService.getById(sid, _this102.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this101.editForm(res);
+                  _this102.editForm(res);
 
-                  _this101.loadingaddon = false;
+                  _this102.loadingaddon = false;
                 });
               }
             });
@@ -21488,7 +21814,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this102 = this;
+            var _this103 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -21506,32 +21832,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this102.ts.showSuccess("Success", "Record added successfully.");
+                  _this103.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this102.router.navigate(['/admin/addons']);
+                  _this103.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this102.loading = false;
+                _this103.loading = false;
               }, function (error) {
-                _this102.ts.showError("Error", "Failed to insert record.");
+                _this103.ts.showError("Error", "Failed to insert record.");
 
-                _this102.loading = false;
+                _this103.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this102.loading = false;
+                _this103.loading = false;
 
                 if (data != 0) {
-                  _this102.ts.showSuccess("Success", "Record updated successfully.");
+                  _this103.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this102.router.navigate(['/admin/addons']);
+                  _this103.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this102.ts.showError("Error", "Failed to update record.");
+                _this103.ts.showError("Error", "Failed to update record.");
 
-                _this102.loading = false;
+                _this103.loading = false;
               });
             }
           }
@@ -21685,11 +22011,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this103 = this;
+            var _this104 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this103.ts.showError("Error", "Failed to export");
+              _this104.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -21721,16 +22047,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this104 = this;
+            var _this105 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this104.ts.showSuccess("Success", "Record deleted successfully.");
+                _this105.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this104.getData();
-              } else _this104.ts.showError("Error", "Failed to delete record.");
+                _this105.getData();
+              } else _this105.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this104.ts.showError("Error", "Failed to delete record.");
+              _this105.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21931,21 +22257,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this105 = this;
+            var _this106 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this105.loadingCategory = true;
+                _this106.loadingCategory = true;
 
-                _this105.f.categoryID.setValue(sid);
+                _this106.f.categoryID.setValue(sid);
 
-                _this105.categoryService.getById(sid, _this105.f.brandID.value).subscribe(function (res) {
+                _this106.categoryService.getById(sid, _this106.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this105.editForm(res);
+                  _this106.editForm(res);
 
-                  _this105.loadingCategory = false;
+                  _this106.loadingCategory = false;
                 });
               }
             });
@@ -21953,7 +22279,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this106 = this;
+            var _this107 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -21970,31 +22296,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this106.ts.showSuccess("Success", "Record added successfully.");
+                  _this107.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this106.router.navigate(['/admin/category']);
+                  _this107.router.navigate(['/admin/category']);
                 }
 
-                _this106.loading = false;
+                _this107.loading = false;
               }, function (error) {
-                _this106.ts.showError("Error", "Failed to insert record.");
+                _this107.ts.showError("Error", "Failed to insert record.");
 
-                _this106.loading = false;
+                _this107.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this106.loading = false;
+                _this107.loading = false;
 
                 if (data != 0) {
-                  _this106.ts.showSuccess("Success", "Record updated successfully.");
+                  _this107.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this106.router.navigate(['/admin/category']);
+                  _this107.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this106.ts.showError("Error", "Failed to update record.");
+                _this107.ts.showError("Error", "Failed to update record.");
 
-                _this106.loading = false;
+                _this107.loading = false;
               });
             }
           }
@@ -22156,11 +22482,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this107 = this;
+            var _this108 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this107.ts.showError("Error", "Failed to export");
+              _this108.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -22192,18 +22518,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this108 = this;
+            var _this109 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this108.ts.showSuccess("Success", "Record deleted successfully.");
+                _this109.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this108.getData();
+                _this109.getData();
               } else {
-                _this108.ts.showError("Error", "Failed to delete record.");
+                _this109.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this108.ts.showError("Error", "Failed to delete record.");
+              _this109.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22441,21 +22767,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this109 = this;
+            var _this110 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this109.loadingItems = true;
+                _this110.loadingItems = true;
 
-                _this109.f.itemID.setValue(sid);
+                _this110.f.itemID.setValue(sid);
 
-                _this109.itemsService.getById(sid, _this109.f.brandID.value).subscribe(function (res) {
+                _this110.itemsService.getById(sid, _this110.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this109.editForm(res);
+                  _this110.editForm(res);
 
-                  _this109.loadingItems = false;
+                  _this110.loadingItems = false;
                 });
               }
             });
@@ -22463,7 +22789,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this110 = this;
+            var _this111 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -22483,31 +22809,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this110.ts.showSuccess("Success", "Record added successfully.");
+                  _this111.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this110.router.navigate(['/admin/item']);
+                  _this111.router.navigate(['/admin/item']);
                 }
 
-                _this110.loading = false;
+                _this111.loading = false;
               }, function (error) {
-                _this110.ts.showError("Error", "Failed to insert record.");
+                _this111.ts.showError("Error", "Failed to insert record.");
 
-                _this110.loading = false;
+                _this111.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this110.loading = false;
+                _this111.loading = false;
 
                 if (data != 0) {
-                  _this110.ts.showSuccess("Success", "Record updated successfully.");
+                  _this111.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this110.router.navigate(['/admin/item']);
+                  _this111.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this110.ts.showError("Error", "Failed to update record.");
+                _this111.ts.showError("Error", "Failed to update record.");
 
-                _this110.loading = false;
+                _this111.loading = false;
               });
             }
           } // private loadCategory() {
@@ -22519,28 +22845,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this111 = this;
+            var _this112 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this111.CategoriesActive = res;
+              _this112.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this112 = this;
+            var _this113 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this112.ModifiersList = res;
+              _this113.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this113 = this;
+            var _this114 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this113.AddonsList = res;
+              _this114.AddonsList = res;
             });
           }
         }, {
@@ -22693,12 +23019,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this114 = this;
+            var _this115 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this114.ts.showError("Error", "Failed to export");
+              _this115.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -22730,16 +23056,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this115 = this;
+            var _this116 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this115.ts.showSuccess("Success", "Record deleted successfully.");
+                _this116.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this115.getData();
-              } else _this115.ts.showError("Error", "Failed to delete record.");
+                _this116.getData();
+              } else _this116.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this115.ts.showError("Error", "Failed to delete record.");
+              _this116.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22905,19 +23231,19 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this116 = this;
+            var _this117 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               var stringToConvert = res.items;
-              _this116.isItemSetting = res.isItemSetting;
-              _this116.itemSettingTitle = res.itemSettingTitle;
-              _this116.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this117.isItemSetting = res.isItemSetting;
+              _this117.itemSettingTitle = res.itemSettingTitle;
+              _this117.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this117 = this;
+            var _this118 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -22926,28 +23252,28 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this117.loading = false;
+              _this118.loading = false;
 
               if (data != 0) {
-                _this117.ts.showSuccess("Success", "Updated successfully.");
+                _this118.ts.showSuccess("Success", "Updated successfully.");
 
-                _this117.router.navigate(['/admin/item/settings']);
+                _this118.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this117.ts.showError("Error", "Failed to update.");
+              _this118.ts.showError("Error", "Failed to update.");
 
-              _this117.loading = false;
+              _this118.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this118 = this;
+            var _this119 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
-              _this118.ItemsList = res;
+              _this119.ItemsList = res;
 
-              _this118.setSelecteditem();
+              _this119.setSelecteditem();
             });
           }
         }]);
@@ -23138,21 +23464,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this119 = this;
+            var _this120 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this119.loadingmodifier = true;
+                _this120.loadingmodifier = true;
 
-                _this119.f.modifierID.setValue(sid);
+                _this120.f.modifierID.setValue(sid);
 
-                _this119.modifierService.getById(sid, _this119.f.brandID.value).subscribe(function (res) {
+                _this120.modifierService.getById(sid, _this120.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this119.editForm(res);
+                  _this120.editForm(res);
 
-                  _this119.loadingmodifier = false;
+                  _this120.loadingmodifier = false;
                 });
               }
             });
@@ -23160,7 +23486,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this120 = this;
+            var _this121 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -23178,32 +23504,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record added successfully.");
+                  _this121.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this120.router.navigate(['/admin/modifier']);
+                  _this121.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this120.loading = false;
+                _this121.loading = false;
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to insert record.");
+                _this121.ts.showError("Error", "Failed to insert record.");
 
-                _this120.loading = false;
+                _this121.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this120.loading = false;
+                _this121.loading = false;
 
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record updated successfully.");
+                  _this121.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this120.router.navigate(['/admin/modifier']);
+                  _this121.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to update record.");
+                _this121.ts.showError("Error", "Failed to update record.");
 
-                _this120.loading = false;
+                _this121.loading = false;
               });
             }
           }
@@ -23357,12 +23683,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this121 = this;
+            var _this122 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to export");
+              _this122.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -23394,16 +23720,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this122 = this;
+            var _this123 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this122.ts.showSuccess("Success", "Record deleted successfully.");
+                _this123.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this122.getData();
-              } else _this122.ts.showError("Error", "Failed to delete record.");
+                _this123.getData();
+              } else _this123.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this122.ts.showError("Error", "Failed to delete record.");
+              _this123.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -23615,21 +23941,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this123 = this;
+            var _this124 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this123.loadingMessage = true;
+                _this124.loadingMessage = true;
 
-                _this123.f.messageID.setValue(sid);
+                _this124.f.messageID.setValue(sid);
 
-                _this123.messageService.getById(sid).subscribe(function (res) {
+                _this124.messageService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this123.editForm(res);
+                  _this124.editForm(res);
 
-                  _this123.loadingMessage = false;
+                  _this124.loadingMessage = false;
                 });
               }
             });
@@ -23637,7 +23963,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this124 = this;
+            var _this125 = this;
 
             debugger;
             this.messageForm.markAllAsTouched();
@@ -23656,32 +23982,32 @@
               console.log(JSON.stringify(this.messageForm.value));
               this.messageService.insert(this.messageForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this124.ts.showSuccess("Success", "Record added successfully.");
+                  _this125.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this124.router.navigate(['/admin/message']);
+                  _this125.router.navigate(['/admin/message']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this124.loading = false;
+                _this125.loading = false;
               }, function (error) {
-                _this124.ts.showError("Error", "Failed to insert record.");
+                _this125.ts.showError("Error", "Failed to insert record.");
 
-                _this124.loading = false;
+                _this125.loading = false;
               });
             } else {
               //Update modifier
               this.messageService.update(this.messageForm.value).subscribe(function (data) {
-                _this124.loading = false;
+                _this125.loading = false;
 
                 if (data != 0) {
-                  _this124.ts.showSuccess("Success", "Record updated successfully.");
+                  _this125.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this124.router.navigate(['/admin/message']);
+                  _this125.router.navigate(['/admin/message']);
                 }
               }, function (error) {
-                _this124.ts.showError("Error", "Failed to update record.");
+                _this125.ts.showError("Error", "Failed to update record.");
 
-                _this124.loading = false;
+                _this125.loading = false;
               });
             }
           }
@@ -23843,12 +24169,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this125 = this;
+            var _this126 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this125.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this126.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this125.ts.showError("Error", "Failed to export");
+              _this126.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -23880,33 +24206,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this126 = this;
+            var _this127 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this126.ts.showSuccess("Success", "Record deleted successfully.");
+                _this127.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this126.getData();
-              } else _this126.ts.showError("Error", "Failed to delete record.");
+                _this127.getData();
+              } else _this127.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this126.ts.showError("Error", "Failed to delete record.");
+              _this127.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this127 = this;
+            var _this128 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this127.closeResult = "Closed with: ".concat(result);
+              _this128.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this127.Delete(obj);
+                _this128.Delete(obj);
               }
             }, function (reason) {
-              _this127.closeResult = "Dismissed ".concat(_this127.getDismissReason(reason));
+              _this128.closeResult = "Dismissed ".concat(_this128.getDismissReason(reason));
             });
           }
         }, {
@@ -24103,18 +24429,18 @@
         }, {
           key: "updateStatus",
           value: function updateStatus(item) {
-            var _this128 = this;
+            var _this129 = this;
 
             item.isRead = 1 ? true : undefined; //Update 
 
             this.service.status(item).subscribe(function (data) {
               if (data != 0) {
-                _this128.ts.showSuccess("Success", "Record updated successfully.");
+                _this129.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this128.router.navigate(['/admin/notification']);
+                _this129.router.navigate(['/admin/notification']);
               }
             }, function (error) {
-              _this128.ts.showError("Error", "Failed to update record.");
+              _this129.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -24326,21 +24652,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this129 = this;
+            var _this130 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this129.loadingorganisingcommittee = true;
+                _this130.loadingorganisingcommittee = true;
 
-                _this129.f.id.setValue(sid);
+                _this130.f.id.setValue(sid);
 
-                _this129.organisingcommitteeService.getById(sid).subscribe(function (res) {
+                _this130.organisingcommitteeService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this129.editForm(res);
+                  _this130.editForm(res);
 
-                  _this129.loadingorganisingcommittee = false;
+                  _this130.loadingorganisingcommittee = false;
                 });
               }
             });
@@ -24348,7 +24674,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this130 = this;
+            var _this131 = this;
 
             debugger;
             this.organisingcommitteeForm.markAllAsTouched();
@@ -24367,32 +24693,32 @@
               console.log(JSON.stringify(this.organisingcommitteeForm.value));
               this.organisingcommitteeService.insert(this.organisingcommitteeForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this130.ts.showSuccess("Success", "Record added successfully.");
+                  _this131.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this130.router.navigate(['/admin/organisingcommittee']);
+                  _this131.router.navigate(['/admin/organisingcommittee']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this130.loading = false;
+                _this131.loading = false;
               }, function (error) {
-                _this130.ts.showError("Error", "Failed to insert record.");
+                _this131.ts.showError("Error", "Failed to insert record.");
 
-                _this130.loading = false;
+                _this131.loading = false;
               });
             } else {
               //Update modifier
               this.organisingcommitteeService.update(this.organisingcommitteeForm.value).subscribe(function (data) {
-                _this130.loading = false;
+                _this131.loading = false;
 
                 if (data != 0) {
-                  _this130.ts.showSuccess("Success", "Record updated successfully.");
+                  _this131.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this130.router.navigate(['/admin/organisingcommittee']);
+                  _this131.router.navigate(['/admin/organisingcommittee']);
                 }
               }, function (error) {
-                _this130.ts.showError("Error", "Failed to update record.");
+                _this131.ts.showError("Error", "Failed to update record.");
 
-                _this130.loading = false;
+                _this131.loading = false;
               });
             }
           }
@@ -24554,12 +24880,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this131 = this;
+            var _this132 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this131.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this132.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this131.ts.showError("Error", "Failed to export");
+              _this132.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -24591,34 +24917,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this132 = this;
+            var _this133 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this132.ts.showSuccess("Success", "Record deleted successfully.");
+                _this133.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this132.getData();
-              } else _this132.ts.showError("Error", "Failed to delete record.");
+                _this133.getData();
+              } else _this133.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this132.ts.showError("Error", "Failed to delete record.");
+              _this133.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this133 = this;
+            var _this134 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this133.closeResult = "Closed with: ".concat(result);
+              _this134.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this133.Delete(obj);
+                _this134.Delete(obj);
               }
             }, function (reason) {
-              _this133.closeResult = "Dismissed ".concat(_this133.getDismissReason(reason));
+              _this134.closeResult = "Dismissed ".concat(_this134.getDismissReason(reason));
             });
           }
         }, {
@@ -24816,21 +25142,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this134 = this;
+            var _this135 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this134.loadingOrganizer = true;
+                _this135.loadingOrganizer = true;
 
-                _this134.f.organizerID.setValue(sid);
+                _this135.f.organizerID.setValue(sid);
 
-                _this134.organizerService.getById(sid).subscribe(function (res) {
+                _this135.organizerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this134.editForm(res);
+                  _this135.editForm(res);
 
-                  _this134.loadingOrganizer = false;
+                  _this135.loadingOrganizer = false;
                 });
               }
             });
@@ -24838,7 +25164,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this135 = this;
+            var _this136 = this;
 
             this.organizerForm.markAllAsTouched();
             this.submitted = true;
@@ -24856,32 +25182,32 @@
               console.log(JSON.stringify(this.organizerForm.value));
               this.organizerService.insert(this.organizerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this135.ts.showSuccess("Success", "Record added successfully.");
+                  _this136.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this135.router.navigate(['/admin/organizer']);
+                  _this136.router.navigate(['/admin/organizer']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this135.loading = false;
+                _this136.loading = false;
               }, function (error) {
-                _this135.ts.showError("Error", "Failed to insert record.");
+                _this136.ts.showError("Error", "Failed to insert record.");
 
-                _this135.loading = false;
+                _this136.loading = false;
               });
             } else {
               //Update modifier
               this.organizerService.update(this.organizerForm.value).subscribe(function (data) {
-                _this135.loading = false;
+                _this136.loading = false;
 
                 if (data != 0) {
-                  _this135.ts.showSuccess("Success", "Record updated successfully.");
+                  _this136.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this135.router.navigate(['/admin/organizer']);
+                  _this136.router.navigate(['/admin/organizer']);
                 }
               }, function (error) {
-                _this135.ts.showError("Error", "Failed to update record.");
+                _this136.ts.showError("Error", "Failed to update record.");
 
-                _this135.loading = false;
+                _this136.loading = false;
               });
             }
           }
@@ -25042,12 +25368,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this136 = this;
+            var _this137 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this136.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this137.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this136.ts.showError("Error", "Failed to export");
+              _this137.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25079,33 +25405,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this137 = this;
+            var _this138 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this137.ts.showSuccess("Success", "Record deleted successfully.");
+                _this138.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this137.getData();
-              } else _this137.ts.showError("Error", "Failed to delete record.");
+                _this138.getData();
+              } else _this138.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this137.ts.showError("Error", "Failed to delete record.");
+              _this138.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this138 = this;
+            var _this139 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this138.closeResult = "Closed with: ".concat(result);
+              _this139.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this138.Delete(obj);
+                _this139.Delete(obj);
               }
             }, function (reason) {
-              _this138.closeResult = "Dismissed ".concat(_this138.getDismissReason(reason));
+              _this139.closeResult = "Dismissed ".concat(_this139.getDismissReason(reason));
             });
           }
         }, {
@@ -25301,21 +25627,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this139 = this;
+            var _this140 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this139.loadingPartner = true;
+                _this140.loadingPartner = true;
 
-                _this139.f.partnerID.setValue(sid);
+                _this140.f.partnerID.setValue(sid);
 
-                _this139.partnerService.getById(sid).subscribe(function (res) {
+                _this140.partnerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this139.editForm(res);
+                  _this140.editForm(res);
 
-                  _this139.loadingPartner = false;
+                  _this140.loadingPartner = false;
                 });
               }
             });
@@ -25323,7 +25649,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this140 = this;
+            var _this141 = this;
 
             this.partnerForm.markAllAsTouched();
             this.submitted = true;
@@ -25341,32 +25667,32 @@
               console.log(JSON.stringify(this.partnerForm.value));
               this.partnerService.insert(this.partnerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this140.ts.showSuccess("Success", "Record added successfully.");
+                  _this141.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this140.router.navigate(['/admin/partner']);
+                  _this141.router.navigate(['/admin/partner']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this140.loading = false;
+                _this141.loading = false;
               }, function (error) {
-                _this140.ts.showError("Error", "Failed to insert record.");
+                _this141.ts.showError("Error", "Failed to insert record.");
 
-                _this140.loading = false;
+                _this141.loading = false;
               });
             } else {
               //Update modifier
               this.partnerService.update(this.partnerForm.value).subscribe(function (data) {
-                _this140.loading = false;
+                _this141.loading = false;
 
                 if (data != 0) {
-                  _this140.ts.showSuccess("Success", "Record updated successfully.");
+                  _this141.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this140.router.navigate(['/admin/partner']);
+                  _this141.router.navigate(['/admin/partner']);
                 }
               }, function (error) {
-                _this140.ts.showError("Error", "Failed to update record.");
+                _this141.ts.showError("Error", "Failed to update record.");
 
-                _this140.loading = false;
+                _this141.loading = false;
               });
             }
           }
@@ -25520,13 +25846,13 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this141 = this;
+            var _this142 = this;
 
             debugger;
             this.service.ExportList().subscribe(function (res) {
-              _this141.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this142.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this141.ts.showError("Error", "Failed to export");
+              _this142.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25558,16 +25884,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this142 = this;
+            var _this143 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this142.ts.showSuccess("Success", "Record deleted successfully.");
+                _this143.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this142.getData();
-              } else _this142.ts.showError("Error", "Failed to delete record.");
+                _this143.getData();
+              } else _this143.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this142.ts.showError("Error", "Failed to delete record.");
+              _this143.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -25759,21 +26085,21 @@
         }, {
           key: "onSelect",
           value: function onSelect(formName) {
-            var _this143 = this;
+            var _this144 = this;
 
             this.permissionService.getById(formName).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this143.editForm(res);
+                _this144.editForm(res);
 
-                _this143.formName = res[0];
+                _this144.formName = res[0];
               }
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this144 = this;
+            var _this145 = this;
 
             {
               this.permissionForm.markAllAsTouched();
@@ -25795,27 +26121,27 @@
 
               this.f.roleName.setValue(this.f.roleName.value);
               this.permissionService.update(this.permissionForm.value).subscribe(function (data) {
-                _this144.loading = false;
+                _this145.loading = false;
 
                 if (data != 0) {
-                  _this144.ts.showSuccess("Success", "Record updated successfully.");
+                  _this145.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this144.router.navigate(['/admin/permission']);
+                  _this145.router.navigate(['/admin/permission']);
                 }
               }, function (error) {
-                _this144.ts.showError("Error", "Failed to update record.");
+                _this145.ts.showError("Error", "Failed to update record.");
 
-                _this144.loading = false;
+                _this145.loading = false;
               });
             }
           }
         }, {
           key: "loadUser",
           value: function loadUser() {
-            var _this145 = this;
+            var _this146 = this;
 
             this.userService.loadUser().subscribe(function (res) {
-              _this145.UserList = res;
+              _this146.UserList = res;
             }); // this.UserList = [
             //   { "type": "Super Admin" },
             //   { "type": "Admin" },
@@ -26099,21 +26425,21 @@
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this146 = this;
+            var _this147 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this146.loadingmedicine = true;
+                _this147.loadingmedicine = true;
 
-                _this146.f.medicineID.setValue(sid);
+                _this147.f.medicineID.setValue(sid);
 
-                _this146.medicineService.getById(sid).subscribe(function (res) {
+                _this147.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this146.editForm(res);
+                  _this147.editForm(res);
 
-                  _this146.loadingmedicine = false;
+                  _this147.loadingmedicine = false;
                 });
               }
             });
@@ -26121,7 +26447,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this147 = this;
+            var _this148 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -26139,31 +26465,31 @@
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this147.ts.showSuccess("Success", "Record added successfully.");
+                  _this148.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this147.router.navigate(['/admin/pharmacy/medicine']);
+                  _this148.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this147.loading = false;
+                _this148.loading = false;
               }, function (error) {
-                _this147.ts.showError("Error", "Failed to insert record.");
+                _this148.ts.showError("Error", "Failed to insert record.");
 
-                _this147.loading = false;
+                _this148.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this147.loading = false;
+                _this148.loading = false;
 
                 if (data != 0) {
-                  _this147.ts.showSuccess("Success", "Record updated successfully.");
+                  _this148.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this147.router.navigate(['/admin/pharmacy/medicine']);
+                  _this148.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this147.ts.showError("Error", "Failed to update record.");
+                _this148.ts.showError("Error", "Failed to update record.");
 
-                _this147.loading = false;
+                _this148.loading = false;
               });
             }
           }
@@ -26353,48 +26679,48 @@
         }, {
           key: "Update",
           value: function Update(medicine) {
-            var _this148 = this;
+            var _this149 = this;
 
             debugger;
             this.service.update(medicine).subscribe(function (res) {
               if (res != 0) {
-                _this148.ts.showSuccess("Success", "Price Updated Successfully.");
+                _this149.ts.showSuccess("Success", "Price Updated Successfully.");
 
-                _this148.getData();
+                _this149.getData();
               }
             });
           }
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this149 = this;
+            var _this150 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this149.ts.showSuccess("Success", "Record deleted successfully.");
+                _this150.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this149.getData();
-              } else _this149.ts.showError("Error", "Failed to delete record.");
+                _this150.getData();
+              } else _this150.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this149.ts.showError("Error", "Failed to delete record.");
+              _this150.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this150 = this;
+            var _this151 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this150.closeResult = "Closed with: ".concat(result);
+              _this151.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this150.Delete(obj);
+                _this151.Delete(obj);
               }
             }, function (reason) {
-              _this150.closeResult = "Dismissed ".concat(_this150.getDismissReason(reason));
+              _this151.closeResult = "Dismissed ".concat(_this151.getDismissReason(reason));
             });
           }
         }, {
@@ -26548,15 +26874,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this151 = this;
+            var _this152 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this151.service.getById(sid).subscribe(function (res) {
-                  _this151.editForm(res);
+                _this152.service.getById(sid).subscribe(function (res) {
+                  _this152.editForm(res);
                 });
               }
             });
@@ -26564,7 +26890,7 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this152 = this;
+            var _this153 = this;
 
             debugger;
             order.statusID = status;
@@ -26572,12 +26898,12 @@
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this152.ts.showSuccess("Success", "Record updated successfully.");
+                _this153.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this152.router.navigate(['/admin/orders']);
+                _this153.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this152.ts.showError("Error", "Failed to update record.");
+              _this153.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -26780,13 +27106,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this153 = this;
+            var _this154 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this153.printout(res.html);
-              } else _this153.ts.showError("Error", "Failed to print.");
+                _this154.printout(res.html);
+              } else _this154.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -26797,27 +27123,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this154 = this;
+            var _this155 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this154.Locations = res;
-              _this154.locationID = _this154.selectedLocation;
+              _this155.Locations = res;
+              _this155.locationID = _this155.selectedLocation;
 
-              _this154.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this155.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this154.Locations = res;
+                _this155.Locations = res;
                 var arr = [];
 
-                _this154.Locations.forEach(function (element) {
+                _this155.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this154.selectedLocations = arr;
+                _this155.selectedLocations = arr;
 
-                _this154.getData();
+                _this155.getData();
               });
             });
           }
@@ -26850,34 +27176,34 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this155 = this;
+            var _this156 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this155.ts.showSuccess("Success", "Record deleted successfully.");
+                _this156.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this155.getData();
-              } else _this155.ts.showError("Error", "Failed to delete record.");
+                _this156.getData();
+              } else _this156.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this155.ts.showError("Error", "Failed to delete record.");
+              _this156.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this156 = this;
+            var _this157 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this156.closeResult = "Closed with: ".concat(result);
+              _this157.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this156.Delete(obj);
+                _this157.Delete(obj);
               }
             }, function (reason) {
-              _this156.closeResult = "Dismissed ".concat(_this156.getDismissReason(reason));
+              _this157.closeResult = "Dismissed ".concat(_this157.getDismissReason(reason));
             });
           }
         }, {
@@ -27077,21 +27403,21 @@
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this157 = this;
+            var _this158 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this157.loadingPrescription = true;
+                _this158.loadingPrescription = true;
 
-                _this157.f.prescriptionID.setValue(sid);
+                _this158.f.prescriptionID.setValue(sid);
 
-                _this157.prescriptionService.getById(sid).subscribe(function (res) {
+                _this158.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this157.editForm(res);
+                  _this158.editForm(res);
 
-                  _this157.loadingPrescription = false;
+                  _this158.loadingPrescription = false;
                 });
               }
             });
@@ -27099,7 +27425,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this158 = this;
+            var _this159 = this;
 
             debugger;
             this.prescriptionForm.markAllAsTouched();
@@ -27113,17 +27439,17 @@
             //Update doctor
 
             this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-              _this158.loading = false;
+              _this159.loading = false;
 
               if (data != 0) {
-                _this158.ts.showSuccess("Success", "Record updated successfully.");
+                _this159.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this158.router.navigate(['/admin/pharmacy/prescription']);
+                _this159.router.navigate(['/admin/pharmacy/prescription']);
               }
             }, function (error) {
-              _this158.ts.showError("Error", "Failed to update record.");
+              _this159.ts.showError("Error", "Failed to update record.");
 
-              _this158.loading = false;
+              _this159.loading = false;
             });
           }
         }, {
@@ -27317,12 +27643,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this159 = this;
+            var _this160 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this159.ts.showError("Error", "Failed to export");
+              _this160.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -27374,18 +27700,18 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this160 = this;
+            var _this161 = this;
 
             debugger;
             data.userName = this.userName;
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this160.ts.showSuccess("Success", "Record deleted successfully.");
+                _this161.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this160.getData();
-              } else _this160.ts.showError("Error", "Failed to delete record.");
+                _this161.getData();
+              } else _this161.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this160.ts.showError("Error", "Failed to delete record.");
+              _this161.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -27646,16 +27972,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this161 = this;
+            var _this162 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this161.ts.showSuccess("Success", "Record deleted successfully.");
+                _this162.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this161.getData();
-              } else _this161.ts.showError("Error", "Failed to delete record.");
+                _this162.getData();
+              } else _this162.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this161.ts.showError("Error", "Failed to delete record.");
+              _this162.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -27816,14 +28142,14 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this162 = this;
+            var _this163 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this162.service.getById(sid).subscribe(function (res) {
-                  _this162.editForm(res);
+                _this163.service.getById(sid).subscribe(function (res) {
+                  _this163.editForm(res);
                 });
               }
             });
@@ -27831,7 +28157,7 @@
         }, {
           key: "updateAppointment",
           value: function updateAppointment(appointment, status) {
-            var _this163 = this;
+            var _this164 = this;
 
             debugger;
             appointment.appointmentStatus = status;
@@ -27840,12 +28166,12 @@
 
             this.service.statusUpdate(appointment).subscribe(function (data) {
               if (data != 0) {
-                _this163.ts.showSuccess("Success", "Record updated successfully.");
+                _this164.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this163.router.navigate(['reception/appointment']);
+                _this164.router.navigate(['reception/appointment']);
               }
             }, function (error) {
-              _this163.ts.showError("Error", "Failed to update record.");
+              _this164.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -28036,21 +28362,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this164 = this;
+            var _this165 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this164.loadingCustomer = true;
+                _this165.loadingCustomer = true;
 
-                _this164.f.customerID.setValue(sid);
+                _this165.f.customerID.setValue(sid);
 
-                _this164.customerService.getById(sid).subscribe(function (res) {
+                _this165.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this164.editForm(res);
+                  _this165.editForm(res);
 
-                  _this164.loadingCustomer = false;
+                  _this165.loadingCustomer = false;
                 });
               }
             });
@@ -28058,7 +28384,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this165 = this;
+            var _this166 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -28076,31 +28402,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this165.ts.showSuccess("Success", "Record added successfully.");
+                  _this166.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this165.router.navigate(['/admin/reception/customers']);
+                  _this166.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this165.loading = false;
+                _this166.loading = false;
               }, function (error) {
-                _this165.ts.showError("Error", "Failed to insert record.");
+                _this166.ts.showError("Error", "Failed to insert record.");
 
-                _this165.loading = false;
+                _this166.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this165.loading = false;
+                _this166.loading = false;
 
                 if (data != 0) {
-                  _this165.ts.showSuccess("Success", "Record updated successfully.");
+                  _this166.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this165.router.navigate(['/admin/reception/customers']);
+                  _this166.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this165.ts.showError("Error", "Failed to update record.");
+                _this166.ts.showError("Error", "Failed to update record.");
 
-                _this165.loading = false;
+                _this166.loading = false;
               });
             }
           }
@@ -28254,11 +28580,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this166 = this;
+            var _this167 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this166.ts.showError("Error", "Failed to export");
+              _this167.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -28290,16 +28616,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this167 = this;
+            var _this168 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this167.ts.showSuccess("Success", "Record deleted successfully.");
+                _this168.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this167.getData();
-              } else _this167.ts.showError("Error", "Failed to delete record.");
+                _this168.getData();
+              } else _this168.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this167.ts.showError("Error", "Failed to delete record.");
+              _this168.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -28502,21 +28828,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this168 = this;
+            var _this169 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this168.loadingAppointment = true;
+                _this169.loadingAppointment = true;
 
-                _this168.f.appointmentID.setValue(sid);
+                _this169.f.appointmentID.setValue(sid);
 
-                _this168.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this169.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this168.editForm(res);
+                  _this169.editForm(res);
 
-                  _this168.loadingAppointment = false;
+                  _this169.loadingAppointment = false;
                 });
               }
             });
@@ -28524,7 +28850,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this169 = this;
+            var _this170 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -28540,71 +28866,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this169.ts.showSuccess("Success", "Record added successfully.");
+                  _this170.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this169.router.navigate(['/admin/reception/appointment']);
+                  _this170.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this169.loading = false;
+                _this170.loading = false;
               }, function (error) {
-                _this169.ts.showError("Error", "Failed to insert record.");
+                _this170.ts.showError("Error", "Failed to insert record.");
 
-                _this169.loading = false;
+                _this170.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this169.loading = false;
+                _this170.loading = false;
 
                 if (data != 0) {
-                  _this169.ts.showSuccess("Success", "Record updated successfully.");
+                  _this170.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this169.router.navigate(['/admin/reception/appointment']);
+                  _this170.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this169.ts.showError("Error", "Failed to update record.");
+                _this170.ts.showError("Error", "Failed to update record.");
 
-                _this169.loading = false;
+                _this170.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this170 = this;
+            var _this171 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this170.DoctorList = res;
+              _this171.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this171 = this;
+            var _this172 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this171.SpecialityList = res;
+              _this172.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this172 = this;
+            var _this173 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this172.selectedSpecialityList = res;
+              _this173.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this173 = this;
+            var _this174 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this173.DoctorDaysList = res;
+              _this174.DoctorDaysList = res;
             });
           }
         }, {
@@ -28834,16 +29160,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this174 = this;
+            var _this175 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this174.ts.showSuccess("Success", "Record deleted successfully.");
+                _this175.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this174.getData();
-              } else _this174.ts.showError("Error", "Failed to delete record.");
+                _this175.getData();
+              } else _this175.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this174.ts.showError("Error", "Failed to delete record.");
+              _this175.ts.showError("Error", "Failed to delete record.");
             });
           } //Status(data) {
           //  debugger
@@ -29029,14 +29355,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this175 = this;
+            var _this176 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this175.salesCategoryWise = res;
-              } else _this175.ts.showError("Error", "Something went wrong");
+                _this176.salesCategoryWise = res;
+              } else _this176.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this175.ts.showError("Error", "Failed to delete record.");
+              _this176.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29048,27 +29374,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this176 = this;
+            var _this177 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this176.Locations = res;
-              _this176.locationID = _this176.selectedLocation;
+              _this177.Locations = res;
+              _this177.locationID = _this177.selectedLocation;
 
-              _this176.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this177.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this176.Locations = res;
+                _this177.Locations = res;
                 var arr = [];
 
-                _this176.Locations.forEach(function (element) {
+                _this177.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this176.selectedLocations = arr;
+                _this177.selectedLocations = arr;
 
-                _this176.getData(_this176.selectedLocations.toString());
+                _this177.getData(_this177.selectedLocations.toString());
               });
             });
           }
@@ -29260,14 +29586,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this177 = this;
+            var _this178 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this177.orders = res;
-              } else _this177.ts.showError("Error", "Something went wrong");
+                _this178.orders = res;
+              } else _this178.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this177.ts.showError("Error", "Failed to delete record.");
+              _this178.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29279,27 +29605,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this178 = this;
+            var _this179 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this178.Locations = res;
-              _this178.locationID = _this178.selectedLocation;
+              _this179.Locations = res;
+              _this179.locationID = _this179.selectedLocation;
 
-              _this178.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this179.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this178.Locations = res;
+                _this179.Locations = res;
                 var arr = [];
 
-                _this178.Locations.forEach(function (element) {
+                _this179.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this178.selectedLocations = arr;
+                _this179.selectedLocations = arr;
 
-                _this178.getData(_this178.selectedLocations.toString());
+                _this179.getData(_this179.selectedLocations.toString());
               });
             });
           }
@@ -29488,14 +29814,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this179 = this;
+            var _this180 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this179.orderDetails = res;
-              } else _this179.ts.showError("Error", "Something went wrong");
+                _this180.orderDetails = res;
+              } else _this180.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this179.ts.showError("Error", "Failed to delete record.");
+              _this180.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29511,27 +29837,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this180 = this;
+            var _this181 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this180.Locations = res;
-              _this180.locationID = _this180.selectedLocation;
+              _this181.Locations = res;
+              _this181.locationID = _this181.selectedLocation;
 
-              _this180.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this181.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this180.Locations = res;
+                _this181.Locations = res;
                 var arr = [];
 
-                _this180.Locations.forEach(function (element) {
+                _this181.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this180.selectedLocations = arr;
+                _this181.selectedLocations = arr;
 
-                _this180.getData(_this180.selectedLocations.toString());
+                _this181.getData(_this181.selectedLocations.toString());
               });
             });
           }
@@ -29726,14 +30052,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this181 = this;
+            var _this182 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this181.salesItemWise = res;
-              } else _this181.ts.showError("Error", "Something went wrong");
+                _this182.salesItemWise = res;
+              } else _this182.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this181.ts.showError("Error", "Failed to delete record.");
+              _this182.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29764,27 +30090,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this182 = this;
+            var _this183 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this182.Locations = res;
-              _this182.locationID = _this182.selectedLocation;
+              _this183.Locations = res;
+              _this183.locationID = _this183.selectedLocation;
 
-              _this182.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this183.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this182.Locations = res;
+                _this183.Locations = res;
                 var arr = [];
 
-                _this182.Locations.forEach(function (element) {
+                _this183.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this182.selectedLocations = arr;
+                _this183.selectedLocations = arr;
 
-                _this182.getData(_this182.selectedLocations.toString());
+                _this183.getData(_this183.selectedLocations.toString());
               });
             });
           }
@@ -29949,14 +30275,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this183 = this;
+            var _this184 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this183.data$ = res;
-              } else _this183.ts.showError("Error", "Something went wrong");
+                _this184.data$ = res;
+              } else _this184.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this183.ts.showError("Error", "Failed to delete record.");
+              _this184.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29968,11 +30294,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this184 = this;
+            var _this185 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this184.Locations = res;
-              _this184.locationID = _this184.selectedLocation;
+              _this185.Locations = res;
+              _this185.locationID = _this185.selectedLocation;
             });
           }
         }, {
@@ -30139,16 +30465,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this185 = this;
+            var _this186 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this185._model = res[0];
+                _this186._model = res[0];
 
-                _this185["export"].push(_this185._model);
-              } else _this185.ts.showError("Error", "Something went wrong");
+                _this186["export"].push(_this186._model);
+              } else _this186.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this185.ts.showError("Error", "Failed to delete record.");
+              _this186.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -30357,21 +30683,21 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this186 = this;
+            var _this187 = this;
 
             debugger;
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this186.editForm(res);
+              _this187.editForm(res);
 
-              _this186.loadingSetting = false;
+              _this187.loadingSetting = false;
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this187 = this;
+            var _this188 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -30394,33 +30720,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this187.ts.showSuccess("Success", "Record added successfully.");
+                  _this188.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this187.router.navigate(['/admin/settings/appsettings']);
+                  _this188.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this187.loading = false;
+                _this188.loading = false;
               }, function (error) {
-                _this187.ts.showError("Error", "Failed to insert record.");
+                _this188.ts.showError("Error", "Failed to insert record.");
 
-                _this187.loading = false;
+                _this188.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this187.loading = false;
+                _this188.loading = false;
 
                 if (data != 0) {
-                  _this187.ts.showSuccess("Success", "Record updated successfully.");
+                  _this188.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this187.setSelectedSetting();
+                  _this188.setSelectedSetting();
 
-                  _this187.router.navigate(['/admin/settings/appsettings/add']);
+                  _this188.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this187.ts.showError("Error", "Failed to update record.");
+                _this188.ts.showError("Error", "Failed to update record.");
 
-                _this187.loading = false;
+                _this188.loading = false;
               });
             }
           }
@@ -30604,16 +30930,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this188 = this;
+            var _this189 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this188.ts.showSuccess("Success", "Record deleted successfully.");
+                _this189.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this188.getData();
-              } else _this188.ts.showError("Error", "Failed to delete record.");
+                _this189.getData();
+              } else _this189.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this188.ts.showError("Error", "Failed to delete record.");
+              _this189.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -30802,21 +31128,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this189 = this;
+            var _this190 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this189.loadingCustomer = true;
+                _this190.loadingCustomer = true;
 
-                _this189.f.bannerID.setValue(sid);
+                _this190.f.bannerID.setValue(sid);
 
-                _this189.bannerService.getById(sid).subscribe(function (res) {
+                _this190.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this189.editForm(res);
+                  _this190.editForm(res);
 
-                  _this189.loadingCustomer = false;
+                  _this190.loadingCustomer = false;
                 });
               }
             });
@@ -30824,7 +31150,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this190 = this;
+            var _this191 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -30843,31 +31169,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this190.ts.showSuccess("Success", "Record added successfully.");
+                  _this191.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this190.router.navigate(['/admin/settings/banner']);
+                  _this191.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this190.loading = false;
+                _this191.loading = false;
               }, function (error) {
-                _this190.ts.showError("Error", "Failed to insert record.");
+                _this191.ts.showError("Error", "Failed to insert record.");
 
-                _this190.loading = false;
+                _this191.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this190.loading = false;
+                _this191.loading = false;
 
                 if (data != 0) {
-                  _this190.ts.showSuccess("Success", "Record updated successfully.");
+                  _this191.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this190.router.navigate(['/admin/settings/banner']);
+                  _this191.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this190.ts.showError("Error", "Failed to update record.");
+                _this191.ts.showError("Error", "Failed to update record.");
 
-                _this190.loading = false;
+                _this191.loading = false;
               });
             }
           }
@@ -31021,6 +31347,7 @@
         }, {
           key: "getData",
           value: function getData() {
+            debugger;
             this.service.getAllData();
             this.data$ = this.service.data$;
             this.total$ = this.service.total$;
@@ -31047,33 +31374,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this191 = this;
+            var _this192 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this191.ts.showSuccess("Success", "Record deleted successfully.");
+                _this192.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this191.getData();
-              } else _this191.ts.showError("Error", "Failed to delete record.");
+                _this192.getData();
+              } else _this192.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this191.ts.showError("Error", "Failed to delete record.");
+              _this192.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this192 = this;
+            var _this193 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this192.closeResult = "Closed with: ".concat(result);
+              _this193.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this192.Delete(obj);
+                _this193.Delete(obj);
               }
             }, function (reason) {
-              _this192.closeResult = "Dismissed ".concat(_this192.getDismissReason(reason));
+              _this193.closeResult = "Dismissed ".concat(_this193.getDismissReason(reason));
             });
           }
         }, {
@@ -31270,22 +31597,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this193 = this;
+            var _this194 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this193.loadingCustomer = true;
+                _this194.loadingCustomer = true;
 
-                _this193.f.corporateClientID.setValue(sid);
+                _this194.f.corporateClientID.setValue(sid);
 
-                _this193.addcorporateclientService.getById(sid).subscribe(function (res) {
+                _this194.addcorporateclientService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this193.editForm(res);
+                  _this194.editForm(res);
 
-                  _this193.loadingCustomer = false;
+                  _this194.loadingCustomer = false;
                 });
               }
             });
@@ -31293,7 +31620,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this194 = this;
+            var _this195 = this;
 
             debugger;
             this.corporateclientForm.markAllAsTouched();
@@ -31312,31 +31639,31 @@
               console.log(JSON.stringify(this.corporateclientForm.value));
               this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this194.ts.showSuccess("Success", "Record added successfully.");
+                  _this195.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this194.router.navigate(['/admin/settings/corporateclient']);
+                  _this195.router.navigate(['/admin/settings/corporateclient']);
                 }
 
-                _this194.loading = false;
+                _this195.loading = false;
               }, function (error) {
-                _this194.ts.showError("Error", "Failed to insert record.");
+                _this195.ts.showError("Error", "Failed to insert record.");
 
-                _this194.loading = false;
+                _this195.loading = false;
               });
             } else {
               //Update banner
               this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(function (data) {
-                _this194.loading = false;
+                _this195.loading = false;
 
                 if (data != 0) {
-                  _this194.ts.showSuccess("Success", "Record updated successfully.");
+                  _this195.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this194.router.navigate(['/admin/settings/corporateclient']);
+                  _this195.router.navigate(['/admin/settings/corporateclient']);
                 }
               }, function (error) {
-                _this194.ts.showError("Error", "Failed to update record.");
+                _this195.ts.showError("Error", "Failed to update record.");
 
-                _this194.loading = false;
+                _this195.loading = false;
               });
             }
           }
@@ -31516,33 +31843,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this195 = this;
+            var _this196 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this195.ts.showSuccess("Success", "Record deleted successfully.");
+                _this196.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this195.getData();
-              } else _this195.ts.showError("Error", "Failed to delete record.");
+                _this196.getData();
+              } else _this196.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this195.ts.showError("Error", "Failed to delete record.");
+              _this196.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this196 = this;
+            var _this197 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this196.closeResult = "Closed with: ".concat(result);
+              _this197.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this196.Delete(obj);
+                _this197.Delete(obj);
               }
             }, function (reason) {
-              _this196.closeResult = "Dismissed ".concat(_this196.getDismissReason(reason));
+              _this197.closeResult = "Dismissed ".concat(_this197.getDismissReason(reason));
             });
           }
         }, {
@@ -31720,21 +32047,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this197 = this;
+            var _this198 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this197.loadingCoupon = true;
+                _this198.loadingCoupon = true;
 
-                _this197.f.couponID.setValue(sid);
+                _this198.f.couponID.setValue(sid);
 
-                _this197.couponService.getById(sid).subscribe(function (res) {
+                _this198.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this197.editForm(res);
+                  _this198.editForm(res);
 
-                  _this197.loadingCoupon = false;
+                  _this198.loadingCoupon = false;
                 });
               }
             });
@@ -31742,7 +32069,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this198 = this;
+            var _this199 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -31760,31 +32087,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this198.ts.showSuccess("Success", "Record added successfully.");
+                  _this199.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this198.router.navigate(['/admin/settings/coupon']);
+                  _this199.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this198.loading = false;
+                _this199.loading = false;
               }, function (error) {
-                _this198.ts.showError("Error", "Failed to insert record.");
+                _this199.ts.showError("Error", "Failed to insert record.");
 
-                _this198.loading = false;
+                _this199.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this198.loading = false;
+                _this199.loading = false;
 
                 if (data != 0) {
-                  _this198.ts.showSuccess("Success", "Record updated successfully.");
+                  _this199.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this198.router.navigate(['/admin/settings/coupon']);
+                  _this199.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this198.ts.showError("Error", "Failed to update record.");
+                _this199.ts.showError("Error", "Failed to update record.");
 
-                _this198.loading = false;
+                _this199.loading = false;
               });
             }
           }
@@ -31988,17 +32315,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this199 = this;
+            var _this200 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this199.ts.showSuccess("Success", "Record deleted successfully.");
+                _this200.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this199.getData();
-              } else _this199.ts.showError("Error", "Failed to delete record.");
+                _this200.getData();
+              } else _this200.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this199.ts.showError("Error", "Failed to delete record.");
+              _this200.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -32196,21 +32523,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this200 = this;
+            var _this201 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this200.loading = true;
+                _this201.loading = true;
 
-                _this200.f.deliveryAreaID.setValue(sid);
+                _this201.f.deliveryAreaID.setValue(sid);
 
-                _this200.deliveryService.getById(sid).subscribe(function (res) {
+                _this201.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this200.editForm(res);
+                  _this201.editForm(res);
 
-                  _this200.loading = false; //BrandsFill
+                  _this201.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -32223,7 +32550,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this201 = this;
+            var _this202 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -32240,41 +32567,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this201.ts.showSuccess("Success", "Record added successfully.");
+                  _this202.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this201.router.navigate(['/admin/delivery']);
+                  _this202.router.navigate(['/admin/delivery']);
                 }
 
-                _this201.loading = false;
+                _this202.loading = false;
               }, function (error) {
-                _this201.ts.showError("Error", "Failed to insert record.");
+                _this202.ts.showError("Error", "Failed to insert record.");
 
-                _this201.loading = false;
+                _this202.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this201.loading = false;
+                _this202.loading = false;
 
                 if (data != 0) {
-                  _this201.ts.showSuccess("Success", "Record updated successfully.");
+                  _this202.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this201.router.navigate(['/admin/delivery']);
+                  _this202.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this201.ts.showError("Error", "Failed to update record.");
+                _this202.ts.showError("Error", "Failed to update record.");
 
-                _this201.loading = false;
+                _this202.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this202 = this;
+            var _this203 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this202.BrandsList = res; // this.setSelecteditem();
+              _this203.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -32473,33 +32800,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this203 = this;
+            var _this204 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this203.ts.showSuccess("Success", "Record deleted successfully.");
+                _this204.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this203.getData();
-              } else _this203.ts.showError("Error", "Failed to delete record.");
+                _this204.getData();
+              } else _this204.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this203.ts.showError("Error", "Failed to delete record.");
+              _this204.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this204 = this;
+            var _this205 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this204.closeResult = "Closed with: ".concat(result);
+              _this205.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this204.Delete(obj);
+                _this205.Delete(obj);
               }
             }, function (reason) {
-              _this204.closeResult = "Dismissed ".concat(_this204.getDismissReason(reason));
+              _this205.closeResult = "Dismissed ".concat(_this205.getDismissReason(reason));
             });
           }
         }, {
@@ -32687,31 +33014,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this205 = this;
+            var _this206 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this205.NursingTypeActive = res;
+              _this206.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this206 = this;
+            var _this207 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this206.loadingService = true;
+                _this207.loadingService = true;
 
-                _this206.f.medicalServiceID.setValue(sid);
+                _this207.f.medicalServiceID.setValue(sid);
 
-                _this206.services.getById(sid).subscribe(function (res) {
+                _this207.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this206.editForm(res);
+                  _this207.editForm(res);
 
-                  _this206.loadingService = false;
+                  _this207.loadingService = false;
                 });
               }
             });
@@ -32719,7 +33046,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this207 = this;
+            var _this208 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -32738,31 +33065,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this207.ts.showSuccess("Success", "Record added successfully.");
+                  _this208.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this207.router.navigate(['/admin/settings/medicalservices']);
+                  _this208.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this207.loading = false;
+                _this208.loading = false;
               }, function (error) {
-                _this207.ts.showError("Error", "Failed to insert record.");
+                _this208.ts.showError("Error", "Failed to insert record.");
 
-                _this207.loading = false;
+                _this208.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this207.loading = false;
+                _this208.loading = false;
 
                 if (data != 0) {
-                  _this207.ts.showSuccess("Success", "Record updated successfully.");
+                  _this208.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this207.router.navigate(['/admin/settings/medicalservices']);
+                  _this208.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this207.ts.showError("Error", "Failed to update record.");
+                _this208.ts.showError("Error", "Failed to update record.");
 
-                _this207.loading = false;
+                _this208.loading = false;
               });
             }
           }
@@ -32932,16 +33259,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this208 = this;
+            var _this209 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this208.ts.showSuccess("Success", "Record deleted successfully.");
+                _this209.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this208.getData();
-              } else _this208.ts.showError("Error", "Failed to delete record.");
+                _this209.getData();
+              } else _this209.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this208.ts.showError("Error", "Failed to delete record.");
+              _this209.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -33100,22 +33427,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this209 = this;
+            var _this210 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this209.loadingService = true;
+                _this210.loadingService = true;
 
-                _this209.f.nursingTypeID.setValue(sid);
+                _this210.f.nursingTypeID.setValue(sid);
 
-                _this209.services.getById(sid).subscribe(function (res) {
+                _this210.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this209.editForm(res);
+                  _this210.editForm(res);
 
-                  _this209.loadingService = false;
+                  _this210.loadingService = false;
                 });
               }
             });
@@ -33123,7 +33450,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this210 = this;
+            var _this211 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -33140,31 +33467,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this210.ts.showSuccess("Success", "Record added successfully.");
+                  _this211.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this210.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this211.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this210.loading = false;
+                _this211.loading = false;
               }, function (error) {
-                _this210.ts.showError("Error", "Failed to insert record.");
+                _this211.ts.showError("Error", "Failed to insert record.");
 
-                _this210.loading = false;
+                _this211.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this210.loading = false;
+                _this211.loading = false;
 
                 if (data != 0) {
-                  _this210.ts.showSuccess("Success", "Record updated successfully.");
+                  _this211.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this210.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this211.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this210.ts.showError("Error", "Failed to update record.");
+                _this211.ts.showError("Error", "Failed to update record.");
 
-                _this210.loading = false;
+                _this211.loading = false;
               });
             }
           }
@@ -33335,16 +33662,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this211 = this;
+            var _this212 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this211.ts.showSuccess("Success", "Record deleted successfully.");
+                _this212.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this211.getData();
-              } else _this211.ts.showError("Error", "Failed to delete record.");
+                _this212.getData();
+              } else _this212.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this211.ts.showError("Error", "Failed to delete record.");
+              _this212.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -33377,6 +33704,489 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/medicalservicetype.component.html"))["default"],
         providers: []
       }), __metadata("design:paramtypes", [src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_5__["MedicalServiceTypes"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], MedicalServicetypeComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.css":
+    /*!*****************************************************************************!*\
+      !*** ./src/app/admin/settings/popupbanner/add/addpopupbanner.component.css ***!
+      \*****************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminSettingsPopupbannerAddAddpopupbannerComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL3BvcHVwYmFubmVyL2FkZC9hZGRwb3B1cGJhbm5lci5jb21wb25lbnQuY3NzIn0= */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts":
+    /*!****************************************************************************!*\
+      !*** ./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts ***!
+      \****************************************************************************/
+
+    /*! exports provided: AddPopupBannerComponent */
+
+    /***/
+    function srcAppAdminSettingsPopupbannerAddAddpopupbannerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddPopupBannerComponent", function () {
+        return AddPopupBannerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/popupbanner.service */
+      "./src/app/_services/popupbanner.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddPopupBannerComponent = /*#__PURE__*/function () {
+        function AddPopupBannerComponent(formBuilder, router, route, ts, ls, popupbannerService) {
+          _classCallCheck(this, AddPopupBannerComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ts = ts;
+          this.ls = ls;
+          this.popupbannerService = popupbannerService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingMessage = false;
+          this.createForm();
+        }
+
+        _createClass(AddPopupBannerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedaddon();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.popupbannerForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              id: 0,
+              image: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            debugger;
+            this.f.name.setValue(obj.name);
+            this.f.id.setValue(obj.id);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedaddon",
+          value: function setSelectedaddon() {
+            var _this213 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this213.loadingMessage = true;
+
+                _this213.f.id.setValue(sid);
+
+                _this213.popupbannerService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this213.editForm(res);
+
+                  _this213.loadingMessage = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this214 = this;
+
+            debugger;
+            this.popupbannerForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.popupbannerForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.id.value) === 0) {
+              //Insert modifier
+              console.log(JSON.stringify(this.popupbannerForm.value));
+              this.popupbannerService.insert(this.popupbannerForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this214.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this214.router.navigate(['/admin/settings/popupbanner']);
+                } // this.alertService.success("Item has been created");
+
+
+                _this214.loading = false;
+              }, function (error) {
+                _this214.ts.showError("Error", "Failed to insert record.");
+
+                _this214.loading = false;
+              });
+            } else {
+              //Update modifier
+              this.popupbannerService.update(this.popupbannerForm.value).subscribe(function (data) {
+                _this214.loading = false;
+
+                if (data != 0) {
+                  _this214.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this214.router.navigate(['/admin/settings/popupbanner']);
+                }
+              }, function (error) {
+                _this214.ts.showError("Error", "Failed to update record.");
+
+                _this214.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.popupbannerForm.controls;
+          }
+        }]);
+
+        return AddPopupBannerComponent;
+      }();
+
+      AddPopupBannerComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_6__["PopupBannerService"]
+        }];
+      };
+
+      AddPopupBannerComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddPopupBannerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addpopupbanner',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addpopupbanner.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/add/addpopupbanner.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addpopupbanner.component.css */
+        "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_6__["PopupBannerService"]])], AddPopupBannerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/popupbanner/popupbanner.component.ts":
+    /*!*********************************************************************!*\
+      !*** ./src/app/admin/settings/popupbanner/popupbanner.component.ts ***!
+      \*********************************************************************/
+
+    /*! exports provided: PopupBannerComponent */
+
+    /***/
+    function srcAppAdminSettingsPopupbannerPopupbannerComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PopupBannerComponent", function () {
+        return PopupBannerComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/popupbanner.service */
+      "./src/app/_services/popupbanner.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var PopupBannerComponent = /*#__PURE__*/function () {
+        function PopupBannerComponent(service, ls, excelService, ts, router, modalService) {
+          _classCallCheck(this, PopupBannerComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.selectedBrand = this.ls.getSelectedBrand().brandID;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(PopupBannerComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          } // exportAsXLSX(): void {
+          //   this.service.ExportList().subscribe((res: any) => {
+          //      this.excelService.exportAsExcelFile(res, 'Report_Export');
+          //   }, error => {
+          //     this.ts.showError("Error", "Failed to export")
+          //   });
+          // }
+
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref32) {
+            var column = _ref32.column,
+                direction = _ref32.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(message) {
+            this.router.navigate(["admin/settings/popupbanner/edit", message]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this215 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this215.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this215.getData();
+              } else _this215.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this215.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this216 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this216.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this216.Delete(obj);
+              }
+            }, function (reason) {
+              _this216.closeResult = "Dismissed ".concat(_this216.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return PopupBannerComponent;
+      }();
+
+      PopupBannerComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_7__["PopupBannerService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
+        }];
+      };
+
+      PopupBannerComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      PopupBannerComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-popupbanner',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./popupbanner.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/popupbanner/popupbanner.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_popupbanner_service__WEBPACK_IMPORTED_MODULE_7__["PopupBannerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], PopupBannerComponent);
       /***/
     },
 
@@ -33531,21 +34341,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this212 = this;
+            var _this217 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this212.loadingOffers = true;
+                _this217.loadingOffers = true;
 
-                _this212.f.promotionID.setValue(sid);
+                _this217.f.promotionID.setValue(sid);
 
-                _this212.promotion.getById(sid).subscribe(function (res) {
+                _this217.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this212.editForm(res);
+                  _this217.editForm(res);
 
-                  _this212.loadingOffers = false;
+                  _this217.loadingOffers = false;
                 });
               }
             });
@@ -33553,7 +34363,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this213 = this;
+            var _this218 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -33571,31 +34381,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this213.ts.showSuccess("Success", "Record added successfully.");
+                  _this218.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this213.router.navigate(['/admin/offers']);
+                  _this218.router.navigate(['/admin/offers']);
                 }
 
-                _this213.loading = false;
+                _this218.loading = false;
               }, function (error) {
-                _this213.ts.showError("Error", "Failed to insert record.");
+                _this218.ts.showError("Error", "Failed to insert record.");
 
-                _this213.loading = false;
+                _this218.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this213.loading = false;
+                _this218.loading = false;
 
                 if (data != 0) {
-                  _this213.ts.showSuccess("Success", "Record updated successfully.");
+                  _this218.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this213.router.navigate(['/admin/offers']);
+                  _this218.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this213.ts.showError("Error", "Failed to update record.");
+                _this218.ts.showError("Error", "Failed to update record.");
 
-                _this213.loading = false;
+                _this218.loading = false;
               });
             }
           }
@@ -33748,9 +34558,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref32) {
-            var column = _ref32.column,
-                direction = _ref32.direction;
+          value: function onSort(_ref33) {
+            var column = _ref33.column,
+                direction = _ref33.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -33767,16 +34577,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this214 = this;
+            var _this219 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this214.ts.showSuccess("Success", "Record deleted successfully.");
+                _this219.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this214.getData();
-              } else _this214.ts.showError("Error", "Failed to delete record.");
+                _this219.getData();
+              } else _this219.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this214.ts.showError("Error", "Failed to delete record.");
+              _this219.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -33942,22 +34752,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this215 = this;
+            var _this220 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this215.loadingService = true;
+                _this220.loadingService = true;
 
-                _this215.f.specialistID.setValue(sid);
+                _this220.f.specialistID.setValue(sid);
 
-                _this215.services.getById(sid).subscribe(function (res) {
+                _this220.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this215.editForm(res);
+                  _this220.editForm(res);
 
-                  _this215.loadingService = false;
+                  _this220.loadingService = false;
                 });
               }
             });
@@ -33965,7 +34775,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this216 = this;
+            var _this221 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -33984,31 +34794,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this216.ts.showSuccess("Success", "Record added successfully.");
+                  _this221.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this216.router.navigate(['/admin/settings/speciality']);
+                  _this221.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this216.loading = false;
+                _this221.loading = false;
               }, function (error) {
-                _this216.ts.showError("Error", "Failed to insert record.");
+                _this221.ts.showError("Error", "Failed to insert record.");
 
-                _this216.loading = false;
+                _this221.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this216.loading = false;
+                _this221.loading = false;
 
                 if (data != 0) {
-                  _this216.ts.showSuccess("Success", "Record updated successfully.");
+                  _this221.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this216.router.navigate(['/admin/settings/speciality']);
+                  _this221.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this216.ts.showError("Error", "Failed to update record.");
+                _this221.ts.showError("Error", "Failed to update record.");
 
-                _this216.loading = false;
+                _this221.loading = false;
               });
             }
           }
@@ -34166,9 +34976,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref33) {
-            var column = _ref33.column,
-                direction = _ref33.direction;
+          value: function onSort(_ref34) {
+            var column = _ref34.column,
+                direction = _ref34.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -34185,33 +34995,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this217 = this;
+            var _this222 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this217.ts.showSuccess("Success", "Record deleted successfully.");
+                _this222.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this217.getData();
-              } else _this217.ts.showError("Error", "Failed to delete record.");
+                _this222.getData();
+              } else _this222.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this217.ts.showError("Error", "Failed to delete record.");
+              _this222.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this218 = this;
+            var _this223 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this218.closeResult = "Closed with: ".concat(result);
+              _this223.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this218.Delete(obj);
+                _this223.Delete(obj);
               }
             }, function (reason) {
-              _this218.closeResult = "Dismissed ".concat(_this218.getDismissReason(reason));
+              _this223.closeResult = "Dismissed ".concat(_this223.getDismissReason(reason));
             });
           }
         }, {
@@ -34385,22 +35195,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this219 = this;
+            var _this224 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this219.loadingService = true;
+                _this224.loadingService = true;
 
-                _this219.f.timeSlotID.setValue(sid);
+                _this224.f.timeSlotID.setValue(sid);
 
-                _this219.services.getById(sid).subscribe(function (res) {
+                _this224.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this219.editForm(res);
+                  _this224.editForm(res);
 
-                  _this219.loadingService = false;
+                  _this224.loadingService = false;
                 });
               }
             });
@@ -34408,7 +35218,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this220 = this;
+            var _this225 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -34426,31 +35236,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this220.ts.showSuccess("Success", "Record added successfully.");
+                  _this225.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this220.router.navigate(['/admin/settings/timeslot']);
+                  _this225.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this220.loading = false;
+                _this225.loading = false;
               }, function (error) {
-                _this220.ts.showError("Error", "Failed to insert record.");
+                _this225.ts.showError("Error", "Failed to insert record.");
 
-                _this220.loading = false;
+                _this225.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this220.loading = false;
+                _this225.loading = false;
 
                 if (data != 0) {
-                  _this220.ts.showSuccess("Success", "Record updated successfully.");
+                  _this225.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this220.router.navigate(['/admin/settings/timeslot']);
+                  _this225.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this220.ts.showError("Error", "Failed to update record.");
+                _this225.ts.showError("Error", "Failed to update record.");
 
-                _this220.loading = false;
+                _this225.loading = false;
               });
             }
           }
@@ -34608,9 +35418,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref34) {
-            var column = _ref34.column,
-                direction = _ref34.direction;
+          value: function onSort(_ref35) {
+            var column = _ref35.column,
+                direction = _ref35.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -34627,34 +35437,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this221 = this;
+            var _this226 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this221.ts.showSuccess("Success", "Record deleted successfully.");
+                _this226.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this221.getData();
-              } else _this221.ts.showError("Error", "Failed to delete record.");
+                _this226.getData();
+              } else _this226.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this221.ts.showError("Error", "Failed to delete record.");
+              _this226.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this222 = this;
+            var _this227 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this222.closeResult = "Closed with: ".concat(result);
+              _this227.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this222.Delete(obj);
+                _this227.Delete(obj);
               }
             }, function (reason) {
-              _this222.closeResult = "Dismissed ".concat(_this222.getDismissReason(reason));
+              _this227.closeResult = "Dismissed ".concat(_this227.getDismissReason(reason));
             });
           }
         }, {
@@ -34867,21 +35677,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this223 = this;
+            var _this228 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this223.loadingSpeaker = true;
+                _this228.loadingSpeaker = true;
 
-                _this223.f.speakerID.setValue(sid);
+                _this228.f.speakerID.setValue(sid);
 
-                _this223.speakerService.getById(sid).subscribe(function (res) {
+                _this228.speakerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this223.editForm(res);
+                  _this228.editForm(res);
 
-                  _this223.loadingSpeaker = false;
+                  _this228.loadingSpeaker = false;
                 });
               }
             });
@@ -34889,7 +35699,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this224 = this;
+            var _this229 = this;
 
             debugger;
             this.speakerForm.markAllAsTouched();
@@ -34908,32 +35718,32 @@
               console.log(JSON.stringify(this.speakerForm.value));
               this.speakerService.insert(this.speakerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this224.ts.showSuccess("Success", "Record added successfully.");
+                  _this229.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this224.router.navigate(['/admin/speaker']);
+                  _this229.router.navigate(['/admin/speaker']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this224.loading = false;
+                _this229.loading = false;
               }, function (error) {
-                _this224.ts.showError("Error", "Failed to insert record.");
+                _this229.ts.showError("Error", "Failed to insert record.");
 
-                _this224.loading = false;
+                _this229.loading = false;
               });
             } else {
               //Update modifier
               this.speakerService.update(this.speakerForm.value).subscribe(function (data) {
-                _this224.loading = false;
+                _this229.loading = false;
 
                 if (data != 0) {
-                  _this224.ts.showSuccess("Success", "Record updated successfully.");
+                  _this229.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this224.router.navigate(['/admin/speaker']);
+                  _this229.router.navigate(['/admin/speaker']);
                 }
               }, function (error) {
-                _this224.ts.showError("Error", "Failed to update record.");
+                _this229.ts.showError("Error", "Failed to update record.");
 
-                _this224.loading = false;
+                _this229.loading = false;
               });
             }
           }
@@ -35095,12 +35905,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this225 = this;
+            var _this230 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this225.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this230.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this225.ts.showError("Error", "Failed to export");
+              _this230.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -35113,9 +35923,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref35) {
-            var column = _ref35.column,
-                direction = _ref35.direction;
+          value: function onSort(_ref36) {
+            var column = _ref36.column,
+                direction = _ref36.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -35132,34 +35942,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this226 = this;
+            var _this231 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this226.ts.showSuccess("Success", "Record deleted successfully.");
+                _this231.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this226.getData();
-              } else _this226.ts.showError("Error", "Failed to delete record.");
+                _this231.getData();
+              } else _this231.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this226.ts.showError("Error", "Failed to delete record.");
+              _this231.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this227 = this;
+            var _this232 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this227.closeResult = "Closed with: ".concat(result);
+              _this232.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this227.Delete(obj);
+                _this232.Delete(obj);
               }
             }, function (reason) {
-              _this227.closeResult = "Dismissed ".concat(_this227.getDismissReason(reason));
+              _this232.closeResult = "Dismissed ".concat(_this232.getDismissReason(reason));
             });
           }
         }, {
@@ -35354,21 +36164,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this228 = this;
+            var _this233 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this228.loadingCustomer = true;
+                _this233.loadingCustomer = true;
 
-                _this228.f.userID.setValue(sid);
+                _this233.f.userID.setValue(sid);
 
-                _this228.userService.getById(sid).subscribe(function (res) {
+                _this233.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this228.editForm(res);
+                  _this233.editForm(res);
 
-                  _this228.loadingCustomer = false;
+                  _this233.loadingCustomer = false;
                 });
               }
             });
@@ -35376,7 +36186,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this229 = this;
+            var _this234 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -35395,31 +36205,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this229.ts.showSuccess("Success", "Record added successfully.");
+                  _this234.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this229.router.navigate(['/admin/user']);
+                  _this234.router.navigate(['/admin/user']);
                 }
 
-                _this229.loading = false;
+                _this234.loading = false;
               }, function (error) {
-                _this229.ts.showError("Error", "Failed to insert record.");
+                _this234.ts.showError("Error", "Failed to insert record.");
 
-                _this229.loading = false;
+                _this234.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this229.loading = false;
+                _this234.loading = false;
 
                 if (data != 0) {
-                  _this229.ts.showSuccess("Success", "Record updated successfully.");
+                  _this234.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this229.router.navigate(['/admin/user']);
+                  _this234.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this229.ts.showError("Error", "Failed to update record.");
+                _this234.ts.showError("Error", "Failed to update record.");
 
-                _this229.loading = false;
+                _this234.loading = false;
               });
             }
           }
@@ -35604,13 +36414,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this230 = this;
+            var _this235 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this230.formName = res[0];
+                _this235.formName = res[0];
               }
 
               debugger;
@@ -35619,22 +36429,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this231 = this;
+            var _this236 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this231.loading = false;
+              _this236.loading = false;
 
               if (obj != 0) {
-                _this231.ts.showSuccess("Success", "Record updated successfully.");
+                _this236.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this231.router.navigate(['/admin/permission']);
+                _this236.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this231.ts.showError("Error", "Failed to update record.");
+              _this236.ts.showError("Error", "Failed to update record.");
 
-              _this231.loading = false;
+              _this236.loading = false;
             });
           }
         }, {
@@ -35798,12 +36608,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this232 = this;
+            var _this237 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this232.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this237.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this232.ts.showError("Error", "Failed to export");
+              _this237.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -35816,9 +36626,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref36) {
-            var column = _ref36.column,
-                direction = _ref36.direction;
+          value: function onSort(_ref37) {
+            var column = _ref37.column,
+                direction = _ref37.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -35835,16 +36645,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this233 = this;
+            var _this238 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this233.ts.showSuccess("Success", "Record deleted successfully.");
+                _this238.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this233.getData();
-              } else _this233.ts.showError("Error", "Failed to delete record.");
+                _this238.getData();
+              } else _this238.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this233.ts.showError("Error", "Failed to delete record.");
+              _this238.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -35996,12 +36806,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this234 = this;
+            var _this239 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this234.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this239.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this234.ts.showError("Error", "Failed to export");
+              _this239.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -36014,9 +36824,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref37) {
-            var column = _ref37.column,
-                direction = _ref37.direction;
+          value: function onSort(_ref38) {
+            var column = _ref38.column,
+                direction = _ref38.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -36039,33 +36849,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this235 = this;
+            var _this240 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this235.ts.showSuccess("Success", "Record deleted successfully.");
+                _this240.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this235.getData();
-              } else _this235.ts.showError("Error", "Failed to delete record.");
+                _this240.getData();
+              } else _this240.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this235.ts.showError("Error", "Failed to delete record.");
+              _this240.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this236 = this;
+            var _this241 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this236.closeResult = "Closed with: ".concat(result);
+              _this241.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this236.Delete(obj);
+                _this241.Delete(obj);
               }
             }, function (reason) {
-              _this236.closeResult = "Dismissed ".concat(_this236.getDismissReason(reason));
+              _this241.closeResult = "Dismissed ".concat(_this241.getDismissReason(reason));
             });
           }
         }, {
@@ -36212,16 +37022,16 @@
         }, {
           key: "setSelecteduser",
           value: function setSelecteduser() {
-            var _this237 = this;
+            var _this242 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this237.service.getById(sid).subscribe(function (res) {
+                _this242.service.getById(sid).subscribe(function (res) {
                   debugger;
 
-                  _this237.editForm(res);
+                  _this242.editForm(res);
                 });
               }
             });
@@ -36229,19 +37039,19 @@
         }, {
           key: "updateuserstatus",
           value: function updateuserstatus(user, status) {
-            var _this238 = this;
+            var _this243 = this;
 
             debugger;
             user.statusID = status; //Update 
 
             this.service.statusUpdate(user).subscribe(function (data) {
               if (data != 0) {
-                _this238.ts.showSuccess("Success", "Record updated successfully.");
+                _this243.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this238.router.navigate(['admin/userdetails']);
+                _this243.router.navigate(['admin/userdetails']);
               }
             }, function (error) {
-              _this238.ts.showError("Error", "Failed to update record.");
+              _this243.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -36402,16 +37212,16 @@
         }, {
           key: "getData",
           value: function getData(attendeesIDs) {
-            var _this239 = this;
+            var _this244 = this;
 
             debugger;
             this.service.AttendeesRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger;
-                _this239.orderDetails = res;
-              } else _this239.ts.showError("Error", "Something went wrong");
+                _this244.orderDetails = res;
+              } else _this244.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this239.ts.showError("Error", "Failed to delete record.");
+              _this244.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -36429,23 +37239,23 @@
         }, {
           key: "LoadAttendee",
           value: function LoadAttendee() {
-            var _this240 = this;
+            var _this245 = this;
 
             debugger;
             this.service.loadAttendees().subscribe(function (res) {
               debugger;
-              _this240.Attendees = res;
-              _this240.attendeesID = _this240.selectedEvent;
+              _this245.Attendees = res;
+              _this245.attendeesID = _this245.selectedEvent;
 
-              _this240.loadEventsMulti().subscribe(function (res) {
-                _this240.Attendees = res;
+              _this245.loadEventsMulti().subscribe(function (res) {
+                _this245.Attendees = res;
                 var arr = [];
 
-                _this240.Attendees.forEach(function (element) {
+                _this245.Attendees.forEach(function (element) {
                   arr.push(element.attendeesID);
                 });
 
-                _this240.getData(_this240.selectedEvents.toString());
+                _this245.getData(_this245.selectedEvents.toString());
               });
             });
           }
@@ -36738,22 +37548,22 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this241 = this;
+            var _this246 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this241.loadingItems = true;
+                _this246.loadingItems = true;
 
-                _this241.f.workshopID.setValue(sid);
+                _this246.f.workshopID.setValue(sid);
 
-                _this241.workshopService.getById(sid).subscribe(function (res) {
+                _this246.workshopService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this241.editForm(res);
+                  _this246.editForm(res);
 
-                  _this241.loadingItems = false;
+                  _this246.loadingItems = false;
                 });
               }
             });
@@ -36761,7 +37571,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this242 = this;
+            var _this247 = this;
 
             debugger;
             this.workshopForm.markAllAsTouched();
@@ -36790,31 +37600,31 @@
               console.log(JSON.stringify(this.workshopForm.value));
               this.workshopService.insert(this.workshopForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this242.ts.showSuccess("Success", "Workshop added successfully.");
+                  _this247.ts.showSuccess("Success", "Workshop added successfully.");
 
-                  _this242.router.navigate(['/admin/workshop']);
+                  _this247.router.navigate(['/admin/workshop']);
                 }
 
-                _this242.loading = false;
+                _this247.loading = false;
               }, function (error) {
-                _this242.ts.showError("Error", "Failed to insert Workshop.");
+                _this247.ts.showError("Error", "Failed to insert Workshop.");
 
-                _this242.loading = false;
+                _this247.loading = false;
               });
             } else {
               //Update item
               this.workshopService.update(this.workshopForm.value).subscribe(function (data) {
-                _this242.loading = false;
+                _this247.loading = false;
 
                 if (data != 0) {
-                  _this242.ts.showSuccess("Success", "Workshop updated successfully.");
+                  _this247.ts.showSuccess("Success", "Workshop updated successfully.");
 
-                  _this242.router.navigate(['/admin/workshop']);
+                  _this247.router.navigate(['/admin/workshop']);
                 }
               }, function (error) {
-                _this242.ts.showError("Error", "Failed to update Workshop.");
+                _this247.ts.showError("Error", "Failed to update Workshop.");
 
-                _this242.loading = false;
+                _this247.loading = false;
               });
             }
           }
@@ -36826,10 +37636,10 @@
         }, {
           key: "loadOrganizer",
           value: function loadOrganizer() {
-            var _this243 = this;
+            var _this248 = this;
 
             this.service.loadOrganizer().subscribe(function (res) {
-              _this243.OrganizerList = res;
+              _this248.OrganizerList = res;
             });
           }
         }, {
@@ -36998,12 +37808,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this244 = this;
+            var _this249 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this244.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this249.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this244.ts.showError("Error", "Failed to export");
+              _this249.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -37016,9 +37826,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref38) {
-            var column = _ref38.column,
-                direction = _ref38.direction;
+          value: function onSort(_ref39) {
+            var column = _ref39.column,
+                direction = _ref39.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -37035,35 +37845,35 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this245 = this;
+            var _this250 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this245.ts.showSuccess("Success", "Record deleted successfully.");
+                _this250.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this245.getData();
-              } else _this245.ts.showError("Error", "Failed to delete record.");
+                _this250.getData();
+              } else _this250.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this245.ts.showError("Error", "Failed to delete record.");
+              _this250.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this246 = this;
+            var _this251 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this246.closeResult = "Closed with: ".concat(result);
+              _this251.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this246.Delete(obj);
+                _this251.Delete(obj);
               }
             }, function (reason) {
-              _this246.closeResult = "Dismissed ".concat(_this246.getDismissReason(reason));
+              _this251.closeResult = "Dismissed ".concat(_this251.getDismissReason(reason));
             });
           }
         }, {
@@ -37889,6 +38699,18 @@
       var _angular_common__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
+      /*! ./admin/settings/popupbanner/popupbanner.component */
+      "./src/app/admin/settings/popupbanner/popupbanner.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
+      /*! ./admin/settings/popupbanner/add/addpopupbanner.component */
+      "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -37908,7 +38730,7 @@
       };
 
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"], _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"], _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"], _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"], _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"], _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"], _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"], _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"], _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"], _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"], _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"], _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"], _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"], _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"], _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"], _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"], _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__["UserEventReportComponent"], _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"], _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"], _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"], _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"], _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"], _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"], _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"], _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"], _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"], _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"], _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"], _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"], _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"], _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"], _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"], _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"], _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"], _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"], _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"], _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"], _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"], _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"], _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"], _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__["UserEventReportComponent"], _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"], _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"], _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"], _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"], _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"], _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"], _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"], _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"], _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"], _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
         }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_common__WEBPACK_IMPORTED_MODULE_114__["CommonModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_105__["RichTextEditorModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
@@ -38006,6 +38828,15 @@
           }, {
             path: 'settings/banner/edit/:id',
             component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"]
+          }, {
+            path: 'settings/popupbanner',
+            component: _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"]
+          }, {
+            path: 'settings/popupbanner/add',
+            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]
+          }, {
+            path: 'settings/popupbanner/edit/:id',
+            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]
           }, {
             path: 'settings/corporateclient',
             component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"]
@@ -38556,12 +39387,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this247 = this;
+        var _this252 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this247.forecasts = result;
+          _this252.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -38744,7 +39575,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this248 = this;
+            var _this253 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -38754,14 +39585,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this248.imageUrl = reader.result;
+                _this253.imageUrl = reader.result;
 
-                _this248.registrationForm.patchValue({
+                _this253.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this248.editFile = false;
-                _this248.removeUpload = true;
+                _this253.editFile = false;
+                _this253.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -38860,7 +39691,7 @@
         _createClass(ImageViewComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this249 = this;
+            var _this254 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -38870,14 +39701,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this249.imageUrl = reader.result;
+                _this254.imageUrl = reader.result;
 
-                _this249.registrationForm.patchValue({
+                _this254.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this249.editFile = false;
-                _this249.removeUpload = true;
+                _this254.editFile = false;
+                _this254.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -39208,7 +40039,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this250 = this;
+            var _this255 = this;
 
             debugger;
             this.loginForm.markAllAsTouched();
@@ -39219,16 +40050,16 @@
 
             this.service.login(this.f.email.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this250.ls.setSelectedBrand(data); //this.userService.getAllData();
+                _this255.ls.setSelectedBrand(data); //this.userService.getAllData();
                 //environment.rootScope = data;
 
 
-                _this250.router.navigate(["/admin/dashboard"]);
+                _this255.router.navigate(["/admin/dashboard"]);
               } else {
-                _this250.ts.showError("Error", "Email or password is not correct.");
+                _this255.ts.showError("Error", "Email or password is not correct.");
               }
             }, function (error) {
-              _this250.ts.showError("Error", "Something went wrong.");
+              _this255.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
