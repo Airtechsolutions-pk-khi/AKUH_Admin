@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Status</th>\r\n                        <!--<th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>-->\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of orderDetails\">\r\n                    <td>{{item.eventName}} </td>\r\n                    <td>{{item.type}} </td>\r\n                    <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                    <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                    <td>{{item.eventTime}}</td>\r\n                    <td>{{item.userName}}</td>\r\n                    <td>{{item.email}}</td>\r\n                    <td>{{item.phoneNo}}</td>\r\n                    <td>\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 1\">Pending</span>\r\n\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n                    </td>\r\n                    <!--<td>{{item.occupation}}</td>\r\n  <td>{{item.gender}}</td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n           \r\n\r\n              <!-- <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Attendee</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div> -->\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n          <table class=\"table table-striped\">\r\n              <thead>\r\n                  <tr class=\"table-header\">\r\n                      <th width=\"25%\">Attendee Name</th>\r\n                      <th width=\"25%\">Email</th>\r\n                      <th width=\"25%\">Contact No</th>\r\n                      <th width=\"25%\" >Status </th>\r\n                      \r\n                      \r\n                  </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let item of orderDetails\">\r\n                      <td>{{item.fullName}} </td>\r\n                      <td>{{item.email}} </td>\r\n                      <td>{{item.phoneNo }} </td>\r\n                      <td>\r\n                          <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 104, 'btn-danger':item.statusID !== 104 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==104?'Payment Approved':'Payment not Approved'\" [term]=\"service.searchTerm\">\r\n                          </ngb-highlight>\r\n                        </td>\r\n                  </tr>\r\n              </tbody>\r\n          </table>\r\n      </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1388,7 +1388,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Attendee Event Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <h6 class=\"m-0 font-weight-bold text-orange\">Attendee Event Report Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.name}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.fullName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Attendee Event Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <h6 class=\"m-0 font-weight-bold text-orange\">Attendee Event Report Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n\r\n            <!-- <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Attendee</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div> -->\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"25%\">Attendee Name</th>\r\n                        <th width=\"25%\">Email</th>\r\n                        <th width=\"25%\">Contact No</th>\r\n                        <th width=\"25%\" >Status </th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.email}} </td>\r\n                        <td>{{item.phoneNo }} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 104, 'btn-danger':item.statusID !== 104 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==104?'Payment Approved':'Payment not Approved'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1505,7 +1505,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/popupbanner']\">popup Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">Registered Attendee List</a> \r\n        <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a> -->\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm Attendee List</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/popupbanner']\">popup Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -8007,11 +8007,11 @@ let ReportService = class ReportService {
     EventDetailRpt(eventID, fromDate, toDate) {
         return this.http.get(`api/event/EventRpt/$${eventID}/${fromDate}/${toDate}`);
     }
-    ConfirmListRpt(eventID, fromDate, toDate) {
-        return this.http.get(`api/event/ConfirmListReport/$${eventID}/${fromDate}/${toDate}`);
+    ConfirmListRpt(fromDate, toDate) {
+        return this.http.get(`api/event/ConfirmListReport/${fromDate}/${toDate}`);
     }
-    AttendeesRpt(attendeesID, fromDate, toDate) {
-        return this.http.get(`api/event/AttendeesReport/$${attendeesID}/${fromDate}/${toDate}`);
+    AttendeesRpt(fromDate, toDate) {
+        return this.http.get(`api/event/AttendeesReport/$/${fromDate}/${toDate}`);
     }
     SalesItemwiseRpt(brandID, locationID, fromDate, toDate) {
         return this.http.get(`api/report/salesitemwise/${brandID}/${locationID}/${fromDate}/${toDate}`);
@@ -8033,6 +8033,9 @@ let ReportService = class ReportService {
     }
     loadAttendees() {
         return this.http.get(`api/Event/allattendees`);
+    }
+    loadAttendeesconfirm() {
+        return this.http.get(`api/Event/allattendeesConfirm`);
     }
 };
 ReportService.ctorParameters = () => [
@@ -9604,17 +9607,32 @@ let ConfirmlistreportComponent = class ConfirmlistreportComponent {
         this.excelService = excelService;
         this.router = router;
         this.Events = [];
+        this.Attendees = [];
         this.eventID = 0;
+        this.attendeesID = 0;
         this.orderDetails = [];
         this.selectedBrand = this.ls.getSelectedBrand().brandID;
         // this.selectedLocation = this.ls.getSelectedLocation().locationID
-        this.LoadEvents();
+        //this.LoadAttendee();
     }
     ngOnInit() {
     }
-    getData(eventIDs) {
+    // getData(eventIDs) {
+    //   debugger
+    //   this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+    //     .subscribe((res: any) => {
+    //       if (res != null) {
+    //         this.orderDetails = res;
+    //       }
+    //       else
+    //         this.ts.showError("Error", "Something went wrong");
+    //     }, error => {
+    //       this.ts.showError("Error", "Failed to delete record.")
+    //     });
+    // }
+    getData() {
         debugger;
-        this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+        this.service.ConfirmListRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
             .subscribe((res) => {
             if (res != null) {
                 this.orderDetails = res;
@@ -9633,34 +9651,65 @@ let ConfirmlistreportComponent = class ConfirmlistreportComponent {
         debugger;
         this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
     }
-    LoadEvents() {
+    //   LoadEvents() {
+    //     debugger
+    //     // this.service.loadEvents().subscribe((res: any) => {
+    //       this.service.loadAttendees().subscribe((res: any) => {
+    //       this.Attendees = res;
+    //       this.attendeesID = this.selectedEvent;
+    //       this.loadEventsMulti()
+    //       //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+    //       .subscribe((res) => {
+    //         this.Attendees = res;
+    //         var arr=[];
+    //         this.Events.forEach(element => {
+    //            arr.push(element.eventID);
+    //         });
+    //         //this.selectedEvents=arr;
+    //         this.getData(this.selectedEvents.toString());   
+    //       });
+    //     });
+    //   }
+    //   loadEventsMulti(term: string = null): Observable<Event[]> {
+    //     let items = this.Events;
+    //     if (term) {
+    //       items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+    //     }
+    //     return of(items).pipe(delay(500));
+    //   }
+    //   Filter() {
+    //     debugger
+    //     this.getData(this.selectedEvents.toString());
+    //   }
+    // }
+    LoadAttendee() {
         debugger;
-        this.service.loadEvents().subscribe((res) => {
-            this.Events = res;
-            this.eventID = this.selectedEvent;
+        this.service.loadAttendeesconfirm().subscribe((res) => {
+            debugger;
+            this.Attendees = res;
+            this.attendeesID = this.selectedEvent;
             this.loadEventsMulti()
-                //.pipe(map(x => x.filter(y => !y.statusID ==2)))
                 .subscribe((res) => {
-                this.Events = res;
+                this.Attendees = res;
                 var arr = [];
-                this.Events.forEach(element => {
-                    arr.push(element.eventID);
+                this.Attendees.forEach(element => {
+                    arr.push(element.attendeesID);
                 });
-                //this.selectedEvents=arr;
-                this.getData(this.selectedEvents.toString());
+                this.getData();
             });
         });
     }
     loadEventsMulti(term = null) {
-        let items = this.Events;
+        let items = this.Attendees;
         if (term) {
-            items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+            items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
         }
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
     }
     Filter() {
         debugger;
-        this.getData(this.selectedEvents.toString());
+        //this.getData(this.selectedEvents.toString());
+        this.getData();
     }
 };
 ConfirmlistreportComponent.ctorParameters = () => [
@@ -22421,15 +22470,13 @@ UserDetailComponent = __decorate([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserEventReportComponent", function() { return UserEventReportComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
-/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
-/* harmony import */ var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/report.service */ "./src/app/_services/report.service.ts");
-/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/report.service */ "./src/app/_services/report.service.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22450,8 +22497,6 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
-
 let UserEventReportComponent = class UserEventReportComponent {
     constructor(service, ls, ts, excelService, router) {
         this.service = service;
@@ -22464,13 +22509,13 @@ let UserEventReportComponent = class UserEventReportComponent {
         this.orderDetails = [];
         this.selectedBrand = this.ls.getSelectedBrand().brandID;
         // this.selectedLocation = this.ls.getSelectedLocation().locationID
-        this.LoadAttendee();
+        //this.LoadAttendee();
     }
     ngOnInit() {
     }
-    getData(attendeesIDs) {
+    getData() {
         debugger;
-        this.service.AttendeesRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+        this.service.AttendeesRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
             .subscribe((res) => {
             if (res != null) {
                 debugger;
@@ -22490,58 +22535,58 @@ let UserEventReportComponent = class UserEventReportComponent {
         debugger;
         this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
     }
-    LoadAttendee() {
-        debugger;
-        this.service.loadAttendees().subscribe((res) => {
-            debugger;
-            this.Attendees = res;
-            this.attendeesID = this.selectedEvent;
-            this.loadEventsMulti()
-                .subscribe((res) => {
-                this.Attendees = res;
-                var arr = [];
-                this.Attendees.forEach(element => {
-                    arr.push(element.attendeesID);
-                });
-                this.getData(this.selectedEvents.toString());
-            });
-        });
-    }
-    loadEventsMulti(term = null) {
-        let items = this.Attendees;
-        if (term) {
-            items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
-        }
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
-    }
+    // LoadAttendee() {
+    //   debugger
+    //   this.service.loadAttendees().subscribe((res: any) => {
+    //     debugger
+    //     this.Attendees = res;
+    //     this.attendeesID = this.selectedEvent;
+    //     this.loadEventsMulti()
+    //       .subscribe((res) => {
+    //       this.Attendees = res;
+    //       var arr=[];
+    //       this.Attendees.forEach(element => {
+    //         arr.push(element.attendeesID);
+    //       });
+    //       this.getData(this.selectedEvents.toString());   
+    //     });
+    //   });   
+    // }
+    // loadEventsMulti(term: string = null): Observable<EventAttendees[]> {
+    //   let items = this.Attendees;
+    //   if (term) {
+    //     items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+    //   }
+    //   return of(items).pipe(delay(500));
+    // }
     Filter() {
         debugger;
-        this.getData(this.selectedEvents.toString());
+        this.getData();
     }
 };
 UserEventReportComponent.ctorParameters = () => [
-    { type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"] },
-    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
-    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
-    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+    { type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__["ReportService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 UserEventReportComponent.propDecorators = {
-    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
-    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"],] }],
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }],
     drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
 };
 UserEventReportComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-usereventreport',
         template: __importDefault(__webpack_require__(/*! raw-loader!./usereventreport.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/usereventreport/usereventreport.component.html")).default,
-        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"]]
     }),
-    __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"],
-        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
-        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
-        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__["ReportService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], UserEventReportComponent);
 
 

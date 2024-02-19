@@ -362,7 +362,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <!-- <div class=\"col-md-12 form-group\">\r\n                <label for=\"inputUsername\">Select Events</label>\r\n                <ng-select [items]=\"Events\" [multiple]=\"true\" bindLabel=\"name\" [selectableGroup]=\"true\" [selectableGroupAsModel]=\"false\" [closeOnSelect]=\"false\" bindValue=\"eventID\" [(ngModel)]=\"selectedEvents\">\r\n                    <ng-template ng-optgroup-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.eventID }}\r\n                    </ng-template>\r\n                    <ng-template ng-option-tmp let-item=\"item\" let-item$=\"item$\" let-index=\"index\">\r\n                        <input id=\"item-{{index}}\" type=\"checkbox\" [ngModel]=\"item$.selected\" /> {{item.name}}\r\n                    </ng-template>\r\n                </ng-select>\r\n            </div> -->\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Events\" bindLabel=\"name\" bindValue=\"eventID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Status</th>\r\n                        <!--<th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>-->\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of orderDetails\">\r\n                    <td>{{item.eventName}} </td>\r\n                    <td>{{item.type}} </td>\r\n                    <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                    <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                    <td>{{item.eventTime}}</td>\r\n                    <td>{{item.userName}}</td>\r\n                    <td>{{item.email}}</td>\r\n                    <td>{{item.phoneNo}}</td>\r\n                    <td>\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 1\">Pending</span>\r\n\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n                    </td>\r\n                    <!--<td>{{item.occupation}}</td>\r\n  <td>{{item.gender}}</td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Confirm Attendee Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Confirm Event Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n           \r\n\r\n              <!-- <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Attendee</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div> -->\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n          <table class=\"table table-striped\">\r\n              <thead>\r\n                  <tr class=\"table-header\">\r\n                      <th width=\"25%\">Attendee Name</th>\r\n                      <th width=\"25%\">Email</th>\r\n                      <th width=\"25%\">Contact No</th>\r\n                      <th width=\"25%\" >Status </th>\r\n                      \r\n                      \r\n                  </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let item of orderDetails\">\r\n                      <td>{{item.fullName}} </td>\r\n                      <td>{{item.email}} </td>\r\n                      <td>{{item.phoneNo }} </td>\r\n                      <td>\r\n                          <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 104, 'btn-danger':item.statusID !== 104 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==104?'Payment Approved':'Payment not Approved'\" [term]=\"service.searchTerm\">\r\n                          </ngb-highlight>\r\n                        </td>\r\n                  </tr>\r\n              </tbody>\r\n          </table>\r\n      </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -2062,7 +2062,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Attendee Event Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <h6 class=\"m-0 font-weight-bold text-orange\">Attendee Event Report Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n\r\n            <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Events</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Event Name</th>\r\n                        <th width=\"10%\">Event Type</th>\r\n                        <th width=\"10%\">Start Date</th>\r\n                        <th width=\"10%\">End Date</th>\r\n                        <th width=\"10%\">Time</th>\r\n                        <th width=\"10%\">Participant Name </th>\r\n                        <th width=\"10%\">Email </th>\r\n                        <th width=\"10%\">Contact No</th>\r\n                        <th width=\"10%\">Occupation</th>\r\n                        <th width=\"5%\">Gender</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.name}} </td>\r\n                        <td>{{item.type}} </td>\r\n                        <td>{{item.fromDate | date:'dd-MM-yyyy' }} </td>\r\n                        <td>{{item.toDate | date:'dd-MM-yyyy'  }} </td>\r\n                        <td>{{item.eventTime}}</td>\r\n                        <td>{{item.fullName}}</td>\r\n                        <td>{{item.email}}</td>\r\n                        <td>{{item.phoneNo}}</td>\r\n                        <td>{{item.occupation}}</td>\r\n                        <td>{{item.gender}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Attendee Event Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <h6 class=\"m-0 font-weight-bold text-orange\">Attendee Event Report Details</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n \r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n\r\n            <!-- <div class=\"form-group col-md-4\">\r\n                <label class=\"small mb-1\" for=\"inputLocation\">Select Attendee</label>\r\n                <ng-select [items]=\"Attendees\" bindLabel=\"fullName\" bindValue=\"attendeesID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedEvents\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div> -->\r\n\r\n\r\n        </div>\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"25%\">Attendee Name</th>\r\n                        <th width=\"25%\">Email</th>\r\n                        <th width=\"25%\">Contact No</th>\r\n                        <th width=\"25%\" >Status </th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails\">\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.email}} </td>\r\n                        <td>{{item.phoneNo }} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 104, 'btn-danger':item.statusID !== 104 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==104?'Payment Approved':'Payment not Approved'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -2242,7 +2242,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">User Wise Report</a> \r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a>\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm List Report</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/popupbanner']\">popup Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-new.png\" style=\"width: 72px;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n     \r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSpeaker\" aria-expanded=\"true\" aria-controls=\"collapseSpeaker\">\r\n          <i class=\"fas fa-fw fa-people-arrows\"></i>\r\n          <span>Speaker</span>\r\n        </a>\r\n        <div id=\"collapseSpeaker\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/speaker']\">Speakers</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n     \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseEvents\" aria-expanded=\"true\" aria-controls=\"collapseEvents\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Event</span>\r\n        </a>\r\n        <div id=\"collapseEvents\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/event']\">Events</a>  \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventcategory']\">Events Category</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/eventattendees']\">Event Attendees</a>                  \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n  \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseWorkshop\" aria-expanded=\"true\" aria-controls=\"collapseWorkshop\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Workshop</span>\r\n        </a>\r\n        <div id=\"collapseWorkshop\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/workshop']\">Workshop</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n \r\n      <hr class=\"sidebar-divider\">\r\n \r\n \r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganizer\" aria-expanded=\"true\" aria-controls=\"collapseOrganizer\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Organizer</span>\r\n        </a>\r\n        <div id=\"collapseOrganizer\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organizer']\">Organizers</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePartner\" aria-expanded=\"true\" aria-controls=\"collapsePartner\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Partner</span>\r\n        </a>\r\n        <div id=\"collapsePartner\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/partner']\">Partners</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseOrganisingCommittee\" aria-expanded=\"true\" aria-controls=\"collapseOrganisingCommittee\">\r\n          <i class=\"fas fa-fw fa-address-card\"></i>\r\n          <span>Organising Committee</span>\r\n        </a>\r\n        <div id=\"collapseOrganisingCommittee\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/organisingcommittee']\">Organising Committee</a>                               \r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n\r\n      <hr class=\"sidebar-divider\">\r\n       \r\n\r\n\r\n      <li class=\"nav-item\">\r\n    <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n      <i class=\"fas fa-fw fa-bars\"></i>\r\n      <span>Reports</span>\r\n    </a>\r\n    <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n      <div class=\"bg-white py-2 collapse-inner rounded\">\r\n         <a class=\"collapse-item\" [routerLink]=\"['/admin/userdetailreport']\">Registered Attendee List</a> \r\n        <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/eventdetail']\">Attendee List Report</a> -->\r\n        <a class=\"collapse-item\" [routerLink]=\"['/admin/confirmlistreport']\">Confirm Attendee List</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n      <hr class=\"sidebar-divider\">\r\n\r\n\r\n\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Setting</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Banners</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/popupbanner']\">popup Banners</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/faq']\">FAQ's</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/message']\">Message</a>           \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\" style=\"font-family: 'Nunito'; font-size: 25px; \">\r\n          <strong>Welcome</strong> : {{name}}\r\n          <strong>To AKUH</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600\">{{name}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; AKUH 2024</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -14046,13 +14046,13 @@
           }
         }, {
           key: "ConfirmListRpt",
-          value: function ConfirmListRpt(eventID, fromDate, toDate) {
-            return this.http.get("api/event/ConfirmListReport/$".concat(eventID, "/").concat(fromDate, "/").concat(toDate));
+          value: function ConfirmListRpt(fromDate, toDate) {
+            return this.http.get("api/event/ConfirmListReport/".concat(fromDate, "/").concat(toDate));
           }
         }, {
           key: "AttendeesRpt",
-          value: function AttendeesRpt(attendeesID, fromDate, toDate) {
-            return this.http.get("api/event/AttendeesReport/$".concat(attendeesID, "/").concat(fromDate, "/").concat(toDate));
+          value: function AttendeesRpt(fromDate, toDate) {
+            return this.http.get("api/event/AttendeesReport/$/".concat(fromDate, "/").concat(toDate));
           }
         }, {
           key: "SalesItemwiseRpt",
@@ -14088,6 +14088,11 @@
           key: "loadAttendees",
           value: function loadAttendees() {
             return this.http.get("api/Event/allattendees");
+          }
+        }, {
+          key: "loadAttendeesconfirm",
+          value: function loadAttendeesconfirm() {
+            return this.http.get("api/Event/allattendeesConfirm");
           }
         }, {
           key: "total$",
@@ -16835,23 +16840,37 @@
           this.excelService = excelService;
           this.router = router;
           this.Events = [];
+          this.Attendees = [];
           this.eventID = 0;
+          this.attendeesID = 0;
           this.orderDetails = [];
           this.selectedBrand = this.ls.getSelectedBrand().brandID; // this.selectedLocation = this.ls.getSelectedLocation().locationID
-
-          this.LoadEvents();
+          //this.LoadAttendee();
         }
 
         _createClass(ConfirmlistreportComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {}
+          value: function ngOnInit() {} // getData(eventIDs) {
+          //   debugger
+          //   this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+          //     .subscribe((res: any) => {
+          //       if (res != null) {
+          //         this.orderDetails = res;
+          //       }
+          //       else
+          //         this.ts.showError("Error", "Something went wrong");
+          //     }, error => {
+          //       this.ts.showError("Error", "Failed to delete record.")
+          //     });
+          // }
+
         }, {
           key: "getData",
-          value: function getData(eventIDs) {
+          value: function getData() {
             var _this50 = this;
 
             debugger;
-            this.service.ConfirmListRpt(eventIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
+            this.service.ConfirmListRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 _this50.orderDetails = res;
               } else _this50.ts.showError("Error", "Something went wrong");
@@ -16870,28 +16889,58 @@
           value: function exportAsXLSX() {
             debugger;
             this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
-          }
+          } //   LoadEvents() {
+          //     debugger
+          //     // this.service.loadEvents().subscribe((res: any) => {
+          //       this.service.loadAttendees().subscribe((res: any) => {
+          //       this.Attendees = res;
+          //       this.attendeesID = this.selectedEvent;
+          //       this.loadEventsMulti()
+          //       //.pipe(map(x => x.filter(y => !y.statusID ==2)))
+          //       .subscribe((res) => {
+          //         this.Attendees = res;
+          //         var arr=[];
+          //         this.Events.forEach(element => {
+          //            arr.push(element.eventID);
+          //         });
+          //         //this.selectedEvents=arr;
+          //         this.getData(this.selectedEvents.toString());   
+          //       });
+          //     });
+          //   }
+          //   loadEventsMulti(term: string = null): Observable<Event[]> {
+          //     let items = this.Events;
+          //     if (term) {
+          //       items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+          //     }
+          //     return of(items).pipe(delay(500));
+          //   }
+          //   Filter() {
+          //     debugger
+          //     this.getData(this.selectedEvents.toString());
+          //   }
+          // }
+
         }, {
-          key: "LoadEvents",
-          value: function LoadEvents() {
+          key: "LoadAttendee",
+          value: function LoadAttendee() {
             var _this51 = this;
 
             debugger;
-            this.service.loadEvents().subscribe(function (res) {
-              _this51.Events = res;
-              _this51.eventID = _this51.selectedEvent;
+            this.service.loadAttendeesconfirm().subscribe(function (res) {
+              debugger;
+              _this51.Attendees = res;
+              _this51.attendeesID = _this51.selectedEvent;
 
-              _this51.loadEventsMulti() //.pipe(map(x => x.filter(y => !y.statusID ==2)))
-              .subscribe(function (res) {
-                _this51.Events = res;
+              _this51.loadEventsMulti().subscribe(function (res) {
+                _this51.Attendees = res;
                 var arr = [];
 
-                _this51.Events.forEach(function (element) {
-                  arr.push(element.eventID);
-                }); //this.selectedEvents=arr;
+                _this51.Attendees.forEach(function (element) {
+                  arr.push(element.attendeesID);
+                });
 
-
-                _this51.getData(_this51.selectedEvents.toString());
+                _this51.getData();
               });
             });
           }
@@ -16899,11 +16948,11 @@
           key: "loadEventsMulti",
           value: function loadEventsMulti() {
             var term = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-            var items = this.Events;
+            var items = this.Attendees;
 
             if (term) {
               items = items.filter(function (x) {
-                return x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1;
+                return x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1;
               });
             }
 
@@ -16912,8 +16961,9 @@
         }, {
           key: "Filter",
           value: function Filter() {
-            debugger;
-            this.getData(this.selectedEvents.toString());
+            debugger; //this.getData(this.selectedEvents.toString());
+
+            this.getData();
           }
         }]);
 
@@ -37117,55 +37167,43 @@
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! rxjs */
-      "./node_modules/rxjs/_esm2015/index.js");
-      /* harmony import */
-
-
-      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! src/app/_directives/sortable.directive */
       "./src/app/_directives/sortable.directive.ts");
       /* harmony import */
 
 
-      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! src/app/_services/local-storage.service */
       "./src/app/_services/local-storage.service.ts");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
-      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/_services/toastservice */
       "./src/app/_services/toastservice.ts");
       /* harmony import */
 
 
-      var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/_services/report.service */
       "./src/app/_services/report.service.ts");
       /* harmony import */
 
 
-      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/datepicker-range/datepicker-range-popup */
       "./src/app/datepicker-range/datepicker-range-popup.ts");
       /* harmony import */
 
 
-      var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! rxjs/operators */
-      "./node_modules/rxjs/_esm2015/operators/index.js");
-      /* harmony import */
-
-
-      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/ExportExcel/excel.service */
       "./src/ExportExcel/excel.service.ts");
 
@@ -37202,8 +37240,7 @@
           this.attendeesID = 0;
           this.orderDetails = [];
           this.selectedBrand = this.ls.getSelectedBrand().brandID; // this.selectedLocation = this.ls.getSelectedLocation().locationID
-
-          this.LoadAttendee();
+          //this.LoadAttendee();
         }
 
         _createClass(UserEventReportComponent, [{
@@ -37211,11 +37248,11 @@
           value: function ngOnInit() {}
         }, {
           key: "getData",
-          value: function getData(attendeesIDs) {
+          value: function getData() {
             var _this244 = this;
 
             debugger;
-            this.service.AttendeesRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
+            this.service.AttendeesRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger;
                 _this244.orderDetails = res;
@@ -37235,49 +37272,36 @@
           value: function exportAsXLSX() {
             debugger;
             this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
-          }
-        }, {
-          key: "LoadAttendee",
-          value: function LoadAttendee() {
-            var _this245 = this;
+          } // LoadAttendee() {
+          //   debugger
+          //   this.service.loadAttendees().subscribe((res: any) => {
+          //     debugger
+          //     this.Attendees = res;
+          //     this.attendeesID = this.selectedEvent;
+          //     this.loadEventsMulti()
+          //       .subscribe((res) => {
+          //       this.Attendees = res;
+          //       var arr=[];
+          //       this.Attendees.forEach(element => {
+          //         arr.push(element.attendeesID);
+          //       });
+          //       this.getData(this.selectedEvents.toString());   
+          //     });
+          //   });   
+          // }
+          // loadEventsMulti(term: string = null): Observable<EventAttendees[]> {
+          //   let items = this.Attendees;
+          //   if (term) {
+          //     items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+          //   }
+          //   return of(items).pipe(delay(500));
+          // }
 
-            debugger;
-            this.service.loadAttendees().subscribe(function (res) {
-              debugger;
-              _this245.Attendees = res;
-              _this245.attendeesID = _this245.selectedEvent;
-
-              _this245.loadEventsMulti().subscribe(function (res) {
-                _this245.Attendees = res;
-                var arr = [];
-
-                _this245.Attendees.forEach(function (element) {
-                  arr.push(element.attendeesID);
-                });
-
-                _this245.getData(_this245.selectedEvents.toString());
-              });
-            });
-          }
-        }, {
-          key: "loadEventsMulti",
-          value: function loadEventsMulti() {
-            var term = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-            var items = this.Attendees;
-
-            if (term) {
-              items = items.filter(function (x) {
-                return x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1;
-              });
-            }
-
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(items).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["delay"])(500));
-          }
         }, {
           key: "Filter",
           value: function Filter() {
             debugger;
-            this.getData(this.selectedEvents.toString());
+            this.getData();
           }
         }]);
 
@@ -37286,28 +37310,28 @@
 
       UserEventReportComponent.ctorParameters = function () {
         return [{
-          type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"]
+          type: src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__["ReportService"]
         }, {
-          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
         }, {
-          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
-          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"]
         }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
         }];
       };
 
       UserEventReportComponent.propDecorators = {
         _datepicker: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
-          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], {
+          args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_6__["NgbdDatepickerRangePopup"], {
             "static": true
           }]
         }],
         headers: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
-          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"]]
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
         }],
         drplocation: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
@@ -37319,8 +37343,8 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./usereventreport.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/usereventreport/usereventreport.component.html"))["default"],
-        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
-      }), __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_6__["ReportService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], UserEventReportComponent);
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_report_service__WEBPACK_IMPORTED_MODULE_5__["ReportService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], UserEventReportComponent);
       /***/
     },
 
@@ -37548,22 +37572,22 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this246 = this;
+            var _this245 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this246.loadingItems = true;
+                _this245.loadingItems = true;
 
-                _this246.f.workshopID.setValue(sid);
+                _this245.f.workshopID.setValue(sid);
 
-                _this246.workshopService.getById(sid).subscribe(function (res) {
+                _this245.workshopService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this246.editForm(res);
+                  _this245.editForm(res);
 
-                  _this246.loadingItems = false;
+                  _this245.loadingItems = false;
                 });
               }
             });
@@ -37571,7 +37595,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this247 = this;
+            var _this246 = this;
 
             debugger;
             this.workshopForm.markAllAsTouched();
@@ -37600,31 +37624,31 @@
               console.log(JSON.stringify(this.workshopForm.value));
               this.workshopService.insert(this.workshopForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this247.ts.showSuccess("Success", "Workshop added successfully.");
+                  _this246.ts.showSuccess("Success", "Workshop added successfully.");
 
-                  _this247.router.navigate(['/admin/workshop']);
+                  _this246.router.navigate(['/admin/workshop']);
                 }
 
-                _this247.loading = false;
+                _this246.loading = false;
               }, function (error) {
-                _this247.ts.showError("Error", "Failed to insert Workshop.");
+                _this246.ts.showError("Error", "Failed to insert Workshop.");
 
-                _this247.loading = false;
+                _this246.loading = false;
               });
             } else {
               //Update item
               this.workshopService.update(this.workshopForm.value).subscribe(function (data) {
-                _this247.loading = false;
+                _this246.loading = false;
 
                 if (data != 0) {
-                  _this247.ts.showSuccess("Success", "Workshop updated successfully.");
+                  _this246.ts.showSuccess("Success", "Workshop updated successfully.");
 
-                  _this247.router.navigate(['/admin/workshop']);
+                  _this246.router.navigate(['/admin/workshop']);
                 }
               }, function (error) {
-                _this247.ts.showError("Error", "Failed to update Workshop.");
+                _this246.ts.showError("Error", "Failed to update Workshop.");
 
-                _this247.loading = false;
+                _this246.loading = false;
               });
             }
           }
@@ -37636,10 +37660,10 @@
         }, {
           key: "loadOrganizer",
           value: function loadOrganizer() {
-            var _this248 = this;
+            var _this247 = this;
 
             this.service.loadOrganizer().subscribe(function (res) {
-              _this248.OrganizerList = res;
+              _this247.OrganizerList = res;
             });
           }
         }, {
@@ -37808,12 +37832,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this249 = this;
+            var _this248 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this249.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this248.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this249.ts.showError("Error", "Failed to export");
+              _this248.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -37845,35 +37869,35 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this250 = this;
+            var _this249 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this250.ts.showSuccess("Success", "Record deleted successfully.");
+                _this249.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this250.getData();
-              } else _this250.ts.showError("Error", "Failed to delete record.");
+                _this249.getData();
+              } else _this249.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this250.ts.showError("Error", "Failed to delete record.");
+              _this249.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this251 = this;
+            var _this250 = this;
 
             debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this251.closeResult = "Closed with: ".concat(result);
+              _this250.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this251.Delete(obj);
+                _this250.Delete(obj);
               }
             }, function (reason) {
-              _this251.closeResult = "Dismissed ".concat(_this251.getDismissReason(reason));
+              _this250.closeResult = "Dismissed ".concat(_this250.getDismissReason(reason));
             });
           }
         }, {
@@ -39387,12 +39411,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this252 = this;
+        var _this251 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this252.forecasts = result;
+          _this251.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -39575,7 +39599,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this253 = this;
+            var _this252 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -39585,14 +39609,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this253.imageUrl = reader.result;
+                _this252.imageUrl = reader.result;
 
-                _this253.registrationForm.patchValue({
+                _this252.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this253.editFile = false;
-                _this253.removeUpload = true;
+                _this252.editFile = false;
+                _this252.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -39691,7 +39715,7 @@
         _createClass(ImageViewComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this254 = this;
+            var _this253 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -39701,14 +39725,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this254.imageUrl = reader.result;
+                _this253.imageUrl = reader.result;
 
-                _this254.registrationForm.patchValue({
+                _this253.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this254.editFile = false;
-                _this254.removeUpload = true;
+                _this253.editFile = false;
+                _this253.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -40039,7 +40063,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this255 = this;
+            var _this254 = this;
 
             debugger;
             this.loginForm.markAllAsTouched();
@@ -40050,16 +40074,16 @@
 
             this.service.login(this.f.email.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this255.ls.setSelectedBrand(data); //this.userService.getAllData();
+                _this254.ls.setSelectedBrand(data); //this.userService.getAllData();
                 //environment.rootScope = data;
 
 
-                _this255.router.navigate(["/admin/dashboard"]);
+                _this254.router.navigate(["/admin/dashboard"]);
               } else {
-                _this255.ts.showError("Error", "Email or password is not correct.");
+                _this254.ts.showError("Error", "Email or password is not correct.");
               }
             }, function (error) {
-              _this255.ts.showError("Error", "Something went wrong.");
+              _this254.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
