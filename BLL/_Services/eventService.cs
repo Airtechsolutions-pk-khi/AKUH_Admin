@@ -51,6 +51,17 @@ namespace AKU_Admin.BLL._Services
                 return new List<EventAttendeesBLL>();
             }
         }
+        public List<EventAttendeesBLL> GetAllAttendeesConfirm()
+        {
+            try
+            {
+                return _service.GetAllAttendeesConfirm();
+            }
+            catch (Exception ex)
+            {
+                return new List<EventAttendeesBLL>();
+            }
+        }
 
         public EventBLL Get(int id)
         {
@@ -201,22 +212,22 @@ namespace AKU_Admin.BLL._Services
                 return new List<EventDetailsBLL>();
             }
         }
-        public List<EventDetailsBLL> ConfirmListReport(string EventID, DateTime FromDate, DateTime ToDate)
+        public List<EventDetailsBLL> ConfirmListReport( DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.ConfirmListReport(EventID, FromDate, ToDate);
+                return _service.ConfirmListReport(FromDate, ToDate);
             }
             catch (Exception ex)
             {
                 return new List<EventDetailsBLL>();
             }
         }   
-        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, DateTime FromDate, DateTime ToDate)
+        public List<EventDetailsBLL> AttendeesReport(DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.AttendeesReport(AttendeesID, FromDate, ToDate);
+                return _service.AttendeesReport( FromDate, ToDate);
             }
             catch (Exception ex)
             {

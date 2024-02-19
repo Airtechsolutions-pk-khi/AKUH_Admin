@@ -40,16 +40,16 @@ export class UserEventReportComponent implements OnInit {
     // this.selectedLocation = this.ls.getSelectedLocation().locationID
 
 
-    this.LoadAttendee();
+    //this.LoadAttendee();
   }
 
   ngOnInit() {
     
   }
 
-  getData(attendeesIDs) {
+  getData() {
     debugger
-    this.service.AttendeesRpt(attendeesIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+    this.service.AttendeesRpt( this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
       .subscribe((res: any) => {
         if (res != null) {
           debugger
@@ -70,33 +70,33 @@ export class UserEventReportComponent implements OnInit {
     debugger;
     this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
   }
-  LoadAttendee() {
-    debugger
-    this.service.loadAttendees().subscribe((res: any) => {
-      debugger
-      this.Attendees = res;
-      this.attendeesID = this.selectedEvent;
-      this.loadEventsMulti()
-        .subscribe((res) => {
-        this.Attendees = res;
-        var arr=[];
-        this.Attendees.forEach(element => {
-          arr.push(element.attendeesID);
-        });
-        this.getData(this.selectedEvents.toString());   
-      });
-    });   
-  }
+  // LoadAttendee() {
+  //   debugger
+  //   this.service.loadAttendees().subscribe((res: any) => {
+  //     debugger
+  //     this.Attendees = res;
+  //     this.attendeesID = this.selectedEvent;
+  //     this.loadEventsMulti()
+  //       .subscribe((res) => {
+  //       this.Attendees = res;
+  //       var arr=[];
+  //       this.Attendees.forEach(element => {
+  //         arr.push(element.attendeesID);
+  //       });
+  //       this.getData(this.selectedEvents.toString());   
+  //     });
+  //   });   
+  // }
 
-  loadEventsMulti(term: string = null): Observable<EventAttendees[]> {
-    let items = this.Attendees;
-    if (term) {
-      items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
-    }
-    return of(items).pipe(delay(500));
-  }
+  // loadEventsMulti(term: string = null): Observable<EventAttendees[]> {
+  //   let items = this.Attendees;
+  //   if (term) {
+  //     items = items.filter(x => x.fullName.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
+  //   }
+  //   return of(items).pipe(delay(500));
+  // }
   Filter() {
     debugger
-    this.getData(this.selectedEvents.toString());
+    this.getData();
   }
 }

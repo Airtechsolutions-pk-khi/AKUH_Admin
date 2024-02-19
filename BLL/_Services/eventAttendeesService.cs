@@ -205,10 +205,16 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
+                //Random random = new Random();
+                //string Password = random.Next(10000000, 99999999).ToString();
                 Random random = new Random();
-                string Password = random.Next(10000000, 99999999).ToString();
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                int passwordLength = 8;  
 
-                obj.Password = Password;
+                string password = new string(Enumerable.Repeat(chars, passwordLength)
+                                                  .Select(s => s[random.Next(s.Length)]).ToArray());
+
+                obj.Password = password;
                 var data = Getcustomer(obj.AttendeesID);
                 string contentRootPath = _env.ContentRootPath;
 

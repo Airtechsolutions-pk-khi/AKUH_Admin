@@ -36,6 +36,11 @@ namespace AKU_Admin.Controllers
         {
             return _service.GetAllAttendees();
         }
+        [HttpGet("allattendeesConfirm")]
+        public List<EventAttendeesBLL> GetAllAttendeesConfirm()
+        {
+            return _service.GetAllAttendeesConfirm();
+        }
 
         [HttpGet("{id}")]
         public EventBLL Get(int id)
@@ -85,15 +90,15 @@ namespace AKU_Admin.Controllers
         {
             return _service.GetEventsDetailRpt(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
         }
-        [HttpGet("ConfirmListReport/{EventID}/{fromDate}/{toDate}")]
-        public List<EventDetailsBLL> ConfirmListReport(string EventID, string FromDate, string ToDate)
+        [HttpGet("ConfirmListReport/{fromDate}/{toDate}")]
+        public List<EventDetailsBLL> ConfirmListReport( string FromDate, string ToDate)
         {
-            return _service.ConfirmListReport(EventID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
+            return _service.ConfirmListReport(Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
         }     
         [HttpGet("AttendeesReport/{AttendeesID}/{fromDate}/{toDate}")]
-        public List<EventDetailsBLL> AttendeesReport(string AttendeesID, string FromDate, string ToDate)
+        public List<EventDetailsBLL> AttendeesReport( string FromDate, string ToDate)
         {
-            return _service.AttendeesReport(AttendeesID, Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
+            return _service.AttendeesReport( Convert.ToDateTime(FromDate), Convert.ToDateTime(ToDate));
         }
         
     }

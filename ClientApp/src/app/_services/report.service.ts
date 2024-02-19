@@ -119,12 +119,12 @@ clear() {
     return this.http.get<EventdetailReport[]>(`api/event/EventRpt/$${eventID}/${fromDate}/${toDate}`);
   }
 
-  ConfirmListRpt(eventID,fromDate,toDate) {
-    return this.http.get<EventdetailReport[]>(`api/event/ConfirmListReport/$${eventID}/${fromDate}/${toDate}`);
+  ConfirmListRpt(fromDate,toDate) {
+    return this.http.get<EventdetailReport[]>(`api/event/ConfirmListReport/${fromDate}/${toDate}`);
   }
 
-  AttendeesRpt(attendeesID,fromDate,toDate) {
-    return this.http.get<EventdetailReport[]>(`api/event/AttendeesReport/$${attendeesID}/${fromDate}/${toDate}`);
+  AttendeesRpt(fromDate,toDate) {
+    return this.http.get<EventdetailReport[]>(`api/event/AttendeesReport/$/${fromDate}/${toDate}`);
   }
 
   SalesItemwiseRpt(brandID,locationID,fromDate,toDate) {
@@ -153,5 +153,8 @@ clear() {
 
   loadAttendees() {
     return this.http.get<EventAttendees[]>(`api/Event/allattendees`);
+  }
+  loadAttendeesconfirm() {
+    return this.http.get<EventAttendees[]>(`api/Event/allattendeesConfirm`);
   }
 }
