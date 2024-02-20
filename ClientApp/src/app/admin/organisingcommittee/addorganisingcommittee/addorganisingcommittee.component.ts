@@ -12,23 +12,23 @@ import { OrganisingCommitteeService } from 'src/app/_services/organisingcommitte
   selector: 'app-addorganisingcommittee',
   templateUrl: './addorganisingcommittee.component.html',
   styleUrls: ['./addorganisingcommittee.component.css'],
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  // providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddOrganisingCommitteeComponent implements OnInit {
 
-  public tools: object = {
-    items: ['Undo', 'Redo', '|',
-      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-      'SubScript', 'SuperScript', '|',
-      'LowerCase', 'UpperCase', '|',
-      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-      'Indent', 'Outdent', '|', 'CreateLink']
-  };
-  public quickTools: object = {
-    image: [
-      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
-  };
+  // public tools: object = {
+  //   items: ['Undo', 'Redo', '|',
+  //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+  //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+  //     'SubScript', 'SuperScript', '|',
+  //     'LowerCase', 'UpperCase', '|',
+  //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+  //     'Indent', 'Outdent', '|', 'CreateLink']
+  // };
+  // public quickTools: object = {
+  //   image: [
+  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // };
 
 
   submitted = false;

@@ -130,7 +130,7 @@ namespace BAL.Repositories
                 p[2] = new SqlParameter("@Image", data.Image);
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@Updatedon",DateTime.UtcNow.AddMinutes(300));
-                p[5] = new SqlParameter("@SpeakerID", data.ID);
+                p[5] = new SqlParameter("@ID", data.ID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateOrganisingCommittee_Admin", p);
 

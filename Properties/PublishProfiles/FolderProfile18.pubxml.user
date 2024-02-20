@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>E:\Publish\AghaKhan_Admin</_PublishTargetUrl>
-    <History>True|2024-02-19T14:32:15.0550149Z;True|2024-02-16T17:55:32.5483858+05:00;True|2024-02-14T20:15:54.5879702+05:00;True|2024-02-14T19:09:42.3244661+05:00;True|2024-02-14T17:08:24.4975005+05:00;</History>
+    <History>True|2024-02-20T13:40:15.8489492Z;True|2024-02-20T18:24:24.5841817+05:00;True|2024-02-19T19:32:15.0550149+05:00;True|2024-02-16T17:55:32.5483858+05:00;True|2024-02-14T20:15:54.5879702+05:00;True|2024-02-14T19:09:42.3244661+05:00;True|2024-02-14T17:08:24.4975005+05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

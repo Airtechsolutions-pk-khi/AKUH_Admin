@@ -962,7 +962,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Organising Committee</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organisingcommitteeForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Organising Committee Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              \r\n             \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Designation</label>\r\n                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"designation\">\r\n                  </ejs-richtexteditor>\r\n                  <!--<textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>-->\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Organising Committee</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"organisingcommitteeForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Organising Committee Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              \r\n             \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <!-- <label class=\"small mb-1\" for=\"inputLastName\">Designation</label>\r\n                  <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\"> -->\r\n\r\n                  \r\n                    <label class=\"small mb-1\" for=\"inputUsername\">Designation</label>\r\n                    <input type=\"text\" class=\"form-control\" id=designation placeholder=\"\" formControlName=\"designation\">\r\n\r\n                  \r\n\r\n                  <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"designation\">\r\n                  </ejs-richtexteditor> -->\r\n                  <!--<textarea type=\"text\" class=\"form-control\" id=about placeholder=\"\" formControlName=\"about\"></textarea>-->\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -24621,13 +24621,7 @@
       /* harmony import */
 
 
-      var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @syncfusion/ej2-angular-richtexteditor */
-      "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
-      /* harmony import */
-
-
-      var src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/_services/organisingcommittee.service */
       "./src/app/_services/organisingcommittee.service.ts");
 
@@ -24660,13 +24654,20 @@
           this.route = route;
           this.ts = ts;
           this.ls = ls;
-          this.organisingcommitteeService = organisingcommitteeService;
-          this.tools = {
-            items: ['Undo', 'Redo', '|', 'Bold', 'Italic', 'Underline', 'StrikeThrough', '|', 'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|', 'SubScript', 'SuperScript', '|', 'LowerCase', 'UpperCase', '|', 'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|', 'Indent', 'Outdent', '|', 'CreateLink']
-          };
-          this.quickTools = {
-            image: ['Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
-          };
+          this.organisingcommitteeService = organisingcommitteeService; // public tools: object = {
+          //   items: ['Undo', 'Redo', '|',
+          //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+          //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+          //     'SubScript', 'SuperScript', '|',
+          //     'LowerCase', 'UpperCase', '|',
+          //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+          //     'Indent', 'Outdent', '|', 'CreateLink']
+          // };
+          // public quickTools: object = {
+          //   image: [
+          //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+          // };
+
           this.submitted = false;
           this.loading = false;
           this.loadingorganisingcommittee = false;
@@ -24794,7 +24795,7 @@
         }, {
           type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
         }, {
-          type: src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_7__["OrganisingCommitteeService"]
+          type: src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_6__["OrganisingCommitteeService"]
         }];
       };
 
@@ -24811,11 +24812,10 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./addorganisingcommittee.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.html"))["default"],
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_6__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_6__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_6__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_6__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./addorganisingcommittee.component.css */
         "./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_7__["OrganisingCommitteeService"]])], AddOrganisingCommitteeComponent);
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_organisingcommittee_service__WEBPACK_IMPORTED_MODULE_6__["OrganisingCommitteeService"]])], AddOrganisingCommitteeComponent);
       /***/
     },
 
