@@ -100,13 +100,14 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[5];
+                SqlParameter[] p = new SqlParameter[6];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);                
                 p[2] = new SqlParameter("@Image", data.Image);
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@CreatedOn", DateTime.UtcNow.AddMinutes(300));
+                p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertOrganisingCommittee_Admin", p);
 
@@ -123,7 +124,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 1;
-                SqlParameter[] p = new SqlParameter[6];
+                SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);               
@@ -131,6 +132,7 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@Updatedon",DateTime.UtcNow.AddMinutes(300));
                 p[5] = new SqlParameter("@ID", data.ID);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateOrganisingCommittee_Admin", p);
 

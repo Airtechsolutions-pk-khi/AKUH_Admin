@@ -65,9 +65,9 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLocation">Description</label>
-                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="description">
-                  </ejs-richtexteditor>
-
+                  <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="description">
+                  </ejs-richtexteditor> -->
+                  <angular-editor [config]="editorConfig" formControlName="description"></angular-editor>
                 </div>
               </div>
               <div class="form-row">

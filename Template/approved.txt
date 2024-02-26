@@ -8,7 +8,7 @@
 
     <style type="text/css">
         body, p, div {
-            font-family: inherit;
+            /*font-family: inherit;*/
             font-size: 14px;
         }
 
@@ -103,11 +103,11 @@
         }
     </style>
     <!--user entered Head Start-->
-    <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">-->
     <style>
-        body {
+       /* body {
             font-family: 'Viga', sans-serif;
-        }
+        }*/
     </style><!--End Head user entered-->
 </head>
 <body>
@@ -153,7 +153,7 @@
                                                                                                                     <tr>
                                                                                                                         <td style="padding:10px 0; line-height:36px; text-align:center; color: #383838" height="100%" valign="top" bgcolor="" role="module-content">
                                                                                                                             <div>
-                                                                                                                                <div style="font-family: inherit; text-align: inherit;padding-top: 15px;"><span style="color: #383838; font-size: 30px; font-family: inherit">Your Payment is approved!</span></div>
+                                                                                                                                <div style="font-family: inherit; text-align: inherit;padding-top: 15px;"><span style="color: #383838; font-size: 20px; font-family: inherit">Congratulations! <br />Your Payment is Approved.</span></div>
 
                                                                                                                                 <div>
 
@@ -188,46 +188,46 @@
                                                                                                 <br />
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Full Name</label>
-                                                                                                        <h2>#name#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Full Name: #name#</label>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Email</label>
-                                                                                                        <h2>#email#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Email: #email#</label>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Password</label>
-                                                                                                        <h2>#password#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Password: #password#</label>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Phone No.</label>
-                                                                                                        <h2>#contact#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Phone No: #contact#</label>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <!--<div style="font-family: inherit; text-align:inherit">Attendee Name: #name#</div>
-                                                                                                <div style="font-family: inherit; text-align:inherit">Contact No: #contact#</div>
-                                                                                                <div style="font-family: inherit; text-align:inherit">Email: #email#</div>
-                                                                                                <div style="font-family: inherit; text-align:inherit">Password: #password#</div>
-                                                                                                <div style="font-family: inherit; text-align: inherit">Message Note: #message#</div>
-                                                                                                <div style="font-family: inherit; text-align: inherit">Registration Date: #date#</div>
-                                                                                                <div style="font-family: inherit; text-align: inherit">Meeting Link: #meetinglink#</div>-->
-                                                                                                
+                        <div style="font-family: inherit; text-align:inherit">Contact No: #contact#</div>
+                        <div style="font-family: inherit; text-align:inherit">Email: #email#</div>
+                        <div style="font-family: inherit; text-align:inherit">Password: #password#</div>
+                        <div style="font-family: inherit; text-align: inherit">Message Note: #message#</div>
+                        <div style="font-family: inherit; text-align: inherit">Registration Date: #date#</div>
+                        <div style="font-family: inherit; text-align: inherit">Meeting Link: #meetinglink#</div>-->
+
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Online Stream</label>
-                                                                                                        <h2>#meetinglink#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Online Stream: #meetinglink#</label>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="form-row">
                                                                                                     <div class="form-group">
-                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 20px;">Message for Attendees</label>
-                                                                                                        <h2>#message#</h2>
+                                                                                                        <label style="font-family: inherit; text-align: inherit; font-size: 16px;">Message for Attendees: #message#</label>
+
                                                                                                     </div>
                                                                                                 </div>
 
@@ -239,27 +239,11 @@
                                                                                 </tbody>
                                                                             </table>
 
-                                                                            <table class="bg_white" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-
-
-                                                                                <p style="background-color: #fff; padding:0 30px;margin: 0;text-align: left;color: #6d6d6d;">For any queries, please reach us on <br /> Email: <a href="mailto:surgery.events@aku.edu ">surgery.events@aku.edu </a> <br /> Tel: 021-34862152 / 021-34861148</p>
-
-                                                                                <p style="background-color: #fff; padding:16px 30px 0px;margin: 0;text-align: left; color: #6d6d6d;">
-                                                                                    Regards,
-                                                                                    <br>
-                                                                                    <span style="color: #383838 ;">Team AKU</span>
-                                                                                </p>
-
-                                                                            </table>
-                                                                            <br>
-                                                                            <br>
-
-
-                                                                            <!--<table class="module" role="module" data-type="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="f7373f10-9ba4-4ca7-9a2e-1a2ba700deb9.1">
+                                                                            <table class="module" role="module" data-type="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="f7373f10-9ba4-4ca7-9a2e-1a2ba700deb9.1">
                                                                                 <tbody>
                                                                                     <tr>
-                                                                                        <td style="padding:20px 30px 0px 30px;" role="module-content" height="100%" valign="top" bgcolor="">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" height="3px" style="line-height:3px; font-size:3px;">
+                                                                                        <td style="padding:5px 30px 0px 30px;" role="module-content" height="100%" valign="top" bgcolor="">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" height="1px" style="line-height:3px; font-size:2px;">
                                                                                                 <tbody>
                                                                                                     <tr>
                                                                                                         <td style="padding:0px 0px 3px 0px;background-color: #383838"></td>
@@ -269,35 +253,41 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>
-                                                                            </table>-->
+                                                                            </table>
 
-                                                                            <!--<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+                                                                            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
                                                                                 <tr>
                                                                                     <td valign="middle" class="bg_light footer email-section">
                                                                                         <table style="">
                                                                                             <tr>
-                                                                                                <td valign="top" width="33.333%" style="padding-top: 20px;padding-left: 20px;">
+                                                                                                <td valign="top" width="33.333%" style="padding-top: 20px;padding-left: 20px; padding-bottom: 10px">
                                                                                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                                                                                         <tr>
                                                                                                             <td style="text-align: left; padding: 10px">
-                                                                                                                <p>Please note that we don’t send any invoices/ receipts of payments to any recipient, we will only send the invoice/ order confirmation to the sender/ order maker, and this is considered as a tax invoice and can be used for any official purpose. </p>
+                                                                                                                <p>
+                                                                                                                    Conference Secretariat<br />
+                                                                                                                    Aga Khan University<br />
+                                                                                                                    Stadium Road,P.O. Box 3500​,
+                                                                                                                    Karachi, 74800, Pakistan
+                                                                                                                </p>
                                                                                                             </td>
                                                                                                         </tr>
-
                                                                                                     </table>
                                                                                                 </td>
                                                                                                 <td valign="top" width="33.333%" style="padding-top: 20px;">
                                                                                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                                                                                         <tr>
                                                                                                             <td style="text-align: left;  padding: 10px;">
-                                                                                                                <h3 class="heading">Contact Info</h3>
+                                                                                                                <h3 class="heading" style="margin-top: 0;">Contact Info</h3>
                                                                                                                 <ul>
+                                                                                                                    <li><a href="" style="color: black" class="text">Tel: +92 21 3486 ​4578/4584​​ </a></li>
+                                                                                                                    <li><a href="" style="color: black" class="text">Fax: +92 21 3493 4294 ​​​​</a></li>
                                                                                                                     <li>
-                                                                                                                        <span class="text">
-                                                                                                                            C-19, Block-17, Federal "B" Area Near Water Pump Chowrangi، Block 17 Gulberg Town, Karachi, Karachi, Pakistan
-                                                                                                                        </span>
+                                                                                                                        <a href="" style="color: black" class="text">
+                                                                                                                            Email: conf.sect@aku.edu  /
+                                                                                                                            surgery.events@aku.edu
+                                                                                                                        </a>
                                                                                                                     </li>
-                                                                                                                    <li><span class="text">(021) 111 166 177</span></a></li>
                                                                                                                 </ul>
                                                                                                             </td>
                                                                                                         </tr>
@@ -307,16 +297,22 @@
                                                                                             </tr>
                                                                                         </table>
                                                                                     </td>
-                                                                                </tr>--><!-- end: tr -->
-                                                                            <!--</table>-->
+                                                                                </tr><!-- end: tr -->
+
+                                                                            </table>
+
+
+
+
+
                                                                             <table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="e5cea269-a730-4c6b-8691-73d2709adc62">
                                                                                 <tbody>
                                                                                     <tr>
-                                                                                        <td align="center" class="outer-td" style="padding:10px 0px 10px 0px;background: #00843D ;color: #f1f1f1;">
+                                                                                        <td align="center" class="outer-td" style="padding: 10px 0px 10px 0px; background: #00843D !important; color: #f1f1f1;">
                                                                                             <table border="0" cellpadding="0" cellspacing="0" class="wrapper-mobile" style="text-align:center;">
                                                                                                 <tbody>
                                                                                                     <tr>
-                                                                                                        <td align="center" class="inner-td" style="" target="_blank"><a style="color:#ffffff;" href="">AKU</a></td>
+                                                                                                        <td align="center" class="inner-td" style="" target="_blank"><a style="color:#ffffff;" href="">AKU Surgery Conference</a></td>
                                                                                                     </tr>
                                                                                                 </tbody>
                                                                                             </table>

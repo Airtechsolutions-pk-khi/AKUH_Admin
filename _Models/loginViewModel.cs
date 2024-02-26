@@ -217,6 +217,7 @@ namespace AKU_Admin._Models
         public string Designation { get; set; }        
         public string Image { get; set; }
         public int? StatusID { get; set; }
+        public int? DisplayOrder { get; set; }
         public DateTime? Createdon { get; set; }
         public DateTime? Updatedon { get; set; }
         public int? UpdatedBy { get; set; }

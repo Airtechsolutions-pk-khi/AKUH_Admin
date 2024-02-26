@@ -19,17 +19,26 @@
     </div>
     <hr />
     <div class="row">
-      <div class="col-md-12 form-group ">
-        <p>Meeting Link</p>
-        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="meetingLink">
+     
+      <!-- <div class="col-md-6 form-group ">
+        <p>Subject</p>
+        <input type="text" class="form-control" id=subject value="" [(ngModel)]="subject">
+      </div> -->
+      <div class="form-group col-md-12">
+        <label class="small mb-1" for="inputLastName">Subject</label>
+        <select class="form-control" id=subject  [(ngModel)]="subject">
+          <option>Payment Approved – 9th Annual Surgical Conference</option>
+          <option>Registration Cancelled</option>
+          
+        </select>
       </div>
       <div class="col-md-6 form-group ">
-        <p>Subject</p>
-        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="subject">
+        <p>Meeting Link</p>
+        <input type="text" class="form-control" id=meetingLink placeholder="" [(ngModel)]="meetingLink">
       </div>
       <div class="col-md-6 form-group ">
         <p>Message For Attendee</p>
-        <input type="text" class="form-control" id=msg placeholder="" [(ngModel)]="messageForAttendee">
+        <input type="text" class="form-control" id=messageForAttendee placeholder="" [(ngModel)]="messageForAttendee">
       </div>
       <div class="col-md-12 mb-4" *ngIf="eventAttendees.statusID!=2">
         <div class="card border-left-info shadow mb-4">

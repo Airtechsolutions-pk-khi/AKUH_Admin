@@ -62,12 +62,14 @@ export class AddOrganisingCommitteeComponent implements OnInit {
       statusID: [true],
       id: 0,
       image: [''],
+      displayOrder: 0,
      
     });
   }
 
   private editForm(obj) {    
     this.f.name.setValue(obj.name);
+    this.f.displayOrder.setValue(obj.displayOrder);
     this.f.designation.setValue(obj.designation);    
     this.f.id.setValue(obj.id);
     this.f.image.setValue(obj.image);

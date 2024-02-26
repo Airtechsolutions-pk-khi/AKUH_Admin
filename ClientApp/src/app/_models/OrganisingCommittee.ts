@@ -4,4 +4,5 @@ export class OrganisingCommittee {
   designation: string;
   image: string;  
   statusID: number;
+  displayOrder:number;
 }

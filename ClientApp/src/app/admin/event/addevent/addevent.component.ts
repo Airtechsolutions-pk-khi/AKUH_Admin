@@ -10,32 +10,37 @@ import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 //import { CategoryService } from 'src/app/_services/category.service';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 const now = new Date();
 
 @Component({
   selector: 'app-addevent',
   templateUrl: './addevent.component.html',
   styleUrls: ['./addevent.component.css'],
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  //providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 
 export class AddEventComponent implements OnInit {
 
-  public tools: object = {
-    items: ['Undo', 'Redo', '|',
-      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-      'SubScript', 'SuperScript', '|',
-      'LowerCase', 'UpperCase', '|',
-      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-      'Indent', 'Outdent', '|', 'CreateLink']
-  //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+  // public tools: object = {
+  //   items: ['Undo', 'Redo', '|',
+  //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+  //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+  //     'SubScript', 'SuperScript', '|',
+  //     'LowerCase', 'UpperCase', '|',
+  //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+  //     'Indent', 'Outdent', '|', 'CreateLink']
+  // //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+  // };
+  // public quickTools: object = {
+  //   image: [
+  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // };
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    enableToolbar: true,
+    showToolbar: true,
   };
-  public quickTools: object = {
-    image: [
-      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
-  };
-
   submitted = false;
   eventForm: FormGroup;
   loading = false;

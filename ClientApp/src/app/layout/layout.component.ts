@@ -12,6 +12,7 @@ import { UserService } from '../_services/user.service';
 import { LoginService } from '../_services/login.service';
 import { Permission, PermissionForms } from '../_models/Permission';
 import { element } from 'protractor';
+ 
 
 @Component({
   selector: 'app-layout',
@@ -24,7 +25,7 @@ export class LayoutComponent implements OnInit {
   //userName = "";
   name = "";
   email = "";
-
+  
   // roleName;
   // isDiagnostic: boolean = true;
   // isDoctor: boolean = true;
@@ -44,25 +45,12 @@ export class LayoutComponent implements OnInit {
   constructor(private router: Router
     , public service: LocationsService
     , public userService: UserService
-    , public ls: LocalStorageService) {
+    , public ls: LocalStorageService
+     ) {
     debugger
     this.name = this.ls.getSelectedBrand().name;
-    // this.type = this.ls.getSelectedBrand().type;
-
-    // //  this.permission=environment.rootScope;
-    // this.permission=this.ls.getSelectedBrand(); 
-    //  var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
-    //  var roleNameType= role.roleName;
-    //  this.isDiagnostic = role.diagnostic === 1 ? true : false;
-    //  this.isDoctor = role.doctor === 1 ? true : false;
-    //  this.isUser = role.mamjiUser === 1 ? true : false;
-    //  this.isNoti = role.notification === 1 ? true : false;
-    //  this.isPharmacy = role.pharmacy === 1 ? true : false;
-    //  this.isReception = role.reception === 1 ? true : false;
-    //  this.isReport = role.reports === 1 ? true : false;
-    //  this.isSetting = role.setting === 1 ? true : false;
-
-
+    
+   
 
   }
   Logout() {

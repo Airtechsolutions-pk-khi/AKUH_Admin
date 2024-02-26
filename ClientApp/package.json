@@ -26,6 +26,7 @@
     "@angular/pwa": "^0.1000.3",
     "@angular/router": "10.0.4",
     "@angular/service-worker": "10.0.4",
+    "@kolkov/angular-editor": "^1.0.0",
     "@microsoft/signalr": "^7.0.5",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@ng-select/ng-select": "^5.1.0",
@@ -44,7 +45,7 @@
     "ngx-toastr": "^13.0.0",
     "oidc-client": "^1.9.1",
     "popper.js": "^1.16.0",
-    "rxjs": "^6.6.0",
+    "rxjs": "^6.6.7",
     "xlsx": "^0.17.4",
     "zone.js": "0.10.3"
   },

@@ -7,26 +7,31 @@ import { AppsettingService } from 'src/app/_services/appsetting.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { Appsetting } from '../../../../_models/Appsetting';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
+ 
 @Component({
   selector: 'app-Addsettings',
   templateUrl: './Addsettings.component.html',
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  //providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddsettingsComponent implements OnInit {
-  public tools: object = {
-    items: ['Undo', 'Redo', '|',
-      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-      'SubScript', 'SuperScript', '|',
-      'LowerCase', 'UpperCase', '|',
-      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-      'Indent', 'Outdent', '|', 'CreateLink'
-    ]
-  };
-  // public quickTools: object = {
-  //   image: [
-  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // public tools: object = {
+  //   items: ['Undo', 'Redo', '|',
+  //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+  //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+  //     'SubScript', 'SuperScript', '|',
+  //     'LowerCase', 'UpperCase', '|',
+  //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+  //     'Indent', 'Outdent', '|', 'CreateLink'
+  //   ]
   // };
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    enableToolbar: true,
+    showToolbar: true,
+  };
+  
+
   submitted = false;
   settingForm: FormGroup;
   loading = false;
@@ -58,7 +63,10 @@ export class AddsettingsComponent implements OnInit {
 
   ngOnInit() {
     this.setSelectedSetting();
+    
   }
+
+ 
 
   get f() { return this.settingForm.controls; }
 

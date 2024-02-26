@@ -15,7 +15,7 @@ import { EventAttendeesService } from 'src/app/_services/eventattendees.service'
 export class EventattendeedetailsComponent implements OnInit {
   public eventAttendees = new Attendees();
    
-  subject = "";
+  subject = "Payment Approved – 9th Annual Surgical Conference";
   messageForAttendee = "";
   meetingLink = "";
   constructor(public service: EventAttendeesService,

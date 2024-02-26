@@ -8,28 +8,33 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpeakerComponent } from '../speaker.component';
 import { SpeakerService } from '../../../_services/speaker.service';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-addspeaker',
   templateUrl: './addspeaker.component.html',
   styleUrls: ['./addspeaker.component.css'],
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  //providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddSpeakerComponent implements OnInit {
 
-  public tools: object = {
-    items: ['Undo', 'Redo', '|',
-      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-      'SubScript', 'SuperScript', '|',
-      'LowerCase', 'UpperCase', '|',
-      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-      'Indent', 'Outdent', '|', 'CreateLink']
+  // public tools: object = {
+  //   items: ['Undo', 'Redo', '|',
+  //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+  //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+  //     'SubScript', 'SuperScript', '|',
+  //     'LowerCase', 'UpperCase', '|',
+  //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+  //     'Indent', 'Outdent', '|', 'CreateLink']
+  // };
+  // public quickTools: object = {
+  //   image: [
+  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // };
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    enableToolbar: true,
+    showToolbar: true,
   };
-  public quickTools: object = {
-    image: [
-      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
-  };
-
 
   submitted = false;
   speakerForm: FormGroup;

@@ -11,6 +11,7 @@ import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-ra
 //import { CategoryService } from 'src/app/_services/category.service';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { WorkshopService } from 'src/app/_services/workshop.service';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 const now = new Date();
 
 @Component({
@@ -22,19 +23,24 @@ const now = new Date();
 
 export class AddWorkshopComponent implements OnInit {
 
-  public tools: object = {
-    items: ['Undo', 'Redo', '|',
-      'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-      'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-      'SubScript', 'SuperScript', '|',
-      'LowerCase', 'UpperCase', '|',
-      'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-      'Indent', 'Outdent', '|', 'CreateLink']
-  //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
-  };
-  public quickTools: object = {
-    image: [
-      'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // public tools: object = {
+  //   items: ['Undo', 'Redo', '|',
+  //     'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
+  //     'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+  //     'SubScript', 'SuperScript', '|',
+  //     'LowerCase', 'UpperCase', '|',
+  //     'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
+  //     'Indent', 'Outdent', '|', 'CreateLink']
+  // //    'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
+  // };
+  // public quickTools: object = {
+  //   image: [
+  //     'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', '-', 'Display', 'AltText', 'Dimension']
+  // };
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    enableToolbar: true,
+    showToolbar: true,
   };
 
   submitted = false;

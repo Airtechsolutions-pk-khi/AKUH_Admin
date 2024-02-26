@@ -175,12 +175,12 @@ namespace AKU_Admin.BLL._Services
         }
         public int UpdateCancelled(EventAttendeesBLL obj, IWebHostEnvironment _env, string Body)
         {
-            string msg = "";
+            //string msg = "";
             //msg = obj.StatusMsg;
-            string contentRootPath = _env.ContentRootPath;
+            //string contentRootPath = _env.ContentRootPath;
 
-            string path = "/ClientApp/dist/assets/Upload/";
-            string filePath = contentRootPath + path;
+            //string path = "/ClientApp/dist/assets/Upload/";
+            //string filePath = contentRootPath + path;
 
             try
             {
@@ -205,14 +205,19 @@ namespace AKU_Admin.BLL._Services
         {
             try
             {
-                //Random random = new Random();
-                //string Password = random.Next(10000000, 99999999).ToString();
-                Random random = new Random();
                 const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                int passwordLength = 8;  
+                int passwordLength = 8;
 
-                string password = new string(Enumerable.Repeat(chars, passwordLength)
-                                                  .Select(s => s[random.Next(s.Length)]).ToArray());
+                Random random = new Random();
+
+                // Generate the first part of the password without the digit
+                string password = new string(Enumerable.Repeat(chars, passwordLength - 1)
+                                                      .Select(s => s[random.Next(s.Length)]).ToArray());
+
+                // Insert a random digit at a random position in the password
+                int positionToInsertDigit = random.Next(password.Length);
+                char digit = chars.Substring(52, 10)[random.Next(10)]; // Selecting from the digit part of 'chars'
+                password = password.Insert(positionToInsertDigit, digit.ToString());
 
                 obj.Password = password;
                 var data = Getcustomer(obj.AttendeesID);

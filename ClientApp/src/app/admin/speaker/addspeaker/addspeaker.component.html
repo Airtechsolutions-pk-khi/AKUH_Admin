@@ -35,9 +35,9 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLastName">About</label>
-                  <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="about">
-                  </ejs-richtexteditor>
-                  <!--<textarea type="text" class="form-control" id=about placeholder="" formControlName="about"></textarea>-->
+                  <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName="about">
+                  </ejs-richtexteditor> -->
+                  <angular-editor [config]="editorConfig" formControlName="about"></angular-editor>
                 </div>
               </div>
             </div>

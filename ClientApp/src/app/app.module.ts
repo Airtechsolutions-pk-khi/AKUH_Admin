@@ -133,10 +133,16 @@ import { AddWorkshopComponent } from './admin/workshop/addworkshop/addworkshop.c
 import { CommonModule } from '@angular/common';
 import { PopupBannerComponent } from './admin/settings/popupbanner/popupbanner.component';
 import { AddPopupBannerComponent } from './admin/settings/popupbanner/add/addpopupbanner.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+ 
+ 
+ 
 
+ 
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     NavMenuComponent,
     DashboardComponent,
@@ -241,9 +247,10 @@ import { AddPopupBannerComponent } from './admin/settings/popupbanner/add/addpop
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    AngularEditorModule ,
     CommonModule,
     NgApexchartsModule,
-    FormsModule,
+    FormsModule,    
     NgSelectModule,
     ReactiveFormsModule,
     RichTextEditorModule,
