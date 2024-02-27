@@ -32,8 +32,6 @@
     "@ng-select/ng-select": "^5.1.0",
     "@ngrx/schematics": "^13.0.2",
     "@nguniversal/module-map-ngfactory-loader": "8.2.6",
-    "@syncfusion/ej2-angular-richtexteditor": "^24.1.47-ngcc",
-    "@tinymce/tinymce-angular": "^4.0.0",
     "apexcharts": "^3.20.0",
     "aspnet-prerendering": "^3.0.1",
     "bootstrap": "^4.5.0",

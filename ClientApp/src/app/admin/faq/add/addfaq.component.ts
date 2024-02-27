@@ -6,13 +6,13 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FaqService } from 'src/app/_services/faq.service';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 @Component({
   selector: 'app-addfaq',
   templateUrl: './addfaq.component.html',
   styleUrls: ['./addfaq.component.css'],
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  //providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 
 })
 export class AddFaqComponent implements OnInit {

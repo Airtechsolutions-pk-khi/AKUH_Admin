@@ -19539,12 +19539,6 @@
       var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/_services/faq.service */
       "./src/app/_services/faq.service.ts");
-      /* harmony import */
-
-
-      var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! @syncfusion/ej2-angular-richtexteditor */
-      "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -19564,7 +19558,8 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      };
+      }; //import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+
 
       var AddFaqComponent = /*#__PURE__*/function () {
         function AddFaqComponent(formBuilder, router, route, ts, ls, faqService) {
@@ -19721,7 +19716,6 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./addfaq.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html"))["default"],
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./addfaq.component.css */
         "./src/app/admin/faq/add/addfaq.component.css"))["default"]]
@@ -23911,12 +23905,6 @@
       var src_app_services_message_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/_services/message.service */
       "./src/app/_services/message.service.ts");
-      /* harmony import */
-
-
-      var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! @syncfusion/ej2-angular-richtexteditor */
-      "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -23936,7 +23924,8 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      };
+      }; //import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+
 
       var AddMessageComponent = /*#__PURE__*/function () {
         function AddMessageComponent(formBuilder, router, route, ts, ls, messageService) {
@@ -24104,7 +24093,6 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./addmessage.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/message/add/addmessage.component.html"))["default"],
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./addmessage.component.css */
         "./src/app/admin/message/add/addmessage.component.css"))["default"]]
@@ -24647,7 +24635,8 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      };
+      }; //import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+
 
       var AddOrganisingCommitteeComponent = /*#__PURE__*/function () {
         function AddOrganisingCommitteeComponent(formBuilder, router, route, ts, ls, organisingcommitteeService) {
@@ -33864,7 +33853,8 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      };
+      }; //import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+
 
       var AddPopupBannerComponent = /*#__PURE__*/function () {
         function AddPopupBannerComponent(formBuilder, router, route, ts, ls, popupbannerService) {
@@ -37450,13 +37440,7 @@
       /* harmony import */
 
 
-      var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @syncfusion/ej2-angular-richtexteditor */
-      "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
-      /* harmony import */
-
-
-      var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! src/app/_services/workshop.service */
       "./src/app/_services/workshop.service.ts");
 
@@ -37480,6 +37464,7 @@
         };
       }; //import { ItemsService } from 'src/app/_services/items.service';
       //import { CategoryService } from 'src/app/_services/category.service';
+      //import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 
       var now = new Date();
@@ -37712,7 +37697,7 @@
         }, {
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
-          type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"]
+          type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__["WorkshopService"]
         }, {
           type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]
         }];
@@ -37737,11 +37722,10 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./addworkshop.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/addworkshop/addworkshop.component.html"))["default"],
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./addworkshop.component.css */
         "./src/app/admin/workshop/addworkshop/addworkshop.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"], src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])], AddWorkshopComponent);
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__["WorkshopService"], src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])], AddWorkshopComponent);
       /***/
     },
 
@@ -38690,79 +38674,73 @@
       /* harmony import */
 
 
-      var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
-      /*! @syncfusion/ej2-angular-richtexteditor */
-      "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
-      /* harmony import */
-
-
-      var _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
+      var _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
       /*! ./admin/eventattendeedetails/eventattendeedetails.component */
       "./src/app/admin/eventattendeedetails/eventattendeedetails.component.ts");
       /* harmony import */
 
 
-      var _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
+      var _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
       /*! ./admin/userdetails/userdetails.component */
       "./src/app/admin/userdetails/userdetails.component.ts");
       /* harmony import */
 
 
-      var _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
+      var _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
       /*! ./admin/message/message.component */
       "./src/app/admin/message/message.component.ts");
       /* harmony import */
 
 
-      var _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
+      var _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
       /*! ./admin/message/add/addmessage.component */
       "./src/app/admin/message/add/addmessage.component.ts");
       /* harmony import */
 
 
-      var _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
+      var _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
       /*! ./admin/organisingcommittee/organisingcommittee.component */
       "./src/app/admin/organisingcommittee/organisingcommittee.component.ts");
       /* harmony import */
 
 
-      var _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
+      var _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
       /*! ./admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component */
       "./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.ts");
       /* harmony import */
 
 
-      var _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
+      var _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
       /*! ./admin/workshop/workshop.component */
       "./src/app/admin/workshop/workshop.component.ts");
       /* harmony import */
 
 
-      var _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
+      var _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
       /*! ./admin/workshop/addworkshop/addworkshop.component */
       "./src/app/admin/workshop/addworkshop/addworkshop.component.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
+      var _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
       /*! ./admin/settings/popupbanner/popupbanner.component */
       "./src/app/admin/settings/popupbanner/popupbanner.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
+      var _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
       /*! ./admin/settings/popupbanner/add/addpopupbanner.component */
       "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts");
       /* harmony import */
 
 
-      var _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
+      var _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
       /*! @kolkov/angular-editor */
       "./node_modules/@kolkov/angular-editor/__ivy_ngcc__/fesm2015/kolkov-angular-editor.js");
 
@@ -38784,10 +38762,10 @@
       };
 
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"], _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"], _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"], _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"], _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"], _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"], _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"], _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"], _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"], _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"], _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"], _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"], _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"], _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"], _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"], _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"], _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__["UserEventReportComponent"], _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"], _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"], _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"], _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"], _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"], _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"], _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"], _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"], _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"], _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_event_event_component__WEBPACK_IMPORTED_MODULE_97__["EventComponent"], _admin_event_addevent_addevent_component__WEBPACK_IMPORTED_MODULE_96__["AddEventComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"], _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"], _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"], _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"], _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"], _admin_eventCategory_eventcategory_component__WEBPACK_IMPORTED_MODULE_94__["EventCategoryComponent"], _admin_eventCategory_add_addeventcategory_component__WEBPACK_IMPORTED_MODULE_95__["AddEventCategoryComponent"], _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"], _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"], _admin_faq_faq_component__WEBPACK_IMPORTED_MODULE_98__["FaqComponent"], _admin_faq_add_addfaq_component__WEBPACK_IMPORTED_MODULE_99__["AddFaqComponent"], _admin_eventdetail_eventdetail_component__WEBPACK_IMPORTED_MODULE_100__["EventdetailComponent"], _admin_confirmlistreport_confirmlistreport_component__WEBPACK_IMPORTED_MODULE_101__["ConfirmlistreportComponent"], _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"], _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"], _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__["UserEventReportComponent"], _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__["EventattendeedetailsComponent"], _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__["UserDetailComponent"], _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__["MessageComponent"], _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"], _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__["OrganisingCommitteeComponent"], _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"], _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__["WorkshopComponent"], _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"], _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__["PopupBannerComponent"], _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
-        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_117__["AngularEditorModule"], _angular_common__WEBPACK_IMPORTED_MODULE_114__["CommonModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_105__["RichTextEditorModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
+        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_116__["AngularEditorModule"], _angular_common__WEBPACK_IMPORTED_MODULE_113__["CommonModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
         /*    MatDialogModule,*/
 
         /*    NgApexchartsModule,*/
@@ -38863,7 +38841,7 @@
             component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"]
           }, {
             path: 'eventattendeedetails/edit/:id',
-            component: _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"]
+            component: _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__["EventattendeedetailsComponent"]
           }, {
             path: 'brand',
             component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"]
@@ -38884,13 +38862,13 @@
             component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"]
           }, {
             path: 'settings/popupbanner',
-            component: _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"]
+            component: _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__["PopupBannerComponent"]
           }, {
             path: 'settings/popupbanner/add',
-            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]
+            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"]
           }, {
             path: 'settings/popupbanner/edit/:id',
-            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]
+            component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"]
           }, {
             path: 'settings/corporateclient',
             component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"]
@@ -39075,7 +39053,7 @@
             component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"]
           }, {
             path: 'user/view/:id',
-            component: _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"]
+            component: _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__["UserDetailComponent"]
           }, {
             path: 'permission',
             component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"]
@@ -39117,13 +39095,13 @@
             component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"]
           }, {
             path: 'organisingcommittee',
-            component: _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"]
+            component: _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__["OrganisingCommitteeComponent"]
           }, {
             path: 'organisingcommittee/add',
-            component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"]
+            component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"]
           }, {
             path: 'organisingcommittee/edit/:id',
-            component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"]
+            component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"]
           }, {
             path: 'organizer',
             component: _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"]
@@ -39135,22 +39113,22 @@
             component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"]
           }, {
             path: 'workshop',
-            component: _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"]
+            component: _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__["WorkshopComponent"]
           }, {
             path: 'workshop/add',
-            component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"]
+            component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"]
           }, {
             path: 'workshop/edit/:id',
-            component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"]
+            component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"]
           }, {
             path: 'message',
-            component: _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"]
+            component: _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__["MessageComponent"]
           }, {
             path: 'message/add',
-            component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"]
+            component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"]
           }, {
             path: 'message/edit/:id',
-            component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"]
+            component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"]
           }, {
             path: 'partner',
             component: _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"]
@@ -40324,28 +40302,22 @@
       /* harmony import */
 
 
-      var _syncfusion_ej2_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @syncfusion/ej2-base */
-      "./node_modules/@syncfusion/ej2-base/dist/es6/ej2-base.es5.js");
-      /* harmony import */
-
-
-      var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./app/app.module */
       "./src/app/app.module.ts");
       /* harmony import */
 
 
-      var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ./environments/environment */
       "./src/environments/environment.ts");
       /***************************************************************************************************
        * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
        */
+      //import { registerLicense } from '@syncfusion/ej2-base';
       // Registering Syncfusion license key
+      //registerLicense('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
 
-
-      Object(_syncfusion_ej2_base__WEBPACK_IMPORTED_MODULE_3__["registerLicense"])('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
 
       function getBaseUrl() {
         return document.getElementsByTagName('base')[0].href;
@@ -40357,11 +40329,11 @@
         deps: []
       }];
 
-      if (_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].production) {
+      if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
       }
 
-      Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"])["catch"](function (err) {
+      Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])["catch"](function (err) {
         return console.log(err);
       });
       /***/

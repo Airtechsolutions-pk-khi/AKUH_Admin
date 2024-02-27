@@ -6,7 +6,7 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { AppsettingService } from 'src/app/_services/appsetting.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { Appsetting } from '../../../../_models/Appsetting';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
  
 @Component({

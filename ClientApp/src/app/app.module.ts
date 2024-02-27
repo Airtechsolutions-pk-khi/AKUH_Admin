@@ -121,7 +121,7 @@ import { EventAttendeesComponent } from './admin/eventattendees/eventattendees.c
 import { AddEventAttendeesComponent } from './admin/eventattendees/addeventattendees/addeventattendees.component';
 import { UserEventReportComponent } from './admin/usereventreport/usereventreport.component';
 // Imported Syncfusion RichTextEditorModule from Rich Text Editor package
-import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
+
 import { EventattendeedetailsComponent } from './admin/eventattendeedetails/eventattendeedetails.component';
 import { UserDetailComponent } from './admin/userdetails/userdetails.component';
 import { MessageComponent } from './admin/message/message.component';
@@ -253,7 +253,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     FormsModule,    
     NgSelectModule,
     ReactiveFormsModule,
-    RichTextEditorModule,
+     
     AlertModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,

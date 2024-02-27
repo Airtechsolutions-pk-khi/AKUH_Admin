@@ -6,7 +6,7 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { OrganisingCommitteeService } from 'src/app/_services/organisingcommittee.service';
 @Component({
   selector: 'app-addorganisingcommittee',

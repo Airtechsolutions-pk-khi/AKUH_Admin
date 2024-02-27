@@ -7,7 +7,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpeakerComponent } from '../speaker.component';
 import { SpeakerService } from '../../../_services/speaker.service';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-addspeaker',

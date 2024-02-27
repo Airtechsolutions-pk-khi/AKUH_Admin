@@ -9,7 +9,7 @@ import { EventService } from 'src/app/_services/event.service';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 //import { CategoryService } from 'src/app/_services/category.service';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+// import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 const now = new Date();
 

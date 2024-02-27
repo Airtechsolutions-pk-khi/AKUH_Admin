@@ -11337,7 +11337,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_app_services_faq_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/faq.service */ "./src/app/_services/faq.service.ts");
-/* harmony import */ var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @syncfusion/ej2-angular-richtexteditor */ "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11357,7 +11356,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 let AddFaqComponent = class AddFaqComponent {
     constructor(formBuilder, router, route, ts, ls, faqService) {
         this.formBuilder = formBuilder;
@@ -11470,7 +11469,6 @@ AddFaqComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-addfaq',
         template: __importDefault(__webpack_require__(/*! raw-loader!./addfaq.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/faq/add/addfaq.component.html")).default,
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(/*! ./addfaq.component.css */ "./src/app/admin/faq/add/addfaq.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
@@ -14132,7 +14130,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_app_services_message_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/message.service */ "./src/app/_services/message.service.ts");
-/* harmony import */ var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @syncfusion/ej2-angular-richtexteditor */ "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14152,7 +14149,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 let AddMessageComponent = class AddMessageComponent {
     constructor(formBuilder, router, route, ts, ls, messageService) {
         this.formBuilder = formBuilder;
@@ -14276,7 +14273,6 @@ AddMessageComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-addmessage',
         template: __importDefault(__webpack_require__(/*! raw-loader!./addmessage.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/message/add/addmessage.component.html")).default,
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_7__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(/*! ./addmessage.component.css */ "./src/app/admin/message/add/addmessage.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
@@ -14600,6 +14596,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 let AddOrganisingCommitteeComponent = class AddOrganisingCommitteeComponent {
     constructor(formBuilder, router, route, ts, ls, organisingcommitteeService) {
@@ -20360,6 +20357,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 let AddPopupBannerComponent = class AddPopupBannerComponent {
     constructor(formBuilder, router, route, ts, ls, popupbannerService) {
@@ -22621,8 +22619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/event.service */ "./src/app/_services/event.service.ts");
 /* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
-/* harmony import */ var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @syncfusion/ej2-angular-richtexteditor */ "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
-/* harmony import */ var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/_services/workshop.service */ "./src/app/_services/workshop.service.ts");
+/* harmony import */ var src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/_services/workshop.service */ "./src/app/_services/workshop.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22645,7 +22642,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 //import { CategoryService } from 'src/app/_services/category.service';
-
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 const now = new Date();
 let AddWorkshopComponent = class AddWorkshopComponent {
@@ -22823,7 +22820,7 @@ AddWorkshopComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
-    { type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"] },
+    { type: src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__["WorkshopService"] },
     { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] }
 ];
 AddWorkshopComponent.propDecorators = {
@@ -22834,7 +22831,6 @@ AddWorkshopComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-addworkshop',
         template: __importDefault(__webpack_require__(/*! raw-loader!./addworkshop.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/workshop/addworkshop/addworkshop.component.html")).default,
-        providers: [_syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ToolbarService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["LinkService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["ImageService"], _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_8__["HtmlEditorService"]],
         styles: [__importDefault(__webpack_require__(/*! ./addworkshop.component.css */ "./src/app/admin/workshop/addworkshop/addworkshop.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
@@ -22842,7 +22838,7 @@ AddWorkshopComponent = __decorate([
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
-        src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_9__["WorkshopService"],
+        src_app_services_workshop_service__WEBPACK_IMPORTED_MODULE_8__["WorkshopService"],
         src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"]])
 ], AddWorkshopComponent);
 
@@ -23153,19 +23149,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./admin/eventattendees/eventattendees.component */ "./src/app/admin/eventattendees/eventattendees.component.ts");
 /* harmony import */ var _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./admin/eventattendees/addeventattendees/addeventattendees.component */ "./src/app/admin/eventattendees/addeventattendees/addeventattendees.component.ts");
 /* harmony import */ var _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./admin/usereventreport/usereventreport.component */ "./src/app/admin/usereventreport/usereventreport.component.ts");
-/* harmony import */ var _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! @syncfusion/ej2-angular-richtexteditor */ "./node_modules/@syncfusion/ej2-angular-richtexteditor/__ivy_ngcc__/@syncfusion/ej2-angular-richtexteditor.js");
-/* harmony import */ var _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./admin/eventattendeedetails/eventattendeedetails.component */ "./src/app/admin/eventattendeedetails/eventattendeedetails.component.ts");
-/* harmony import */ var _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./admin/userdetails/userdetails.component */ "./src/app/admin/userdetails/userdetails.component.ts");
-/* harmony import */ var _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./admin/message/message.component */ "./src/app/admin/message/message.component.ts");
-/* harmony import */ var _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./admin/message/add/addmessage.component */ "./src/app/admin/message/add/addmessage.component.ts");
-/* harmony import */ var _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./admin/organisingcommittee/organisingcommittee.component */ "./src/app/admin/organisingcommittee/organisingcommittee.component.ts");
-/* harmony import */ var _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component */ "./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.ts");
-/* harmony import */ var _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./admin/workshop/workshop.component */ "./src/app/admin/workshop/workshop.component.ts");
-/* harmony import */ var _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./admin/workshop/addworkshop/addworkshop.component */ "./src/app/admin/workshop/addworkshop/addworkshop.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./admin/settings/popupbanner/popupbanner.component */ "./src/app/admin/settings/popupbanner/popupbanner.component.ts");
-/* harmony import */ var _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./admin/settings/popupbanner/add/addpopupbanner.component */ "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts");
-/* harmony import */ var _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! @kolkov/angular-editor */ "./node_modules/@kolkov/angular-editor/__ivy_ngcc__/fesm2015/kolkov-angular-editor.js");
+/* harmony import */ var _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./admin/eventattendeedetails/eventattendeedetails.component */ "./src/app/admin/eventattendeedetails/eventattendeedetails.component.ts");
+/* harmony import */ var _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./admin/userdetails/userdetails.component */ "./src/app/admin/userdetails/userdetails.component.ts");
+/* harmony import */ var _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./admin/message/message.component */ "./src/app/admin/message/message.component.ts");
+/* harmony import */ var _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./admin/message/add/addmessage.component */ "./src/app/admin/message/add/addmessage.component.ts");
+/* harmony import */ var _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./admin/organisingcommittee/organisingcommittee.component */ "./src/app/admin/organisingcommittee/organisingcommittee.component.ts");
+/* harmony import */ var _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component */ "./src/app/admin/organisingcommittee/addorganisingcommittee/addorganisingcommittee.component.ts");
+/* harmony import */ var _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./admin/workshop/workshop.component */ "./src/app/admin/workshop/workshop.component.ts");
+/* harmony import */ var _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./admin/workshop/addworkshop/addworkshop.component */ "./src/app/admin/workshop/addworkshop/addworkshop.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./admin/settings/popupbanner/popupbanner.component */ "./src/app/admin/settings/popupbanner/popupbanner.component.ts");
+/* harmony import */ var _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./admin/settings/popupbanner/add/addpopupbanner.component */ "./src/app/admin/settings/popupbanner/add/addpopupbanner.component.ts");
+/* harmony import */ var _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! @kolkov/angular-editor */ "./node_modules/@kolkov/angular-editor/__ivy_ngcc__/fesm2015/kolkov-angular-editor.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23291,7 +23286,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -23387,27 +23381,26 @@ AppModule = __decorate([
             _admin_eventattendees_eventattendees_component__WEBPACK_IMPORTED_MODULE_102__["EventAttendeesComponent"],
             _admin_eventattendees_addeventattendees_addeventattendees_component__WEBPACK_IMPORTED_MODULE_103__["AddEventAttendeesComponent"],
             _admin_usereventreport_usereventreport_component__WEBPACK_IMPORTED_MODULE_104__["UserEventReportComponent"],
-            _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"],
-            _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"],
-            _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"],
-            _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"],
-            _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"],
-            _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"],
-            _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"],
-            _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"],
-            _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"],
-            _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"]
+            _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__["EventattendeedetailsComponent"],
+            _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__["UserDetailComponent"],
+            _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__["MessageComponent"],
+            _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"],
+            _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__["OrganisingCommitteeComponent"],
+            _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"],
+            _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__["WorkshopComponent"],
+            _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"],
+            _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__["PopupBannerComponent"],
+            _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_117__["AngularEditorModule"],
-            _angular_common__WEBPACK_IMPORTED_MODULE_114__["CommonModule"],
+            _kolkov_angular_editor__WEBPACK_IMPORTED_MODULE_116__["AngularEditorModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_113__["CommonModule"],
             ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
-            _syncfusion_ej2_angular_richtexteditor__WEBPACK_IMPORTED_MODULE_105__["RichTextEditorModule"],
             _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"],
             ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(),
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
@@ -23439,16 +23432,16 @@ AppModule = __decorate([
                         { path: 'location', component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"] },
                         { path: 'location/add', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"] },
                         { path: 'location/edit/:id', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"] },
-                        { path: 'eventattendeedetails/edit/:id', component: _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_106__["EventattendeedetailsComponent"] },
+                        { path: 'eventattendeedetails/edit/:id', component: _admin_eventattendeedetails_eventattendeedetails_component__WEBPACK_IMPORTED_MODULE_105__["EventattendeedetailsComponent"] },
                         { path: 'brand', component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"] },
                         { path: 'brand/add', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"] },
                         { path: 'brand/edit/:id', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"] },
                         { path: 'settings/banner', component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"] },
                         { path: 'settings/banner/add', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"] },
                         { path: 'settings/banner/edit/:id', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"] },
-                        { path: 'settings/popupbanner', component: _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_115__["PopupBannerComponent"] },
-                        { path: 'settings/popupbanner/add', component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"] },
-                        { path: 'settings/popupbanner/edit/:id', component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_116__["AddPopupBannerComponent"] },
+                        { path: 'settings/popupbanner', component: _admin_settings_popupbanner_popupbanner_component__WEBPACK_IMPORTED_MODULE_114__["PopupBannerComponent"] },
+                        { path: 'settings/popupbanner/add', component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"] },
+                        { path: 'settings/popupbanner/edit/:id', component: _admin_settings_popupbanner_add_addpopupbanner_component__WEBPACK_IMPORTED_MODULE_115__["AddPopupBannerComponent"] },
                         { path: 'settings/corporateclient', component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"] },
                         { path: 'settings/corporateclient/add', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"] },
                         { path: 'settings/corporateclient/edit/:id', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"] },
@@ -23516,7 +23509,7 @@ AppModule = __decorate([
                         { path: 'user', component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"] },
                         { path: 'user/add', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
                         { path: 'user/edit/:id', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
-                        { path: 'user/view/:id', component: _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_107__["UserDetailComponent"] },
+                        { path: 'user/view/:id', component: _admin_userdetails_userdetails_component__WEBPACK_IMPORTED_MODULE_106__["UserDetailComponent"] },
                         { path: 'permission', component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"] },
                         { path: 'permission/add', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
                         { path: 'permission/edit/:id', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
@@ -23530,18 +23523,18 @@ AppModule = __decorate([
                         { path: 'speaker', component: _admin_speaker_speaker_component__WEBPACK_IMPORTED_MODULE_88__["SpeakerComponent"] },
                         { path: 'speaker/add', component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"] },
                         { path: 'speaker/edit/:id', component: _admin_speaker_addspeaker_addspeaker_component__WEBPACK_IMPORTED_MODULE_89__["AddSpeakerComponent"] },
-                        { path: 'organisingcommittee', component: _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["OrganisingCommitteeComponent"] },
-                        { path: 'organisingcommittee/add', component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"] },
-                        { path: 'organisingcommittee/edit/:id', component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_111__["AddOrganisingCommitteeComponent"] },
+                        { path: 'organisingcommittee', component: _admin_organisingcommittee_organisingcommittee_component__WEBPACK_IMPORTED_MODULE_109__["OrganisingCommitteeComponent"] },
+                        { path: 'organisingcommittee/add', component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"] },
+                        { path: 'organisingcommittee/edit/:id', component: _admin_organisingcommittee_addorganisingcommittee_addorganisingcommittee_component__WEBPACK_IMPORTED_MODULE_110__["AddOrganisingCommitteeComponent"] },
                         { path: 'organizer', component: _admin_organizer_organizer_component__WEBPACK_IMPORTED_MODULE_90__["OrganizerComponent"] },
                         { path: 'organizer/add', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
                         { path: 'organizer/edit/:id', component: _admin_organizer_add_addorganizer_component__WEBPACK_IMPORTED_MODULE_91__["AddOrganizerComponent"] },
-                        { path: 'workshop', component: _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_112__["WorkshopComponent"] },
-                        { path: 'workshop/add', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"] },
-                        { path: 'workshop/edit/:id', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_113__["AddWorkshopComponent"] },
-                        { path: 'message', component: _admin_message_message_component__WEBPACK_IMPORTED_MODULE_108__["MessageComponent"] },
-                        { path: 'message/add', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"] },
-                        { path: 'message/edit/:id', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_109__["AddMessageComponent"] },
+                        { path: 'workshop', component: _admin_workshop_workshop_component__WEBPACK_IMPORTED_MODULE_111__["WorkshopComponent"] },
+                        { path: 'workshop/add', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"] },
+                        { path: 'workshop/edit/:id', component: _admin_workshop_addworkshop_addworkshop_component__WEBPACK_IMPORTED_MODULE_112__["AddWorkshopComponent"] },
+                        { path: 'message', component: _admin_message_message_component__WEBPACK_IMPORTED_MODULE_107__["MessageComponent"] },
+                        { path: 'message/add', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"] },
+                        { path: 'message/edit/:id', component: _admin_message_add_addmessage_component__WEBPACK_IMPORTED_MODULE_108__["AddMessageComponent"] },
                         { path: 'partner', component: _admin_partner_partner_component__WEBPACK_IMPORTED_MODULE_92__["PartnerComponent"] },
                         { path: 'partner/add', component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"] },
                         { path: 'partner/edit/:id', component: _admin_partner_add_addpartner_component__WEBPACK_IMPORTED_MODULE_93__["AddPartnerComponent"] },
@@ -24267,18 +24260,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_angular_localize_init__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/__ivy_ngcc__/fesm2015/platform-browser-dynamic.js");
-/* harmony import */ var _syncfusion_ej2_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @syncfusion/ej2-base */ "./node_modules/@syncfusion/ej2-base/dist/es6/ej2-base.es5.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 /***************************************************************************************************
  * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
  */
 
 
 
-
+//import { registerLicense } from '@syncfusion/ej2-base';
 // Registering Syncfusion license key
-Object(_syncfusion_ej2_base__WEBPACK_IMPORTED_MODULE_3__["registerLicense"])('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
+//registerLicense('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
 
 
 function getBaseUrl() {
@@ -24287,10 +24279,10 @@ function getBaseUrl() {
 const providers = [
     { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
 ];
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].production) {
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(err => console.log(err));
 
 

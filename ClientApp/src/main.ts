@@ -4,10 +4,10 @@
 import '@angular/localize/init';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { registerLicense } from '@syncfusion/ej2-base';
+//import { registerLicense } from '@syncfusion/ej2-base';
 
 // Registering Syncfusion license key
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
+//registerLicense('Ngo9BigBOggjHTQxAR8/V1NAaF5cWWRCfEx0QXxbf1x0ZFNMYltbRX9PMyBoS35RckViW3pednFTQmNfVU12');
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';

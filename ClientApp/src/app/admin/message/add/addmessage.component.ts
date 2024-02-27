@@ -6,14 +6,14 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageService } from 'src/app/_services/message.service';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+//import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 
 
 @Component({
   selector: 'app-addmessage',
   templateUrl: './addmessage.component.html',
   styleUrls: ['./addmessage.component.css'],
-  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+ // providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
 })
 export class AddMessageComponent implements OnInit {
 
