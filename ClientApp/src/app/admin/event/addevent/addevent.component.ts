@@ -57,18 +57,20 @@ export class AddEventComponent implements OnInit {
   selectedModifierIds: string[];
   selectedAddonIds: string[];
   //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-  eventTime =
-    {
-      hour: new Date().getHours() % 12 || 12,
-      minute: new Date().getMinutes(),
-      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-    };
-    eventEndTime =
-    {
-      hour: new Date().getHours() % 12 || 12,
-      minute: new Date().getMinutes(),
-      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-    };
+  //eventTime: string[];
+  //{
+  //  hour: new Date().getHours() % 12 || 12,
+  //  minute: new Date().getMinutes(),
+  //  ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+  //};
+  //eventEndTime: string[];
+  //{
+  //  hour: new Date().getHours() % 12 || 12,
+  //  minute: new Date().getMinutes(),
+  //  ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+  //};
+  eventTime: { hour: number; minute: number; } | null;
+  eventEndTime: { hour: number; minute: number; } | null;
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -91,9 +93,10 @@ export class AddEventComponent implements OnInit {
   }
 
   ngOnInit() {
-    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
-    this._datepicker.fromDate = date;
+    //const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+    //this._datepicker.fromDate = date;
     this.setSelecteditem();
+
   }
 
   get f() { return this.eventForm.controls; }
@@ -109,7 +112,7 @@ export class AddEventComponent implements OnInit {
       fromDate: '',
       toDate: '',
       eventCity: [''],
-      eventCategoryID: [ Validators.required],
+      eventCategoryID: [Validators.required],
       locationLink: [''],
       phoneNo: [''],
       eventTime: [''],
@@ -140,19 +143,30 @@ export class AddEventComponent implements OnInit {
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.location.setValue(obj.location);
-    this.f.fromDate.setValue(obj.fromDate);
-    this.f.toDate.setValue(obj.toDate);
+    //this.f.fromDate.setValue(obj.fromDate);
+    //this.f.toDate.setValue(obj.toDate);
+    this.eventForm.patchValue({
+      fromDate: this.formatDate(obj.fromDate),
+      toDate: this.formatDate(obj.toDate),
+    });
     this.f.eventLink.setValue(obj.eventLink);
-    this.eventTime = {
-      hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
-    };
-    this.eventEndTime = {
-      hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
-    };
+    this.eventTime = obj.eventTime
+      ? this.parseTime12Hour(obj.eventTime)
+      : { hour: 0, minute: 0 };
+
+    this.eventEndTime = obj.eventEndTime
+      ? this.parseTime12Hour(obj.eventEndTime)
+      : { hour: 0, minute: 0 };
+    //this.eventTime = {
+    //  hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
+    //  minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
+    //  ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+    //};
+    //this.eventEndTime = {
+    //  hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
+    //  minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
+    //  ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
+    //};
     this.f.eventCity.setValue(obj.eventCity);
     this.f.eventCategoryID.setValue(obj.eventCategoryID);
     this.f.locationLink.setValue(obj.locationLink);
@@ -179,17 +193,30 @@ export class AddEventComponent implements OnInit {
       this.f.speakers.setValue(obj.speakers);
     }
 
-    //if (obj.eventCategories != "") {
-    //  debugger
-    //  var stringToConvert = obj.eventCategories;
-    //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
-    //  this.f.eventCategories.setValue(obj.eventCategories);
-    //}
     this.loadItemImages(this.f.eventID.value);
   }
+
+  parseTime12Hour(time: string): { hour: number; minute: number } {
+    const [hourMinute, period] = time.split(' ');
+    const [hour, minute] = hourMinute.split(':').map(Number);
+    return {
+      hour: period === 'PM' && hour !== 12 ? hour + 12 : hour % 12,
+      minute: minute || 0,
+    };
+  }
+
+  private formatDate(date: Date): string {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
   }
+
   setSelecteditem() {
     debugger
     this.route.paramMap.subscribe(param => {
@@ -218,18 +245,18 @@ export class AddEventComponent implements OnInit {
     //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
     //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
 
-    const formattedHour = (this.eventTime.hour % 12 || 12);
-    const formattedMinute = this.pad(this.eventTime.minute);
-    const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
-    const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
-    this.f.eventTime.setValue(formattedTime);
+    //const formattedHour = (this.eventTime.hour % 12 || 12);
+    //const formattedMinute = this.pad(this.eventTime.minute);
+    //const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
+    //const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+    this.f.eventTime.setValue(this.eventTime);
 
-    const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
-    const formattedEndMinute = this.pad(this.eventEndTime.minute);
-    const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
-    const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
-    this.f.eventEndTime.setValue(formattedEndTime);
-    
+    //const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
+    //const formattedEndMinute = this.pad(this.eventEndTime.minute);
+    //const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
+    //const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
+    this.f.eventEndTime.setValue(this.eventEndTime);
+
     this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
     this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

@@ -49,18 +49,20 @@ export class AddWorkshopComponent implements OnInit {
   loadingItems = false;
   OrganizerList = [];
   selectedOrganizerIds: string[];
-  startTime =
-    {
-      hour: new Date().getHours() % 12 || 12,
-      minute: new Date().getMinutes(),
-      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-    };
-  endTime =
-    {
-      hour: new Date().getHours() % 12 || 12,
-      minute: new Date().getMinutes(),
-      ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-    };
+  //startTime == [];
+  //{
+  //  hour: new Date().getHours() % 12 || 12,
+  //  minute: new Date().getMinutes(),
+  //  ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+  //};
+  //endTime == [];
+  //{
+  //  hour: new Date().getHours() % 12 || 12,
+  //  minute: new Date().getMinutes(),
+  //  ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
+  //};
+  startTime: { hour: number; minute: number; } | null;
+  endTime: { hour: number; minute: number; } | null;
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -110,18 +112,28 @@ export class AddWorkshopComponent implements OnInit {
     this.f.name.setValue(obj.name);
     this.f.description.setValue(obj.description);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.f.date.setValue(obj.date);
+    //this.f.date.setValue(obj.date);
+    this.workshopForm.patchValue({
+      date: this.formatDate(obj.date),
+    });
     this.f.pdfLink.setValue(obj.pdfLink);
-    this.startTime = {
-      hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
-    };
-    this.endTime = {
-      hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
-      minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
-      ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
-    };
+    this.startTime = obj.startTime
+      ? this.parseTime12Hour(obj.startTime)
+      : { hour: 0, minute: 0 };
+
+    this.endTime = obj.endTime
+      ? this.parseTime12Hour(obj.endTime)
+      : { hour: 0, minute: 0 };
+    //this.startTime = {
+    //  hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
+    //  minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
+    //  ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
+    //};
+    //this.endTime = {
+    //  hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
+    //  minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
+    //  ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
+    //};
     this.f.link.setValue(obj.link);
     this.f.displayOrder.setValue(obj.displayOrder);
     if (obj.organizerID != "") {
@@ -131,6 +143,24 @@ export class AddWorkshopComponent implements OnInit {
     }
     this.imgComp.imageUrl = obj.image;
   }
+
+  parseTime12Hour(time: string): { hour: number; minute: number } {
+    const [hourMinute, period] = time.split(' ');
+    const [hour, minute] = hourMinute.split(':').map(Number);
+    return {
+      hour: period === 'PM' && hour !== 12 ? hour + 12 : hour % 12,
+      minute: minute || 0,
+    };
+  }
+
+  private formatDate(date: Date): string {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
   }
@@ -165,7 +195,7 @@ export class AddWorkshopComponent implements OnInit {
     const formattedEndHour = (this.endTime.hour % 12 || 12);
     const formattedEndMinute = this.pad(this.endTime.minute);
     const formattedEndAMPM = this.endTime.hour >= 12 ? 'PM' : 'AM'
-    const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
+    const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;
     this.f.endTime.setValue(formattedEndTime);
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
@@ -201,7 +231,7 @@ export class AddWorkshopComponent implements OnInit {
   pad(value: number): string {
     return value < 10 ? `0${value}` : `${value}`;
   }
-  
+
   private loadOrganizer() {
     this.service.loadOrganizer().subscribe((res: any) => {
       this.OrganizerList = res;
