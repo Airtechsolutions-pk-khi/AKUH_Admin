@@ -69,12 +69,14 @@ export class AddSpeakerComponent implements OnInit {
       statusID: [true],
       speakerID: 0,
       image: [''],
+      type: ['', Validators.required],
       locationID: null
     });
   }
 
   private editForm(obj) {    
     this.f.name.setValue(obj.name);
+    this.f.type.setValue(obj.type);
     this.f.designation.setValue(obj.designation);
     this.f.company.setValue(obj.company);
     this.f.about.setValue(obj.about);

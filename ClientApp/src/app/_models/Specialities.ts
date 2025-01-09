@@ -3,5 +3,6 @@ export class Specialities {
     name: string;
     urduName: string;
     image: string;
+    type: string;
     statusID: number;
 }

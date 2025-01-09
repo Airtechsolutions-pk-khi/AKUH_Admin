@@ -100,7 +100,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[8];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);
@@ -109,6 +109,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@Image", data.Image);
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@CreatedOn", data.Createdon);
+                p[7] = new SqlParameter("@Type", data.Type);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertSpeaker_Admin", p);
 
@@ -125,7 +126,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 1;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Designation", data.Designation);
@@ -135,6 +136,7 @@ namespace BAL.Repositories
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@Updatedon", data.Updatedon);
                 p[7] = new SqlParameter("@SpeakerID", data.SpeakerID);
+                p[8] = new SqlParameter("@Type", data.Type);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateSpeaker_Admin", p);
 

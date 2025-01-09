@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Projects\\AKUH_Admin\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\bll\\_dbparamfactory\\eventattendeesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:bll\\_dbparamfactory\\eventattendeesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\bll\\_dbparamfactory\\popupbannerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:bll\\_dbparamfactory\\popupbannerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\controllers\\popupbannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:controllers\\popupbannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,44 +50,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "eventAttendeesDB.cs",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventAttendeesDB.cs",
-              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\eventAttendeesDB.cs",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventAttendeesDB.cs",
-              "RelativeToolTip": "BLL\\_DBParamFactory\\eventAttendeesDB.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAAwMcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T07:33:18.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "popupbannerDB.cs",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\popupbannerDB.cs",
-              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\popupbannerDB.cs",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\popupbannerDB.cs",
-              "RelativeToolTip": "BLL\\_DBParamFactory\\popupbannerDB.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA1wCIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T11:56:27.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "popupbannerController.cs",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\Controllers\\popupbannerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\popupbannerController.cs",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\Controllers\\popupbannerController.cs",
-              "RelativeToolTip": "Controllers\\popupbannerController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T12:31:56.114Z"
             }
           ]
         }

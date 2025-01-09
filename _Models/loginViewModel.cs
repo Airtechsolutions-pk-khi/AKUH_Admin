@@ -203,6 +203,7 @@ namespace AKU_Admin._Models
         public string Designation { get; set; }
         public string Company { get; set; }
         public string About { get; set; }
+        public string Type { get; set; }
         public string Image { get; set; }
         public int? StatusID { get; set; }
         public DateTime? Createdon { get; set; }
