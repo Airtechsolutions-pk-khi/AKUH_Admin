@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Event Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Type</label>\r\n              <select class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option>Onsite</option>\r\n                <option>Online</option>\r\n                <option>Both</option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventLink placeholder=\"\" formControlName=\"eventLink\">\r\n            </div>\r\n\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" class=\"form-control\" id=email placeholder=\"abc@gmail.com\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors?.required\">\r\n                  Email is required.\r\n                </div>\r\n                <div *ngIf=\"f.email.errors?.pattern\">\r\n                  Please enter a valid email address.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" maxlength=\"12\" class=\"form-control\" id=phoneNo placeholder=\"xxxx-xxxxxxx\" formControlName=\"phoneNo\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Workshop Detail Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Venue</label>\r\n              <input type=\"text\" class=\"form-control\" id=location placeholder=\"\" formControlName=\"location\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category<em style=\"color: red;\">*</em></label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n\r\n              <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n              </ejs-richtexteditor> -->\r\n              <angular-editor [config]=\"editorConfig\" formControlName=\"description\"></angular-editor>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"mb-1\" for=\"inputLocation\">Choose Start to End Date<em style=\"color: red;\">*</em></label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\" style=\"display: none;\">\r\n              <label for=\"Item Status\">Is Workshop</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event Start Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event End Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventEndTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images <em style=\"color: red;\">*</em></label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Event</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"eventForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Event Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Event Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Type</label>\r\n              <select class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option>Onsite</option>\r\n                <option>Online</option>\r\n                <option>Both</option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventLink placeholder=\"\" formControlName=\"eventLink\">\r\n            </div>\r\n\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Email<em style=\"color: red;\">*</em></label>\r\n              <input type=\"text\" pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" class=\"form-control\" id=email placeholder=\"abc@gmail.com\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors?.required\">\r\n                  Email is required.\r\n                </div>\r\n                <div *ngIf=\"f.email.errors?.pattern\">\r\n                  Please enter a valid email address.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Contact No</label>\r\n              <input type=\"text\" maxlength=\"12\" class=\"form-control\" id=phoneNo placeholder=\"xxxx-xxxxxxx\" formControlName=\"phoneNo\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Event City</label>\r\n              <input type=\"text\" class=\"form-control\" id=eventCity placeholder=\"\" formControlName=\"eventCity\">\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Workshop Detail Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=locationLink placeholder=\"\" formControlName=\"locationLink\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Venue</label>\r\n              <input type=\"text\" class=\"form-control\" id=location placeholder=\"\" formControlName=\"location\">\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n              <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Category<em style=\"color: red;\">*</em></label>\r\n              <select class=\"custom-select\" formControlName=\"eventCategoryID\">\r\n                <option [ngValue]=\"option.eventCategoryID\" selected=\"option.eventCategoryID == eventCategoryID\"\r\n                        *ngFor=\"let option of EventCategoryList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedOrganizerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-4\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Event Speakers<em style=\"color: red;\">*</em></label>\r\n              <ng-select [items]=\"SpeakerList\" bindLabel=\"name\" bindValue=\"speakerID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpeakerIds\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-12\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n\r\n              <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n              </ejs-richtexteditor> -->\r\n              <angular-editor [config]=\"editorConfig\" formControlName=\"description\"></angular-editor>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <!--<div class=\"form-group col-md-6\">\r\n              <label class=\"mb-1\" for=\"inputLocation\">Choose Start to End Date<em style=\"color: red;\">*</em></label>\r\n              <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>-->\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"fromDate\">From Date</label>\r\n              <input type=\"date\" class=\"form-control\" id=\"fromDate\" placeholder=\"\" formControlName=\"fromDate\">\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"toDate\">To Date</label>\r\n              <input type=\"date\" class=\"form-control\" id=\"toDate\" placeholder=\"\" formControlName=\"toDate\">\r\n            </div>\r\n\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\" style=\"display: none;\">\r\n              <label for=\"Item Status\">Is Workshop</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event Start Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\"\r\n                              [ngModelOptions]=\"{ standalone: true }\"\r\n                              [meridian]=\"true\">\r\n              </ngb-timepicker>\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event End Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventEndTime\"\r\n                              [ngModelOptions]=\"{ standalone: true }\"\r\n                              [meridian]=\"true\">\r\n              </ngb-timepicker>\r\n            </div>\r\n\r\n            <!--<div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event Start Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>\r\n            <div class=\"form-group col-md-3\">\r\n              <label for=\"Item Status\">Event End Time<em style=\"color: red;\">*</em></label>\r\n              <ngb-timepicker [(ngModel)]=\"eventEndTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n            </div>-->\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images <em style=\"color: red;\">*</em></label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                              padding: 5px 8px;\r\n                              border-radius: 18px;\r\n                              color: white;\r\n                              position: absolute;\r\n                              left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n          </div>\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -1401,7 +1401,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Workshop</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"workshopForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Workshop Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n                  <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.name.errors.required\">\r\n                      Event Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Pdf Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=pdfLink placeholder=\"\" formControlName=\"pdfLink\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=link placeholder=\"\" formControlName=\"link\">\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n                  <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n                  <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"organizerID\" formControlName=\"organizerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"mb-1\" for=\"inputLocation\">Date<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"date\" class=\"form-control\" checked id=\"date\" formControlName=\"date\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">Start Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"startTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">End Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"endTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                  <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n                  </ejs-richtexteditor> -->\r\n                  <angular-editor [config]=\"editorConfig\" formControlName=\"description\"></angular-editor>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-lg-4\">\r\n                  <label for=\"Item Status\">Status</label>\r\n                  <div class=\"custom-control custom-switch custom-switch-md\">\r\n                    <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                    <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Workshop</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"workshopForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Workshop Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n\r\n                  <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.name.errors.required\">\r\n                      Event Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Pdf Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=pdfLink placeholder=\"\" formControlName=\"pdfLink\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Link</label>\r\n                  <input type=\"text\" class=\"form-control\" id=link placeholder=\"\" formControlName=\"link\">\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n                  <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Event Organizer<em style=\"color: red;\">*</em></label>\r\n                  <ng-select [items]=\"OrganizerList\" bindLabel=\"name\" bindValue=\"organizerID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"organizerID\" formControlName=\"organizerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"mb-1\" for=\"inputLocation\">Date<em style=\"color: red;\">*</em></label>\r\n                  <input type=\"date\" class=\"form-control\" checked id=\"date\" formControlName=\"date\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <!--<div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">Start Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"startTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">End Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"endTime\" [ngModelOptions]=\"{standalone: true}\" [meridian]=\"true\"></ngb-timepicker>\r\n                </div>-->\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">Start Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"startTime\"\r\n                                  [ngModelOptions]=\"{ standalone: true }\"\r\n                                  [meridian]=\"true\">\r\n                  </ngb-timepicker>\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label for=\"Item Status\">End Time<em style=\"color: red;\">*</em></label>\r\n                  <ngb-timepicker [(ngModel)]=\"endTime\"\r\n                                  [ngModelOptions]=\"{ standalone: true }\"\r\n                                  [meridian]=\"true\">\r\n                  </ngb-timepicker>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                  <!-- <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' formControlName=\"description\">\r\n                  </ejs-richtexteditor> -->\r\n                  <angular-editor [config]=\"editorConfig\" formControlName=\"description\"></angular-editor>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-lg-4\">\r\n                  <label for=\"Item Status\">Status</label>\r\n                  <div class=\"custom-control custom-switch custom-switch-md\">\r\n                    <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                    <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -9944,8 +9944,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/event.service */ "./src/app/_services/event.service.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
-/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9961,7 +9960,6 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 //import { ItemsService } from 'src/app/_services/items.service';
-
 
 
 
@@ -10005,25 +10003,14 @@ let AddEventComponent = class AddEventComponent {
         this.SpeakerList = [];
         this.ModifiersList = [];
         this.AddonsList = [];
-        //eventTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-        this.eventTime = {
-            hour: new Date().getHours() % 12 || 12,
-            minute: new Date().getMinutes(),
-            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-        };
-        this.eventEndTime = {
-            hour: new Date().getHours() % 12 || 12,
-            minute: new Date().getMinutes(),
-            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-        };
         this.createForm();
         this.loadEventCategory();
         this.loadOrganizer();
         this.loadSpeaker();
     }
     ngOnInit() {
-        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbDate"](now.getFullYear(), now.getMonth() + 1, 1);
-        this._datepicker.fromDate = date;
+        //const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+        //this._datepicker.fromDate = date;
         this.setSelecteditem();
     }
     get f() { return this.eventForm.controls; }
@@ -10067,19 +10054,29 @@ let AddEventComponent = class AddEventComponent {
         this.f.description.setValue(obj.description);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.f.location.setValue(obj.location);
-        this.f.fromDate.setValue(obj.fromDate);
-        this.f.toDate.setValue(obj.toDate);
+        //this.f.fromDate.setValue(obj.fromDate);
+        //this.f.toDate.setValue(obj.toDate);
+        this.eventForm.patchValue({
+            fromDate: this.formatDate(obj.fromDate),
+            toDate: this.formatDate(obj.toDate),
+        });
         this.f.eventLink.setValue(obj.eventLink);
-        this.eventTime = {
-            hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
-            minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
-            ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
-        };
-        this.eventEndTime = {
-            hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
-            minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
-            ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
-        };
+        this.eventTime = obj.eventTime
+            ? this.parseTime12Hour(obj.eventTime)
+            : { hour: 0, minute: 0 };
+        this.eventEndTime = obj.eventEndTime
+            ? this.parseTime12Hour(obj.eventEndTime)
+            : { hour: 0, minute: 0 };
+        //this.eventTime = {
+        //  hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
+        //  minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
+        //  ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
+        //};
+        //this.eventEndTime = {
+        //  hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
+        //  minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
+        //  ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
+        //};
         this.f.eventCity.setValue(obj.eventCity);
         this.f.eventCategoryID.setValue(obj.eventCategoryID);
         this.f.locationLink.setValue(obj.locationLink);
@@ -10104,13 +10101,22 @@ let AddEventComponent = class AddEventComponent {
             this.selectedSpeakerIds = stringToConvert.split(',').map(Number);
             this.f.speakers.setValue(obj.speakers);
         }
-        //if (obj.eventCategories != "") {
-        //  debugger
-        //  var stringToConvert = obj.eventCategories;
-        //  this.selectedEventCategoryIds = stringToConvert.split(',').map(Number);
-        //  this.f.eventCategories.setValue(obj.eventCategories);
-        //}
         this.loadItemImages(this.f.eventID.value);
+    }
+    parseTime12Hour(time) {
+        const [hourMinute, period] = time.split(' ');
+        const [hour, minute] = hourMinute.split(':').map(Number);
+        return {
+            hour: period === 'PM' && hour !== 12 ? hour + 12 : hour % 12,
+            minute: minute || 0,
+        };
+    }
+    formatDate(date) {
+        const d = new Date(date);
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
     }
     parseDate(obj) {
         return obj.year + "-" + obj.month + "-" + obj.day;
@@ -10144,16 +10150,16 @@ let AddEventComponent = class AddEventComponent {
         this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
         //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
         //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
-        const formattedHour = (this.eventTime.hour % 12 || 12);
-        const formattedMinute = this.pad(this.eventTime.minute);
-        const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM';
-        const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
-        this.f.eventTime.setValue(formattedTime);
-        const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
-        const formattedEndMinute = this.pad(this.eventEndTime.minute);
-        const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM';
-        const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;
-        this.f.eventEndTime.setValue(formattedEndTime);
+        //const formattedHour = (this.eventTime.hour % 12 || 12);
+        //const formattedMinute = this.pad(this.eventTime.minute);
+        //const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
+        //const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+        this.f.eventTime.setValue(this.eventTime);
+        //const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
+        //const formattedEndMinute = this.pad(this.eventEndTime.minute);
+        //const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
+        //const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
+        this.f.eventEndTime.setValue(this.eventEndTime);
         this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
         this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
@@ -10248,7 +10254,7 @@ AddEventComponent.ctorParameters = () => [
     { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_6__["EventService"] }
 ];
 AddEventComponent.propDecorators = {
-    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], { static: true },] }],
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
     imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
 };
 AddEventComponent = __decorate([
@@ -22677,16 +22683,6 @@ let AddWorkshopComponent = class AddWorkshopComponent {
         this.loading = false;
         this.loadingItems = false;
         this.OrganizerList = [];
-        this.startTime = {
-            hour: new Date().getHours() % 12 || 12,
-            minute: new Date().getMinutes(),
-            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-        };
-        this.endTime = {
-            hour: new Date().getHours() % 12 || 12,
-            minute: new Date().getMinutes(),
-            ampm: new Date().getHours() >= 12 ? 'PM' : 'AM'
-        };
         this.createForm();
         this.loadOrganizer();
     }
@@ -22717,18 +22713,27 @@ let AddWorkshopComponent = class AddWorkshopComponent {
         this.f.name.setValue(obj.name);
         this.f.description.setValue(obj.description);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-        this.f.date.setValue(obj.date);
+        //this.f.date.setValue(obj.date);
+        this.workshopForm.patchValue({
+            date: this.formatDate(obj.date),
+        });
         this.f.pdfLink.setValue(obj.pdfLink);
-        this.startTime = {
-            hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
-            minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
-            ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
-        };
-        this.endTime = {
-            hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
-            minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
-            ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
-        };
+        this.startTime = obj.startTime
+            ? this.parseTime12Hour(obj.startTime)
+            : { hour: 0, minute: 0 };
+        this.endTime = obj.endTime
+            ? this.parseTime12Hour(obj.endTime)
+            : { hour: 0, minute: 0 };
+        //this.startTime = {
+        //  hour: new Date("1/1/1900 " + obj.startTime).getHours() % 12 || 12,
+        //  minute: new Date("1/1/1900 " + obj.startTime).getMinutes(),
+        //  ampm: new Date("1/1/1900 " + obj.startTime).getHours() >= 12 ? 'PM' : 'AM'
+        //};
+        //this.endTime = {
+        //  hour: new Date("1/1/1900 " + obj.endTime).getHours() % 12 || 12,
+        //  minute: new Date("1/1/1900 " + obj.endTime).getMinutes(),
+        //  ampm: new Date("1/1/1900 " + obj.endTime).getHours() >= 12 ? 'PM' : 'AM'
+        //};
         this.f.link.setValue(obj.link);
         this.f.displayOrder.setValue(obj.displayOrder);
         if (obj.organizerID != "") {
@@ -22737,6 +22742,21 @@ let AddWorkshopComponent = class AddWorkshopComponent {
             this.f.organizerID.setValue(obj.organizerID);
         }
         this.imgComp.imageUrl = obj.image;
+    }
+    parseTime12Hour(time) {
+        const [hourMinute, period] = time.split(' ');
+        const [hour, minute] = hourMinute.split(':').map(Number);
+        return {
+            hour: period === 'PM' && hour !== 12 ? hour + 12 : hour % 12,
+            minute: minute || 0,
+        };
+    }
+    formatDate(date) {
+        const d = new Date(date);
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
     }
     parseDate(obj) {
         return obj.year + "-" + obj.month + "-" + obj.day;
@@ -24295,7 +24315,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Project\AghaKhan\AKUH_Admin_GIT\ClientApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Projects\AKUH_Admin\ClientApp\src\main.ts */"./src/main.ts");
 
 
 /***/ }),

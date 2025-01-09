@@ -107,9 +107,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
-               
-                p[3] = new SqlParameter("@Updatedon",DateTime.UtcNow.AddMinutes(300));
-               
+                p[3] = new SqlParameter("@Updatedon",DateTime.UtcNow.AddMinutes(300));              
                 p[4] = new SqlParameter("@ID", data.ID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdatePopupBanner_Admin", p);

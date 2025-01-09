@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\Projects\\AKUH_Admin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\clientapp\\src\\app\\admin\\event\\addevent\\addevent.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:clientapp\\src\\app\\admin\\event\\addevent\\addevent.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\bll\\_dbparamfactory\\eventattendeesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:bll\\_dbparamfactory\\eventattendeesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\bll\\_dbparamfactory\\eventdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:bll\\_dbparamfactory\\eventdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\bll\\_dbparamfactory\\popupbannerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:bll\\_dbparamfactory\\popupbannerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\clientapp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:clientapp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\clientapp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:clientapp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\clientapp\\src\\app\\admin\\event\\addevent\\addevent.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:clientapp\\src\\app\\admin\\event\\addevent\\addevent.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|e:\\projects\\akuh_admin\\controllers\\popupbannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|AKU_Admin.csproj|solutionrelative:controllers\\popupbannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,68 +66,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "addworkshop.component.ts",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts",
-              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts",
-              "RelativeToolTip": "ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.ts",
-              "ViewState": "AgIAACwAAAAAAAAAAAAQwEAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-06T08:31:04.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "addworkshop.component.html",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html",
-              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html",
-              "RelativeToolTip": "ClientApp\\src\\app\\admin\\workshop\\addworkshop\\addworkshop.component.html",
-              "ViewState": "AgIAADAAAAAAAAAAAAAuwEAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-06T08:30:13.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "addevent.component.ts",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.ts",
-              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.ts",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.ts",
-              "RelativeToolTip": "ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.ts",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAowM0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-06T08:11:39.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "addevent.component.html",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.html",
-              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.html",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.html",
-              "RelativeToolTip": "ClientApp\\src\\app\\admin\\event\\addevent\\addevent.component.html",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJMAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-06T08:10:53.02Z",
+              "Title": "eventAttendeesDB.cs",
+              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventAttendeesDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\eventAttendeesDB.cs",
+              "ToolTip": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventAttendeesDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\eventAttendeesDB.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAAwMcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T07:33:18.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "eventDB.cs",
-              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventDB.cs",
-              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\eventDB.cs",
-              "ToolTip": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\eventDB.cs",
-              "RelativeToolTip": "BLL\\_DBParamFactory\\eventDB.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAowIwAAAAQAAAAAAAAAA==",
+              "Title": "popupbannerDB.cs",
+              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\popupbannerDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\popupbannerDB.cs",
+              "ToolTip": "E:\\Projects\\AKUH_Admin\\BLL\\_DBParamFactory\\popupbannerDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\popupbannerDB.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wCIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:07:24.628Z",
+              "WhenOpened": "2025-01-06T11:56:27.73Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "popupbannerController.cs",
+              "DocumentMoniker": "E:\\Projects\\AKUH_Admin\\Controllers\\popupbannerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\popupbannerController.cs",
+              "ToolTip": "E:\\Projects\\AKUH_Admin\\Controllers\\popupbannerController.cs",
+              "RelativeToolTip": "Controllers\\popupbannerController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T12:31:56.114Z"
             }
           ]
         }

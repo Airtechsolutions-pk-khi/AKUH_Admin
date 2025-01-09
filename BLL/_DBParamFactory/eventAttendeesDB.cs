@@ -197,7 +197,7 @@ namespace BAL.Repositories
                 smtp.Port = Int32.Parse("587");
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("akuhevents@gmail.com", "ueuzxvrsgtaxdbev");
+                     ("akuhevents@gmail.com", "xkezqmvksalkwwom");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
             }
