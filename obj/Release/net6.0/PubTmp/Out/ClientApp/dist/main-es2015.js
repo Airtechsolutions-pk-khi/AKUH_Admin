@@ -10054,8 +10054,6 @@ let AddEventComponent = class AddEventComponent {
         this.f.description.setValue(obj.description);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.f.location.setValue(obj.location);
-        //this.f.fromDate.setValue(obj.fromDate);
-        //this.f.toDate.setValue(obj.toDate);
         this.eventForm.patchValue({
             fromDate: this.formatDate(obj.fromDate),
             toDate: this.formatDate(obj.toDate),
@@ -10067,25 +10065,12 @@ let AddEventComponent = class AddEventComponent {
         this.eventEndTime = obj.eventEndTime
             ? this.parseTime12Hour(obj.eventEndTime)
             : { hour: 0, minute: 0 };
-        //this.eventTime = {
-        //  hour: new Date("1/1/1900 " + obj.eventTime).getHours() % 12 || 12,
-        //  minute: new Date("1/1/1900 " + obj.eventTime).getMinutes(),
-        //  ampm: new Date("1/1/1900 " + obj.eventTime).getHours() >= 12 ? 'PM' : 'AM'
-        //};
-        //this.eventEndTime = {
-        //  hour: new Date("1/1/1900 " + obj.eventEndTime).getHours() % 12 || 12,
-        //  minute: new Date("1/1/1900 " + obj.eventEndTime).getMinutes(),
-        //  ampm: new Date("1/1/1900 " + obj.eventEndTime).getHours() >= 12 ? 'PM' : 'AM'
-        //};
         this.f.eventCity.setValue(obj.eventCity);
         this.f.eventCategoryID.setValue(obj.eventCategoryID);
         this.f.locationLink.setValue(obj.locationLink);
         this.f.phoneNo.setValue(obj.phoneNo);
         this.f.email.setValue(obj.email);
         this.f.remainingTicket.setValue(obj.remainingTicket);
-        //this.f.facebook.setValue(obj.facebook);
-        //this.f.instagram.setValue(obj.instagram);
-        //this.f.twitter.setValue(obj.twitter);
         this.f.displayOrder.setValue(obj.displayOrder);
         this.f.isFeatured.setValue(obj.isFeatured);
         //this.eventTime = { hour: new Date("1/1/1900 " + obj.eventTime).getHours(), minute: new Date("1/1/1900 " + obj.eventTime).getMinutes() };
@@ -10148,22 +10133,19 @@ let AddEventComponent = class AddEventComponent {
         this.f.eventCategories.setValue(this.selectedEventCategoryIds == undefined ? "" : this.selectedEventCategoryIds.toString());
         this.f.speakers.setValue(this.selectedSpeakerIds == undefined ? "" : this.selectedSpeakerIds.toString());
         this.f.organizers.setValue(this.selectedOrganizerIds == undefined ? "" : this.selectedOrganizerIds.toString());
-        //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute);
-        //this.f.eventTime.setValue(this.eventTime.hour + ":" + this.eventTime.minute + " " + this.eventTime.ampm);
-        //const formattedHour = (this.eventTime.hour % 12 || 12);
-        //const formattedMinute = this.pad(this.eventTime.minute);
-        //const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM'
-        //const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
-        this.f.eventTime.setValue(this.eventTime);
-        //const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
-        //const formattedEndMinute = this.pad(this.eventEndTime.minute);
-        //const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM'
-        //const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;    
-        this.f.eventEndTime.setValue(this.eventEndTime);
-        this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
-        this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
+        //this.f.eventTime.setValue(this.eventTime);
+        //this.f.eventEndTime.setValue(this.parseTime12Hour(this.eventEndTime));
+        const formattedHour = (this.eventTime.hour % 12 || 12);
+        const formattedMinute = this.pad(this.eventTime.minute);
+        const formattedAMPM = this.eventTime.hour >= 12 ? 'PM' : 'AM';
+        const formattedTime = `${formattedHour}:${formattedMinute} ${formattedAMPM}`;
+        this.f.eventTime.setValue(formattedTime);
+        const formattedEndHour = (this.eventEndTime.hour % 12 || 12);
+        const formattedEndMinute = this.pad(this.eventEndTime.minute);
+        const formattedEndAMPM = this.eventEndTime.hour >= 12 ? 'PM' : 'AM';
+        const formattedEndTime = `${formattedEndHour}:${formattedEndMinute} ${formattedEndAMPM}`;
+        this.f.eventEndTime.setValue(formattedEndTime);
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        //this.f.image.setValue(this.imgComp.imageUrl);
         if (parseInt(this.f.eventID.value) === 0) {
             //Insert item
             console.log(JSON.stringify(this.eventForm.value));

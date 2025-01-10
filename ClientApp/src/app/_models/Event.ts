@@ -23,6 +23,7 @@ twitter : string;
 image : string;
 displayOrder:number;
 eventTime:string;
+eventEndTime:string;
   
 }
 export class EventImageJunc {

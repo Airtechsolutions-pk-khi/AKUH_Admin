@@ -92,7 +92,38 @@ namespace AKU_Admin._Models
 
         public DateTime? Createdon { get; set; }
 
-        
-
+    }
+    public class EventBLL1
+    {
+        public int EventID { get; set; }
+        public int? EventCategoryID { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        [AllowHtml]
+        public string Description { get; set; }
+        public string Location { get; set; }
+        public string FromDate { get; set; }
+        public string ToDate { get; set; }
+        public string LocationLink { get; set; }
+        public int StatusID { get; set; }
+        public string PhoneNo { get; set; }
+        public string Email { get; set; }
+        public int DisplayOrder { get; set; }
+        public string Speakers { get; set; }
+        public string Organizers { get; set; }
+        public string Image { get; set; }
+        List<EventImagesBLL> EventImages = new List<EventImagesBLL>();
+        public List<string> ImagesSource { get; set; }
+        public DateTime? Createdon { get; set; }
+        public DateTime? Updatedon { get; set; }
+        public string EventTime { get; set; }
+        public string EventEndTime { get; set; }
+        public int? UpdatedBy { get; set; }
+        public bool IsFeatured { get; set; }
+        public string EventCategories { get; set; }
+        public string EventLink { get; set; }
+        public string EventDate { get; set; }
+        public string EventCity { get; set; }
+        public int RemainingTicket { get; set; }
     }
 }
